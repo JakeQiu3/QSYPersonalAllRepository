@@ -1,0 +1,64 @@
+
+1.kvo 和通知的区别？
+观察者模式
+对象间的直接交互： 观察者观察对象属性发生变化，执行某种行为。
+通知中心间接交互： 通知中心发送通知，注册通知的都能执行相应的行为。
+
+2.通知和代理的区别：1对1，1对多。
+代理的接受者可以把结果返回sender
+通知只负责消息发送不接受返回值
+
+3.Sqlite和coredata的区别
+c的简单封装 和 oc的封装。
+方便性上，都应该是对其进行封装，业务层面提供接口，而不是直接使用sqlite语句。
+存储性能想当。
+core data模型多人管理比较麻烦
+
+4.多线程
+同时执行多个代码段路径。
+提高性能，发挥多核优势。
+代码段间的顺序的复杂度和共用同一资源带来的问题；
+占用内存和CPU
+
+5.数据的安全性
+MD5加密: NSString *md5 = [CJMD5 md5HexDigest:password];
+aes加密:  NSString *encryptedData = [AESCrypt encrypt:userName password:password];//加密
+NSString *message = [AESCrypt decrypt:encryptedData password:password];//解密
+base64加密：
++ (NSString*)encodeBase64String:(NSString *)input;
++ (NSString*)decodeBase64String:(NSString *)input;
++ (NSString*)encodeBase64Data:(NSData *)data;
++ (NSString*)decodeBase64Data:(NSData *)data;
+数据请求方式为post。
+
+6.loadView：加载self.view
+viewDidLoad：界面显示
+viewDidUnload在self.view = nil的时候会调用
+didReceiveMemoryWarning：默认操作viewDidUnload
+7.只遍历一遍，找到单链表的倒数第n位
+用两个指针，让他们之间的距离保持为n-1，同时对链表进行遍历，当第一个指针到达链表的最后一个元素时，第二个指针执行的就是倒数第n个元素。
+8.autorelease 在向池中发送release操作时，释放掉对象。
+9.栈和堆：
+编译器自动管理  程序员控制
+连续的小       不连续但灵活的大空间
+先进先出，后进后出的队列   易出碎片化
+分配内存的方式： 静态分配(编译器:局部变量)和动态分配(释放是由编译器来完成)  堆是动态分配（释放由程序员手动释放）。   动态分配是由alloca函数进行分配
+分配效率高（专门的寄存器存放栈，压栈出栈都有专门的指令执行） 效率低（C/ C++函数库提供，较复杂）
+
+10.频繁创建和销毁对象，容易产生内存碎片，造成内存泄露。
+for 循环很多对象时，记得在for循环的代码加上 autorelease, 防止内存占用过多，造成crash。
+11.garage cycle 垃圾回收：定期检查内存，查看是否有无指针指向的对象，并将其回收。iphone 中无此 机制，而是引用计数机制。
+
+
+
+
+
+
+
+
+
+
+
+
+
+

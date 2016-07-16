@@ -1,0 +1,16 @@
+
+<Teachers>
+    <teacher>
+        <name>邱少一</name>
+        <age>23</age>
+        <sex>男</sex>
+        <address>永城市蒋口乡洪楼村邱庄</address>
+    </teacher>
+    
+    <teacher>
+        <name>邱少二</name>
+        <age>88</age>
+        <sex>男</sex>
+        <address>北京市通州区永顺西里45号楼</address>
+    </teacher>
+</Teachers>

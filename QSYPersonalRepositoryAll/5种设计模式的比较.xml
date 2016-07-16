@@ -1,0 +1,31 @@
+
+<!-- 好的框架应该具有的3特征-->
+//严格定义的角色  平衡的将职责  == 划分 == 给不同的实体。
+//可测性 通常取决于上面说的第一点.
+//易用 并且维护成本低。
+
+
+//（MVC）如果你最看重的是开发速度，那么 Cocoa MVC 就是你最好的选择...谁来负责网络请求：是 Model 还是 Controller？
+// let model = Person(firstName: "David", lastName: "Blaine")
+// let view = GreetingViewController()
+// view.person = model;
+
+
+// （MVP）:架构在 iOS 中意味着极好的可测性和巨大的代码量
+// let model = Person(firstName: "David", lastName: "Blaine")
+// let view = GreetingViewController()
+// let presenter = GreetingPresenter(view: view, person: model)
+// view.presenter = presenter
+
+
+//（MVVM）：MVVM 真的很有魅力，因为它不仅结合了上述几种框架的优点，还不需要你为视图的更新去写额外的代码（因为在 View 上已经做了数据绑定），另外它在可测性上的表现也依然很棒。 我该怎么去把一个 Model 传递给一个新创建的 View 的 ViewModel？
+//let model = Person(firstName: "David", lastName: "Blaine")
+//let viewModel = GreetingViewModel(person: model)
+//let view = GreetingViewController()
+//view.viewModel = viewModel
+
+
+//（VIPER）谁来负责创建 VIPER 模块：是 Router 还是 Presenter？
+//划分 - 毫无疑问的，VIPER 在职责划分方面是做的最好的。
+//可测性 - 理所当然的，职责划分的越好，测试起来就越容易
+//易用 - 最后，你可能已经猜到了，上面两点好处都是用维护性的代价换来的。一个小小的任务，可能就需要你为各种类写大量的接口。
