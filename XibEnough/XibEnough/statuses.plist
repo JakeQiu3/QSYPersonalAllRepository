@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>icon</key>
+		<string>1</string>
+		<key>name</key>
+		<string>我就是我是颜色不一样的烟火</string>
+		<key>text</key>
+		<string>测试无止境，生活永不停歇</string>
+		<key>vip</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>1</string>
+		<key>name</key>
+		<string>我就是我</string>
+		<key>text</key>
+		<string>测试无止境，生活永不停歇</string>
+		<key>vip</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>1</string>
+		<key>name</key>
+		<string>我就是我</string>
+		<key>text</key>
+		<string>测试无止境，生活永不停歇</string>
+		<key>vip</key>
+		<true/>
+	</dict>
+</array>
+</plist>
