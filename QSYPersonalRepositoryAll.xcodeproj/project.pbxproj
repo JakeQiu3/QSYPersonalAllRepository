@@ -13,6 +13,11 @@
 		303F38C11D3B1BAF00630F31 /* MultiplePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38C01D3B1BAF00630F31 /* MultiplePickerView.m */; };
 		303F38C81D3B32C800630F31 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38C71D3B32C800630F31 /* CustomAlertViewController.m */; };
 		303F38CC1D3B332E00630F31 /* CustumAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38CB1D3B332E00630F31 /* CustumAlertView.m */; };
+		303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */; };
+		303F38D31D3B9A5700630F31 /* TabActionColView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38D21D3B9A5700630F31 /* TabActionColView.m */; };
+		303F38D61D3B9E6600630F31 /* RightCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38D51D3B9E6600630F31 /* RightCollectionView.m */; };
+		303F38DA1D3BA34900630F31 /* RightColHeaderResuableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */; };
+		303F38DD1D3BA41000630F31 /* RightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */; };
 		305458561D0F06DE002B039E /* 同步异步 和 串行并行队列.png in Resources */ = {isa = PBXBuildFile; fileRef = 305458551D0F06DE002B039E /* 同步异步 和 串行并行队列.png */; };
 		308B97821CCA899400BDA0FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 308B97811CCA899400BDA0FA /* main.m */; };
 		308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B97891CCA899400BDA0FA /* Main.storyboard */; };
@@ -74,6 +79,10 @@
 		30B2865F1D0998D200085313 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B2865E1D0998D200085313 /* FirstViewController.m */; };
 		30B286621D0998E300085313 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B286611D0998E300085313 /* SecondViewController.m */; };
 		30B286661D0A825300085313 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B286651D0A825300085313 /* TestView.m */; };
+		30C976A41D3BAD8100614EBC /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976A31D3BAD8100614EBC /* BaseModel.m */; };
+		30C976A71D3BB1C500614EBC /* PostMallCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */; };
+		30C976A91D3BB76600614EBC /* 商品分类假数据.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30C976A81D3BB76600614EBC /* 商品分类假数据.plist */; };
+		30C976AC1D3BDCF100614EBC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976AB1D3BDCF100614EBC /* DetailViewController.m */; };
 		30CB778A1D3001CB00C3DDEC /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30CB77891D3001CB00C3DDEC /* AutoLayoutViewController.xib */; };
 		30DC00491D03CB2D005EAD0C /* MVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC00481D03CB2D005EAD0C /* MVVMViewController.m */; };
 		30DC004E1D03D200005EAD0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC004B1D03D200005EAD0C /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -315,6 +324,17 @@
 		303F38C71D3B32C800630F31 /* CustomAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewController.m; sourceTree = "<group>"; };
 		303F38CA1D3B332E00630F31 /* CustumAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustumAlertView.h; sourceTree = "<group>"; };
 		303F38CB1D3B332E00630F31 /* CustumAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustumAlertView.m; sourceTree = "<group>"; };
+		303F38CE1D3B9A0900630F31 /* TabActionColViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabActionColViewController.h; sourceTree = "<group>"; };
+		303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabActionColViewController.m; sourceTree = "<group>"; };
+		303F38D11D3B9A5700630F31 /* TabActionColView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabActionColView.h; sourceTree = "<group>"; };
+		303F38D21D3B9A5700630F31 /* TabActionColView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabActionColView.m; sourceTree = "<group>"; };
+		303F38D41D3B9E6600630F31 /* RightCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCollectionView.h; sourceTree = "<group>"; };
+		303F38D51D3B9E6600630F31 /* RightCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCollectionView.m; sourceTree = "<group>"; };
+		303F38D71D3BA10B00630F31 /* LeftLabRightColViewSelectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftLabRightColViewSelectDelegate.h; sourceTree = "<group>"; };
+		303F38D81D3BA34900630F31 /* RightColHeaderResuableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightColHeaderResuableView.h; sourceTree = "<group>"; };
+		303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightColHeaderResuableView.m; sourceTree = "<group>"; };
+		303F38DB1D3BA41000630F31 /* RightCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCollectionViewCell.h; sourceTree = "<group>"; };
+		303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCollectionViewCell.m; sourceTree = "<group>"; };
 		305458551D0F06DE002B039E /* 同步异步 和 串行并行队列.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同步异步 和 串行并行队列.png"; sourceTree = "<group>"; };
 		308B977D1CCA899400BDA0FA /* QSYPersonalRepositoryAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSYPersonalRepositoryAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308B97811CCA899400BDA0FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -426,6 +446,13 @@
 		30B286611D0998E300085313 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		30B286641D0A825300085313 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		30B286651D0A825300085313 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		30C976A21D3BAD8100614EBC /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		30C976A31D3BAD8100614EBC /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		30C976A51D3BB1C500614EBC /* PostMallCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMallCategoryModel.h; sourceTree = "<group>"; };
+		30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMallCategoryModel.m; sourceTree = "<group>"; };
+		30C976A81D3BB76600614EBC /* 商品分类假数据.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "商品分类假数据.plist"; sourceTree = "<group>"; };
+		30C976AA1D3BDCF100614EBC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		30C976AB1D3BDCF100614EBC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		30CB77891D3001CB00C3DDEC /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
 		30DC00471D03CB2D005EAD0C /* MVVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVVMViewController.h; sourceTree = "<group>"; };
 		30DC00481D03CB2D005EAD0C /* MVVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVMViewController.m; sourceTree = "<group>"; };
@@ -925,6 +952,27 @@
 			name = CustumAlertView;
 			sourceTree = "<group>";
 		};
+		303F38CD1D3B99CB00630F31 /* 左Tab右Tab或Col */ = {
+			isa = PBXGroup;
+			children = (
+				303F38CE1D3B9A0900630F31 /* TabActionColViewController.h */,
+				303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */,
+				303F38D11D3B9A5700630F31 /* TabActionColView.h */,
+				303F38D21D3B9A5700630F31 /* TabActionColView.m */,
+				303F38D41D3B9E6600630F31 /* RightCollectionView.h */,
+				303F38D51D3B9E6600630F31 /* RightCollectionView.m */,
+				303F38D81D3BA34900630F31 /* RightColHeaderResuableView.h */,
+				303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */,
+				303F38DB1D3BA41000630F31 /* RightCollectionViewCell.h */,
+				303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */,
+				303F38D71D3BA10B00630F31 /* LeftLabRightColViewSelectDelegate.h */,
+				30C976AA1D3BDCF100614EBC /* DetailViewController.h */,
+				30C976AB1D3BDCF100614EBC /* DetailViewController.m */,
+				30C976A11D3BAD1500614EBC /* Lib */,
+			);
+			name = "左Tab右Tab或Col";
+			sourceTree = "<group>";
+		};
 		305458541D0EFFE8002B039E /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -967,6 +1015,7 @@
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				731BBF141D24B6CB00B14CF2 /* Common.h */,
 				7323B4AF1D2BBD2D00CE6790 /* 封装的思路.jpg */,
+				303F38CD1D3B99CB00630F31 /* 左Tab右Tab或Col */,
 				3091A7A21CEE1D00003B97F4 /* 知识点总测试 */,
 				303F38C51D3B327800630F31 /* 自定义含确认button的弹出框 */,
 				303F38BA1D3B1B4600630F31 /* 多功能PickerView */,
@@ -1177,6 +1226,18 @@
 				30B286611D0998E300085313 /* SecondViewController.m */,
 			);
 			name = "2个界面间的交互跳转(ReactCocoa版本)";
+			sourceTree = "<group>";
+		};
+		30C976A11D3BAD1500614EBC /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				30C976A81D3BB76600614EBC /* 商品分类假数据.plist */,
+				30C976A51D3BB1C500614EBC /* PostMallCategoryModel.h */,
+				30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */,
+				30C976A21D3BAD8100614EBC /* BaseModel.h */,
+				30C976A31D3BAD8100614EBC /* BaseModel.m */,
+			);
+			name = Lib;
 			sourceTree = "<group>";
 		};
 		30DC002E1D03BD3F005EAD0C /* AutoLayout xib和storyboard使用 */ = {
@@ -2104,6 +2165,7 @@
 				736584BA1D2266620088CDAB /* test.html in Resources */,
 				736584BC1D22676D0088CDAB /* test.png in Resources */,
 				73D15B1B1CEEE07B008855FB /* DemoView.xib in Resources */,
+				30C976A91D3BB76600614EBC /* 商品分类假数据.plist in Resources */,
 				30DC00801D0484C3005EAD0C /* 5.jpg in Resources */,
 				3091A71A1CEE1A32003B97F4 /* 知不足.rtf in Resources */,
 				309590421CFF228100176AAC /* VM和V通过ReactiveCocoa实现绑定.png in Resources */,
@@ -2213,6 +2275,7 @@
 				7369596B1D06D9F3005DA410 /* RACEmptySequence.m in Sources */,
 				736959671D06D9F3005DA410 /* RACDisposable.m in Sources */,
 				736959921D06D9F3005DA410 /* UIBarButtonItem+RACCommandSupport.m in Sources */,
+				303F38D61D3B9E6600630F31 /* RightCollectionView.m in Sources */,
 				309590591CFF22C000176AAC /* DrawRectView.m in Sources */,
 				7336BDEC1D0EB04100F32485 /* AFURLSessionManager.m in Sources */,
 				3091A7951CEE1A64003B97F4 /* TestTotalViewController.m in Sources */,
@@ -2260,6 +2323,7 @@
 				730C49091D23B3E400707722 /* WKWebViewJavascriptBridge.m in Sources */,
 				7336BDEF1D0EB04100F32485 /* UIAlertView+AFNetworking.m in Sources */,
 				30B2865F1D0998D200085313 /* FirstViewController.m in Sources */,
+				303F38D31D3B9A5700630F31 /* TabActionColView.m in Sources */,
 				73D15B071CEEBF7A008855FB /* MHScanViewController.m in Sources */,
 				7336BDE71D0EB04100F32485 /* AFNetworkReachabilityManager.m in Sources */,
 				730CFB381D1A2A1500B62765 /* WebViewDemoViewController.m in Sources */,
@@ -2277,6 +2341,7 @@
 				7336BDEA1D0EB04100F32485 /* AFURLRequestSerialization.m in Sources */,
 				3091A77E1CEE1A64003B97F4 /* MASViewAttribute.m in Sources */,
 				7369599B1D06D9F3005DA410 /* UISegmentedControl+RACSignalSupport.m in Sources */,
+				303F38DA1D3BA34900630F31 /* RightColHeaderResuableView.m in Sources */,
 				7358D9E31D05644400B7484C /* DQKMainViewCell.m in Sources */,
 				73BCADB31D0ECA40004FF832 /* RequestDetailViewController.m in Sources */,
 				3091A78F1CEE1A64003B97F4 /* MXPullDownMenu.m in Sources */,
@@ -2292,6 +2357,8 @@
 				30DC006A1D04845F005EAD0C /* StatusTableViewCell.m in Sources */,
 				73D15B331CEF4118008855FB /* tttViewController.m in Sources */,
 				30DC00691D04845F005EAD0C /* WeiboStatus.m in Sources */,
+				30C976A71D3BB1C500614EBC /* PostMallCategoryModel.m in Sources */,
+				30C976A41D3BAD8100614EBC /* BaseModel.m in Sources */,
 				736959A01D06D9F3005DA410 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */,
 				736959821D06D9F3005DA410 /* RACSignalSequence.m in Sources */,
 				73982A991D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m in Sources */,
@@ -2305,6 +2372,7 @@
 				7323B4721D2B506900CE6790 /* CustomTestView.m in Sources */,
 				730C490A1D23B3E400707722 /* WebViewJavascriptBridgeBase.m in Sources */,
 				736959681D06D9F3005DA410 /* RACDynamicSequence.m in Sources */,
+				303F38DD1D3BA41000630F31 /* RightCollectionViewCell.m in Sources */,
 				3091A77A1CEE1A64003B97F4 /* MASCompositeConstraint.m in Sources */,
 				30DC004E1D03D200005EAD0C /* AppDelegate.m in Sources */,
 				730CFB4D1D1A966D00B62765 /* IMYWebView.m in Sources */,
@@ -2342,6 +2410,8 @@
 				730CFB4F1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m in Sources */,
 				736959881D06D9F3005DA410 /* RACSubscriptionScheduler.m in Sources */,
 				7323B4AA1D2BB1C200CE6790 /* KNCollectionViewCell.m in Sources */,
+				30C976AC1D3BDCF100614EBC /* DetailViewController.m in Sources */,
+				303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */,
 				7369599F1D06D9F3005DA410 /* UITableViewCell+RACSignalSupport.m in Sources */,
 				736959511D06D9F3005DA410 /* NSObject+RACDeallocating.m in Sources */,
 				73037E831D2A71C60017D024 /* Sb1TableViewCell.m in Sources */,

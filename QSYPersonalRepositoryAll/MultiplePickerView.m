@@ -56,7 +56,7 @@ static NSTimeInterval const animatioinDuration = 0.32;
     }
     //  将选择时间父视图添加到self上
     [self initSubviews];
-    [keyWindow insertSubview:self atIndex:keyWindow.subviews.count-1];
+    [keyWindow addSubview:self];
     [keyWindow insertSubview:self atIndex:keyWindow.subviews.count-1];
     [self showAnimation];
 }
