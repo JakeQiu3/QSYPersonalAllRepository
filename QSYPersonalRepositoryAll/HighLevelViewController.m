@@ -229,13 +229,13 @@ typedef NS_ENUM(NSInteger, CLSex) {
 //   在main()函数 中 main thread 的runloop默认是启动；其他线程来说，runloop对象是没有启动的，若需要更多的线程交互则可以手动配置和启动。
 //   NSRunLoop *currentRun =  [NSRunLoop currentRunLoop];
     
-    //   mode：运行循环runloop中的优先级状态
+    //   mode：运行循环runloop中的不同模式下优先级状态
 //    NSDefaultRunLoopMode（kCFRunLoopDefaultMode）：默认，空闲状态
 //    UITrackingRunLoopMode：ScrollView滑动时
 //    UIInitializationRunLoopMode：启动时
 //    NSRunLoopCommonModes（kCFRunLoopCommonModes）
-    NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(woqu) userInfo:nil repeats:YES];
-    //    iOS公开提供2种： NSDefaultRunLoopMode 和 NSRunLoopCommonModes。 runloop只能运行在一种mode中，若切换mode ，当前的runloop需要停止，启动新mode的runloop。ScrollView滚动过程种从默认的NSDefaultRunLoopMode，因为在NSDefaultRunLoopMode下会影响滚动效果，故需要切换到UITrackingRunLoopMode。上述timer会被添加到NSDefaultRunLoopMode的main thread 的主runloop中，但scrollview滚动会切换到UITrackingRunLoopMode的主循环的状态，会造成NSDefaultRunLoopMode下的timer停止。
+    NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(woqu) userInfo:nil repeats:YES];//默认添加到NSDefaultRunLoopMode：主runloop的mode
+//    iOS公开提供2种： NSDefaultRunLoopMode 和 NSRunLoopCommonModes。 runloop只能运行在一种mode中，若切换mode ，当前的runloop需要停止，启动新mode的runloop。ScrollView滚动过程种从默认的NSDefaultRunLoopMode，因为在NSDefaultRunLoopMode下会影响滚动效果，故需要切换到UITrackingRunLoopMode。上述timer会被添加到NSDefaultRunLoopMode的main thread 的主runloop中，但scrollview滚动会切换到UITrackingRunLoopMode的主循环的状态，会造成NSDefaultRunLoopMode下的timer停止。
 //    解决办法
     NSTimer *timer2 = [NSTimer timerWithTimeInterval:2.0f target:self selector:@selector(woqu) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer2 forMode:NSRunLoopCommonModes];
