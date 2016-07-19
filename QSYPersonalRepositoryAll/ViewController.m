@@ -26,8 +26,8 @@
 }
 
 - (void)loadData {
-    _fileNameArray = @[@"知识点总测试",@"坐标系转换",@"下拉菜单",@"Xib和Storyboard使用汇总",@"Masonry 适配",@"Json和XML解析",@"数据库工具之FMDB",@"数据库工具之sqlite3.0",@"TabBar封装",@"二维码和条形码",@"计时器",@"导航条的隐藏和渐变处理",@"改变动画",@"冻结cell列表",@"加载Webview",@"加载WKWebview",@"TouchID使用",@"广告位轮播",@"多功能PickerView",@"自定义含button的弹出框",@"左Tab右Tab或Col"].mutableCopy;
-    _titileArray = @[@"TestTotalViewController",@"TapAExitOtherViewController",@"PullDownMenuViewController",@"AutoLayoutViewController",@"MasonryContraintViewController",@"JsonAndXmlParserViewController",@"FmdbViewController",@"SqliteDatabaseViewController",@"无",@"CaptureDeviceViewController",@"MZTLViewController",@"NavBarViewController",@"ChangeAnimationViewController",@"FreezeViewController",@"WebViewDemoViewController",@"WKWebViewDemoViewController",@"TouchIdViewController",@"BannerViewController",@"MulitplePickerViewController",@"CustomAlertViewController",@"TabActionColViewController"].mutableCopy;//
+    _fileNameArray = @[@"知识点总测试",@"坐标系转换",@"下拉菜单",@"Xib和Storyboard使用汇总",@"Masonry 适配",@"Json和XML解析",@"数据库工具之FMDB",@"数据库工具之sqlite3.0",@"TabBar封装",@"二维码和条形码",@"计时器",@"导航条的隐藏和渐变处理",@"改变动画",@"冻结cell列表",@"加载Webview",@"加载WKWebview",@"TouchID使用",@"广告位轮播",@"多功能PickerView",@"自定义含button的弹出框",@"左Tab右Tab或Col",@"双tab混合单tab的下拉菜单"].mutableCopy;
+    _titileArray = @[@"TestTotalViewController",@"TapAExitOtherViewController",@"PullDownMenuViewController",@"AutoLayoutViewController",@"MasonryContraintViewController",@"JsonAndXmlParserViewController",@"FmdbViewController",@"SqliteDatabaseViewController",@"无",@"CaptureDeviceViewController",@"MZTLViewController",@"NavBarViewController",@"ChangeAnimationViewController",@"FreezeViewController",@"WebViewDemoViewController",@"WKWebViewDemoViewController",@"TouchIdViewController",@"BannerViewController",@"MulitplePickerViewController",@"CustomAlertViewController",@"TabActionColViewController",@"MutlipleTwoTabAndOneTabViewController"].mutableCopy;//
 }
 - (void)setUI {
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];

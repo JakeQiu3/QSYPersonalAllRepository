@@ -23,6 +23,8 @@
 		308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B97891CCA899400BDA0FA /* Main.storyboard */; };
 		308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B978C1CCA899400BDA0FA /* Assets.xcassets */; };
 		308B97901CCA899400BDA0FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B978E1CCA899400BDA0FA /* LaunchScreen.storyboard */; };
+		308DA7FD1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DA7FC1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m */; };
+		308DA8001D3E78C700A97FA9 /* QSPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DA7FF1D3E78C700A97FA9 /* QSPullDownMenu.m */; };
 		3091A7191CEE1A32003B97F4 /* hhh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3091A7171CEE1A32003B97F4 /* hhh.png */; };
 		3091A71A1CEE1A32003B97F4 /* 知不足.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3091A7181CEE1A32003B97F4 /* 知不足.rtf */; };
 		3091A7731CEE1A64003B97F4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A71D1CEE1A64003B97F4 /* FMDatabase.m */; };
@@ -342,6 +344,10 @@
 		308B978C1CCA899400BDA0FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		308B978F1CCA899400BDA0FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		308B97911CCA899400BDA0FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308DA7FB1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutlipleTwoTabAndOneTabViewController.h; sourceTree = "<group>"; };
+		308DA7FC1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutlipleTwoTabAndOneTabViewController.m; sourceTree = "<group>"; };
+		308DA7FE1D3E78C700A97FA9 /* QSPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPullDownMenu.h; sourceTree = "<group>"; };
+		308DA7FF1D3E78C700A97FA9 /* QSPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSPullDownMenu.m; sourceTree = "<group>"; };
 		3091A7171CEE1A32003B97F4 /* hhh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hhh.png; sourceTree = "<group>"; };
 		3091A7181CEE1A32003B97F4 /* 知不足.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "知不足.rtf"; sourceTree = "<group>"; };
 		3091A71C1CEE1A64003B97F4 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -1015,6 +1021,7 @@
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				731BBF141D24B6CB00B14CF2 /* Common.h */,
 				7323B4AF1D2BBD2D00CE6790 /* 封装的思路.jpg */,
+				308DA7F91D3E77D000A97FA9 /* 双tab混合单tab的下拉菜单 */,
 				303F38CD1D3B99CB00630F31 /* 左Tab右Tab或Col */,
 				3091A7A21CEE1D00003B97F4 /* 知识点总测试 */,
 				303F38C51D3B327800630F31 /* 自定义含确认button的弹出框 */,
@@ -1052,6 +1059,25 @@
 				308B97811CCA899400BDA0FA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		308DA7F91D3E77D000A97FA9 /* 双tab混合单tab的下拉菜单 */ = {
+			isa = PBXGroup;
+			children = (
+				308DA7FB1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.h */,
+				308DA7FC1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m */,
+				308DA8011D3E78CB00A97FA9 /* 混合Tab下拉菜单 工具 */,
+			);
+			name = "双tab混合单tab的下拉菜单";
+			sourceTree = "<group>";
+		};
+		308DA8011D3E78CB00A97FA9 /* 混合Tab下拉菜单 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				308DA7FE1D3E78C700A97FA9 /* QSPullDownMenu.h */,
+				308DA7FF1D3E78C700A97FA9 /* QSPullDownMenu.m */,
+			);
+			name = "混合Tab下拉菜单 工具";
 			sourceTree = "<group>";
 		};
 		3091A71B1CEE1A64003B97F4 /* fmdb */ = {
@@ -2222,6 +2248,7 @@
 				7336BDE91D0EB04100F32485 /* AFURLConnectionOperation.m in Sources */,
 				7369596C1D06D9F3005DA410 /* RACEmptySignal.m in Sources */,
 				7336BDF01D0EB04100F32485 /* UIButton+AFNetworking.m in Sources */,
+				308DA7FD1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m in Sources */,
 				7369594B1D06D9F3005DA410 /* NSDictionary+RACSequenceAdditions.m in Sources */,
 				7369599E1D06D9F3005DA410 /* UISwitch+RACSignalSupport.m in Sources */,
 				3095905B1CFF22C000176AAC /* LayoutSubView.m in Sources */,
@@ -2399,6 +2426,7 @@
 				7369598D1D06D9F3005DA410 /* RACUnarySequence.m in Sources */,
 				3091A7781CEE1A64003B97F4 /* JSONKit.m in Sources */,
 				73D15B081CEEBF7A008855FB /* FrostedView.m in Sources */,
+				308DA8001D3E78C700A97FA9 /* QSPullDownMenu.m in Sources */,
 				736959741D06D9F3005DA410 /* RACKVOTrampoline.m in Sources */,
 				3091A7831CEE1A64003B97F4 /* ViewController+MASAdditions.m in Sources */,
 				73D15B141CEED943008855FB /* MZTimerLabel.m in Sources */,
