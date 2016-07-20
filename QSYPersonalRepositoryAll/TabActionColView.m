@@ -12,6 +12,8 @@
 
 #define defaultLeftLabCellH 45
 #define defaultLeftLabWidth 90
+static NSTimeInterval const animatioinDuration = 0.32;
+
 @interface TabActionColView()<UITableViewDataSource,UITableViewDelegate>
 {
     BOOL rightIsColView;
@@ -19,7 +21,7 @@
     NSMutableArray *dataAllArr; //总模型数组
     UITableView *leftSelectTab;
     
-    NSArray *rightSelTabArray;//右侧是tab
+    NSArray *rightTabArray;//右侧是tab
     
 }
 
@@ -32,15 +34,43 @@
         self.backgroundColor = [UIColor whiteColor];
         self.alpha = 0.3;
         self.layer.opacity = 0;
+        dataAllArr = @[].mutableCopy;
+    
+        rightTabArray = @[];
+        rightIsColView = isColView;
 // 转模型：设置默认显示的数据
         [arr enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             PostMallCategoryModel *model = [[PostMallCategoryModel alloc] initWithDataDic:obj];
             [dataAllArr addObject:model];
         }];
-        rightSelTabArray = @[];
-        rightIsColView = isColView;
     }
     return self;
+}
+
+- (void)dismiss {
+    [self dismissAnimation:^{
+        [leftSelectTab removeFromSuperview];
+        leftSelectTab = nil;
+        
+        [_rightSelectCol removeFromSuperview];
+        _rightSelectCol = nil;
+        
+        [_rightSelectTab removeFromSuperview];
+        _rightSelectTab = nil;
+        [self removeFromSuperview];
+    }];
+}
+
+- (void)dismissAnimation:(void(^)(void))block
+{
+    [UIView animateWithDuration:animatioinDuration
+                     animations:^{
+                         self.transform = CGAffineTransformMakeTranslation(0, self.bounds.size.height);
+                         self.layer.opacity = 0;
+                     }
+                     completion:^(BOOL finished) {
+                         !block ? : block();
+                     }];
 }
 
 - (void)showInView:(UIView *)supView {
@@ -60,7 +90,7 @@
     if (rightIsColView) {//右侧是colView
         _rightSelectCol.dataArray = model.children;
     } else {
-        rightSelTabArray = model.children;
+        rightTabArray = model.children;
     }
 }
 
@@ -92,7 +122,7 @@
     }
 }
 
-#pragma mark -- UITableViewDelegate
+#pragma mark -- UITableViewDelegate dataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -121,12 +151,14 @@
     return cell;
 }
 
-// 点击 左侧tab 的方法
+// 点击 左侧tab 执行的方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [leftSelectTab selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
-    PostMallCategoryModel *model = [dataAllArr objectAtIndex:indexPath.row];
-    _rightSelectCol.dataArray = model.children;
+    if (tableView == leftSelectTab) {//左侧的tab
+        [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+        PostMallCategoryModel *model = [dataAllArr objectAtIndex:indexPath.row];
+        _rightSelectCol.dataArray = model.children;
+    }
+   
 }
 
 

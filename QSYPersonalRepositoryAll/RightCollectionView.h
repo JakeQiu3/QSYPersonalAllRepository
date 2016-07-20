@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LeftLabRightColViewSelectDelegate.h"
+
+@protocol LeftLabRightColViewSelectDelegate <NSObject>
+#pragma  mark 点击rightCol或者tab的item的代理方法： 参数-> 分类名  和 产品名
+- (void)selectedCategoryName:(NSString *)categoryName
+               categoryValue:(NSString *)categoryValue;
+@end
 @interface RightCollectionView : UICollectionView
 /** collectionView dataArray */
 @property (nonatomic, strong) NSArray *dataArray;

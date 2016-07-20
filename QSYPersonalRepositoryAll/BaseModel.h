@@ -2,7 +2,7 @@
 //  BaseModel.h
 //  PManager
 //
-//  Created by  MR-zhang  on 14-6-20.
+//  Created by 张浩 on 14-6-20.
 //  Copyright (c) 2014年 Huoli. All rights reserved.
 //
 

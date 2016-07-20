@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    currentSelectArr = @[].mutableCopy;
+    currentSelectArr = @[].mutableCopy;//必须得提前创建
     [self initBtn];
     // Do any additional setup after loading the view.
 }

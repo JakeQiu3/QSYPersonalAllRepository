@@ -14,10 +14,12 @@ typedef void(^ConfirmSelectBlock)(NSMutableArray *selectArray);
 // 确定按钮的block回调
 @property (nonatomic, copy) ConfirmSelectBlock confirmSelectBlock;
 
-@property (nonatomic, assign) CGFloat bgViewH;//默认是150
+@property (nonatomic, assign) CGFloat bgViewH;//bgView的默认高度，是150
 @property (nonatomic, assign) CGFloat rowHeight;//pickerView的行高 默认是35
-
+@property (nonatomic, assign) CGFloat pickerViewY;//pickerView 到bgView 的顶部的Y:默认是在取消和确认按钮的下沿
+@property (nonatomic, assign) CGFloat titleViewY;//titleView 到bgView 的顶部的Y: 默认是同取消和确认按钮
 @property (nonatomic, copy) NSString *title;// 标题label:默认为@“”
+
 @property (nonatomic, strong)UIColor *titleColor;//标题的color
 @property (nonatomic, strong)UIColor *cancelBtnColor;//取消button的颜色
 @property (nonatomic, strong)UIColor *confirmBtnColor;//确定button的颜色

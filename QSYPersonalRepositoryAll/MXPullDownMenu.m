@@ -281,8 +281,8 @@
         [UIView animateWithDuration:0.2 animations:^{
             _tableView.frame = CGRectMake(0, self.frame.origin.y + self.frame.size.height, self.frame.size.width, 0);
         } completion:^(BOOL finished) {
-            [tableView removeFromSuperview];
-        }];
+           [tableView removeFromSuperview];
+        }]; 
         
         
     }

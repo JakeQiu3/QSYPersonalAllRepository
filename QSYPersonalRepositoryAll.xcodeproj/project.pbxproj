@@ -10,7 +10,6 @@
 		300783CB1D3A937B00E349D6 /* xib和storyboard使用看这个就够了.zip in Resources */ = {isa = PBXBuildFile; fileRef = 300783CA1D3A937B00E349D6 /* xib和storyboard使用看这个就够了.zip */; };
 		303816B71D07119000046B3D /* 5种设计模式的比较.xml in Resources */ = {isa = PBXBuildFile; fileRef = 303816B61D07119000046B3D /* 5种设计模式的比较.xml */; };
 		303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */; };
-		303F38C11D3B1BAF00630F31 /* MultiplePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38C01D3B1BAF00630F31 /* MultiplePickerView.m */; };
 		303F38C81D3B32C800630F31 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38C71D3B32C800630F31 /* CustomAlertViewController.m */; };
 		303F38CC1D3B332E00630F31 /* CustumAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38CB1D3B332E00630F31 /* CustumAlertView.m */; };
 		303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */; };
@@ -81,7 +80,6 @@
 		30B2865F1D0998D200085313 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B2865E1D0998D200085313 /* FirstViewController.m */; };
 		30B286621D0998E300085313 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B286611D0998E300085313 /* SecondViewController.m */; };
 		30B286661D0A825300085313 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B286651D0A825300085313 /* TestView.m */; };
-		30C976A41D3BAD8100614EBC /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976A31D3BAD8100614EBC /* BaseModel.m */; };
 		30C976A71D3BB1C500614EBC /* PostMallCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */; };
 		30C976A91D3BB76600614EBC /* 商品分类假数据.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30C976A81D3BB76600614EBC /* 商品分类假数据.plist */; };
 		30C976AC1D3BDCF100614EBC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976AB1D3BDCF100614EBC /* DetailViewController.m */; };
@@ -144,6 +142,7 @@
 		731BBF271D25025900B14CF2 /* navigation_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 731BBF221D25025900B14CF2 /* navigation_back@3x.png */; };
 		731BBF281D25025900B14CF2 /* navigation_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 731BBF231D25025900B14CF2 /* navigation_close@2x.png */; };
 		731BBF291D25025900B14CF2 /* navigation_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 731BBF241D25025900B14CF2 /* navigation_close@3x.png */; };
+		731FFF0B1D3C703700F65E0F /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 731FFF0A1D3C703700F65E0F /* BaseModel.m */; };
 		73214C1E1D1B7CFA00A766D2 /* IMYWebView-iOS通用demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73214C1D1D1B7CFA00A766D2 /* IMYWebView-iOS通用demo.zip */; };
 		7323B46F1D2B4F5900CE6790 /* customTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7323B46E1D2B4F5900CE6790 /* customTest.xib */; };
 		7323B4721D2B506900CE6790 /* CustomTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4711D2B506900CE6790 /* CustomTestView.m */; };
@@ -293,6 +292,7 @@
 		736959A21D06D9F3005DA410 /* UITextView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 736959471D06D9F3005DA410 /* UITextView+RACSignalSupport.m */; };
 		73982A931D10F1C000E74B69 /* 可变和不可变的copy，mutableCopy.png in Resources */ = {isa = PBXBuildFile; fileRef = 73982A921D10F1C000E74B69 /* 可变和不可变的copy，mutableCopy.png */; };
 		73982A991D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 73982A981D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m */; };
+		739C46AE1D3CB0E10023C0D7 /* MultiplePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739C46AD1D3CB0E10023C0D7 /* MultiplePickerView.m */; };
 		73BCADB31D0ECA40004FF832 /* RequestDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BCADB21D0ECA40004FF832 /* RequestDetailViewController.m */; };
 		73D15AFC1CEEB3E4008855FB /* CaptureDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15AFB1CEEB3E4008855FB /* CaptureDeviceViewController.m */; };
 		73D15AFE1CEEB46D008855FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D15AFD1CEEB46D008855FB /* AVFoundation.framework */; };
@@ -320,8 +320,6 @@
 		303816B81D0712FA00046B3D /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = QSYPersonalRepositoryAll/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		303F38BB1D3B1B6400630F31 /* MulitplePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulitplePickerViewController.h; sourceTree = "<group>"; };
 		303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulitplePickerViewController.m; sourceTree = "<group>"; };
-		303F38BF1D3B1BAF00630F31 /* MultiplePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplePickerView.h; sourceTree = "<group>"; };
-		303F38C01D3B1BAF00630F31 /* MultiplePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplePickerView.m; sourceTree = "<group>"; };
 		303F38C61D3B32C800630F31 /* CustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewController.h; sourceTree = "<group>"; };
 		303F38C71D3B32C800630F31 /* CustomAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewController.m; sourceTree = "<group>"; };
 		303F38CA1D3B332E00630F31 /* CustumAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustumAlertView.h; sourceTree = "<group>"; };
@@ -332,7 +330,6 @@
 		303F38D21D3B9A5700630F31 /* TabActionColView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabActionColView.m; sourceTree = "<group>"; };
 		303F38D41D3B9E6600630F31 /* RightCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCollectionView.h; sourceTree = "<group>"; };
 		303F38D51D3B9E6600630F31 /* RightCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCollectionView.m; sourceTree = "<group>"; };
-		303F38D71D3BA10B00630F31 /* LeftLabRightColViewSelectDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftLabRightColViewSelectDelegate.h; sourceTree = "<group>"; };
 		303F38D81D3BA34900630F31 /* RightColHeaderResuableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightColHeaderResuableView.h; sourceTree = "<group>"; };
 		303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightColHeaderResuableView.m; sourceTree = "<group>"; };
 		303F38DB1D3BA41000630F31 /* RightCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCollectionViewCell.h; sourceTree = "<group>"; };
@@ -452,8 +449,6 @@
 		30B286611D0998E300085313 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		30B286641D0A825300085313 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		30B286651D0A825300085313 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
-		30C976A21D3BAD8100614EBC /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
-		30C976A31D3BAD8100614EBC /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		30C976A51D3BB1C500614EBC /* PostMallCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMallCategoryModel.h; sourceTree = "<group>"; };
 		30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMallCategoryModel.m; sourceTree = "<group>"; };
 		30C976A81D3BB76600614EBC /* 商品分类假数据.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "商品分类假数据.plist"; sourceTree = "<group>"; };
@@ -551,6 +546,8 @@
 		731BBF221D25025900B14CF2 /* navigation_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back@3x.png"; sourceTree = "<group>"; };
 		731BBF231D25025900B14CF2 /* navigation_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_close@2x.png"; sourceTree = "<group>"; };
 		731BBF241D25025900B14CF2 /* navigation_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_close@3x.png"; sourceTree = "<group>"; };
+		731FFF0A1D3C703700F65E0F /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		731FFF0C1D3C705500F65E0F /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		73214C1D1D1B7CFA00A766D2 /* IMYWebView-iOS通用demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "IMYWebView-iOS通用demo.zip"; sourceTree = "<group>"; };
 		7323B46E1D2B4F5900CE6790 /* customTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = customTest.xib; sourceTree = "<group>"; };
 		7323B4701D2B506900CE6790 /* CustomTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTestView.h; sourceTree = "<group>"; };
@@ -847,6 +844,8 @@
 		73982A921D10F1C000E74B69 /* 可变和不可变的copy，mutableCopy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "可变和不可变的copy，mutableCopy.png"; sourceTree = "<group>"; };
 		73982A971D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RunAtDeallocBlock.h"; sourceTree = "<group>"; };
 		73982A981D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RunAtDeallocBlock.m"; sourceTree = "<group>"; };
+		739C46AC1D3CB0E10023C0D7 /* MultiplePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplePickerView.h; sourceTree = "<group>"; };
+		739C46AD1D3CB0E10023C0D7 /* MultiplePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplePickerView.m; sourceTree = "<group>"; };
 		73BCADB11D0ECA40004FF832 /* RequestDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDetailViewController.h; sourceTree = "<group>"; };
 		73BCADB21D0ECA40004FF832 /* RequestDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestDetailViewController.m; sourceTree = "<group>"; };
 		73D15AFA1CEEB3E4008855FB /* CaptureDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureDeviceViewController.h; sourceTree = "<group>"; };
@@ -934,8 +933,8 @@
 		303F38BE1D3B1B9B00630F31 /* MultiplePickerView */ = {
 			isa = PBXGroup;
 			children = (
-				303F38BF1D3B1BAF00630F31 /* MultiplePickerView.h */,
-				303F38C01D3B1BAF00630F31 /* MultiplePickerView.m */,
+				739C46AC1D3CB0E10023C0D7 /* MultiplePickerView.h */,
+				739C46AD1D3CB0E10023C0D7 /* MultiplePickerView.m */,
 			);
 			name = MultiplePickerView;
 			sourceTree = "<group>";
@@ -963,18 +962,9 @@
 			children = (
 				303F38CE1D3B9A0900630F31 /* TabActionColViewController.h */,
 				303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */,
-				303F38D11D3B9A5700630F31 /* TabActionColView.h */,
-				303F38D21D3B9A5700630F31 /* TabActionColView.m */,
-				303F38D41D3B9E6600630F31 /* RightCollectionView.h */,
-				303F38D51D3B9E6600630F31 /* RightCollectionView.m */,
-				303F38D81D3BA34900630F31 /* RightColHeaderResuableView.h */,
-				303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */,
-				303F38DB1D3BA41000630F31 /* RightCollectionViewCell.h */,
-				303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */,
-				303F38D71D3BA10B00630F31 /* LeftLabRightColViewSelectDelegate.h */,
 				30C976AA1D3BDCF100614EBC /* DetailViewController.h */,
 				30C976AB1D3BDCF100614EBC /* DetailViewController.m */,
-				30C976A11D3BAD1500614EBC /* Lib */,
+				731FFF091D3C6C4000F65E0F /* 左Tab右TabOrCol */,
 			);
 			name = "左Tab右Tab或Col";
 			sourceTree = "<group>";
@@ -1260,8 +1250,8 @@
 				30C976A81D3BB76600614EBC /* 商品分类假数据.plist */,
 				30C976A51D3BB1C500614EBC /* PostMallCategoryModel.h */,
 				30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */,
-				30C976A21D3BAD8100614EBC /* BaseModel.h */,
-				30C976A31D3BAD8100614EBC /* BaseModel.m */,
+				731FFF0C1D3C705500F65E0F /* BaseModel.h */,
+				731FFF0A1D3C703700F65E0F /* BaseModel.m */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -1414,6 +1404,22 @@
 				730CFB4A1D1A966D00B62765 /* IMY_NJKWebViewProgress.m */,
 			);
 			path = UIWebViewProgress;
+			sourceTree = "<group>";
+		};
+		731FFF091D3C6C4000F65E0F /* 左Tab右TabOrCol */ = {
+			isa = PBXGroup;
+			children = (
+				303F38D11D3B9A5700630F31 /* TabActionColView.h */,
+				303F38D21D3B9A5700630F31 /* TabActionColView.m */,
+				303F38D41D3B9E6600630F31 /* RightCollectionView.h */,
+				303F38D51D3B9E6600630F31 /* RightCollectionView.m */,
+				303F38D81D3BA34900630F31 /* RightColHeaderResuableView.h */,
+				303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */,
+				303F38DB1D3BA41000630F31 /* RightCollectionViewCell.h */,
+				303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */,
+				30C976A11D3BAD1500614EBC /* Lib */,
+			);
+			name = "左Tab右TabOrCol";
 			sourceTree = "<group>";
 		};
 		7323B4731D2B50F700CE6790 /* init代码和xib 的自定义某控件的方法 */ = {
@@ -2250,6 +2256,7 @@
 				7336BDF01D0EB04100F32485 /* UIButton+AFNetworking.m in Sources */,
 				308DA7FD1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m in Sources */,
 				7369594B1D06D9F3005DA410 /* NSDictionary+RACSequenceAdditions.m in Sources */,
+				739C46AE1D3CB0E10023C0D7 /* MultiplePickerView.m in Sources */,
 				7369599E1D06D9F3005DA410 /* UISwitch+RACSignalSupport.m in Sources */,
 				3095905B1CFF22C000176AAC /* LayoutSubView.m in Sources */,
 				7369599D1D06D9F3005DA410 /* UIStepper+RACSignalSupport.m in Sources */,
@@ -2318,6 +2325,7 @@
 				736959521D06D9F3005DA410 /* NSObject+RACDescription.m in Sources */,
 				7369598E1D06D9F3005DA410 /* RACUnit.m in Sources */,
 				736959581D06D9F3005DA410 /* NSSet+RACSequenceAdditions.m in Sources */,
+				731FFF0B1D3C703700F65E0F /* BaseModel.m in Sources */,
 				736959751D06D9F3005DA410 /* RACMulticastConnection.m in Sources */,
 				736959721D06D9F3005DA410 /* RACKVOChannel.m in Sources */,
 				303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */,
@@ -2333,7 +2341,6 @@
 				7323B4AC1D2BB1C200CE6790 /* NSString+hash.m in Sources */,
 				7304B8281CF29CB1005CA459 /* UserCopy.m in Sources */,
 				7369597D1D06D9F3005DA410 /* RACSequence.m in Sources */,
-				303F38C11D3B1BAF00630F31 /* MultiplePickerView.m in Sources */,
 				3091A7761CEE1A64003B97F4 /* FMDatabaseQueue.m in Sources */,
 				3091A77B1CEE1A64003B97F4 /* MASConstraint.m in Sources */,
 				7304B8251CF29BC9005CA459 /* HighLevelViewController.m in Sources */,
@@ -2385,7 +2392,6 @@
 				73D15B331CEF4118008855FB /* tttViewController.m in Sources */,
 				30DC00691D04845F005EAD0C /* WeiboStatus.m in Sources */,
 				30C976A71D3BB1C500614EBC /* PostMallCategoryModel.m in Sources */,
-				30C976A41D3BAD8100614EBC /* BaseModel.m in Sources */,
 				736959A01D06D9F3005DA410 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */,
 				736959821D06D9F3005DA410 /* RACSignalSequence.m in Sources */,
 				73982A991D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m in Sources */,

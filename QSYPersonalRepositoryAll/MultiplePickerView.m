@@ -9,7 +9,6 @@
 #import "MultiplePickerView.h"
 
 #define QSY_SIGNALTEXTSIZE(text, font) [text length] > 0 ? [text sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
-
 #define SCREENW [UIScreen mainScreen].bounds.size.width
 #define SCREENH [UIScreen mainScreen].bounds.size.height
 #define compotentW 100
@@ -84,7 +83,7 @@ static NSTimeInterval const animatioinDuration = 0.32;
     titleLable.textColor = !_titleColor?[UIColor grayColor]:_titleColor;
     titleLable.text = ![_title length]?@"":_title;
     CGSize titleSize = QSY_SIGNALTEXTSIZE(titleLable.text, [UIFont systemFontOfSize:17]);
-    titleLable.frame = CGRectMake((SCREENW-titleSize.width)*0.5, 10, titleSize.width, 30);
+    titleLable.frame = CGRectMake((SCREENW-titleSize.width)*0.5,!_titleViewY ? 10:_titleViewY, titleSize.width, 30);
     titleLable.textAlignment = NSTextAlignmentCenter;
     [bgView addSubview:titleLable];
     
@@ -101,11 +100,11 @@ static NSTimeInterval const animatioinDuration = 0.32;
     confirmBtn.titleLabel.font = [UIFont systemFontOfSize:17];
     confirmBtn.frame = CGRectMake(SCREENW -cancelAndconfirmbtnW-20,10, cancelAndconfirmbtnW, 30);
     [confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
-    [confirmBtn setTitleColor:!_confirmBtnColor ? [UIColor greenColor]:_confirmBtnColor forState:UIControlStateNormal];
+    [confirmBtn setTitleColor:!_confirmBtnColor ? [UIColor colorWithRed:160/255.0 green:200/255.0 blue:115/255.0 alpha:1.0f]:_confirmBtnColor forState:UIControlStateNormal];
     [confirmBtn addTarget:self action:@selector(confrimBtn:) forControlEvents:UIControlEventTouchUpInside];
     [bgView addSubview:confirmBtn];
     //    pickerView
-    qsyPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(confirmBtn.frame),SCREENW, bgView.bounds.size.height - CGRectGetMaxY(confirmBtn.frame))];
+    qsyPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(confirmBtn.frame),SCREENW,!_pickerViewY ? (bgView.bounds.size.height - CGRectGetMaxY(confirmBtn.frame)): _pickerViewY)];
     qsyPickerView.dataSource = self;
     qsyPickerView.delegate = self;
     qsyPickerView.showsSelectionIndicator = YES;
@@ -123,8 +122,7 @@ static NSTimeInterval const animatioinDuration = 0.32;
 }
 
 #pragma mark -- UIPickerViewDelegate And dataSource
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return dataArray.count;
 }
 

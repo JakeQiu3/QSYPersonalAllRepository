@@ -11,15 +11,21 @@
 @interface TabActionColView : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame dataArray:(NSArray *)arr rightCollectionView:(BOOL )isColView;
-//显示的index：默认是第0行
-@property (nonatomic, assign)NSInteger showIndex;
-
-@property (nonatomic, assign)CGFloat leftLabW;
-@property (nonatomic, assign)CGFloat leftLabCellH;
-- (void)showInView:(UIView *)supView;
-
+// 右侧为 tab
 @property (nonatomic, strong)UITableView *rightSelectTab;
 ;
+// 右侧为 CollectionView
 @property (nonatomic, strong)RightCollectionView *rightSelectCol;
 ;
+//左侧显示的index：默认是第0行
+@property (nonatomic, assign)NSInteger showIndex;
+// 左侧lab的宽
+@property (nonatomic, assign)CGFloat leftLabW;
+// 左侧lab的cell高
+@property (nonatomic, assign)CGFloat leftLabCellH;
+// 添加到superView
+- (void)showInView:(UIView *)supView;
+// 消失
+- (void)dismiss;
+
 @end

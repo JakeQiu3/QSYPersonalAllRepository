@@ -2,8 +2,8 @@
 //  QuanzhiBaseModel.m
 //  Quanzhi
 //
-//  Created by  MR-zhang  on 13-12-11.
-//  Copyright (c) 2013年  MR-zhang . All rights reserved.
+//  Created by 张浩 on 13-12-11.
+//  Copyright (c) 2013年 张浩. All rights reserved.
 //
 
 #import "BaseModel.h"
@@ -105,7 +105,7 @@
                                    withObject:attributeValue
                                 waitUntilDone:[NSThread isMainThread]];
             //---------------------------分线程取数据----------------------------------
-            // 如果开分线程请求网络,就用下面这句。
+            //如果开分线程请求网络,就用下面这句。
             //                        [self performSelectorOnMainThread:sel withObject:attributeValue waitUntilDone:YES];
         }
     }

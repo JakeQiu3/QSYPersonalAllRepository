@@ -8,7 +8,6 @@
 
 #import "TabActionColViewController.h"
 #import "TabActionColView.h"
-#import "LeftLabRightColViewSelectDelegate.h"
 @interface TabActionColViewController ()<LeftLabRightColViewSelectDelegate>
 
 @end
@@ -20,8 +19,8 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"商品分类假数据" ofType:@"plist"];
     NSArray *dataArray = [NSArray arrayWithContentsOfFile:filePath];
     TabActionColView *tabColView = [[TabActionColView alloc] initWithFrame:self.view.bounds dataArray:dataArray rightCollectionView:YES];
-    tabColView.rightSelectCol.selectDelegate = self;
     [tabColView showInView:self.view];
+    tabColView.rightSelectCol.selectDelegate = self;
     // Do any additional setup after loading the view.
 }
 
