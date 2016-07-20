@@ -33,7 +33,6 @@ static const CGFloat pullDownMenuHeight = 45;
     UIView *backGroundView;//背景视图：默认是灰色半透明
     
     NSInteger _currentSelectedMenuIndex;//当前选择的menuIndex
-    BOOL isShowTab;// 是否显示menu的子tabview
     BOOL isSingleTab;// 是否只有单个Tab
     NSIndexPath *selectIndex;
     UITapGestureRecognizer *gesture;//轻拍menu的手势
@@ -177,7 +176,7 @@ static const CGFloat pullDownMenuHeight = 45;
     
     //  设置是哪个item
     _currentSelectedMenuIndex = -1;
-    isShowTab = NO;
+    _isShowTab = NO;
     
 }
 
@@ -232,9 +231,9 @@ static const CGFloat pullDownMenuHeight = 45;
     }
     
     //  连续单击某个menu的item
-    if (tapIndex == _currentSelectedMenuIndex && isShowTab) {
+    if (tapIndex == _currentSelectedMenuIndex && _isShowTab) {
         [self animateIdicator:indicatorsPic[tapIndex] background:backGroundView tableView:leftTab title:currentTextLayerArr[tapIndex] forward:NO complecte:^{
-            isShowTab = NO;
+            _isShowTab = NO;
         }];
         
     } else {// 仅仅一次单击某个item时：首次点击
@@ -243,7 +242,7 @@ static const CGFloat pullDownMenuHeight = 45;
         [leftTab reloadData];
         [rightTab reloadData];
         [self animateIdicator:indicatorsPic[tapIndex] background:backGroundView tableView:leftTab title:currentTextLayerArr[tapIndex] forward:YES complecte:^{
-            isShowTab = YES;
+            _isShowTab = YES;
         }];
         
     }
@@ -273,7 +272,7 @@ static const CGFloat pullDownMenuHeight = 45;
 - (void)tapBackGround:(UITapGestureRecognizer *)paramSender {
     
     [self animateIdicator:indicatorsPic[_currentSelectedMenuIndex] background:backGroundView tableView:leftTab title:currentTextLayerArr[_currentSelectedMenuIndex] forward:NO complecte:^{
-        isShowTab = NO;
+        _isShowTab = NO;
     }];
     
 }

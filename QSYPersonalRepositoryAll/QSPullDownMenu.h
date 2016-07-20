@@ -41,6 +41,7 @@ typedef NS_ENUM (NSInteger,BackGroundViewStatus) {
 
 - (QSPullDownMenu *)initWithArray:(NSArray *)array selectedColor:(UIColor *)selectedColor constantTitlesArr:(NSArray *)titlesArr;
 
+@property (nonatomic, assign) BOOL isShowTab;// 是否显示menu的子tabview
 @property (nonatomic, assign) BOOL isUpdataMenuTitle; //是否更新该menu的title: 默认是NO
 @property (nonatomic, assign) CGFloat titleAndPicMargin;// 绘制的文字和图片的间距
 @property (nonatomic, assign)CGFloat titleFontSize;//文字字体的大小：默认是15
