@@ -306,6 +306,7 @@
 		73D15B1B1CEEE07B008855FB /* DemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D15B1A1CEEE07B008855FB /* DemoView.xib */; };
 		73D15B2F1CEF3DD1008855FB /* Uuu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D15B2E1CEF3DD1008855FB /* Uuu.xib */; };
 		73D15B331CEF4118008855FB /* tttViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15B311CEF4118008855FB /* tttViewController.m */; };
+		73D9C1411D420E55001C60CE /* 仿微信选择图片Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */; };
 		73DEED901D0662D400FE72DE /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */; };
 		73DEED931D06744900FE72DE /* 5种编程思想比较.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73DEED921D06744900FE72DE /* 5种编程思想比较.xml */; };
 		73DEED961D0674EA00FE72DE /* CacultorFunctionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */; };
@@ -868,6 +869,7 @@
 		73D15B2E1CEF3DD1008855FB /* Uuu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Uuu.xib; sourceTree = "<group>"; };
 		73D15B301CEF4118008855FB /* tttViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tttViewController.h; sourceTree = "<group>"; };
 		73D15B311CEF4118008855FB /* tttViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tttViewController.m; sourceTree = "<group>"; };
+		73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "仿微信选择图片Demo.zip"; sourceTree = "<group>"; };
 		73DEED8E1D0662D400FE72DE /* CaculatorMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculatorMaker.h; sourceTree = "<group>"; };
 		73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculatorMaker.m; sourceTree = "<group>"; };
 		73DEED921D06744900FE72DE /* 5种编程思想比较.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "5种编程思想比较.xml"; sourceTree = "<group>"; };
@@ -1011,6 +1013,7 @@
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				731BBF141D24B6CB00B14CF2 /* Common.h */,
 				7323B4AF1D2BBD2D00CE6790 /* 封装的思路.jpg */,
+				73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */,
 				308DA7F91D3E77D000A97FA9 /* 双tab混合单tab的下拉菜单 */,
 				303F38CD1D3B99CB00630F31 /* 左Tab右Tab或Col */,
 				3091A7A21CEE1D00003B97F4 /* 知识点总测试 */,
@@ -2222,6 +2225,7 @@
 				7323B46F1D2B4F5900CE6790 /* customTest.xib in Resources */,
 				300783CB1D3A937B00E349D6 /* xib和storyboard使用看这个就够了.zip in Resources */,
 				30DC00881D0484C3005EAD0C /* 13.jpg in Resources */,
+				73D9C1411D420E55001C60CE /* 仿微信选择图片Demo.zip in Resources */,
 				3091A79B1CEE1A64003B97F4 /* 自定义tabbarDemo.zip in Resources */,
 				3091A7791CEE1A64003B97F4 /* Info.plist in Resources */,
 				731BBF251D25025900B14CF2 /* navigation_back.png in Resources */,
