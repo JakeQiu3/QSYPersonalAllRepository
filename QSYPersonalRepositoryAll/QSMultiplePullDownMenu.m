@@ -4,25 +4,27 @@
 //  Created by 邱少依 on 16/7/18.
 //  Copyright © 2016年 QSY. All rights reserved.
 
-#import "QSPullDownMenu.h"
+#import "QSMultiplePullDownMenu.h"
 #define SCREENW [UIScreen mainScreen].bounds.size.width
 #define SCREENH [UIScreen mainScreen].bounds.size.height
 #define bgViewOrTabsY (self.frame.origin.y + self.frame.size.height)
 static const CGFloat pullDownMenuHeight = 45;
-@interface QSPullDownMenu ()
+@interface QSMultiplePullDownMenu ()
 {
     
     NSArray *dataArray;// 总的数据源
-    NSMutableArray *currentTitlesArr;// 当前展示在menu中的title的数组
-    NSMutableArray *currentTextLayerArr; // 当前展示在menu中的textLayerArr的数组
+    NSMutableArray *currentTitlesArr;// 当前展示在menu中的titleStr数组
+    NSMutableArray *currentTextLayerArr; // 当前展示在menu中的layerText的数组
     
-    NSMutableArray *indicatorsPic; // 当前展示在menu中的图标的数组
+    NSMutableArray *indicatorsPic; // 当前展示在menu中的layerIndicator图标的数组
+    
     // 左侧和右侧的tab 以及对应的数组
     UITableView *leftTab;
-    NSMutableArray *leftArr;//3组数据的左侧总array
+    NSMutableArray *leftArr;// 3组数据的左侧Tab的总array
     
     UITableView *rightTab;
-    //    决定只创建1个tab的数组:存放着该menu的index
+    
+    // 决定仅仅创建1个tab的数组:存放着该menu的index
     NSMutableArray *confirmCreatSingleTabArr;
     
     NSInteger numsOfMenu;//menu中菜单栏的个数
@@ -32,26 +34,29 @@ static const CGFloat pullDownMenuHeight = 45;
     
     UIView *backGroundView;//背景视图：默认是灰色半透明
     
-    NSInteger _currentSelectedMenuIndex;//当前选择的menuIndex
-    BOOL isSingleTab;// 是否只有单个Tab
-    NSIndexPath *selectIndex;
-    UITapGestureRecognizer *gesture;//轻拍menu的手势
+    // 当前选择的menuIndex
+    NSInteger _currentSelectedMenuIndex;
+    // 是否只有单个Tab
+    BOOL isSingleTab;
+    UITapGestureRecognizer *backGroundGesture;// backGroundGesture的手势
     
-    UITableViewCell *selectedLeftCell;//选择的左侧Cell
-    UITableViewCell *selectedRightCell;//选择的右侧Cell
-    //  选择的左右2个数据或1个数据
+    UITableViewCell *selectedLeftCell;//选择的左侧Tab的Cell
+    UITableViewCell *selectedRightCell;//选择的右侧Tab的Cell
+    
+    //  选择的最终的左右2个数据或1个数据
     NSString *selectFirstTitle;
     NSString *selectSecondTitle;
     
 }
 
-@property (nonatomic, strong)  NSMutableArray *rightArr;//双tab中点击左侧tab的获取得到右侧tab的arr
+// 2个tab时，点击左侧tab某row：得到右侧tab的arr
+@property (nonatomic, strong)  NSMutableArray *rightArr;
 
 @end
 
-@implementation QSPullDownMenu
+@implementation QSMultiplePullDownMenu
 
-//   遍历dataArr:获取哪个item位置是单个tab
+#warning 少 待修改的区域： 遍历总的数据源dataArr:获取哪个是单个tab的menu，并将该数组的index保存在 confirmCreatSingleTabArr。
 - (void)confirmCreatSingleTabNum {
     NSMutableArray *tempArr = @[].mutableCopy;
     for (NSInteger i = 0; i<[dataArray count]; i++) {
@@ -71,6 +76,7 @@ static const CGFloat pullDownMenuHeight = 45;
     }
 }
 
+#warning 少 待修改的区域： nums的====左侧的Tab的数组的大数组====
 - (void)getLeftLabData {
     for (NSInteger i = 0; i<[dataArray count]; i++) {
         NSArray *itemArr = [dataArray objectAtIndex:i];
@@ -81,10 +87,10 @@ static const CGFloat pullDownMenuHeight = 45;
         }
         [leftArr addObject:tempArray];
     }
-    NSLog(@"左侧的3组数据: %@",leftArr);
+    NSLog(@"左侧的3组数组的total数组: %@",leftArr);
 }
 
-- (QSPullDownMenu *)initWithArray:(NSArray *)array selectedColor:(UIColor *)selectedColor constantTitlesArr:(NSArray *)titlesArr {
+- (QSMultiplePullDownMenu *)initWithArray:(NSArray *)array selectedColor:(UIColor *)selectedColor constantTitlesArr:(NSArray *)titlesArr {
     self = [super init];
     if (self) {
         
@@ -93,7 +99,7 @@ static const CGFloat pullDownMenuHeight = 45;
         //       设置非选中文字和图标的颜色
         menuColor = [UIColor colorWithRed:164.0/255.0 green:166.0/255.0 blue:169.0/255.0 alpha:1.0];
         selectMenuColor = selectedColor;
-        //   设置默认可视化的tableView高度
+        //   左侧设置默认可视化的tableView高度
         _tableVHeightNumMax = 6;
         dataArray = array;
         leftArr = @[].mutableCopy;
@@ -106,23 +112,25 @@ static const CGFloat pullDownMenuHeight = 45;
         //  menu中显示items
         numsOfMenu = dataArray.count;
         [self confirmCreatSingleTabNum];
-        // 获得左侧tab的数据
+        // 获得menu的左侧tab的total数组
         [self getLeftLabData];
-        //    menu中显示title的数组
+        
+#warning 少 待修改的区域： menu中显示的title的字符串数组
         if ([titlesArr count]) {// menu显示的title数组不为空，是固定不变的
             currentTitlesArr = titlesArr.mutableCopy;
         } else {// 为空数组: 取每个数组中第0个数据
             currentTitlesArr = [[NSMutableArray alloc] initWithCapacity:numsOfMenu];
             for (NSInteger i = 0; i<[dataArray count]; i++) {
-                [currentTitlesArr addObject:dataArray[i][0]];
+                NSDictionary *dic = dataArray[i][0];
+                [currentTitlesArr addObject:[dic objectForKey:@"provinceName"]];
             }
         }
+        
         indicatorsPic = [[NSMutableArray alloc] initWithCapacity:numsOfMenu];
-        //        绘制文字，图标，分割线
+        //  绘制menu上的 文字，图标，分割线
         [self drawTitleAndIndicatorPic];
         
     }
-    
     return self;
 }
 
@@ -133,12 +141,12 @@ static const CGFloat pullDownMenuHeight = 45;
     for (NSInteger i = 0; i < numsOfMenu; i++) {
         //    绘制menu的文字
         CGPoint position = CGPointMake( (i * 2 + 1) * textLayerInterval , self.frame.size.height / 2);
-        CATextLayer *title = [self creatTextLayerWithNSString:currentTitlesArr[i] withColor:menuColor andPosition:position];
-        [self.layer addSublayer:title];
-        [currentTextLayerArr addObject:title];
+        CATextLayer *layerTitle = [self creatTextLayerWithNSString:currentTitlesArr[i] withColor:menuColor andPosition:position];
+        [self.layer addSublayer:layerTitle];
+        [currentTextLayerArr addObject:layerTitle];
         
         //    绘制menu的箭头图标：并添加到indicatorsPic
-        CAShapeLayer *indicator = [self creatIndicatorWithColor:!_indicatorColor? menuColor:_indicatorColor andPosition:CGPointMake(position.x + title.bounds.size.width / 2 + (!_titleAndPicMargin ? 10:_titleAndPicMargin), self.frame.size.height / 2)];
+        CAShapeLayer *indicator = [self creatIndicatorWithColor:!_indicatorColor? menuColor:_indicatorColor andPosition:CGPointMake(position.x + layerTitle.bounds.size.width / 2 + (!_titleAndPicMargin ? 10:_titleAndPicMargin), self.frame.size.height / 2)];
         [self.layer addSublayer:indicator];
         [indicatorsPic addObject:indicator];
         //    绘制竖向间隔线
@@ -171,8 +179,8 @@ static const CGFloat pullDownMenuHeight = 45;
     backGroundView = [[UIView alloc] initWithFrame:CGRectMake(0, bgViewOrTabsY,SCREENW, SCREENH-bgViewOrTabsY)];
     backGroundView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
     backGroundView.opaque = NO;
-    gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackGround:)];
-    [backGroundView addGestureRecognizer:gesture];
+    backGroundGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBackGround:)];
+    [backGroundView addGestureRecognizer:backGroundGesture];
     
     //  设置是哪个item
     _currentSelectedMenuIndex = -1;
@@ -188,7 +196,7 @@ static const CGFloat pullDownMenuHeight = 45;
 
 // 消失子视图
 - (void)dismissPullDownView {
-    [self tapBackGround:gesture];
+    [self tapBackGround:backGroundGesture];
 }
 #warning 判断tab是单个还是多个，并设置frame -> 只有左侧tab：right宽为0,左侧tab宽为屏宽
 - (void)configSingleOrTwoTabsFrame:(NSInteger )currentTapIndex {
@@ -209,11 +217,11 @@ static const CGFloat pullDownMenuHeight = 45;
 }
 
 #pragma mark - tapEvents menu gesture
-- (void)tapMenu:(UITapGestureRecognizer *)gesture {
-    CGPoint touchPoint = [gesture locationInView:self];
+- (void)tapMenu:(UITapGestureRecognizer *)menuGesture {
+    CGPoint touchPoint = [menuGesture locationInView:self];
     // 得到tapIndex： 0表示点击了第1个item, 1表示点击第2个item，以此类推
     NSInteger tapIndex = touchPoint.x / (self.frame.size.width / numsOfMenu);
-    //    确定当前点击的是1个还是2个tab：并用 isSingleTab 做记录
+    //  确定当前点击的是1个还是2个tab：并用 isSingleTab 做记录
     [self configSingleOrTwoTabsFrame:tapIndex];
     //  tap 某item时，设置其他的tiems title和indicator
     for (NSInteger i = 0; i < numsOfMenu; i++) {
@@ -254,7 +262,7 @@ static const CGFloat pullDownMenuHeight = 45;
         [self animateTitle:title show:forward complete:^{
             [self animateBackGroundView:background show:forward complete:^{
                 [self animateTableView:tableView show:forward complete:^{
-                    //  判断是否是单个数组
+                    //  判断是否是单个数组：单门考虑rightTab
                     if (!isSingleTab) {// 不是单个tab:显示右侧的tab
                         [self animateTableView:rightTab show:forward complete:^{
                         }];
@@ -325,13 +333,13 @@ static const CGFloat pullDownMenuHeight = 45;
         cell.textLabel.text = _rightArr[indexPath.row];
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
-//    //    若允许更新menu的title
-//    if (_isUpdataMenuTitle) {
-//        if (cell.textLabel.text == [(CATextLayer *)[currentTextLayerArr objectAtIndex:_currentSelectedMenuIndex] string]) {
-//            [cell setAccessoryType:UITableViewCellAccessoryNone];
-//            [cell.textLabel setTextColor:[tableView tintColor]];
-//        }
-//    }
+    //    //    若允许更新menu的title
+    //    if (_isUpdataMenuTitle) {
+    //        if (cell.textLabel.text == [(CATextLayer *)[currentTextLayerArr objectAtIndex:_currentSelectedMenuIndex] string]) {
+    //            [cell setAccessoryType:UITableViewCellAccessoryNone];
+    //            [cell.textLabel setTextColor:[tableView tintColor]];
+    //        }
+    //    }
     return cell;
 }
 
@@ -375,11 +383,17 @@ static const CGFloat pullDownMenuHeight = 45;
     if (!isSingleTab) {// 2个tab
         if ([selectFirstTitle length]>0 && [selectSecondTitle length]>0) {//2个都有值才执行代理
             if (self.delegate && [self.delegate respondsToSelector:@selector(pullDownMenu:didSelectColumn:secondRow:)]) {
+                __weak __typeof(self)weakSelf = self;
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    __strong __typeof(weakSelf)strongSelf = weakSelf;
                     //  使该控件消失并传值
-                    [self dismissPullDownView];
+                    [strongSelf dismissPullDownView];
                 });
                 [self.delegate pullDownMenu:self didSelectColumn:selectFirstTitle secondRow:selectSecondTitle];
+                //   是否更新menu的title
+                if (_allowUpdataMenuTitle) {
+                    [self confiMenuWithSelectTitle:selectSecondTitle];
+                }
                 selectFirstTitle = @"";
                 selectSecondTitle = @"";
             }
@@ -387,32 +401,53 @@ static const CGFloat pullDownMenuHeight = 45;
     } else {//单个tab
         if ([selectFirstTitle length] > 0) {
             if (self.delegate && [self.delegate respondsToSelector:@selector(pullDownMenu:didSelectColumn:secondRow:)]) {
+                __weak __typeof(self)weakSelf = self;
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    __strong __typeof(weakSelf)strongSelf = weakSelf;
                     //  使该控件消失并传值
-                    [self dismissPullDownView];
+                    [strongSelf dismissPullDownView];
                 });
                 [self.delegate pullDownMenu:self didSelectColumn:selectFirstTitle secondRow:selectSecondTitle];
+                //      是否更新menu的title
+                if (_allowUpdataMenuTitle) {
+                    [self confiMenuWithSelectTitle:selectFirstTitle];
+                }
                 selectFirstTitle = @"";
                 
             }
         }
     }
 }
-// 配置是否更新到menu的title
-//- (void)confiMenuWithSelectRow:(NSInteger)row {
-////   获取
-//    CATextLayer *title = (CATextLayer *)currentTextLayerArr[_currentSelectedMenuIndex];
-//    title.string = [[_array objectAtIndex:_currentSelectedMenudIndex] objectAtIndex:row];
-//    
-//    
-//    [self animateIdicator:_indicators[_currentSelectedMenudIndex] background:_backGroundView tableView:_tableView title:_titles[_currentSelectedMenudIndex] forward:NO complecte:^{
-//        _show = NO;
-//        
-//    }];
-//    
-//    CAShapeLayer *indicator = (CAShapeLayer *)_indicators[_currentSelectedMenudIndex];
-//    indicator.position = CGPointMake(title.position.x + title.frame.size.width / 2 + 8, indicator.position.y);
-//}
+
+// 返回CATextLayer，绘制title到self.view
+- (CATextLayer *)getDrawTextLayer {
+    //  重新绘制menu的layer文字
+    CGFloat textLayerInterval = self.frame.size.width / ( numsOfMenu * 2);
+    CGPoint position = CGPointMake( (_currentSelectedMenuIndex * 2 + 1) * textLayerInterval , self.frame.size.height / 2);
+    CATextLayer *selectLayerTitle = [self creatTextLayerWithNSString:currentTitlesArr[_currentSelectedMenuIndex] withColor:menuColor andPosition:position];
+    return selectLayerTitle;
+}
+
+// 配置是否动态更新选择的数据到menu的title
+- (void)confiMenuWithSelectTitle:(NSString *)selectTitle {
+    //   修改currentTitlesArr的数据
+    [currentTitlesArr replaceObjectAtIndex:_currentSelectedMenuIndex withObject:selectTitle];
+    //    获取到newTextLayer
+    CATextLayer *newTextLayer = [self getDrawTextLayer];
+    
+    [self.layer replaceSublayer:[currentTextLayerArr objectAtIndex:_currentSelectedMenuIndex] with:newTextLayer];
+    //  修改layerText数组
+    [currentTextLayerArr replaceObjectAtIndex:_currentSelectedMenuIndex withObject:newTextLayer];
+    
+    [self animateIdicator:indicatorsPic[_currentSelectedMenuIndex] background:backGroundView tableView:leftTab title:currentTextLayerArr[_currentSelectedMenuIndex] forward:NO complecte:^{
+        _isShowTab = NO;
+        
+    }];
+    
+    //    更正indicator的位置
+    CAShapeLayer *indicator = (CAShapeLayer *)indicatorsPic[_currentSelectedMenuIndex];
+    indicator.position = CGPointMake(newTextLayer.position.x + newTextLayer.frame.size.width / 2 + 8, indicator.position.y);
+}
 
 #pragma mark - animation
 
@@ -610,21 +645,6 @@ static const CGFloat pullDownMenuHeight = 45;
     CGSize size = [string boundingRectWithSize:CGSizeMake(280, 0) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dic context:nil].size;
     return size;
 }
-
-//- (void)confiMenuWithSelectRow:(NSInteger)row {
-//
-//    CATextLayer *title = (CATextLayer *)currentTextLayerArr[_currentSelectedMenuIndex];
-//    title.string = [[dataArray objectAtIndex:_currentSelectedMenuIndex] objectAtIndex:row];
-//
-//
-//    [self animateIdicator:indicatorsPic[_currentSelectedMenuIndex] background:backGroundView tableView:leftTab title:currentTextLayerArr[_currentSelectedMenuIndex] forward:NO complecte:^{
-//        isShowTab = NO;
-//
-//    }];
-//
-//    CAShapeLayer *indicator = (CAShapeLayer *)indicatorsPic[_currentSelectedMenuIndex];
-//    indicator.position = CGPointMake(title.position.x + title.frame.size.width / 2 + 8, indicator.position.y);
-//}
 
 #pragma _mark 右侧tab的arr setter
 - (void)setRightArr:(NSMutableArray *)rightArr {

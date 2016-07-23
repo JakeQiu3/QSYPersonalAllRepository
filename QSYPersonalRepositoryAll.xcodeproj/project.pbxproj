@@ -23,7 +23,7 @@
 		308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B978C1CCA899400BDA0FA /* Assets.xcassets */; };
 		308B97901CCA899400BDA0FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B978E1CCA899400BDA0FA /* LaunchScreen.storyboard */; };
 		308DA7FD1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DA7FC1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m */; };
-		308DA8001D3E78C700A97FA9 /* QSPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DA7FF1D3E78C700A97FA9 /* QSPullDownMenu.m */; };
+		308DA8001D3E78C700A97FA9 /* QSMultiplePullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DA7FF1D3E78C700A97FA9 /* QSMultiplePullDownMenu.m */; };
 		3091A7191CEE1A32003B97F4 /* hhh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3091A7171CEE1A32003B97F4 /* hhh.png */; };
 		3091A71A1CEE1A32003B97F4 /* 知不足.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3091A7181CEE1A32003B97F4 /* 知不足.rtf */; };
 		3091A7731CEE1A64003B97F4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A71D1CEE1A64003B97F4 /* FMDatabase.m */; };
@@ -344,8 +344,8 @@
 		308B97911CCA899400BDA0FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308DA7FB1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutlipleTwoTabAndOneTabViewController.h; sourceTree = "<group>"; };
 		308DA7FC1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutlipleTwoTabAndOneTabViewController.m; sourceTree = "<group>"; };
-		308DA7FE1D3E78C700A97FA9 /* QSPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPullDownMenu.h; sourceTree = "<group>"; };
-		308DA7FF1D3E78C700A97FA9 /* QSPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSPullDownMenu.m; sourceTree = "<group>"; };
+		308DA7FE1D3E78C700A97FA9 /* QSMultiplePullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMultiplePullDownMenu.h; sourceTree = "<group>"; };
+		308DA7FF1D3E78C700A97FA9 /* QSMultiplePullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSMultiplePullDownMenu.m; sourceTree = "<group>"; };
 		3091A7171CEE1A32003B97F4 /* hhh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hhh.png; sourceTree = "<group>"; };
 		3091A7181CEE1A32003B97F4 /* 知不足.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "知不足.rtf"; sourceTree = "<group>"; };
 		3091A71C1CEE1A64003B97F4 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -1067,8 +1067,8 @@
 		308DA8011D3E78CB00A97FA9 /* 混合Tab下拉菜单 工具 */ = {
 			isa = PBXGroup;
 			children = (
-				308DA7FE1D3E78C700A97FA9 /* QSPullDownMenu.h */,
-				308DA7FF1D3E78C700A97FA9 /* QSPullDownMenu.m */,
+				308DA7FE1D3E78C700A97FA9 /* QSMultiplePullDownMenu.h */,
+				308DA7FF1D3E78C700A97FA9 /* QSMultiplePullDownMenu.m */,
 			);
 			name = "混合Tab下拉菜单 工具";
 			sourceTree = "<group>";
@@ -2436,7 +2436,7 @@
 				7369598D1D06D9F3005DA410 /* RACUnarySequence.m in Sources */,
 				3091A7781CEE1A64003B97F4 /* JSONKit.m in Sources */,
 				73D15B081CEEBF7A008855FB /* FrostedView.m in Sources */,
-				308DA8001D3E78C700A97FA9 /* QSPullDownMenu.m in Sources */,
+				308DA8001D3E78C700A97FA9 /* QSMultiplePullDownMenu.m in Sources */,
 				736959741D06D9F3005DA410 /* RACKVOTrampoline.m in Sources */,
 				3091A7831CEE1A64003B97F4 /* ViewController+MASAdditions.m in Sources */,
 				73D15B141CEED943008855FB /* MZTimerLabel.m in Sources */,

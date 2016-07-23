@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class QSPullDownMenu;
+@class QSMultiplePullDownMenu;
 
 typedef NS_ENUM (NSInteger,IndicatorStatus) {
     IndicatorStateShow = 0,
@@ -23,11 +23,11 @@ typedef NS_ENUM (NSInteger,BackGroundViewStatus) {
 
 @optional
 
-- (void)pullDownMenu:(QSPullDownMenu *)pullDownMenu didSelectColumn:(NSString *)columnStr secondRow:(NSString *)rowStr;
+- (void)pullDownMenu:(QSMultiplePullDownMenu *)pullDownMenu didSelectColumn:(NSString *)columnStr secondRow:(NSString *)rowStr;
 
 @end
 
-@interface QSPullDownMenu : UIView <UITableViewDelegate, UITableViewDataSource>
+@interface QSMultiplePullDownMenu : UIView <UITableViewDelegate, UITableViewDataSource>
 
 /**
  *  初始化控件
@@ -39,10 +39,11 @@ typedef NS_ENUM (NSInteger,BackGroundViewStatus) {
  *  @return 该下拉菜单控件
  */
 
-- (QSPullDownMenu *)initWithArray:(NSArray *)array selectedColor:(UIColor *)selectedColor constantTitlesArr:(NSArray *)titlesArr;
+- (QSMultiplePullDownMenu *)initWithArray:(NSArray *)array selectedColor:(UIColor *)selectedColor constantTitlesArr:(NSArray *)titlesArr;
 
-@property (nonatomic, assign) BOOL isShowTab;// 是否显示menu的子tabview
-@property (nonatomic, assign) BOOL isUpdataMenuTitle; //是否更新该menu的title: 默认是NO
+@property (nonatomic, assign) BOOL isShowTab;// 是否显示menu的下拉tabview
+//是否更新该menu的title: 默认是NO
+@property (nonatomic, assign) BOOL allowUpdataMenuTitle;
 @property (nonatomic, assign) CGFloat titleAndPicMargin;// 绘制的文字和图片的间距
 @property (nonatomic, assign)CGFloat titleFontSize;//文字字体的大小：默认是15
 @property (nonatomic, assign)CGFloat lineWidth;//中间分割线的宽度：默认是1
@@ -57,7 +58,6 @@ typedef NS_ENUM (NSInteger,BackGroundViewStatus) {
  *  设置tableview可视的cell的个数，设置tableview的可视高度
  */
 @property (nonatomic, assign) int tableVHeightNumMax;// default 是 6
-
 
 @property (nonatomic,weak) id<QSPullDownMenuDelegate> delegate;
 
