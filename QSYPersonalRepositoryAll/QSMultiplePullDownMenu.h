@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 @class QSMultiplePullDownMenu;
-
+#define QSMultiplePullMenuShowNotification @"QSMultiplePullMenuShowNotification"
 typedef NS_ENUM (NSInteger,IndicatorStatus) {
     IndicatorStateShow = 0,
     IndicatorStateHide
@@ -40,20 +40,18 @@ typedef NS_ENUM (NSInteger,BackGroundViewStatus) {
  */
 
 - (QSMultiplePullDownMenu *)initWithArray:(NSArray *)array selectedColor:(UIColor *)selectedColor constantTitlesArr:(NSArray *)titlesArr;
+// 是否显示menu的下拉tabview
+@property (nonatomic, assign) BOOL isShowTab;
 
-@property (nonatomic, assign) BOOL isShowTab;// 是否显示menu的下拉tabview
-//是否更新该menu的title: 默认是NO
+// 是否更新该menu的title: 默认是NO
 @property (nonatomic, assign) BOOL allowUpdataMenuTitle;
+
 @property (nonatomic, assign) CGFloat titleAndPicMargin;// 绘制的文字和图片的间距
 @property (nonatomic, assign)CGFloat titleFontSize;//文字字体的大小：默认是15
 @property (nonatomic, assign)CGFloat lineWidth;//中间分割线的宽度：默认是1
 @property (nonatomic, strong)UIColor *indicatorColor;//指示图标的颜色:默认同title
 @property (nonatomic, assign)CGFloat leftLabWidth;//左侧lab宽度：默认是120
 
-/**
- * 设置不同的菜单栏默认选中tableview的item
- */
-@property (nonatomic, assign) int defaultItem;//默认每个tableview都是 0
 /**
  *  设置tableview可视的cell的个数，设置tableview的可视高度
  */
@@ -64,6 +62,7 @@ typedef NS_ENUM (NSInteger,BackGroundViewStatus) {
 - (void)showInSupView:(UIView *)superView;//添加到父控件上
 
 - (void)dismissPullDownView; //下拉菜单消失
+
 @end
 
 
