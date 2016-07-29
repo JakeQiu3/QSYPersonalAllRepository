@@ -293,6 +293,7 @@
 		73982A931D10F1C000E74B69 /* 可变和不可变的copy，mutableCopy.png in Resources */ = {isa = PBXBuildFile; fileRef = 73982A921D10F1C000E74B69 /* 可变和不可变的copy，mutableCopy.png */; };
 		73982A991D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 73982A981D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m */; };
 		739C46AE1D3CB0E10023C0D7 /* MultiplePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739C46AD1D3CB0E10023C0D7 /* MultiplePickerView.m */; };
+		73A65D201D472FAD00796C5B /* ImageBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A65D1F1D472FAD00796C5B /* ImageBtn.m */; };
 		73BCADB31D0ECA40004FF832 /* RequestDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BCADB21D0ECA40004FF832 /* RequestDetailViewController.m */; };
 		73D15AFC1CEEB3E4008855FB /* CaptureDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15AFB1CEEB3E4008855FB /* CaptureDeviceViewController.m */; };
 		73D15AFE1CEEB46D008855FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D15AFD1CEEB46D008855FB /* AVFoundation.framework */; };
@@ -848,6 +849,8 @@
 		73982A981D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RunAtDeallocBlock.m"; sourceTree = "<group>"; };
 		739C46AC1D3CB0E10023C0D7 /* MultiplePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplePickerView.h; sourceTree = "<group>"; };
 		739C46AD1D3CB0E10023C0D7 /* MultiplePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplePickerView.m; sourceTree = "<group>"; };
+		73A65D1E1D472FAD00796C5B /* ImageBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBtn.h; sourceTree = "<group>"; };
+		73A65D1F1D472FAD00796C5B /* ImageBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBtn.m; sourceTree = "<group>"; };
 		73BCADB11D0ECA40004FF832 /* RequestDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDetailViewController.h; sourceTree = "<group>"; };
 		73BCADB21D0ECA40004FF832 /* RequestDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestDetailViewController.m; sourceTree = "<group>"; };
 		73D15AFA1CEEB3E4008855FB /* CaptureDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureDeviceViewController.h; sourceTree = "<group>"; };
@@ -953,13 +956,13 @@
 			name = "自定义含确认button的弹出框";
 			sourceTree = "<group>";
 		};
-		303F38C91D3B330B00630F31 /* CustumAlertView */ = {
+		303F38C91D3B330B00630F31 /* CustumAlertView(自定义各个位置的弹出框) */ = {
 			isa = PBXGroup;
 			children = (
 				303F38CA1D3B332E00630F31 /* CustumAlertView.h */,
 				303F38CB1D3B332E00630F31 /* CustumAlertView.m */,
 			);
-			name = CustumAlertView;
+			name = "CustumAlertView(自定义各个位置的弹出框)";
 			sourceTree = "<group>";
 		};
 		303F38CD1D3B99CB00630F31 /* 左Tab右Tab或Col */ = {
@@ -1150,7 +1153,8 @@
 		3091A7A01CEE1C20003B97F4 /* 工具箱 */ = {
 			isa = PBXGroup;
 			children = (
-				303F38C91D3B330B00630F31 /* CustumAlertView */,
+				73A65D1D1D472F9C00796C5B /* ImgBtn(左文字右图片Btn) */,
+				303F38C91D3B330B00630F31 /* CustumAlertView(自定义各个位置的弹出框) */,
 				303F38BE1D3B1B9B00630F31 /* MultiplePickerView */,
 				7323B49C1D2BB1C200CE6790 /* KNBannerView（广告工具,封装了网络判断） */,
 				73E5F5951D263F91002E3F25 /* PopGestureViewController(重写pop手势方法) */,
@@ -1868,6 +1872,15 @@
 			name = "抽象类具有copy和mutableCopy功能";
 			sourceTree = "<group>";
 		};
+		73A65D1D1D472F9C00796C5B /* ImgBtn(左文字右图片Btn) */ = {
+			isa = PBXGroup;
+			children = (
+				73A65D1E1D472FAD00796C5B /* ImageBtn.h */,
+				73A65D1F1D472FAD00796C5B /* ImageBtn.m */,
+			);
+			name = "ImgBtn(左文字右图片Btn)";
+			sourceTree = "<group>";
+		};
 		73BCADB41D0ECC48004FF832 /* 学习MVVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -2338,6 +2351,7 @@
 				731FFF0B1D3C703700F65E0F /* BaseModel.m in Sources */,
 				736959751D06D9F3005DA410 /* RACMulticastConnection.m in Sources */,
 				736959721D06D9F3005DA410 /* RACKVOChannel.m in Sources */,
+				73A65D201D472FAD00796C5B /* ImageBtn.m in Sources */,
 				303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */,
 				736959641D06D9F3005DA410 /* RACCompoundDisposable.m in Sources */,
 				3091A7821CEE1A64003B97F4 /* View+MASAdditions.m in Sources */,

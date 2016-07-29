@@ -10,100 +10,6 @@
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
 static CGFloat const animateDurations = 0.25;
-//===============UIView 的分类，实现属性修改frame===============
-@interface UIView (QSYExtention)
-//分类里的方法是默认实现的. 分类是对原有类的扩展.但不能声明实例变量
-@property (nonatomic, assign)CGFloat x;
-@property (nonatomic, assign)CGFloat y;
-@property (nonatomic, assign)CGFloat CenterX;
-@property (nonatomic, assign)CGFloat CenterY;
-@property (nonatomic, assign)CGFloat width;
-@property (nonatomic, assign)CGFloat height;
-@property (nonatomic, assign)CGSize size;
-@property (nonatomic, assign)CGPoint origin;
-
-@end
-@implementation UIView (QSYExtention)
-- (void)setX:(CGFloat)x{
-    CGRect frame = self.frame;
-    frame.origin.x = x;
-    self.frame = frame;
-}
-
-- (void)setY:(CGFloat)y{
-    CGRect frame = self.frame;
-    frame.origin.y = y;
-    self.frame = frame;
-}
-
-- (CGFloat)x{
-    return self.frame.origin.x;
-}
-
-- (CGFloat)y{
-    return self.frame.origin.y;
-}
-
-- (void)setCenterX:(CGFloat)CenterX{
-    CGPoint center = self.center;
-    center.x = CenterX;
-    self.center = center;
-}
-
-- (void)setCenterY:(CGFloat)CenterY{
-    CGPoint center = self.center;
-    center.y = CenterY;
-    self.center = center;
-}
-
-- (CGFloat)CenterX{
-    return self.center.x;
-}
-
-- (CGFloat)CenterY{
-    return self.center.y;
-}
-
-- (void)setWidth:(CGFloat)width{
-    CGRect frame = self.frame;
-    frame.size.width = width;
-    self.frame =frame;
-}
-
-- (CGFloat)width{
-    return self.frame.size.width;
-}
-- (void)setHeight:(CGFloat)height{
-    CGRect frame = self.frame;
-    frame.size.height= height;
-    self.frame =frame;
-}
-
-- (CGFloat)height{
-    return self.frame.size.height;
-}
-
-- (void)setSize:(CGSize)size{
-    CGRect frame = self.frame;
-    frame.size = size;
-    self.frame = frame;
-}
-
-- (CGSize)size{
-    return self.frame.size;
-}
-
-- (void)setOrigin:(CGPoint)origin{
-    CGRect frame = self.frame;
-    frame.origin = origin;
-    self.frame = frame;
-}
-
-- (CGPoint)origin{
-    return  self.frame.origin;
-}
-
-@end
 
 // ================ 遮罩层 ===============
 @interface UIBlackOverLayers : UIView
@@ -144,6 +50,7 @@ static CGFloat const animateDurations = 0.25;
 }
 
 @end
+
 // ==================本身实现==============
 @interface CustumAlertView ()
 @property (nonatomic, strong) UIBlackOverLayers *overLayer;
