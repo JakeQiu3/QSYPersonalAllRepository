@@ -108,6 +108,7 @@
 		30DC00881D0484C3005EAD0C /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30DC00791D0484C3005EAD0C /* 13.jpg */; };
 		30DC00891D0484C3005EAD0C /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30DC007A1D0484C3005EAD0C /* 14.jpg */; };
 		30DC008A1D0484C3005EAD0C /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30DC007B1D0484C3005EAD0C /* 15.jpg */; };
+		30E65E471D5268CA0090442A /* date.json in Resources */ = {isa = PBXBuildFile; fileRef = 30E65E461D5268CA0090442A /* date.json */; };
 		30FDF0401D0DB154006D2732 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FDF03F1D0DB154006D2732 /* LoginViewController.m */; };
 		30FDF0431D0DB16B006D2732 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FDF0421D0DB16B006D2732 /* LoginViewModel.m */; };
 		30FDF0461D0DB181006D2732 /* LoginModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FDF0451D0DB181006D2732 /* LoginModle.m */; };
@@ -490,6 +491,7 @@
 		30DC00791D0484C3005EAD0C /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
 		30DC007A1D0484C3005EAD0C /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
 		30DC007B1D0484C3005EAD0C /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
+		30E65E461D5268CA0090442A /* date.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = date.json; sourceTree = "<group>"; };
 		30FDF03E1D0DB154006D2732 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		30FDF03F1D0DB154006D2732 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		30FDF0411D0DB16B006D2732 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
@@ -932,6 +934,7 @@
 		303F38BA1D3B1B4600630F31 /* 多功能PickerView */ = {
 			isa = PBXGroup;
 			children = (
+				30E65E461D5268CA0090442A /* date.json */,
 				303F38BB1D3B1B6400630F31 /* MulitplePickerViewController.h */,
 				303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */,
 			);
@@ -2229,6 +2232,7 @@
 				30DC00821D0484C3005EAD0C /* 7.jpg in Resources */,
 				30DC007D1D0484C3005EAD0C /* 2.jpg in Resources */,
 				30DC006C1D04848A005EAD0C /* StatusInfo.plist in Resources */,
+				30E65E471D5268CA0090442A /* date.json in Resources */,
 				7363D6D31D0572CD00991477 /* 日历的Demo.zip in Resources */,
 				30DC008A1D0484C3005EAD0C /* 15.jpg in Resources */,
 				3095905A1CFF22C000176AAC /* navigation_close.png in Resources */,
