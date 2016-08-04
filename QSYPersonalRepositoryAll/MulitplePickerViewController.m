@@ -43,6 +43,13 @@
 
 - (void)configPickerView {
     //    http://blog.csdn.net/zsk_zane/article/details/47303285
+    //去掉iOS7后tableview header的延伸高度。。适配iOS7
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.extendedLayoutIncludesOpaqueBars = NO;
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+
     NSArray *totalDataArray = @[@[@"今天20点",@"hahhha",@"我的世界我的世界我的世界",@"我做主"],@[@"220",@"30分",@"222",@"223"]];
     NSDictionary *tempDic = @{@"8-1":@[@[@"10:00",@"10:30"],@[@"11:00",@"11:30"],@[@"16:00",@"16:30"],@[@"20:00",@"20:30"]],@"8-2":@[@[@"20:00",@"20:30"],@[@"08:00",@"08:30"]]};
     //    NSMutableArray *monthDayArr = @[].mutableCopy;
@@ -58,8 +65,6 @@
         NSArray *dmArr = [key componentsSeparatedByString:@"-"];
         NSString *dmstr =  [NSString stringWithFormat:@"%@月%@日",[dmArr objectAtIndex:0],[dmArr objectAtIndex:1]];
         [mdhDic setObject:dmstr forKey:@"mdStr"];//月日
-        
-        //        @[@"10:00",@"10:30"]=obj
         NSMutableArray *hmArr = @[].mutableCopy;
         [obj enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSMutableDictionary *hmDic = @{}.mutableCopy;//存放小时和分数组的字典
