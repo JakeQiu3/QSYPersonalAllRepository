@@ -24,7 +24,14 @@ static NSTimeInterval const animatioinDuration = 0.32;
     UIDatePicker *datePicker;
     UIPickerView *qsyPickerView;
     NSArray *dataArray;//数据源数组
-    NSMutableArray *selectArr;//选择后数据添加到新的数组
+    NSArray *firstArr;//1级数组
+    NSArray *secondArr;//2级数组
+    NSArray *thirdArr;//3级数组
+    NSMutableArray *selectArr;// 选择后数据添加到新的数组
+    
+    NSString *selectFirstStr;
+    NSString *selectSecondStr;
+    NSString *selectThirdStr;
 }
 
 /** 设置默认显示的数据row的数组*/
@@ -46,8 +53,7 @@ static NSTimeInterval const animatioinDuration = 0.32;
     return self;
 }
 
-- (void)showInView
-{
+- (void)showInView {
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     // 禁止重复添加
     if ([keyWindow.subviews containsObject:self]) {
@@ -103,33 +109,65 @@ static NSTimeInterval const animatioinDuration = 0.32;
     [confirmBtn setTitleColor:!_confirmBtnColor ? [UIColor colorWithRed:160/255.0 green:200/255.0 blue:115/255.0 alpha:1.0f]:_confirmBtnColor forState:UIControlStateNormal];
     [confirmBtn addTarget:self action:@selector(confrimBtn:) forControlEvents:UIControlEventTouchUpInside];
     [bgView addSubview:confirmBtn];
-    //    pickerView
+    //    创建pickerView
     qsyPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(confirmBtn.frame),SCREENW,!_pickerViewY ? (bgView.bounds.size.height - CGRectGetMaxY(confirmBtn.frame)): _pickerViewY)];
     qsyPickerView.dataSource = self;
     qsyPickerView.delegate = self;
     qsyPickerView.showsSelectionIndicator = YES;
     [bgView addSubview:qsyPickerView];
-    //  pickerView 加载完毕，遍历修改该行数
+    
+    //  设置默认选中数据
+    NSDictionary *mdDic = [dataArray objectAtIndex:[[_defaultSelectRowArr objectAtIndex:0] integerValue]];
+    NSString *mdStr = [mdDic objectForKey:@"mdStr"];//月日
+    NSArray *hourArr = [mdDic objectForKey:@"hourArr"];
+    NSDictionary *hourDic = [hourArr objectAtIndex:[[_defaultSelectRowArr objectAtIndex:1] integerValue]];
+    NSString *hourStr = [hourDic objectForKey:@"hourStr"];//时
+    NSArray *minuteArr = [hourDic objectForKey:@"minuteArr"];
+    NSString *minuteStr = [minuteArr objectAtIndex:[[_defaultSelectRowArr objectAtIndex:2] integerValue]];// 分
+    [selectArr  addObject:mdStr];
+    [selectArr  addObject:hourStr];
+    [selectArr  addObject:minuteStr];
+    // 设置1级数组、2级数组 和 3级数组
+    NSMutableArray *firstTempArr = [[NSMutableArray alloc] init];
+    for (NSInteger j=0; j<dataArray.count; j++) {
+        NSDictionary *tempDic = [dataArray objectAtIndex:j];
+        [firstTempArr addObject:[tempDic objectForKey:@"mdStr"]];
+    }
+    NSMutableArray *secondTempArr = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i<[hourArr count]; i++) {
+        NSDictionary *tempDic = [hourArr objectAtIndex:i];
+        [secondTempArr addObject:[tempDic objectForKey:@"hourStr"]];
+    }
+    NSMutableArray *thirdTempArr = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i<[minuteArr count]; i++) {
+        [thirdTempArr addObject:[minuteArr objectAtIndex:i]];
+    }
+    firstArr = firstTempArr.copy;
+    secondArr = secondTempArr.copy;
+    thirdArr = thirdTempArr.copy;
+    
     for (NSInteger i = 0; i<_defaultSelectRowArr.count; i++) {
-        //     获取不同分区中默认选中的行数
         NSInteger row = [[_defaultSelectRowArr objectAtIndex:i] integerValue];
-        
         [qsyPickerView selectRow:row inComponent:i animated:NO];
-        //    设置默认选中数据的数组
-        NSArray *arr = [dataArray objectAtIndex:i];
-        [selectArr  addObject:arr[row]];
     }
 }
 
 #pragma mark -- UIPickerViewDelegate And dataSource
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return dataArray.count;
+    return 3;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    NSArray *arr = dataArray[component];
-    return  arr.count;
+    if (component == 0) {
+        return [firstArr count];
+    } else if (component == 1){
+        return [secondArr count];
+    } else if (component == 2){
+        return [thirdArr count];
+    }
+    return  0;
 }
+
 //  获取数据源中所有每个分组的数组
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
     // 经测试,此方法的reusingView并没什么用,可能是iOS7之后不再使用
@@ -137,20 +175,69 @@ static NSTimeInterval const animatioinDuration = 0.32;
     myLabel.textAlignment = NSTextAlignmentCenter;
     myLabel.frame = CGRectMake(0.0, 0.0,compotentW,!_rowHeight?35:_rowHeight);
     myLabel.font = [UIFont systemFontOfSize:14];
-    //    获取数据源中每个分组的数据
-    NSArray *arr = dataArray[component];
-    myLabel.text = arr[row];
+    if (component == 0) {
+        myLabel.text = [firstArr objectAtIndex:row];
+    } else if (component == 1) {
+        myLabel.text = [secondArr objectAtIndex:row];
+    } else if (component == 2) {
+        myLabel.text = [thirdArr objectAtIndex:row];
+    }
     return myLabel;
     
 }
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    // 获取数据源中每个分组的数据
-    NSArray *arr = dataArray[component];
-    //   获取到该分组选中的行数的数据
-    NSString *selectStr = [arr objectAtIndex:row];
-    [selectArr replaceObjectAtIndex:component withObject:selectStr];
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    NSString *selectStr = @"";
+    if (component == 0) {
+//      获取2级数据和3级数据,刷新pickerView
+        NSDictionary *mdDic = [dataArray objectAtIndex:row];
+        NSArray *hourArr = [mdDic objectForKey:@"hourArr"];
+        NSMutableArray *hourTempArr = @[].mutableCopy;
+        for (NSInteger i =0 ; i<[hourArr count]; i++) {
+            NSDictionary *hourDic = [hourArr objectAtIndex:i];
+            NSString *hourStr = [hourDic objectForKey:@"hourStr"];
+            [hourTempArr addObject:hourStr];
+        }
+        secondArr = hourTempArr.copy;
+        NSDictionary *hourDic = [hourArr objectAtIndex:0];
+        thirdArr = [hourDic objectForKey:@"minuteArr"];
+        selectFirstStr = [firstArr objectAtIndex:row];
+        selectSecondStr = [secondArr objectAtIndex:0];
+        selectThirdStr = [thirdArr objectAtIndex:0];
+//      再次设置默认选择的数据
+        [selectArr replaceObjectAtIndex:0 withObject:selectFirstStr];
+        [selectArr replaceObjectAtIndex:1 withObject:selectSecondStr];
+        [selectArr replaceObjectAtIndex:2 withObject:selectThirdStr];
+//      刷新PickerView:移动到对应0位置
+        [pickerView reloadComponent:1];
+        [pickerView reloadComponent:2];
+        [pickerView selectRow:0 inComponent:1 animated:YES];
+        [pickerView selectRow:0 inComponent:2 animated:YES];
+    } else if (component == 1) {
+        //   再次设置默认选择的数据
+        selectSecondStr = [secondArr objectAtIndex:row];
+        NSString *firstSelectStr = [selectArr objectAtIndex:0];
+        for (NSDictionary *dic in dataArray) {
+            if ([[dic objectForKey:@"mdStr"] isEqualToString:firstSelectStr]) {
+                NSArray *hourArr = [dic objectForKey:@"hourArr"];
+                for (NSDictionary *hourDic in hourArr) {
+                    if ([[hourDic objectForKey:@"hourStr"] isEqualToString:selectSecondStr]) {
+                      thirdArr = [hourDic objectForKey:@"minuteArr"];
+                    }
+                }
+            }
+        }
+        
+        selectThirdStr =  [thirdArr objectAtIndex:0];
+        [selectArr replaceObjectAtIndex:1 withObject:selectSecondStr];
+        [selectArr replaceObjectAtIndex:2 withObject:selectThirdStr];
+        //      刷新PickerView
+        [pickerView reloadComponent:2];
+        [pickerView selectRow:0 inComponent:2 animated:YES];
+    } else if (component == 2) {
+         selectThirdStr = [thirdArr objectAtIndex:row];
+         [selectArr replaceObjectAtIndex:2 withObject:selectThirdStr];
+    }
 }
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
@@ -178,8 +265,9 @@ static NSTimeInterval const animatioinDuration = 0.32;
     }
 }
 
-
+// 设置默认选择行的：SelectRowArr
 - (void)setDefaultSelectRowArr:(NSArray *)array isDynamicChange:(BOOL)isDynamic {
+    //   获取已经选择的内容数组
     NSArray *getSelArr = array;
     if (!isDynamic) {//不允许动态变化数据
         if ([_defaultSelectRowArr count]) {
@@ -187,16 +275,28 @@ static NSTimeInterval const animatioinDuration = 0.32;
         }
         getSelArr = _firstShowArr;
     }
-    //    若已经有旧数据，移除
+    //  若已经有旧数据，移除
     if ([_defaultSelectRowArr count]) {
         [_defaultSelectRowArr removeAllObjects];
     }
     
-    for (NSInteger i = 0; i<dataArray.count; i++) {
-        NSArray *arr = (NSArray *)[dataArray objectAtIndex:i];
-        for (NSInteger j = 0; j<arr.count; j++) {
-            if ([getSelArr objectAtIndex:i] == [arr objectAtIndex:j]) {
-                [_defaultSelectRowArr addObject:[NSNumber numberWithInteger:j]];
+    for (NSInteger i = 0; i< [dataArray count]; i++) {
+        NSDictionary *mdDic = [dataArray objectAtIndex:i];
+        if ([[mdDic objectForKey:@"mdStr"] isEqualToString:[getSelArr objectAtIndex:0]]) {
+            NSArray *hourArr = [mdDic objectForKey:@"hourArr"];
+            for (NSInteger j=0; j<[hourArr count]; j++) {
+                NSDictionary *hourDic = [hourArr objectAtIndex:j];
+                if ([[hourDic objectForKey:@"hourStr"]isEqualToString:[getSelArr objectAtIndex:1]]) {
+                    NSArray *minuteArr = [hourDic objectForKey:@"minuteArr"];
+                    for (NSInteger k = 0; k<[minuteArr count]; k++) {
+                        if ([[minuteArr objectAtIndex:k] isEqualToString:[getSelArr objectAtIndex:2]]) {
+                            [_defaultSelectRowArr addObject:[NSNumber numberWithInteger:i]];//月日的row
+                            [_defaultSelectRowArr addObject:[NSNumber numberWithInteger:j]];//时的row
+                            [_defaultSelectRowArr addObject:[NSNumber numberWithInteger:k]];//分的row
+                            NSLog(@"少：_defaultSelectRowArr:%@",_defaultSelectRowArr);
+                        }
+                    }
+                }
             }
         }
     }
