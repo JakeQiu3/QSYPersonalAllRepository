@@ -37,7 +37,6 @@
     NSDictionary *tempDic = @{@"2016-8-1":@[@[@"10:00:00",@"10:30:00"],@[@"11:00:00",@"11:30:00"],@[@"16:00:00"],@[@"20:00:00",@"20:30:00"]],@"2016-8-2":@[@[@"20:30:00"],@[@"08:30:00"]],@"2016-8-3":@[@[@"6:30:00"],@[@"6:00:00"]]};// 暂时使用假数据字典
     NSMutableArray *dataArr = @[].mutableCopy;// 存放所有数据源的数组
     [tempDic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        NSLog(@"%@======%@",key,obj);
         NSMutableDictionary *mdhDic = @{}.mutableCopy;//存放月日和时数组的字典
         NSArray *dmArr = [key componentsSeparatedByString:@"-"];
         NSInteger dmNum = [dmArr count];

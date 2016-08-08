@@ -310,6 +310,8 @@
 		73D15B331CEF4118008855FB /* tttViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15B311CEF4118008855FB /* tttViewController.m */; };
 		73D3A19B1D45F5860024C5E8 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D3A19A1D45F5860024C5E8 /* UIColor+Ext.m */; };
 		73D9C1411D420E55001C60CE /* 仿微信选择图片Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */; };
+		73DA62081D53782900F61160 /* SinglePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DA62071D53782900F61160 /* SinglePickerView.m */; };
+		73DA620B1D5378F800F61160 /* QSYSinglePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DA620A1D5378F800F61160 /* QSYSinglePickerView.m */; };
 		73DEED901D0662D400FE72DE /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */; };
 		73DEED931D06744900FE72DE /* 5种编程思想比较.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73DEED921D06744900FE72DE /* 5种编程思想比较.xml */; };
 		73DEED961D0674EA00FE72DE /* CacultorFunctionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */; };
@@ -878,6 +880,10 @@
 		73D3A1991D45F5860024C5E8 /* UIColor+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ext.h"; sourceTree = "<group>"; };
 		73D3A19A1D45F5860024C5E8 /* UIColor+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Ext.m"; sourceTree = "<group>"; };
 		73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "仿微信选择图片Demo.zip"; sourceTree = "<group>"; };
+		73DA62061D53782900F61160 /* SinglePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePickerView.h; sourceTree = "<group>"; };
+		73DA62071D53782900F61160 /* SinglePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePickerView.m; sourceTree = "<group>"; };
+		73DA62091D5378F800F61160 /* QSYSinglePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSYSinglePickerView.h; sourceTree = "<group>"; };
+		73DA620A1D5378F800F61160 /* QSYSinglePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSYSinglePickerView.m; sourceTree = "<group>"; };
 		73DEED8E1D0662D400FE72DE /* CaculatorMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculatorMaker.h; sourceTree = "<group>"; };
 		73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculatorMaker.m; sourceTree = "<group>"; };
 		73DEED921D06744900FE72DE /* 5种编程思想比较.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "5种编程思想比较.xml"; sourceTree = "<group>"; };
@@ -1027,6 +1033,7 @@
 				303F38CD1D3B99CB00630F31 /* 左Tab右Tab或Col */,
 				3091A7A21CEE1D00003B97F4 /* 知识点总测试 */,
 				303F38C51D3B327800630F31 /* 自定义含确认button的弹出框 */,
+				73DA62041D53776B00F61160 /* 单功能PickerView */,
 				303F38BA1D3B1B4600630F31 /* 多功能PickerView */,
 				30DC002E1D03BD3F005EAD0C /* AutoLayout xib和storyboard使用 */,
 				7323B4951D2B9D2A00CE6790 /* 广告位轮播 */,
@@ -1159,6 +1166,7 @@
 				73A65D1D1D472F9C00796C5B /* ImgBtn(左文字右图片Btn) */,
 				303F38C91D3B330B00630F31 /* CustumAlertView(自定义各个位置的弹出框) */,
 				303F38BE1D3B1B9B00630F31 /* MultiplePickerView */,
+				73DA62051D53780C00F61160 /* SinglePickerView */,
 				7323B49C1D2BB1C200CE6790 /* KNBannerView（广告工具,封装了网络判断） */,
 				73E5F5951D263F91002E3F25 /* PopGestureViewController(重写pop手势方法) */,
 				7358D9D71D05644400B7484C /* FreezeWindowView（冻结列表工具） */,
@@ -2093,6 +2101,24 @@
 			path = MZTimerLabel;
 			sourceTree = "<group>";
 		};
+		73DA62041D53776B00F61160 /* 单功能PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				73DA62091D5378F800F61160 /* QSYSinglePickerView.h */,
+				73DA620A1D5378F800F61160 /* QSYSinglePickerView.m */,
+			);
+			name = "单功能PickerView";
+			sourceTree = "<group>";
+		};
+		73DA62051D53780C00F61160 /* SinglePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				73DA62061D53782900F61160 /* SinglePickerView.h */,
+				73DA62071D53782900F61160 /* SinglePickerView.m */,
+			);
+			name = SinglePickerView;
+			sourceTree = "<group>";
+		};
 		73DEED911D0663CA00FE72DE /* 链式思想 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2344,6 +2370,7 @@
 				7369594D1D06D9F3005DA410 /* NSFileHandle+RACSupport.m in Sources */,
 				7369597C1D06D9F3005DA410 /* RACScopedDisposable.m in Sources */,
 				736959771D06D9F3005DA410 /* RACPassthroughSubscriber.m in Sources */,
+				73DA62081D53782900F61160 /* SinglePickerView.m in Sources */,
 				3091A77C1CEE1A64003B97F4 /* MASConstraintMaker.m in Sources */,
 				7369599C1D06D9F3005DA410 /* UISlider+RACSignalSupport.m in Sources */,
 				736959571D06D9F3005DA410 /* NSOrderedSet+RACSequenceAdditions.m in Sources */,
@@ -2380,6 +2407,7 @@
 				7336BDEE1D0EB04100F32485 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				3091A7911CEE1A64003B97F4 /* PullDownMenuViewController.m in Sources */,
 				308B97821CCA899400BDA0FA /* main.m in Sources */,
+				73DA620B1D5378F800F61160 /* QSYSinglePickerView.m in Sources */,
 				73D15B011CEEBC54008855FB /* UIImage+FixOrientation.m in Sources */,
 				73037E861D2A720E0017D024 /* Sb1ViewController.m in Sources */,
 				730C49091D23B3E400707722 /* WKWebViewJavascriptBridge.m in Sources */,
