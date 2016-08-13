@@ -317,6 +317,7 @@
 		73DEED961D0674EA00FE72DE /* CacultorFunctionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */; };
 		73DEF33D1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73DEF33C1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */; };
 		73E5F5941D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */; };
+		73ED277A1D5DF4AA00D42515 /* Mine.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73ED27791D5DF4AA00D42515 /* Mine.zip */; };
 		73FCE1CB1D1D1C190000BF20 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */; };
 /* End PBXBuildFile section */
 
@@ -891,6 +892,7 @@
 		73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacultorFunctionProgram.m; sourceTree = "<group>"; };
 		73DEF33C1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ReactiveCocoa Demo 注册搜索嵌套信号.zip"; sourceTree = "<group>"; };
 		73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf"; sourceTree = "<group>"; };
+		73ED27791D5DF4AA00D42515 /* Mine.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Mine.zip; sourceTree = "<group>"; };
 		73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1028,6 +1030,7 @@
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				731BBF141D24B6CB00B14CF2 /* Common.h */,
 				7323B4AF1D2BBD2D00CE6790 /* 封装的思路.jpg */,
+				73ED27791D5DF4AA00D42515 /* Mine.zip */,
 				73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */,
 				308DA7F91D3E77D000A97FA9 /* 双tab混合单tab的下拉菜单 */,
 				303F38CD1D3B99CB00630F31 /* 左Tab右Tab或Col */,
@@ -2291,6 +2294,7 @@
 				3091A79A1CEE1A64003B97F4 /* Teacher.xml in Resources */,
 				308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */,
 				73D15B2F1CEF3DD1008855FB /* Uuu.xib in Resources */,
+				73ED277A1D5DF4AA00D42515 /* Mine.zip in Resources */,
 				3095902E1CF4B67200176AAC /* 面试题总结.xml in Resources */,
 				73FCE1CB1D1D1C190000BF20 /* ExampleApp.html in Resources */,
 			);
