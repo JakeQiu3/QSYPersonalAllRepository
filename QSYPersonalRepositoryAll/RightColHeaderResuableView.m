@@ -11,8 +11,7 @@
 static CGFloat const leftMargin = 10.0f;
 
 @implementation RightColHeaderResuableView
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
@@ -29,8 +28,7 @@ static CGFloat const leftMargin = 10.0f;
 }
 
 // 重用时，把盘子清空
-- (void)prepareForReuse
-{
+- (void)prepareForReuse {
     [super prepareForReuse];
     self.label.text = nil;
 }

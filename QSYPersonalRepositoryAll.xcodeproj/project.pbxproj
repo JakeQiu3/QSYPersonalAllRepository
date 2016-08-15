@@ -23,7 +23,6 @@
 		308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B978C1CCA899400BDA0FA /* Assets.xcassets */; };
 		308B97901CCA899400BDA0FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B978E1CCA899400BDA0FA /* LaunchScreen.storyboard */; };
 		308DA7FD1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DA7FC1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m */; };
-		308DA8001D3E78C700A97FA9 /* QSMultiplePullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DA7FF1D3E78C700A97FA9 /* QSMultiplePullDownMenu.m */; };
 		3091A7191CEE1A32003B97F4 /* hhh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3091A7171CEE1A32003B97F4 /* hhh.png */; };
 		3091A71A1CEE1A32003B97F4 /* 知不足.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3091A7181CEE1A32003B97F4 /* 知不足.rtf */; };
 		3091A7731CEE1A64003B97F4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A71D1CEE1A64003B97F4 /* FMDatabase.m */; };
@@ -81,8 +80,6 @@
 		30B286621D0998E300085313 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B286611D0998E300085313 /* SecondViewController.m */; };
 		30B286661D0A825300085313 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B286651D0A825300085313 /* TestView.m */; };
 		30C976A71D3BB1C500614EBC /* PostMallCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */; };
-		30C976A91D3BB76600614EBC /* 商品分类假数据.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30C976A81D3BB76600614EBC /* 商品分类假数据.plist */; };
-		30C976AC1D3BDCF100614EBC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976AB1D3BDCF100614EBC /* DetailViewController.m */; };
 		30CB778A1D3001CB00C3DDEC /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30CB77891D3001CB00C3DDEC /* AutoLayoutViewController.xib */; };
 		30DC00491D03CB2D005EAD0C /* MVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC00481D03CB2D005EAD0C /* MVVMViewController.m */; };
 		30DC004E1D03D200005EAD0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC004B1D03D200005EAD0C /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -295,6 +292,9 @@
 		73982A991D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 73982A981D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m */; };
 		739C46AE1D3CB0E10023C0D7 /* MultiplePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739C46AD1D3CB0E10023C0D7 /* MultiplePickerView.m */; };
 		73A65D201D472FAD00796C5B /* ImageBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A65D1F1D472FAD00796C5B /* ImageBtn.m */; };
+		73B04E201D61977E00171F0C /* QSMultiplePullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B04E1F1D61977E00171F0C /* QSMultiplePullDownMenu.m */; };
+		73B04E221D6199D500171F0C /* departmentCitysServices.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73B04E211D6199D500171F0C /* departmentCitysServices.plist */; };
+		73B04E251D61CAF700171F0C /* 商品分类数据.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73B04E241D61CAF700171F0C /* 商品分类数据.plist */; };
 		73BCADB31D0ECA40004FF832 /* RequestDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BCADB21D0ECA40004FF832 /* RequestDetailViewController.m */; };
 		73D15AFC1CEEB3E4008855FB /* CaptureDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15AFB1CEEB3E4008855FB /* CaptureDeviceViewController.m */; };
 		73D15AFE1CEEB46D008855FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D15AFD1CEEB46D008855FB /* AVFoundation.framework */; };
@@ -308,7 +308,6 @@
 		73D15B1B1CEEE07B008855FB /* DemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D15B1A1CEEE07B008855FB /* DemoView.xib */; };
 		73D15B2F1CEF3DD1008855FB /* Uuu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D15B2E1CEF3DD1008855FB /* Uuu.xib */; };
 		73D15B331CEF4118008855FB /* tttViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15B311CEF4118008855FB /* tttViewController.m */; };
-		73D3A19B1D45F5860024C5E8 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D3A19A1D45F5860024C5E8 /* UIColor+Ext.m */; };
 		73D9C1411D420E55001C60CE /* 仿微信选择图片Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */; };
 		73DA62081D53782900F61160 /* SinglePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DA62071D53782900F61160 /* SinglePickerView.m */; };
 		73DA620B1D5378F800F61160 /* QSYSinglePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DA620A1D5378F800F61160 /* QSYSinglePickerView.m */; };
@@ -317,7 +316,6 @@
 		73DEED961D0674EA00FE72DE /* CacultorFunctionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */; };
 		73DEF33D1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73DEF33C1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */; };
 		73E5F5941D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */; };
-		73ED277A1D5DF4AA00D42515 /* Mine.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73ED27791D5DF4AA00D42515 /* Mine.zip */; };
 		73FCE1CB1D1D1C190000BF20 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */; };
 /* End PBXBuildFile section */
 
@@ -350,8 +348,6 @@
 		308B97911CCA899400BDA0FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308DA7FB1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutlipleTwoTabAndOneTabViewController.h; sourceTree = "<group>"; };
 		308DA7FC1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutlipleTwoTabAndOneTabViewController.m; sourceTree = "<group>"; };
-		308DA7FE1D3E78C700A97FA9 /* QSMultiplePullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMultiplePullDownMenu.h; sourceTree = "<group>"; };
-		308DA7FF1D3E78C700A97FA9 /* QSMultiplePullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSMultiplePullDownMenu.m; sourceTree = "<group>"; };
 		3091A7171CEE1A32003B97F4 /* hhh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hhh.png; sourceTree = "<group>"; };
 		3091A7181CEE1A32003B97F4 /* 知不足.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "知不足.rtf"; sourceTree = "<group>"; };
 		3091A71C1CEE1A64003B97F4 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -458,9 +454,6 @@
 		30B286651D0A825300085313 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		30C976A51D3BB1C500614EBC /* PostMallCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMallCategoryModel.h; sourceTree = "<group>"; };
 		30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMallCategoryModel.m; sourceTree = "<group>"; };
-		30C976A81D3BB76600614EBC /* 商品分类假数据.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "商品分类假数据.plist"; sourceTree = "<group>"; };
-		30C976AA1D3BDCF100614EBC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		30C976AB1D3BDCF100614EBC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		30CB77891D3001CB00C3DDEC /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
 		30DC00471D03CB2D005EAD0C /* MVVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVVMViewController.h; sourceTree = "<group>"; };
 		30DC00481D03CB2D005EAD0C /* MVVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVMViewController.m; sourceTree = "<group>"; };
@@ -856,6 +849,11 @@
 		739C46AD1D3CB0E10023C0D7 /* MultiplePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplePickerView.m; sourceTree = "<group>"; };
 		73A65D1E1D472FAD00796C5B /* ImageBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBtn.h; sourceTree = "<group>"; };
 		73A65D1F1D472FAD00796C5B /* ImageBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBtn.m; sourceTree = "<group>"; };
+		73B04E1E1D61977E00171F0C /* QSMultiplePullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMultiplePullDownMenu.h; sourceTree = "<group>"; };
+		73B04E1F1D61977E00171F0C /* QSMultiplePullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSMultiplePullDownMenu.m; sourceTree = "<group>"; };
+		73B04E211D6199D500171F0C /* departmentCitysServices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = departmentCitysServices.plist; sourceTree = "<group>"; };
+		73B04E241D61CAF700171F0C /* 商品分类数据.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "商品分类数据.plist"; sourceTree = "<group>"; };
+		73B04E271D61ECCA00171F0C /* TabOrColDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabOrColDelegate.h; sourceTree = "<group>"; };
 		73BCADB11D0ECA40004FF832 /* RequestDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDetailViewController.h; sourceTree = "<group>"; };
 		73BCADB21D0ECA40004FF832 /* RequestDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestDetailViewController.m; sourceTree = "<group>"; };
 		73D15AFA1CEEB3E4008855FB /* CaptureDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureDeviceViewController.h; sourceTree = "<group>"; };
@@ -878,8 +876,6 @@
 		73D15B2E1CEF3DD1008855FB /* Uuu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Uuu.xib; sourceTree = "<group>"; };
 		73D15B301CEF4118008855FB /* tttViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tttViewController.h; sourceTree = "<group>"; };
 		73D15B311CEF4118008855FB /* tttViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tttViewController.m; sourceTree = "<group>"; };
-		73D3A1991D45F5860024C5E8 /* UIColor+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ext.h"; sourceTree = "<group>"; };
-		73D3A19A1D45F5860024C5E8 /* UIColor+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Ext.m"; sourceTree = "<group>"; };
 		73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "仿微信选择图片Demo.zip"; sourceTree = "<group>"; };
 		73DA62061D53782900F61160 /* SinglePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePickerView.h; sourceTree = "<group>"; };
 		73DA62071D53782900F61160 /* SinglePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePickerView.m; sourceTree = "<group>"; };
@@ -892,7 +888,6 @@
 		73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacultorFunctionProgram.m; sourceTree = "<group>"; };
 		73DEF33C1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ReactiveCocoa Demo 注册搜索嵌套信号.zip"; sourceTree = "<group>"; };
 		73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf"; sourceTree = "<group>"; };
-		73ED27791D5DF4AA00D42515 /* Mine.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Mine.zip; sourceTree = "<group>"; };
 		73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -976,16 +971,17 @@
 			name = "CustumAlertView(自定义各个位置的弹出框)";
 			sourceTree = "<group>";
 		};
-		303F38CD1D3B99CB00630F31 /* 左Tab右Tab或Col */ = {
+		303F38CD1D3B99CB00630F31 /* 左Tab右CollectionView选择器 */ = {
 			isa = PBXGroup;
 			children = (
 				303F38CE1D3B9A0900630F31 /* TabActionColViewController.h */,
 				303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */,
-				30C976AA1D3BDCF100614EBC /* DetailViewController.h */,
-				30C976AB1D3BDCF100614EBC /* DetailViewController.m */,
-				731FFF091D3C6C4000F65E0F /* 左Tab右TabOrCol */,
+				303F38D11D3B9A5700630F31 /* TabActionColView.h */,
+				303F38D21D3B9A5700630F31 /* TabActionColView.m */,
+				73B04E261D61E53000171F0C /* Col */,
+				30C976A11D3BAD1500614EBC /* Lib */,
 			);
-			name = "左Tab右Tab或Col";
+			name = "左Tab右CollectionView选择器";
 			sourceTree = "<group>";
 		};
 		305458541D0EFFE8002B039E /* Libs */ = {
@@ -1030,15 +1026,13 @@
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				731BBF141D24B6CB00B14CF2 /* Common.h */,
 				7323B4AF1D2BBD2D00CE6790 /* 封装的思路.jpg */,
-				73ED27791D5DF4AA00D42515 /* Mine.zip */,
 				73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */,
-				308DA7F91D3E77D000A97FA9 /* 双tab混合单tab的下拉菜单 */,
-				303F38CD1D3B99CB00630F31 /* 左Tab右Tab或Col */,
-				3091A7A21CEE1D00003B97F4 /* 知识点总测试 */,
+				73B04E231D61C3A700171F0C /* 自定义菊花转起来 */,
+				308DA7F91D3E77D000A97FA9 /* 混合(<=2)Tab 的下拉菜单 */,
+				303F38CD1D3B99CB00630F31 /* 左Tab右CollectionView选择器 */,
 				303F38C51D3B327800630F31 /* 自定义含确认button的弹出框 */,
 				73DA62041D53776B00F61160 /* 单功能PickerView */,
 				303F38BA1D3B1B4600630F31 /* 多功能PickerView */,
-				30DC002E1D03BD3F005EAD0C /* AutoLayout xib和storyboard使用 */,
 				7323B4951D2B9D2A00CE6790 /* 广告位轮播 */,
 				7323B48C1D2B8B0600CE6790 /* TouchID使用 */,
 				736584B11D2256FC0088CDAB /* Git使用的逻辑指南 */,
@@ -1052,9 +1046,11 @@
 				73D15AF41CEEAC97008855FB /* Json和XML解析 */,
 				73D15AF21CEEAC27008855FB /* 数据库工具之FMDB */,
 				73D15AF01CEEAB70008855FB /* 数据库工具之sqlite3.0 */,
-				73D15AEE1CEEAAD6008855FB /* 下拉菜单 */,
+				73D15AEE1CEEAAD6008855FB /* 单tab的下拉菜单 */,
 				73D15AED1CEEAAB0008855FB /* TabBar封装 */,
 				73D15AEC1CEEAA85008855FB /* 坐标系转换 */,
+				3091A7A21CEE1D00003B97F4 /* 知识点总测试 */,
+				30DC002E1D03BD3F005EAD0C /* AutoLayout xib和storyboard使用 */,
 				3091A7A01CEE1C20003B97F4 /* 工具箱 */,
 				308B97801CCA899400BDA0FA /* Supporting Files */,
 			);
@@ -1073,25 +1069,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		308DA7F91D3E77D000A97FA9 /* 双tab混合单tab的下拉菜单 */ = {
+		308DA7F91D3E77D000A97FA9 /* 混合(<=2)Tab 的下拉菜单 */ = {
 			isa = PBXGroup;
 			children = (
 				308DA7FB1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.h */,
 				308DA7FC1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m */,
-				308DA8011D3E78CB00A97FA9 /* 混合Tab下拉菜单 工具 */,
 			);
-			name = "双tab混合单tab的下拉菜单";
+			name = "混合(<=2)Tab 的下拉菜单";
 			sourceTree = "<group>";
 		};
-		308DA8011D3E78CB00A97FA9 /* 混合Tab下拉菜单 工具 */ = {
+		308DA8011D3E78CB00A97FA9 /* 混合(<=2)Tab 的下拉菜单 */ = {
 			isa = PBXGroup;
 			children = (
-				308DA7FE1D3E78C700A97FA9 /* QSMultiplePullDownMenu.h */,
-				308DA7FF1D3E78C700A97FA9 /* QSMultiplePullDownMenu.m */,
-				73D3A1991D45F5860024C5E8 /* UIColor+Ext.h */,
-				73D3A19A1D45F5860024C5E8 /* UIColor+Ext.m */,
+				73B04E211D6199D500171F0C /* departmentCitysServices.plist */,
+				73B04E1E1D61977E00171F0C /* QSMultiplePullDownMenu.h */,
+				73B04E1F1D61977E00171F0C /* QSMultiplePullDownMenu.m */,
 			);
-			name = "混合Tab下拉菜单 工具";
+			name = "混合(<=2)Tab 的下拉菜单";
 			sourceTree = "<group>";
 		};
 		3091A71B1CEE1A64003B97F4 /* fmdb */ = {
@@ -1166,6 +1160,7 @@
 		3091A7A01CEE1C20003B97F4 /* 工具箱 */ = {
 			isa = PBXGroup;
 			children = (
+				308DA8011D3E78CB00A97FA9 /* 混合(<=2)Tab 的下拉菜单 */,
 				73A65D1D1D472F9C00796C5B /* ImgBtn(左文字右图片Btn) */,
 				303F38C91D3B330B00630F31 /* CustumAlertView(自定义各个位置的弹出框) */,
 				303F38BE1D3B1B9B00630F31 /* MultiplePickerView */,
@@ -1273,7 +1268,8 @@
 		30C976A11D3BAD1500614EBC /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				30C976A81D3BB76600614EBC /* 商品分类假数据.plist */,
+				73B04E241D61CAF700171F0C /* 商品分类数据.plist */,
+				73B04E271D61ECCA00171F0C /* TabOrColDelegate.h */,
 				30C976A51D3BB1C500614EBC /* PostMallCategoryModel.h */,
 				30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */,
 				731FFF0C1D3C705500F65E0F /* BaseModel.h */,
@@ -1430,22 +1426,6 @@
 				730CFB4A1D1A966D00B62765 /* IMY_NJKWebViewProgress.m */,
 			);
 			path = UIWebViewProgress;
-			sourceTree = "<group>";
-		};
-		731FFF091D3C6C4000F65E0F /* 左Tab右TabOrCol */ = {
-			isa = PBXGroup;
-			children = (
-				303F38D11D3B9A5700630F31 /* TabActionColView.h */,
-				303F38D21D3B9A5700630F31 /* TabActionColView.m */,
-				303F38D41D3B9E6600630F31 /* RightCollectionView.h */,
-				303F38D51D3B9E6600630F31 /* RightCollectionView.m */,
-				303F38D81D3BA34900630F31 /* RightColHeaderResuableView.h */,
-				303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */,
-				303F38DB1D3BA41000630F31 /* RightCollectionViewCell.h */,
-				303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */,
-				30C976A11D3BAD1500614EBC /* Lib */,
-			);
-			name = "左Tab右TabOrCol";
 			sourceTree = "<group>";
 		};
 		7323B4731D2B50F700CE6790 /* init代码和xib 的自定义某控件的方法 */ = {
@@ -1895,6 +1875,26 @@
 			name = "ImgBtn(左文字右图片Btn)";
 			sourceTree = "<group>";
 		};
+		73B04E231D61C3A700171F0C /* 自定义菊花转起来 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "自定义菊花转起来";
+			sourceTree = "<group>";
+		};
+		73B04E261D61E53000171F0C /* Col */ = {
+			isa = PBXGroup;
+			children = (
+				303F38D41D3B9E6600630F31 /* RightCollectionView.h */,
+				303F38D51D3B9E6600630F31 /* RightCollectionView.m */,
+				303F38D81D3BA34900630F31 /* RightColHeaderResuableView.h */,
+				303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */,
+				303F38DB1D3BA41000630F31 /* RightCollectionViewCell.h */,
+				303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */,
+			);
+			name = Col;
+			sourceTree = "<group>";
+		};
 		73BCADB41D0ECC48004FF832 /* 学习MVVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -1958,13 +1958,13 @@
 			name = "TabBar封装";
 			sourceTree = "<group>";
 		};
-		73D15AEE1CEEAAD6008855FB /* 下拉菜单 */ = {
+		73D15AEE1CEEAAD6008855FB /* 单tab的下拉菜单 */ = {
 			isa = PBXGroup;
 			children = (
 				3091A7531CEE1A64003B97F4 /* PullDownMenuViewController.h */,
 				3091A7681CEE1A64003B97F4 /* PullDownMenuViewController.m */,
 			);
-			name = "下拉菜单";
+			name = "单tab的下拉菜单";
 			sourceTree = "<group>";
 		};
 		73D15AEF1CEEAB2F008855FB /* 计算文件和文件夹内存大小或移除 */ = {
@@ -2240,6 +2240,7 @@
 				30CB778A1D3001CB00C3DDEC /* AutoLayoutViewController.xib in Resources */,
 				30DC00871D0484C3005EAD0C /* 12.jpg in Resources */,
 				7323B4B01D2BBD2D00CE6790 /* 封装的思路.jpg in Resources */,
+				73B04E251D61CAF700171F0C /* 商品分类数据.plist in Resources */,
 				309590401CFF228100176AAC /* MVC的控制器瘦身.png in Resources */,
 				736584B81D22652C0088CDAB /* test.js in Resources */,
 				73214C1E1D1B7CFA00A766D2 /* IMYWebView-iOS通用demo.zip in Resources */,
@@ -2250,7 +2251,6 @@
 				736584BA1D2266620088CDAB /* test.html in Resources */,
 				736584BC1D22676D0088CDAB /* test.png in Resources */,
 				73D15B1B1CEEE07B008855FB /* DemoView.xib in Resources */,
-				30C976A91D3BB76600614EBC /* 商品分类假数据.plist in Resources */,
 				30DC00801D0484C3005EAD0C /* 5.jpg in Resources */,
 				3091A71A1CEE1A32003B97F4 /* 知不足.rtf in Resources */,
 				309590421CFF228100176AAC /* VM和V通过ReactiveCocoa实现绑定.png in Resources */,
@@ -2294,9 +2294,9 @@
 				3091A79A1CEE1A64003B97F4 /* Teacher.xml in Resources */,
 				308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */,
 				73D15B2F1CEF3DD1008855FB /* Uuu.xib in Resources */,
-				73ED277A1D5DF4AA00D42515 /* Mine.zip in Resources */,
 				3095902E1CF4B67200176AAC /* 面试题总结.xml in Resources */,
 				73FCE1CB1D1D1C190000BF20 /* ExampleApp.html in Resources */,
+				73B04E221D6199D500171F0C /* departmentCitysServices.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2362,7 +2362,6 @@
 				736959991D06D9F3005DA410 /* UIImagePickerController+RACSignalSupport.m in Sources */,
 				3091A7771CEE1A64003B97F4 /* FMResultSet.m in Sources */,
 				303F38C81D3B32C800630F31 /* CustomAlertViewController.m in Sources */,
-				73D3A19B1D45F5860024C5E8 /* UIColor+Ext.m in Sources */,
 				7369596B1D06D9F3005DA410 /* RACEmptySequence.m in Sources */,
 				736959671D06D9F3005DA410 /* RACDisposable.m in Sources */,
 				736959921D06D9F3005DA410 /* UIBarButtonItem+RACCommandSupport.m in Sources */,
@@ -2448,6 +2447,7 @@
 				730CFB4E1D1A966D00B62765 /* IMY_NJKWebViewProgress.m in Sources */,
 				7336BD7F1D0EA9D700F32485 /* SVIndefiniteAnimatedView.m in Sources */,
 				3091A78D1CEE1A64003B97F4 /* MasonryContraintViewController.m in Sources */,
+				73B04E201D61977E00171F0C /* QSMultiplePullDownMenu.m in Sources */,
 				30DC006A1D04845F005EAD0C /* StatusTableViewCell.m in Sources */,
 				73D15B331CEF4118008855FB /* tttViewController.m in Sources */,
 				30DC00691D04845F005EAD0C /* WeiboStatus.m in Sources */,
@@ -2492,7 +2492,6 @@
 				7369598D1D06D9F3005DA410 /* RACUnarySequence.m in Sources */,
 				3091A7781CEE1A64003B97F4 /* JSONKit.m in Sources */,
 				73D15B081CEEBF7A008855FB /* FrostedView.m in Sources */,
-				308DA8001D3E78C700A97FA9 /* QSMultiplePullDownMenu.m in Sources */,
 				736959741D06D9F3005DA410 /* RACKVOTrampoline.m in Sources */,
 				3091A7831CEE1A64003B97F4 /* ViewController+MASAdditions.m in Sources */,
 				73D15B141CEED943008855FB /* MZTimerLabel.m in Sources */,
@@ -2504,7 +2503,6 @@
 				730CFB4F1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m in Sources */,
 				736959881D06D9F3005DA410 /* RACSubscriptionScheduler.m in Sources */,
 				7323B4AA1D2BB1C200CE6790 /* KNCollectionViewCell.m in Sources */,
-				30C976AC1D3BDCF100614EBC /* DetailViewController.m in Sources */,
 				303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */,
 				7369599F1D06D9F3005DA410 /* UITableViewCell+RACSignalSupport.m in Sources */,
 				736959511D06D9F3005DA410 /* NSObject+RACDeallocating.m in Sources */,

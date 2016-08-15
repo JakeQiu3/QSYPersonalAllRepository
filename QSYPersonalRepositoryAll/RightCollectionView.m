@@ -19,15 +19,17 @@ static CGFloat const margin = 0;
 static CGFloat const lineCount = 3;
 
 @interface RightCollectionView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
-
+{
+    NSString *selectRightStr;
+    NSString *selectRightId;
+}
 @end
 @implementation RightCollectionView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.headerReferenceSize = CGSizeMake(SCREENWIDTH,44);
-    flowLayout.minimumInteritemSpacing = margin; //item左右最小间隔
+    flowLayout.minimumInteritemSpacing = margin;
     flowLayout.minimumLineSpacing = margin;
     self = [super initWithFrame:frame collectionViewLayout:flowLayout];
     if (self) {
@@ -42,6 +44,8 @@ static CGFloat const lineCount = 3;
     self.delegate = self;
     self.dataSource = self;
     self.backgroundColor = [UIColor whiteColor];
+    selectRightStr = @"";
+    selectRightId = @"";
 }
 
 - (void)addIdenfier {
@@ -49,21 +53,10 @@ static CGFloat const lineCount = 3;
     [self registerClass:[RightColHeaderResuableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:categoryHeaderIdentifier];
 }
 
-#pragma mark -- setter
-- (void)setDataArray:(NSArray *)dataArray
-{
-    if (_dataArray != dataArray) {
-        _dataArray = dataArray;
-    }
-    [self reloadData];
-}
-
-//设置头部视图
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         RightColHeaderResuableView * view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:categoryHeaderIdentifier forIndexPath:indexPath];
-//  设置头部视图的数据
         PostMallCategoryModel *model = [_dataArray objectAtIndex:indexPath.section];
         view.label.text = model.categoryName;
         return view;
@@ -73,18 +66,17 @@ static CGFloat const lineCount = 3;
 
 #pragma mark - collection数据源代理
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return  _dataArray.count;
+    return  [_dataArray count];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     PostMallCategoryModel *sectionModel = [_dataArray objectAtIndex:section];
-    return sectionModel.children.count;
+    return [sectionModel.children count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     RightCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:categoryCell forIndexPath:indexPath];
-//    设置cell数据
     PostMallCategoryModel *sectionModel = [_dataArray objectAtIndex:indexPath.section];
     PostMallCategoryModel *itemModel = [sectionModel.children objectAtIndex:indexPath.item];
     cell.seaSaleCategoryModel = itemModel;
@@ -109,24 +101,24 @@ static CGFloat const lineCount = 3;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-    RightCollectionViewCell *cell = (RightCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     
+    RightCollectionViewCell *cell = (RightCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     [cell.nameLabel setBackgroundColor:[UIColor whiteColor]];
 }
 
 #pragma mark cell的点击方法
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    //    获取对应的点击模型
-    PostMallCategoryModel *sectionModel = [self.dataArray objectAtIndex:indexPath.section];
-    PostMallCategoryModel *itemModel = [sectionModel.children objectAtIndex:indexPath.item];
     
-    if ([itemModel.categoryName length] == 0) {
+    PostMallCategoryModel *sectionModel = [_dataArray objectAtIndex:indexPath.section];
+    PostMallCategoryModel *itemModel = [sectionModel.children objectAtIndex:indexPath.item];
+    if ([itemModel.categoryName length] == 0 ||[itemModel.categoryId length] == 0) {
         return;
     }
-    if (_selectDelegate && [_selectDelegate respondsToSelector:@selector(selectedCategoryName:categoryValue:)]) {
-        [_selectDelegate selectedCategoryName:itemModel.categoryId categoryValue:itemModel.categoryName];
+    selectRightStr = itemModel.categoryName;
+    selectRightId = itemModel.categoryId;
+    if (self.selectDelegate && [self.selectDelegate respondsToSelector:@selector(selectedCategoryName:categoryId:objectValue:objectId:)]) {
+        [self.selectDelegate selectedCategoryName:self.selectLeftStr categoryId:self.selectLeftId objectValue:selectRightStr objectId:selectRightId];
     }
 }
 

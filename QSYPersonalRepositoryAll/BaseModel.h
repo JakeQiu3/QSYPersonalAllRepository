@@ -2,8 +2,8 @@
 //  BaseModel.h
 //  PManager
 //
-//  Created by 张浩 on 14-6-20.
-//  Copyright (c) 2014年 Huoli. All rights reserved.
+//  Created by qsy on 14-6-20.
+//  Copyright (c) 2014年 qsy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

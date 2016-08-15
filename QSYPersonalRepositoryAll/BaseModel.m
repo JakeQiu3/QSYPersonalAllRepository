@@ -1,9 +1,9 @@
 //
-//  QuanzhiBaseModel.m
-//  Quanzhi
+//  BaseModel.m
+//  PManager
 //
-//  Created by 张浩 on 13-12-11.
-//  Copyright (c) 2013年 张浩. All rights reserved.
+//  Created by qsy on 13-12-11.
+//  Copyright (c) 2013年 qsy. All rights reserved.
 //
 
 #import "BaseModel.h"
@@ -54,10 +54,8 @@
             NSObject *valueObj = nil;
             [invocation invoke];
             [invocation getReturnValue:&valueObj];
-            //            ITTDINFO(@"attributeName %@ value %@", attributeName, valueObj);
             if (valueObj) {
                 [attrsDesc appendFormat:@" [%@=%@] ",attributeName, valueObj];
-                //[valueObj release];
             }else {
                 [attrsDesc appendFormat:@" [%@=nil] ",attributeName];
             }

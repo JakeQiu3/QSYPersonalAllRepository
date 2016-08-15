@@ -5,7 +5,6 @@
 //  Copyright © 2016年 QSY. All rights reserved.
 
 #import "QSMultiplePullDownMenu.h"
-#import "UIColor+Ext.h"
 #define SCREENW [UIScreen mainScreen].bounds.size.width
 #define SCREENH [UIScreen mainScreen].bounds.size.height
 #define bgViewOrTabsY (self.frame.origin.y + self.frame.size.height)
@@ -13,10 +12,9 @@ static const CGFloat pullDownMenuHeight = 45;
 @interface QSMultiplePullDownMenu ()
 {
     
-    NSArray *dataArray;// 总的数据源
+    NSArray *dataArray; // 总的数据源
     NSMutableArray *currentTitlesArr;// 当前展示在menu中的titleStr数组
     NSMutableArray *currentTextLayerArr; //当前展示在menu中的layerText的数组
-    
     NSMutableArray *indicatorsPic; // 当前展示在menu中的layerIndicator图标的数组
     
     // 左侧和右侧的tab 以及对应的数组
@@ -39,7 +37,7 @@ static const CGFloat pullDownMenuHeight = 45;
     NSInteger _currentSelectedMenuIndex;
     // 是否只有单个Tab
     BOOL isSingleTab;
-    BOOL switchLeftTabCell;// 点击 添加切换左侧cell的标示
+    BOOL switchLeftTabCell;// 选择左侧leftTab的cell的标示
     UITapGestureRecognizer *backGroundGesture;// backGroundGesture的手势
     
     UITableViewCell *selectedLeftCell;//选择的左侧Tab的Cell
@@ -48,7 +46,9 @@ static const CGFloat pullDownMenuHeight = 45;
     //  选择的最终的左右2个数据或1个数据
     NSString *selectFirstTitle;
     NSString *selectSecondTitle;
-    
+    //    选择数据的id
+    NSString *selectFirstId;
+    NSString *selectThirdId;
 }
 
 // 2个tab时，点击左侧tab某row：得到右侧tab的arr
@@ -57,45 +57,28 @@ static const CGFloat pullDownMenuHeight = 45;
 /**
  * 记录tab的row
  */
-@property (nonatomic, assign) NSInteger selectLeftRow;//记录选择的左侧的Row
-@property (nonatomic, assign) NSInteger selectRightRow;//记录选择的右侧Tab的Row
+@property (nonatomic, assign) NSInteger selectLeftRow;//  记录选择的左侧的Row
+@property (nonatomic, assign) NSInteger selectRightRow;// 记录选择的右侧Tab的Row
 
 @end
 
 @implementation QSMultiplePullDownMenu
-
-#warning 少 待修改的区域： 遍历总的数据源dataArr:获取哪个是单个tab的menu，并将该数组的index保存在 confirmCreatSingleTabArr。
+#warning 少 获取哪个tab是singleTab
 - (void)confirmCreatSingleTabNum {
-    NSMutableArray *tempArr = @[].mutableCopy;
-    for (NSInteger i = 0; i<[dataArray count]; i++) {
-        NSArray *itemArr = [dataArray objectAtIndex:i];
-        for (NSDictionary *dic in itemArr) {
-            NSArray *citysArr = [dic objectForKey:@"citys"];
-            if (![citysArr count]) {//获取到城市的数组count
-                [tempArr addObject:[NSNumber numberWithInteger:i]];
-            }
-        }
-    }
-    // 数组去重后添加
-    for (NSNumber *num in tempArr) {
-        if (![confirmCreatSingleTabArr containsObject:num]) {
-            [confirmCreatSingleTabArr addObject:num];
-        }
-    }
+    [confirmCreatSingleTabArr addObject:[NSNumber numberWithInteger:2]];
 }
 
-#warning 少 待修改的区域： nums的====左侧的Tab的数组的大数组====
+#warning 少 左侧的Tab的数组的大数组:必须含有name字段。
 - (void)getLeftLabData {
     for (NSInteger i = 0; i<[dataArray count]; i++) {
         NSArray *itemArr = [dataArray objectAtIndex:i];
         NSMutableArray *tempArray = @[].mutableCopy;
         for (NSDictionary *dic in itemArr) {
-            NSString *title = [dic objectForKey:@"provinceName"];
+            NSString *title = [dic objectForKey:@"name"];
             [tempArray addObject:title];
         }
         [leftArr addObject:tempArray];
     }
-    NSLog(@"左侧的3组数组的total数组: %@",leftArr);
 }
 
 - (QSMultiplePullDownMenu *)initWithArray:(NSArray *)array selectedColor:(UIColor *)selectedColor constantTitlesArr:(NSArray *)titlesArr {
@@ -104,11 +87,11 @@ static const CGFloat pullDownMenuHeight = 45;
         
         self.frame = CGRectMake(0, 0, SCREENW, pullDownMenuHeight);
         self.backgroundColor = [UIColor whiteColor];
-        //       设置非选中文字和图标的颜色
-        menuColor = [UIColor colorWithHexString:@"#333333"];
+        //   设置非选中文字和图标的颜色
+        menuColor = [UIColor blackColor];
         selectMenuColor = selectedColor;
         //   左侧设置默认可视化的tableView高度
-        _tableVHeightNumMax = 6;
+        _tableVHeightNumMax = 0;
         dataArray = array;
         leftArr = @[].mutableCopy;
         self.rightArr = @[].mutableCopy;
@@ -117,25 +100,19 @@ static const CGFloat pullDownMenuHeight = 45;
         
         selectFirstTitle = @"";
         selectSecondTitle = @"";
+        selectFirstId = @"";
+        _selectSecondId = @"";
+        selectThirdId = @"";
+        
         //  menu中显示items
         numsOfMenu = dataArray.count;
         [self confirmCreatSingleTabNum];
         // 获得menu的左侧tab的total数组
         [self getLeftLabData];
-        
-#warning 少 待修改的区域： menu中显示的title的字符串数组
-        if ([titlesArr count]) {// menu显示的title数组不为空，是固定不变的
-            currentTitlesArr = titlesArr.mutableCopy;
-        } else {// 为空数组: 取每个数组中第0个数据
-            currentTitlesArr = [[NSMutableArray alloc] initWithCapacity:numsOfMenu];
-            for (NSInteger i = 0; i<[dataArray count]; i++) {
-                NSDictionary *dic = dataArray[i][0];
-                [currentTitlesArr addObject:[dic objectForKey:@"provinceName"]];
-            }
-        }
-        
+#warning 少 首次默认进入menu后显示的title的字符串数组
+        currentTitlesArr = titlesArr.mutableCopy;
         indicatorsPic = [[NSMutableArray alloc] initWithCapacity:numsOfMenu];
-        //  绘制menu上的 文字，图标，分割线
+        // 绘制menu上的 文字，图标，分割线
         [self drawTitleAndIndicatorPic];
     }
     return self;
@@ -174,6 +151,7 @@ static const CGFloat pullDownMenuHeight = 45;
     
     //    创建右侧的lab CGRectGetMaxX(leftTab.frame) SCREENW - leftTab.bounds.size.width
     rightTab = [self creatTableViewAtPosition:CGPointMake(CGRectGetMaxX(leftTab.frame), bgViewOrTabsY) labWidth:(SCREENW - CGRectGetMaxX(leftTab.frame))];
+    rightTab.separatorStyle = UITableViewCellSeparatorStyleNone;
     rightTab.tintColor = selectMenuColor;
     rightTab.dataSource = self;
     rightTab.delegate = self;
@@ -197,8 +175,8 @@ static const CGFloat pullDownMenuHeight = 45;
 
 //  添加子视图
 - (void)showInSupView:(UIView *)superView {
-    [self initSubviews];
     [superView addSubview:self];
+    [self initSubviews];
 }
 
 // 消失子视图
@@ -247,91 +225,19 @@ static const CGFloat pullDownMenuHeight = 45;
     _selectRightRow = 0;
     selectFirstTitle = @"";
     selectSecondTitle = @"";
-    
     //  连续单击某个menu的item
     if (tapIndex == _currentSelectedMenuIndex && _isShowTab) {
         [self animateIdicator:indicatorsPic[tapIndex] background:backGroundView tableView:leftTab title:currentTextLayerArr[tapIndex] forward:NO complecte:^{
             _isShowTab = NO;
         }];
-        
-    } else {// 仅仅一次单击某个item时：首次点击
-        //     menu showTab 发布通知
+    } else {// 单击不同的item时执行
+        //   menu showTab 发布通知
         [[NSNotificationCenter defaultCenter] postNotificationName:QSMultiplePullMenuShowNotification object:self];
         _currentSelectedMenuIndex = tapIndex;
-#warning 少 记录左侧和右侧的tab的对应数据
-        //  获取当前选择在menu的title
-        NSString *selectStr = [(CATextLayer *)[currentTextLayerArr objectAtIndex:_currentSelectedMenuIndex] string];
-        // 获取该menu item的所有数据
-        NSArray *tempArr =  [dataArray objectAtIndex:_currentSelectedMenuIndex];
-        // 处理单个tab时的情况
-        if (isSingleTab) {// 单个tab
-            for (NSInteger i=0; i<[tempArr count]; i++) {
-                NSDictionary *dic = [tempArr objectAtIndex:i];
-                if ([[dic objectForKey:@"provinceName"] isEqualToString:selectStr]) {
-                    _selectLeftRow = i;
-                }
-            }
-        } else {
-            //  根据市获取省的名字
-            for (NSInteger i=0; i<[tempArr count]; i++) {
-                NSDictionary *dic = [tempArr objectAtIndex:i];
-                NSArray *citysArr = [dic objectForKey:@"citys"];
-                for (NSInteger j=0; j<[citysArr count]; j++) {
-                    if ([[citysArr objectAtIndex:j] isEqualToString:selectStr]) {
-                        _selectLeftRow = i;
-                        _selectRightRow =j;
-                    }
-                }
-            }
-            //    设置 rightArr
-            NSString *rightProvinceName = [[leftArr objectAtIndex:_currentSelectedMenuIndex] objectAtIndex:_selectLeftRow];
-            NSArray *rightCitysArr = @[];
-            for (NSInteger i=0; i<[tempArr count]; i++) {
-                NSDictionary *dic = [tempArr objectAtIndex:i];
-                if ([rightProvinceName isEqualToString:[dic objectForKey:@"provinceName"]]) {
-                    rightCitysArr = [dic objectForKey:@"citys"];
-                }
-            }
-            _rightArr = rightCitysArr.mutableCopy;
-        }
-        
-        //        for (NSInteger i=0; i<numsOfMenu; i++) {
-        //            //  获取当前选择在menu的title
-        //            NSString *selectStr = [(CATextLayer *)[currentTextLayerArr objectAtIndex:_currentSelectedMenuIndex] string];
-        //            // 获取该menu item的所有数据
-        //            NSArray *tempArr =  [dataArray objectAtIndex:_currentSelectedMenuIndex];
-        //            // 处理单个tab时的情况
-        //            if (isSingleTab) {// 单个tab
-        //                for (NSInteger i=0; i<[tempArr count]; i++) {
-        //                    NSDictionary *dic = [tempArr objectAtIndex:i];
-        //                    if ([[dic objectForKey:@"provinceName"] isEqualToString:selectStr]) {
-        //                        _selectLeftRow = i;
-        //                    }
-        //                }
-        //            } else {
-        //                //          根据市获取省的名字
-        //                for (NSInteger i=0; i<[tempArr count]; i++) {
-        //                    NSDictionary *dic = [tempArr objectAtIndex:i];
-        //                    NSArray *citysArr = [dic objectForKey:@"citys"];
-        //                    for (NSInteger j=0; j<[citysArr count]; j++) {
-        //                        if ([[citysArr objectAtIndex:j] isEqualToString:selectStr]) {
-        //                            _selectLeftRow = i;
-        //                            _selectRightRow =j;
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //
-        //            if (_currentSelectedMenuIndex == i) {//当前选择的menu的item
-        //                [leftTab selectRowAtIndexPath:[NSIndexPath indexPathForRow:_selectLeftRow inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
-        //                [rightTab selectRowAtIndexPath:[NSIndexPath indexPathForRow:_selectRightRow inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
-        //            }
-        //        }
-        
+        [self getDefaultData:_currentSelectedMenuIndex];
         // 刷新左侧和右侧tab
         [leftTab reloadData];
         [rightTab reloadData];
-        
         [leftTab selectRowAtIndexPath:[NSIndexPath indexPathForRow:_selectLeftRow inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
         if (!isSingleTab) {// 2个tab
             [rightTab selectRowAtIndexPath:[NSIndexPath indexPathForRow:_selectRightRow inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
@@ -340,6 +246,93 @@ static const CGFloat pullDownMenuHeight = 45;
         [self animateIdicator:indicatorsPic[tapIndex] background:backGroundView tableView:leftTab title:currentTextLayerArr[tapIndex] forward:YES complecte:^{
             _isShowTab = YES;
         }];
+    }
+}
+
+#warning 少 获取defaultData
+- (void)getDefaultData:(NSInteger )currentMenuNum {
+    NSArray *tempArr = [dataArray objectAtIndex:currentMenuNum];
+    //  获取当前选择在menu的title
+    NSString *selectStr = [(CATextLayer *)[currentTextLayerArr objectAtIndex:currentMenuNum] string];
+    if (currentMenuNum == 0) {
+        //  若menu的内容 ->地区: 取广州
+        if ([selectStr isEqualToString:@"广州"]) {
+            for (NSInteger i = 0; i<[tempArr count]; i++) {
+                NSDictionary *dic = [tempArr objectAtIndex:i];
+                NSArray *childsArr = [dic objectForKey:@"childs"];
+                for (NSInteger j=0; j<[childsArr count]; j++) {
+                    NSDictionary *childDic = [childsArr objectAtIndex:j];
+                    if ([[childDic objectForKey:@"name"] isEqualToString:@"广州"]) {
+                        _selectLeftRow = i;
+                        _selectRightRow = j;
+                    }
+                }
+            }
+        } else {//  若是选择menu中其他的内容
+            for (NSInteger i = 0; i<[tempArr count]; i++) {
+                NSDictionary *dic = [tempArr objectAtIndex:i];
+                NSArray *childsArr = [dic objectForKey:@"childs"];
+                for (NSInteger j=0; j<[childsArr count]; j++) {
+                    NSDictionary *childDic = [childsArr objectAtIndex:j];
+                    if ([[NSString stringWithFormat:@"%@",[childDic objectForKey:@"id"]] isEqualToString:selectFirstId]) {
+                        _selectLeftRow = i;
+                        _selectRightRow = j;
+                    }
+                }
+            }
+        }
+    } else if (currentMenuNum == 1){
+        //    若menu的内容 ->科室: 取内科的全部科室
+        if ([selectStr isEqualToString:@"全部内科"]) {
+            for (NSInteger i = 0; i<[tempArr count]; i++) {
+                NSDictionary *dic = [tempArr objectAtIndex:i];
+                if ([[dic objectForKey:@"name"] isEqualToString:@"内科"]) {
+                    _selectLeftRow = i;
+                    _selectRightRow = 0;
+                }
+            }
+        } else {//    若是menu选择的内容
+            for (NSInteger i = 0; i<[tempArr count]; i++) {
+                NSDictionary *dic = [tempArr objectAtIndex:i];
+                NSArray *childsArr = [dic objectForKey:@"childs"];
+                for (NSInteger j=0; j<[childsArr count]; j++) {
+                    NSDictionary *childDic = [childsArr objectAtIndex:j];
+                    if ([[NSString stringWithFormat:@"%@",[childDic objectForKey:@"id"]] isEqualToString:_selectSecondId]) {
+                        _selectLeftRow = i;
+                        _selectRightRow = j;
+                    }
+                }
+            }
+        }
+    } else if (currentMenuNum == 2) {
+        //    若menu的内容 ->服务: 取服务的全部服务
+        if ([selectStr isEqualToString:@"全部服务"]) {
+            for (NSInteger i = 0; i<[tempArr count]; i++) {
+                NSDictionary *dic = [tempArr objectAtIndex:i];
+                if ([[dic objectForKey:@"name"] isEqualToString:@"全部服务"]) {
+                    _selectLeftRow = i;
+                }
+            }
+        } else {//    若是menu选择的内容
+            for (NSInteger i = 0; i<[tempArr count]; i++) {
+                NSDictionary *dic = [tempArr objectAtIndex:i];
+                if ([[NSString stringWithFormat:@"%@",[dic objectForKey:@"id"]] isEqualToString:selectThirdId]) {
+                    _selectLeftRow = i;
+                }
+            }
+        }
+    }
+    //  设置 rightArr
+    if (currentMenuNum !=2) {
+        NSMutableArray *rightCitysArr = @[].mutableCopy;
+        NSDictionary *selectLeftDic = [tempArr objectAtIndex:_selectLeftRow];
+        NSArray *chilidArr  = [selectLeftDic objectForKey:@"childs"];
+        for (NSInteger k = 0; k < [chilidArr count]; k++) {
+            NSDictionary *dic = [chilidArr objectAtIndex:k];
+            NSString *nameStr = [dic objectForKey:@"name"];
+            [rightCitysArr addObject:nameStr];
+        }
+        _rightArr = rightCitysArr;
     }
 }
 
@@ -358,14 +351,12 @@ static const CGFloat pullDownMenuHeight = 45;
             }];
         }];
     }];
-    
     complete();
 }
 
 
 #pragma _mark 单击tabs的bgView手势
 - (void)tapBackGround:(UITapGestureRecognizer *)paramSender {
-    
     [self animateIdicator:indicatorsPic[_currentSelectedMenuIndex] background:backGroundView tableView:leftTab title:currentTextLayerArr[_currentSelectedMenuIndex] forward:NO complecte:^{
         _isShowTab = NO;
     }];
@@ -379,7 +370,7 @@ static const CGFloat pullDownMenuHeight = 45;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if ([tableView isEqual: leftTab]) {
-        return [[leftArr objectAtIndex:_currentSelectedMenuIndex] count];
+        return [(NSArray* )[leftArr objectAtIndex:_currentSelectedMenuIndex] count];
     } else return self.rightArr.count;
 }
 
@@ -388,7 +379,8 @@ static const CGFloat pullDownMenuHeight = 45;
     static NSString *leftCellIdentifier = @"leftCellIdentifier";
     static NSString *rightCellIdentifier = @"leftCellIdentifier";
     UITableViewCell *cell;
-    if ([tableView isEqual: leftTab]) {
+    if ([tableView isEqual:leftTab]) {
+        leftTab.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         cell = [tableView dequeueReusableCellWithIdentifier:leftCellIdentifier];
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftCellIdentifier];
@@ -400,18 +392,37 @@ static const CGFloat pullDownMenuHeight = 45;
         UIView *bacGroundView = [[UIView alloc]init];
         bacGroundView.backgroundColor = [UIColor whiteColor];
         cell.selectedBackgroundView = bacGroundView;
-        if (isSingleTab) {//仅仅1个tab
-            cell.backgroundColor = [UIColor whiteColor];
+        if (isSingleTab) {// 只有左侧的tab
+            leftTab.separatorStyle = UITableViewCellSeparatorStyleNone;
+#warning 少 在线咨询的是否允许点击的方法
+            if (self.notAllowThrMenuSelect) {
+                //  获取到不可点击单个tab的行数
+                __block  NSInteger notAllowThrMenuSelectIndex  = 0;
+                for (NSInteger i = 0; i < [leftArr count]; i++) {
+                    NSArray *tempArr = [leftArr objectAtIndex:_currentSelectedMenuIndex];
+                    [tempArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        if ([obj isEqualToString:@"在线咨询"]) {
+                            notAllowThrMenuSelectIndex = idx;
+                        }
+                    }];
+                }
+                if (indexPath.row == notAllowThrMenuSelectIndex) {
+                    cell.userInteractionEnabled = NO;
+                    cell.textLabel.textColor = [UIColor colorWithRed:220/255.0f green:220/255.0f blue:220/255.0f alpha:1.0f];
+                } else {
+                    cell.userInteractionEnabled = YES;
+                }
+            } else cell.backgroundColor = [UIColor whiteColor];
         } else {
-            cell.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1.0f];
+            cell.userInteractionEnabled = YES;
+            cell.backgroundColor = [UIColor colorWithRed:247/255.0 green:248/255.0 blue:249/255.0 alpha:1.0f];
         }
         cell.textLabel.text = leftArr[_currentSelectedMenuIndex][indexPath.row];
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        
-        //    若允许更新menu的title
+        //  若允许更新menu的title
         if (_allowUpdataMenuTitle) {// 若左侧的行为选择的数据
             if ([cell.textLabel.text isEqualToString:leftArr[_currentSelectedMenuIndex][_selectLeftRow]]) {
-                selectFirstTitle = cell.textLabel.text;//设置文字
+                selectFirstTitle = cell.textLabel.text;// 设置文字
                 [cell setAccessoryType:UITableViewCellAccessoryNone];
                 [cell.textLabel setTextColor:[tableView tintColor]];
             }
@@ -426,17 +437,18 @@ static const CGFloat pullDownMenuHeight = 45;
         
         [cell.textLabel setTextColor:[UIColor blackColor]];
         [cell setAccessoryType:UITableViewCellAccessoryNone];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        UIView *bacGroundView = [[UIView alloc]init];
+        bacGroundView.backgroundColor = [UIColor colorWithRed:247/255.0 green:248/255.0 blue:249/255.0 alpha:1.0f];
+        cell.selectedBackgroundView = bacGroundView;
         cell.textLabel.text = _rightArr[indexPath.row];
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         //    若允许更新menu的title
         if (_allowUpdataMenuTitle) {// 若左侧的行为选择的数据
-            if (!switchLeftTabCell) {//左侧tab为发生切换
+            if (!switchLeftTabCell) {// 左侧tab为发生切换
                 if ([cell.textLabel.text isEqualToString:_rightArr[_selectRightRow]]) {
                     if (!isSingleTab) {//2个tab时
                         selectSecondTitle = cell.textLabel.text;//设置文字
                     }
-                    
                     [cell setAccessoryType:UITableViewCellAccessoryNone];
                     [cell.textLabel setTextColor:[tableView tintColor]];
                 }
@@ -448,11 +460,11 @@ static const CGFloat pullDownMenuHeight = 45;
 
 #pragma mark - tableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];//反选：点击背景色消失
     switchLeftTabCell = NO;
+    NSArray *tempArr = [dataArray objectAtIndex:_currentSelectedMenuIndex];
     if (tableView == leftTab) {
         selectedLeftCell.textLabel.textColor = [UIColor blackColor];
-        //      获取到左侧的tab cell
+        // 获取到左侧的tab cell
         UITableViewCell *leftCell;
         leftCell = [tableView cellForRowAtIndexPath:indexPath];
         leftCell.textLabel.textColor = selectMenuColor;
@@ -470,50 +482,84 @@ static const CGFloat pullDownMenuHeight = 45;
                 [rightTab deselectRowAtIndexPath:[NSIndexPath indexPathForRow:_selectRightRow inSection:0] animated:YES];
                 //                将右侧的选择title为空，获取左侧选择的
                 selectSecondTitle = @"";
-               
+                _selectLeftRow = indexPath.row;
+                selectFirstTitle = leftCell.textLabel.text;// 获取左侧tab的名字
+#warning  少  遍历获取得到右侧tab的array
                 //   提前移除上一组数据
                 if ([_rightArr count]) {
                     [_rightArr removeAllObjects];
                 }
-                 _selectLeftRow = indexPath.row;
-                selectFirstTitle = leftCell.textLabel.text;// 获取省的名字
-                NSArray *citysArr = @[].copy;
-                for (NSArray *array in dataArray) {
-                    for (NSDictionary *dic in array) {
-                        if ([[dic objectForKey:@"provinceName"] isEqualToString:selectFirstTitle]) {
-                            citysArr = (NSArray *)[dic objectForKey:@"citys"];
-                        }
-                    }
+                //   获取新的rightArr
+                NSMutableArray *rightCitysArr = @[].mutableCopy;
+                NSDictionary *selectLeftDic = [tempArr objectAtIndex:_selectLeftRow];
+                NSArray *chilidArr  = [selectLeftDic objectForKey:@"childs"];
+                for (NSInteger k = 0; k < [chilidArr count]; k++) {
+                    NSDictionary *dic = [chilidArr objectAtIndex:k];
+                    NSString *nameStr = [dic objectForKey:@"name"];
+                    [rightCitysArr addObject:nameStr];
                 }
-                [_rightArr addObjectsFromArray:citysArr];
+                _rightArr = rightCitysArr;
                 switchLeftTabCell = YES; // 点击 添加切换左侧cell的标示
                 [rightTab reloadData];
+                // 重新修改右侧tab的frame
+                CGFloat tableViewHeight = 0;
+                CGFloat maxH = SCREENH-bgViewOrTabsY;
+                CGFloat currentH = [rightTab numberOfRowsInSection:0] * tableView.rowHeight;
+                tableViewHeight = (currentH > maxH ? maxH:currentH);
+                [UIView animateWithDuration:0.2 animations:^{
+                    rightTab.frame = CGRectMake( CGRectGetMaxX(leftTab.frame),bgViewOrTabsY, SCREENW - CGRectGetMaxX(leftTab.frame), tableViewHeight);
+                }];
             }
-        } else {//单个tab时
-             selectFirstTitle = leftCell.textLabel.text;//获取省的名字
+        } else { //单个tab
+            _selectLeftRow = indexPath.row;
+            selectFirstTitle = leftCell.textLabel.text;
+            NSDictionary *selectSingleLeftDic = [tempArr objectAtIndex:_selectLeftRow];
+            selectThirdId = [NSString stringWithFormat:@"%@",[selectSingleLeftDic objectForKey:@"id"]];
         }
-#warning  少  遍历获取得到右侧tab的array
-        
     } else if ([tableView isEqual:rightTab]) {// 点击右侧的tabView
         selectedRightCell.textLabel.textColor = [UIColor blackColor];
-        //      获取到左侧的tab cell
         UITableViewCell *rightCell;
         rightCell = [tableView cellForRowAtIndexPath:indexPath];
         rightCell.textLabel.textColor = selectMenuColor;
         selectedRightCell = rightCell;
         selectSecondTitle = rightCell.textLabel.text;//获取省的名字
+        _selectRightRow = indexPath.row;// 获取右侧选择的行数，用于获取Id
+        NSDictionary *selectLeftDic = [tempArr objectAtIndex:_selectLeftRow];
+        NSArray *chilidArr  = [selectLeftDic objectForKey:@"childs"];
+        NSDictionary *selectRightDic = [chilidArr objectAtIndex:_selectRightRow];
+        NSString *selectRightId = [NSString stringWithFormat:@"%@",[selectRightDic objectForKey:@"id"]];
+        if (_currentSelectedMenuIndex == 0) {
+            selectFirstId = selectRightId;
+        } else if (_currentSelectedMenuIndex == 1){
+            _selectSecondId = selectRightId;
+        }
+    }
+    
+    NSString *IdStr = @"";
+    switch (_currentSelectedMenuIndex) {
+        case 0:
+            IdStr = selectFirstId;
+            break;
+        case 1:
+            IdStr = _selectSecondId;
+            break;
+        case 2:
+            IdStr = selectThirdId;
+            break;
+        default:
+            break;
     }
     
     if (!isSingleTab) {// 2个tab
-        if ([selectFirstTitle length]>0 && [selectSecondTitle length]>0) {//2个都有值才执行代理
-            if (self.delegate && [self.delegate respondsToSelector:@selector(pullDownMenu:didSelectColumn:secondRow:)]) {
+        if ([selectFirstTitle length]>0 && [selectSecondTitle length]>0 && [IdStr length]>0) {// 3个都有值才执行代理
+            if (self.delegate && [self.delegate respondsToSelector:@selector(pullDownMenu:didSelectColumn:secondRow:selectId:selectColumnId:)]) {
                 __weak __typeof(self)weakSelf = self;
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     __strong __typeof(weakSelf)strongSelf = weakSelf;
                     //  使该控件消失并传值
                     [strongSelf dismissPullDownView];
                 });
-                [self.delegate pullDownMenu:self didSelectColumn:selectFirstTitle secondRow:selectSecondTitle];
+                [self.delegate pullDownMenu:self didSelectColumn:selectFirstTitle secondRow:selectSecondTitle selectId:IdStr selectColumnId:_currentSelectedMenuIndex];
                 //   是否更新menu的title
                 if (_allowUpdataMenuTitle) {
                     [self confiMenuWithSelectTitle:selectSecondTitle];
@@ -522,22 +568,21 @@ static const CGFloat pullDownMenuHeight = 45;
                 selectSecondTitle = @"";
             }
         }
-    } else {//单个tab
-        if ([selectFirstTitle length] > 0) {
-            if (self.delegate && [self.delegate respondsToSelector:@selector(pullDownMenu:didSelectColumn:secondRow:)]) {
+    } else { // 单个tab
+        if ([selectFirstTitle length] > 0 && [IdStr length] > 0) {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(pullDownMenu:didSelectColumn:secondRow:selectId:selectColumnId:)]) {
                 __weak __typeof(self)weakSelf = self;
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     __strong __typeof(weakSelf)strongSelf = weakSelf;
                     //  使该控件消失并传值
                     [strongSelf dismissPullDownView];
                 });
-                [self.delegate pullDownMenu:self didSelectColumn:selectFirstTitle secondRow:selectSecondTitle];
+                [self.delegate pullDownMenu:self didSelectColumn:selectFirstTitle secondRow:selectSecondTitle selectId:IdStr selectColumnId:_currentSelectedMenuIndex];
                 //      是否更新menu的title
                 if (_allowUpdataMenuTitle) {
                     [self confiMenuWithSelectTitle:selectFirstTitle];
                 }
                 selectFirstTitle = @"";
-                
             }
         }
     }
@@ -640,27 +685,29 @@ static const CGFloat pullDownMenuHeight = 45;
     if (show) {
         //      判断并设置左右侧tab的frame和显示高度
         CGFloat tableViewHeight = 0;
+        CGFloat maxH = SCREENH-bgViewOrTabsY;
+        CGFloat currentH = [tableView numberOfRowsInSection:0] * tableView.rowHeight;
         if ([tableView isEqual:leftTab]) {//若是左侧Tab
             tableView.frame = CGRectMake(0, bgViewOrTabsY,leftTabWidth, 0);
             [self.superview addSubview:tableView];
-            tableViewHeight = ([tableView numberOfRowsInSection:0] > _tableVHeightNumMax) ? (_tableVHeightNumMax * tableView.rowHeight) : ([tableView numberOfRowsInSection:0] * tableView.rowHeight);
+            //            tableViewHeight = ([tableView numberOfRowsInSection:0] > _tableVHeightNumMax) ? (_tableVHeightNumMax * tableView.rowHeight) : ([tableView numberOfRowsInSection:0] * tableView.rowHeight);
+            tableViewHeight = (currentH > maxH ? maxH:currentH);
             
             [UIView animateWithDuration:0.2 animations:^{
                 tableView.frame = CGRectMake(0, bgViewOrTabsY, leftTabWidth, tableViewHeight);
             }];
             
         } else if ([tableView isEqual:rightTab]){
-            tableView.frame = CGRectMake( CGRectGetMaxX(leftTab.frame),bgViewOrTabsY, SCREENW - CGRectGetMaxX(leftTab.frame), SCREENH-bgViewOrTabsY);
+            tableView.frame = CGRectMake( CGRectGetMaxX(leftTab.frame),bgViewOrTabsY, SCREENW - CGRectGetMaxX(leftTab.frame), 0);
             [self.superview addSubview:tableView];
-            tableViewHeight = ([tableView numberOfRowsInSection:0] > _tableVHeightNumMax) ? (_tableVHeightNumMax * tableView.rowHeight) : ([tableView numberOfRowsInSection:0] * tableView.rowHeight);
-            
+            //            tableViewHeight = ([tableView numberOfRowsInSection:0] > _tableVHeightNumMax) ? (_tableVHeightNumMax * tableView.rowHeight) : ([tableView numberOfRowsInSection:0] * tableView.rowHeight);
+            tableViewHeight = (currentH > maxH ? maxH:currentH);
             [UIView animateWithDuration:0.2 animations:^{
-                tableView.frame = CGRectMake( CGRectGetMaxX(leftTab.frame),bgViewOrTabsY, SCREENW - CGRectGetMaxX(leftTab.frame), SCREENH-bgViewOrTabsY);
+                tableView.frame = CGRectMake( CGRectGetMaxX(leftTab.frame),bgViewOrTabsY, SCREENW - CGRectGetMaxX(leftTab.frame), tableViewHeight);
             }];
         }
         
 #warning 少 设置单个tableview可视化的高度
-        
     } else {
         if ([tableView isEqual:leftTab]) {
             [UIView animateWithDuration:0.2 animations:^{
@@ -693,14 +740,10 @@ static const CGFloat pullDownMenuHeight = 45;
     [path addLineToPoint:CGPointMake(4, 5)];
     [path addLineToPoint:CGPointMake(8, 0)];
     
-    
     layer.path = path.CGPath;
     layer.lineWidth = 1.5;
-    layer.strokeColor = [UIColor blackColor].CGColor;//设置边框的颜色
-#warning  同背景颜色
-    layer.fillColor = [UIColor whiteColor].CGColor;//设置内部填充的颜色:
-    
-    
+    layer.strokeColor = [UIColor blackColor].CGColor;
+    layer.fillColor = [UIColor whiteColor].CGColor;
     CGPathRef bound = CGPathCreateCopyByStrokingPath(layer.path, nil, layer.lineWidth, kCGLineCapButt, kCGLineJoinMiter, layer.miterLimit);
     layer.bounds = CGPathGetBoundingBox(bound);
     
@@ -755,13 +798,12 @@ static const CGFloat pullDownMenuHeight = 45;
 - (UITableView *)creatTableViewAtPosition:(CGPoint)point labWidth:(CGFloat)labWidth {
     UITableView *tableView = [UITableView new];
     tableView.frame = CGRectMake(point.x, point.y,labWidth, 0);
-    tableView.rowHeight = 36;
+    tableView.rowHeight = 40;
     
     return tableView;
 }
 
 #pragma mark - otherMethods
-// 根据字符串和长度计算
 - (CGSize)calculateTitleSizeWithString:(NSString *)string
 {
     CGFloat fontSize = (!_titleFontSize?15:_titleFontSize);
@@ -776,13 +818,10 @@ static const CGFloat pullDownMenuHeight = 45;
 }
 
 @end
-
 #pragma mark - CALayer Category
 
 @implementation CALayer (MXAddAnimationAndValue)
-
-- (void)addAnimation:(CAAnimation *)anim andValue:(NSValue *)value forKeyPath:(NSString *)keyPath
-{
+- (void)addAnimation:(CAAnimation *)anim andValue:(NSValue *)value forKeyPath:(NSString *)keyPath {
     [self addAnimation:anim forKey:keyPath];
     [self setValue:value forKeyPath:keyPath];
 }

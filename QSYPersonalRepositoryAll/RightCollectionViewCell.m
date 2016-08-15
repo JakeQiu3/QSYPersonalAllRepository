@@ -9,7 +9,6 @@
 #import "RightCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
 
-#define KImageUrl @"http://img.vinux.com/upload/"
 #define viewWidth self.bounds.size.width
 #define viewHeight self.bounds.size.height
 
@@ -21,6 +20,7 @@
         
         _iconImage =[[UIImageView alloc] initWithFrame:CGRectZero];
         _iconImage.contentMode = UIViewContentModeScaleAspectFit;
+        _iconImage.backgroundColor = [UIColor orangeColor];
         [self.contentView addSubview:_iconImage];
         
         _nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -43,7 +43,7 @@
     if (_seaSaleCategoryModel != seaSaleCategoryModel) {
         _seaSaleCategoryModel = seaSaleCategoryModel;
     }
-    NSString *imgStr = [NSString stringWithFormat:@"%@%@", KImageUrl, _seaSaleCategoryModel.seaSaleLogoUrl];
+    NSString *imgStr = [NSString stringWithFormat:@"%@%@", @"",@""];
     [self.iconImage setImageWithURL:[NSURL URLWithString:imgStr] placeholderImage:[UIImage imageNamed:@"pic_default.png"]];
     self.nameLabel.text = _seaSaleCategoryModel.categoryName;
 }

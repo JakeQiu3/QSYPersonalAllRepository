@@ -22,12 +22,14 @@ typedef NS_ENUM (NSInteger,BackGroundViewStatus) {
 @protocol QSPullDownMenuDelegate <NSObject>
 
 @optional
-
-- (void)pullDownMenu:(QSMultiplePullDownMenu *)pullDownMenu didSelectColumn:(NSString *)columnStr secondRow:(NSString *)rowStr;
+#warning 少 直接传递第二组数据对应的Id
+- (void)pullDownMenu:(QSMultiplePullDownMenu *)pullDownMenu didSelectColumn:(NSString *)columnStr secondRow:(NSString *)rowStr selectId:(NSString *)selectId selectColumnId:(NSInteger)columnId;
 
 @end
 
 @interface QSMultiplePullDownMenu : UIView <UITableViewDelegate, UITableViewDataSource>
+#pragma _mark 新增是否可以选择第3个menu的在线咨询
+@property (nonatomic, assign) BOOL notAllowThrMenuSelect;
 
 /**
  *  初始化控件
@@ -40,22 +42,28 @@ typedef NS_ENUM (NSInteger,BackGroundViewStatus) {
  */
 
 - (QSMultiplePullDownMenu *)initWithArray:(NSArray *)array selectedColor:(UIColor *)selectedColor constantTitlesArr:(NSArray *)titlesArr;
+
 // 是否显示menu的下拉tabview
 @property (nonatomic, assign) BOOL isShowTab;
 
 // 是否更新该menu的title: 默认是NO
 @property (nonatomic, assign) BOOL allowUpdataMenuTitle;
-
-@property (nonatomic, assign) CGFloat titleAndPicMargin;// 绘制的文字和图片的间距
-@property (nonatomic, assign)CGFloat titleFontSize;//文字字体的大小：默认是15
-@property (nonatomic, assign)CGFloat lineWidth;//中间分割线的宽度：默认是1
-@property (nonatomic, strong)UIColor *indicatorColor;//指示图标的颜色:默认同title
-@property (nonatomic, assign)CGFloat leftLabWidth;//左侧lab宽度：默认是120
-
+// 绘制的文字和图片的间距
+@property (nonatomic, assign) CGFloat titleAndPicMargin;
+//文字字体的大小：默认是15
+@property (nonatomic, assign)CGFloat titleFontSize;
+//中间分割线的宽度：默认是1
+@property (nonatomic, assign)CGFloat lineWidth;
+//指示图标的颜色:默认同title
+@property (nonatomic, strong)UIColor *indicatorColor;
+//左侧lab宽度：默认是120
+@property (nonatomic, assign)CGFloat leftLabWidth;
 /**
  *  设置tableview可视的cell的个数，设置tableview的可视高度
  */
-@property (nonatomic, assign) int tableVHeightNumMax;// default 是 6
+@property (nonatomic, assign) NSInteger tableVHeightNumMax;// default 是 0
+#warning 少 暴露出选择科室的Id，考虑到出诊患者的医生列表问题
+@property (nonatomic, strong) NSString *selectSecondId;;
 
 @property (nonatomic,weak) id<QSPullDownMenuDelegate> delegate;
 
