@@ -135,6 +135,9 @@
 		730CFB4D1D1A966D00B62765 /* IMYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB471D1A966D00B62765 /* IMYWebView.m */; };
 		730CFB4E1D1A966D00B62765 /* IMY_NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB4A1D1A966D00B62765 /* IMY_NJKWebViewProgress.m */; };
 		730CFB4F1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB4C1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m */; };
+		7313C05C1D62B35F00404EDF /* UserDefinedLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7313C05B1D62B35F00404EDF /* UserDefinedLoadingViewController.m */; };
+		7313C0601D62B3EA00404EDF /* ActivityView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7313C05F1D62B3EA00404EDF /* ActivityView.mm */; };
+		7313C0631D62B8C800404EDF /* QSYActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7313C0621D62B8C800404EDF /* QSYActivityView.m */; };
 		731BBF251D25025900B14CF2 /* navigation_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 731BBF201D25025900B14CF2 /* navigation_back.png */; };
 		731BBF261D25025900B14CF2 /* navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 731BBF211D25025900B14CF2 /* navigation_back@2x.png */; };
 		731BBF271D25025900B14CF2 /* navigation_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 731BBF221D25025900B14CF2 /* navigation_back@3x.png */; };
@@ -541,6 +544,12 @@
 		730CFB4A1D1A966D00B62765 /* IMY_NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMY_NJKWebViewProgress.m; sourceTree = "<group>"; };
 		730CFB4B1D1A966D00B62765 /* WYWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
 		730CFB4C1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		7313C05A1D62B35F00404EDF /* UserDefinedLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefinedLoadingViewController.h; sourceTree = "<group>"; };
+		7313C05B1D62B35F00404EDF /* UserDefinedLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefinedLoadingViewController.m; sourceTree = "<group>"; };
+		7313C05E1D62B3EA00404EDF /* ActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityView.h; sourceTree = "<group>"; };
+		7313C05F1D62B3EA00404EDF /* ActivityView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ActivityView.mm; sourceTree = "<group>"; };
+		7313C0611D62B8C800404EDF /* QSYActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSYActivityView.h; sourceTree = "<group>"; };
+		7313C0621D62B8C800404EDF /* QSYActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSYActivityView.m; sourceTree = "<group>"; };
 		731BBF141D24B6CB00B14CF2 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		731BBF201D25025900B14CF2 /* navigation_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_back.png; sourceTree = "<group>"; };
 		731BBF211D25025900B14CF2 /* navigation_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back@2x.png"; sourceTree = "<group>"; };
@@ -971,7 +980,7 @@
 			name = "CustumAlertView(自定义各个位置的弹出框)";
 			sourceTree = "<group>";
 		};
-		303F38CD1D3B99CB00630F31 /* 左Tab右CollectionView选择器 */ = {
+		303F38CD1D3B99CB00630F31 /* 左Tab右CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				303F38CE1D3B9A0900630F31 /* TabActionColViewController.h */,
@@ -981,7 +990,7 @@
 				73B04E261D61E53000171F0C /* Col */,
 				30C976A11D3BAD1500614EBC /* Lib */,
 			);
-			name = "左Tab右CollectionView选择器";
+			name = "左Tab右CollectionView";
 			sourceTree = "<group>";
 		};
 		305458541D0EFFE8002B039E /* Libs */ = {
@@ -1027,9 +1036,9 @@
 				731BBF141D24B6CB00B14CF2 /* Common.h */,
 				7323B4AF1D2BBD2D00CE6790 /* 封装的思路.jpg */,
 				73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */,
-				73B04E231D61C3A700171F0C /* 自定义菊花转起来 */,
-				308DA7F91D3E77D000A97FA9 /* 混合(<=2)Tab 的下拉菜单 */,
-				303F38CD1D3B99CB00630F31 /* 左Tab右CollectionView选择器 */,
+				73B04E231D61C3A700171F0C /* 自定义和系统菊花转起来 */,
+				308DA7F91D3E77D000A97FA9 /* 混合Tab (<=2)的下拉菜单 */,
+				303F38CD1D3B99CB00630F31 /* 左Tab右CollectionView */,
 				303F38C51D3B327800630F31 /* 自定义含确认button的弹出框 */,
 				73DA62041D53776B00F61160 /* 单功能PickerView */,
 				303F38BA1D3B1B4600630F31 /* 多功能PickerView */,
@@ -1069,13 +1078,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		308DA7F91D3E77D000A97FA9 /* 混合(<=2)Tab 的下拉菜单 */ = {
+		308DA7F91D3E77D000A97FA9 /* 混合Tab (<=2)的下拉菜单 */ = {
 			isa = PBXGroup;
 			children = (
 				308DA7FB1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.h */,
 				308DA7FC1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m */,
 			);
-			name = "混合(<=2)Tab 的下拉菜单";
+			name = "混合Tab (<=2)的下拉菜单";
 			sourceTree = "<group>";
 		};
 		308DA8011D3E78CB00A97FA9 /* 混合(<=2)Tab 的下拉菜单 */ = {
@@ -1160,6 +1169,9 @@
 		3091A7A01CEE1C20003B97F4 /* 工具箱 */ = {
 			isa = PBXGroup;
 			children = (
+				732B05F11D672779007655CA /* 测一下 */,
+				730DAA451D658F6300E19CAC /* 网络请求工具包 */,
+				7313C05D1D62B3D700404EDF /* 自定义和系统菊花 */,
 				308DA8011D3E78CB00A97FA9 /* 混合(<=2)Tab 的下拉菜单 */,
 				73A65D1D1D472F9C00796C5B /* ImgBtn(左文字右图片Btn) */,
 				303F38C91D3B330B00630F31 /* CustumAlertView(自定义各个位置的弹出框) */,
@@ -1428,6 +1440,24 @@
 			path = UIWebViewProgress;
 			sourceTree = "<group>";
 		};
+		730DAA451D658F6300E19CAC /* 网络请求工具包 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "网络请求工具包";
+			sourceTree = "<group>";
+		};
+		7313C05D1D62B3D700404EDF /* 自定义和系统菊花 */ = {
+			isa = PBXGroup;
+			children = (
+				7313C0611D62B8C800404EDF /* QSYActivityView.h */,
+				7313C0621D62B8C800404EDF /* QSYActivityView.m */,
+				7313C05E1D62B3EA00404EDF /* ActivityView.h */,
+				7313C05F1D62B3EA00404EDF /* ActivityView.mm */,
+			);
+			name = "自定义和系统菊花";
+			sourceTree = "<group>";
+		};
 		7323B4731D2B50F700CE6790 /* init代码和xib 的自定义某控件的方法 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1486,6 +1516,13 @@
 			);
 			name = "KNBannerView（广告工具,封装了网络判断）";
 			path = KNBannerView;
+			sourceTree = "<group>";
+		};
+		732B05F11D672779007655CA /* 测一下 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "测一下";
 			sourceTree = "<group>";
 		};
 		7336BD711D0E79BA00F32485 /* 网络请求 MVVM */ = {
@@ -1875,11 +1912,13 @@
 			name = "ImgBtn(左文字右图片Btn)";
 			sourceTree = "<group>";
 		};
-		73B04E231D61C3A700171F0C /* 自定义菊花转起来 */ = {
+		73B04E231D61C3A700171F0C /* 自定义和系统菊花转起来 */ = {
 			isa = PBXGroup;
 			children = (
+				7313C05A1D62B35F00404EDF /* UserDefinedLoadingViewController.h */,
+				7313C05B1D62B35F00404EDF /* UserDefinedLoadingViewController.m */,
 			);
-			name = "自定义菊花转起来";
+			name = "自定义和系统菊花转起来";
 			sourceTree = "<group>";
 		};
 		73B04E261D61E53000171F0C /* Col */ = {
@@ -2332,6 +2371,7 @@
 				7304B82C1CF2B4C0005CA459 /* UINavigationBar+Awesome.m in Sources */,
 				3091A77F1CEE1A64003B97F4 /* MASViewConstraint.m in Sources */,
 				7336BDF21D0EB04100F32485 /* UIProgressView+AFNetworking.m in Sources */,
+				7313C05C1D62B35F00404EDF /* UserDefinedLoadingViewController.m in Sources */,
 				736959901D06D9F3005DA410 /* UIActionSheet+RACSignalSupport.m in Sources */,
 				7369594F1D06D9F3005DA410 /* NSInvocation+RACTypeParsing.m in Sources */,
 				7336BDF71D0EB64900F32485 /* Book.m in Sources */,
@@ -2452,6 +2492,7 @@
 				73D15B331CEF4118008855FB /* tttViewController.m in Sources */,
 				30DC00691D04845F005EAD0C /* WeiboStatus.m in Sources */,
 				30C976A71D3BB1C500614EBC /* PostMallCategoryModel.m in Sources */,
+				7313C0631D62B8C800404EDF /* QSYActivityView.m in Sources */,
 				736959A01D06D9F3005DA410 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */,
 				736959821D06D9F3005DA410 /* RACSignalSequence.m in Sources */,
 				73982A991D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m in Sources */,
@@ -2481,6 +2522,7 @@
 				3091A7731CEE1A64003B97F4 /* FMDatabase.m in Sources */,
 				736959911D06D9F3005DA410 /* UIAlertView+RACSignalSupport.m in Sources */,
 				3091A78A1CEE1A64003B97F4 /* GCDViewController.m in Sources */,
+				7313C0601D62B3EA00404EDF /* ActivityView.mm in Sources */,
 				7336BD811D0EA9D700F32485 /* SVProgressHUD.m in Sources */,
 				736959871D06D9F3005DA410 /* RACSubscriptingAssignmentTrampoline.m in Sources */,
 				7323B4A91D2BB1C200CE6790 /* KNBannerView.m in Sources */,

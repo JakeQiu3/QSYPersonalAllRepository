@@ -31579,7 +31579,7 @@
 					<key>id</key>
 					<string>9</string>
 					<key>name</key>
-					<string>感染内科</string>
+					<string>感染内科感染内科感染内科感染</string>
 					<key>parentId</key>
 					<string>0</string>
 				</dict>
@@ -32185,37 +32185,6 @@
 			<string>8</string>
 			<key>name</key>
 			<string>皮肤性病科</string>
-			<key>parentId</key>
-			<string>0</string>
-		</dict>
-		<dict>
-			<key>childs</key>
-			<array>
-				<dict>
-					<key>childs</key>
-					<array/>
-					<key>id</key>
-					<string>9</string>
-					<key>name</key>
-					<string>全部康复医学科</string>
-					<key>parentId</key>
-					<string>0</string>
-				</dict>
-				<dict>
-					<key>childs</key>
-					<array/>
-					<key>id</key>
-					<string>37</string>
-					<key>name</key>
-					<string>康复医学科2</string>
-					<key>parentId</key>
-					<string>0</string>
-				</dict>
-			</array>
-			<key>id</key>
-			<string>9</string>
-			<key>name</key>
-			<string>康复医学科</string>
 			<key>parentId</key>
 			<string>0</string>
 		</dict>
