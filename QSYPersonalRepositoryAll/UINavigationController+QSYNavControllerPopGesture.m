@@ -9,12 +9,10 @@
 /**
  *  runtime setter 方法
  *
- *  @param self                                                 要绑定到的对象
- *  @param key                                                 方法或者常量字符串地址
- *  @param value
- 属性名 （若是基本数据类型，需强转）
- * @param objc_AssociationPolicy
- 属性修饰
+ *  @param self       要绑定到的对象
+ *  @param key        方法或者常量字符串地址
+ *  @param value      属性名 （若 基本数据类型，需强转）
+ * @param objc_AssociationPolicy 属性修饰
  */
 #pragma mark 2
 // delegate 可以做文章：delegate 本身可以单抽出一个类来拆分，同时在该类中实现某些协议方法。
@@ -72,8 +70,8 @@ typedef void (^QsyViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 //2. 加载UIViewController，用runtime重写 viewWillAppear： 方法
 //1. 调用所有的Framework中的初始化方法\
 2. 调用所有的+load方法\
-3. 调用C++的静态初始化方及C/C++中的__attribute__(constructor)函数\
-4.调用所有链接到目标文件的framework中的初始化方法\
+3. 调用C++的静态初始化及C/C++中的__attribute__(constructor)函数\
+4. 调用所有链接到目标文件的framework中的初始化方法\
 故早于rootviewcontroller 执行。
 
 @implementation UIViewController (QsyFullScreenPopGesturePrivate)
@@ -105,7 +103,7 @@ typedef void (^QsyViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 }
 
 - (void)qsyViewWillAppear:(BOOL )animated {
-    // Forward to primary implementation.
+    // Forward to primary implementation.调用系统的方法
     [self qsyViewWillAppear:animated];
     
     if (self.qsyWillAppearInjectBlock) {
@@ -221,12 +219,11 @@ typedef void (^QsyViewControllerWillAppearInjectBlock)(UIViewController *viewCon
         delegate.navigationController = self;
         objc_setAssociatedObject(self, _cmd, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    
     return delegate;
 }
 //qsyPopGestureRecognizer  getter 方法
 - (UIPanGestureRecognizer *)qsyPopGestureRecognizer {
-    //  self 和 _cmd 把方法名作为identifier的key在self取出该属性变量。
+    // _cmd :把方法名作为identifier的key在self取出该属性变量。如等效于上面的getter方法名 qsyPopGestureRecognizer
     UIPanGestureRecognizer *panGestureRecognizer = objc_getAssociatedObject(self, _cmd);
     if (!panGestureRecognizer) {
         panGestureRecognizer = [[UIPanGestureRecognizer alloc] init];
