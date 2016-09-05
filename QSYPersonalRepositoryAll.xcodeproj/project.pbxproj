@@ -48,7 +48,7 @@
 		3091A7881CEE1A64003B97F4 /* FmdbHandleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A75F1CEE1A64003B97F4 /* FmdbHandleObject.m */; };
 		3091A7891CEE1A64003B97F4 /* FmdbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A7601CEE1A64003B97F4 /* FmdbViewController.m */; };
 		3091A78A1CEE1A64003B97F4 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A7611CEE1A64003B97F4 /* GCDViewController.m */; };
-		3091A78B1CEE1A64003B97F4 /* GetCacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A7621CEE1A64003B97F4 /* GetCacheObject.m */; };
+		3091A78B1CEE1A64003B97F4 /* ClearCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A7621CEE1A64003B97F4 /* ClearCacheTool.m */; };
 		3091A78C1CEE1A64003B97F4 /* JsonAndXmlParserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A7631CEE1A64003B97F4 /* JsonAndXmlParserViewController.m */; };
 		3091A78D1CEE1A64003B97F4 /* MasonryContraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A7641CEE1A64003B97F4 /* MasonryContraintViewController.m */; };
 		3091A78E1CEE1A64003B97F4 /* MemoryManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A7651CEE1A64003B97F4 /* MemoryManagerViewController.m */; };
@@ -200,6 +200,8 @@
 		736584BC1D22676D0088CDAB /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 736584BB1D22676D0088CDAB /* test.png */; };
 		736584BE1D227C710088CDAB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736584BD1D227C710088CDAB /* JavaScriptCore.framework */; };
 		736584C51D228C890088CDAB /* TestJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 736584C41D228C890088CDAB /* TestJSObject.m */; };
+		736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736679071D752C0D00B39376 /* ClearCacheViewController.m */; };
+		7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736679081D752C0D00B39376 /* ClearCacheViewController.xib */; };
 		736959481D06D9F3005DA410 /* RACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7369588C1D06D9F3005DA410 /* RACEXTRuntimeExtensions.m */; };
 		736959491D06D9F3005DA410 /* NSArray+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 736958901D06D9F3005DA410 /* NSArray+RACSequenceAdditions.m */; };
 		7369594A1D06D9F3005DA410 /* NSData+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 736958921D06D9F3005DA410 /* NSData+RACSupport.m */; };
@@ -398,7 +400,7 @@
 		3091A74A1CEE1A64003B97F4 /* FmdbHandleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FmdbHandleObject.h; sourceTree = "<group>"; };
 		3091A74B1CEE1A64003B97F4 /* FmdbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FmdbViewController.h; sourceTree = "<group>"; };
 		3091A74C1CEE1A64003B97F4 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
-		3091A74D1CEE1A64003B97F4 /* GetCacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetCacheObject.h; sourceTree = "<group>"; };
+		3091A74D1CEE1A64003B97F4 /* ClearCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheTool.h; sourceTree = "<group>"; };
 		3091A74E1CEE1A64003B97F4 /* JsonAndXmlParserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonAndXmlParserViewController.h; sourceTree = "<group>"; };
 		3091A74F1CEE1A64003B97F4 /* MasonryContraintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryContraintViewController.h; sourceTree = "<group>"; };
 		3091A7501CEE1A64003B97F4 /* MemoryManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryManagerViewController.h; sourceTree = "<group>"; };
@@ -417,7 +419,7 @@
 		3091A75F1CEE1A64003B97F4 /* FmdbHandleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FmdbHandleObject.m; sourceTree = "<group>"; };
 		3091A7601CEE1A64003B97F4 /* FmdbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FmdbViewController.m; sourceTree = "<group>"; };
 		3091A7611CEE1A64003B97F4 /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
-		3091A7621CEE1A64003B97F4 /* GetCacheObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCacheObject.m; sourceTree = "<group>"; };
+		3091A7621CEE1A64003B97F4 /* ClearCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheTool.m; sourceTree = "<group>"; };
 		3091A7631CEE1A64003B97F4 /* JsonAndXmlParserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonAndXmlParserViewController.m; sourceTree = "<group>"; };
 		3091A7641CEE1A64003B97F4 /* MasonryContraintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryContraintViewController.m; sourceTree = "<group>"; };
 		3091A7651CEE1A64003B97F4 /* MemoryManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryManagerViewController.m; sourceTree = "<group>"; };
@@ -661,6 +663,9 @@
 		736584BD1D227C710088CDAB /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		736584C31D228C890088CDAB /* TestJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestJSObject.h; sourceTree = "<group>"; };
 		736584C41D228C890088CDAB /* TestJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestJSObject.m; sourceTree = "<group>"; };
+		736679061D752C0D00B39376 /* ClearCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
+		736679071D752C0D00B39376 /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
+		736679081D752C0D00B39376 /* ClearCacheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClearCacheViewController.xib; sourceTree = "<group>"; };
 		7369588A1D06D9F3005DA410 /* RACEXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTKeyPathCoding.h; sourceTree = "<group>"; };
 		7369588B1D06D9F3005DA410 /* RACEXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTRuntimeExtensions.h; sourceTree = "<group>"; };
 		7369588C1D06D9F3005DA410 /* RACEXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACEXTRuntimeExtensions.m; sourceTree = "<group>"; };
@@ -1036,6 +1041,7 @@
 				731BBF141D24B6CB00B14CF2 /* Common.h */,
 				7323B4AF1D2BBD2D00CE6790 /* 封装的思路.jpg */,
 				73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */,
+				736679051D752BED00B39376 /* 清除缓存工具 */,
 				73B04E231D61C3A700171F0C /* 自定义和系统菊花转起来 */,
 				308DA7F91D3E77D000A97FA9 /* 混合Tab (<=2)的下拉菜单 */,
 				303F38CD1D3B99CB00630F31 /* 左Tab右CollectionView */,
@@ -1169,7 +1175,6 @@
 		3091A7A01CEE1C20003B97F4 /* 工具箱 */ = {
 			isa = PBXGroup;
 			children = (
-				732B05F11D672779007655CA /* 测一下 */,
 				730DAA451D658F6300E19CAC /* 网络请求工具包 */,
 				7313C05D1D62B3D700404EDF /* 自定义和系统菊花 */,
 				308DA8011D3E78CB00A97FA9 /* 混合(<=2)Tab 的下拉菜单 */,
@@ -1406,6 +1411,7 @@
 			children = (
 				730CFB361D1A2A1500B62765 /* WebViewDemoViewController.h */,
 				730CFB371D1A2A1500B62765 /* WebViewDemoViewController.m */,
+				73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */,
 				736584C31D228C890088CDAB /* TestJSObject.h */,
 				736584C41D228C890088CDAB /* TestJSObject.m */,
 				73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */,
@@ -1516,13 +1522,6 @@
 			);
 			name = "KNBannerView（广告工具,封装了网络判断）";
 			path = KNBannerView;
-			sourceTree = "<group>";
-		};
-		732B05F11D672779007655CA /* 测一下 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "测一下";
 			sourceTree = "<group>";
 		};
 		7336BD711D0E79BA00F32485 /* 网络请求 MVVM */ = {
@@ -1683,9 +1682,18 @@
 				730CFB451D1A966D00B62765 /* Classes */,
 				73FCE1BD1D1CC8510000BF20 /* WebViewJavascriptBridge */,
 				730CFB391D1A306100B62765 /* index.html */,
-				73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */,
 			);
 			name = "Demo和libs";
+			sourceTree = "<group>";
+		};
+		736679051D752BED00B39376 /* 清除缓存工具 */ = {
+			isa = PBXGroup;
+			children = (
+				736679061D752C0D00B39376 /* ClearCacheViewController.h */,
+				736679071D752C0D00B39376 /* ClearCacheViewController.m */,
+				736679081D752C0D00B39376 /* ClearCacheViewController.xib */,
+			);
+			name = "清除缓存工具";
 			sourceTree = "<group>";
 		};
 		736958881D06D9F3005DA410 /* ReactiveCocoa */ = {
@@ -2009,8 +2017,8 @@
 		73D15AEF1CEEAB2F008855FB /* 计算文件和文件夹内存大小或移除 */ = {
 			isa = PBXGroup;
 			children = (
-				3091A74D1CEE1A64003B97F4 /* GetCacheObject.h */,
-				3091A7621CEE1A64003B97F4 /* GetCacheObject.m */,
+				3091A74D1CEE1A64003B97F4 /* ClearCacheTool.h */,
+				3091A7621CEE1A64003B97F4 /* ClearCacheTool.m */,
 			);
 			name = "计算文件和文件夹内存大小或移除";
 			sourceTree = "<group>";
@@ -2331,6 +2339,7 @@
 				3095903F1CFF228100176AAC /* 传统的MVC.png in Resources */,
 				3095903D1CFF228100176AAC /* 几种设计模式的比较.png in Resources */,
 				3091A79A1CEE1A64003B97F4 /* Teacher.xml in Resources */,
+				7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */,
 				308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */,
 				73D15B2F1CEF3DD1008855FB /* Uuu.xib in Resources */,
 				3095902E1CF4B67200176AAC /* 面试题总结.xml in Resources */,
@@ -2427,6 +2436,7 @@
 				736959721D06D9F3005DA410 /* RACKVOChannel.m in Sources */,
 				73A65D201D472FAD00796C5B /* ImageBtn.m in Sources */,
 				303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */,
+				736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */,
 				736959641D06D9F3005DA410 /* RACCompoundDisposable.m in Sources */,
 				3091A7821CEE1A64003B97F4 /* View+MASAdditions.m in Sources */,
 				3091A7841CEE1A64003B97F4 /* GDataXMLNode.m in Sources */,
@@ -2496,7 +2506,7 @@
 				736959A01D06D9F3005DA410 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */,
 				736959821D06D9F3005DA410 /* RACSignalSequence.m in Sources */,
 				73982A991D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m in Sources */,
-				3091A78B1CEE1A64003B97F4 /* GetCacheObject.m in Sources */,
+				3091A78B1CEE1A64003B97F4 /* ClearCacheTool.m in Sources */,
 				736959961D06D9F3005DA410 /* UIControl+RACSignalSupportPrivate.m in Sources */,
 				736959541D06D9F3005DA410 /* NSObject+RACLifting.m in Sources */,
 				736959701D06D9F3005DA410 /* RACImmediateScheduler.m in Sources */,

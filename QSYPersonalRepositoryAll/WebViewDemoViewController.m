@@ -57,8 +57,8 @@
     }
     self.view.backgroundColor = [UIColor grayColor];//webview的 scrollview的superView
     [self setUpNavItems];
-    [self loadWebView];//加载url或本地的html
-    //    [self loadWebView2];
+//    [self loadWebView];//加载url或本地的html
+        [self loadWebView2];
 }
 
 - (void)setUpNavItems {
@@ -81,18 +81,22 @@
     [WebViewJavascriptBridge enableLogging];
     self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.myWebView];
     [self.bridge setWebViewDelegate:self];
-    //    注册操作：当html有执行交互该testObjcCallback名称的操作时，就会执行下面的block
-    [self.bridge registerHandler:@"testObjcCallback" handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"data: %@",data);
+    //  注册操作：当html有执行交互该testObjcCallback名称的操作时，就会执行下面的block
+    [self.bridge registerHandler:@"testJavascriptHandler" handler:^(id data, WVJBResponseCallback responseCallback) {
+        NSLog(@"====data: %@",data);
         responseCallback(@"Response from testObjcCallback");
     }];
-    ////
+//    [self.bridge registerHandler:@"testObjcCallback" handler:^(id data, WVJBResponseCallback responseCallback) {
+//        NSLog(@"data: %@",data);
+//        responseCallback(@"Response from testObjcCallback");
+//    }];
+    //
     //    [self.bridge callHandler:@"testJavascriptHandler" data:@{@"bridgeKey":@"邱少测试"} responseCallback:^(id responseData) {
     //         NSLog(@"responseData: %@",responseData);
     //    }];
     //  添加 3button
     [self redenerButtons:self.myWebView];
-    //    加载html文件
+    //  加载html文件
     [self loadExamplePage:self.myWebView];
     
 }
@@ -133,7 +137,7 @@
 }
 
 - (void)callHandler:(id)sender {
-    id data = @{@"我是谁？":@"你好，我是邱少!"};
+    id data = @{@"我是谁？":@"我是邱少!"};
     // testJavascriptHandler 为html中函数的handler的名字；responseData 是html中的数据“ Javascript Says = Right back atcha!”
     [self.bridge callHandler:@"testJavascriptHandler" data:data responseCallback:^(id responseData) {
         NSLog(@"responseData: %@",responseData);

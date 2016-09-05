@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClearCacheViewController">
+            <connections>
+                <outlet property="showCacheSizeLabel" destination="hSR-am-7X4" id="lOL-Xx-wFD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前缓存：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXr-HY-Aku">
+                    <rect key="frame" x="20" y="100" width="85" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSR-am-7X4">
+                    <rect key="frame" x="113" y="100" width="35" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dz5-s1-F9i">
+                    <rect key="frame" x="24" y="171" width="60" height="30"/>
+                    <state key="normal" title="清除缓存"/>
+                    <connections>
+                        <action selector="clearCache:" destination="-1" eventType="touchUpInside" id="dEa-S5-RIf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.98431372549019602" green="0.95294117647058818" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="hXr-HY-Aku" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="7uI-Z6-ARI"/>
+                <constraint firstItem="hSR-am-7X4" firstAttribute="leading" secondItem="hXr-HY-Aku" secondAttribute="trailing" constant="8" id="91c-kr-Wge"/>
+                <constraint firstItem="Dz5-s1-F9i" firstAttribute="top" secondItem="hXr-HY-Aku" secondAttribute="bottom" constant="50" id="Agv-Ll-D7I"/>
+                <constraint firstItem="hXr-HY-Aku" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="GQk-QU-tor"/>
+                <constraint firstItem="Dz5-s1-F9i" firstAttribute="leading" secondItem="hXr-HY-Aku" secondAttribute="leading" constant="4" id="Zx3-Kd-hKD"/>
+                <constraint firstItem="hSR-am-7X4" firstAttribute="bottom" secondItem="hXr-HY-Aku" secondAttribute="bottom" id="cdx-Pf-8Mi"/>
+                <constraint firstItem="hSR-am-7X4" firstAttribute="top" secondItem="hXr-HY-Aku" secondAttribute="top" id="skq-CL-ymd"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
