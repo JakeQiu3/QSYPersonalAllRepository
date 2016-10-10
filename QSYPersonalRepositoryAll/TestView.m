@@ -10,8 +10,7 @@
 #import "TestView.h"
 #import "ReactiveCocoa.h"
 @implementation TestView
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
