@@ -4,7 +4,7 @@
 //  YiRefresh
 //
 //  Created by apple on 15/3/6.
-//  Copyright (c) 2015年 coderyi. All rights reserved.
+//  Copyright (c) 2015年 qsy. All rights reserved.
 //
 
 #import "YiRefreshFooter.h"

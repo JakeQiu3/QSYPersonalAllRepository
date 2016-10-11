@@ -2,8 +2,8 @@
 //  TableViewController.m
 //  YiRefresh
 //
-//  Created by coderyi on 15/3/5.
-//  Copyright (c) 2015年 coderyi. All rights reserved.
+//  Created by qsy on 15/3/5.
+//  Copyright (c) 2015年 qsy. All rights reserved.
 //
 
 #import "TableViewController.h"
