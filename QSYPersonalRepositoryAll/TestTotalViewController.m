@@ -33,8 +33,8 @@
 }
 
 - (void)loadData {
-    _fileNameArray = @[@"某对象连续创建和子视图frame大于父视图问题",@"内存管理",@"多线程 大全",@"知识点 IOS（高级版）",@"iOS的设计模式 MVC介绍",@"iOS的设计模式 MVVM介绍",@"drawRect&layoutSubviews方法比较",@"AutoLayout:xib和storyboard使用",@"2个界面间的交互跳转(ReactCocoa版本)",@"登陆MVVM",@"网络请求 MVVM"].mutableCopy;
-       _titileArray = @[@"BtnNewAgainViewController",@"MemoryManagerViewController",@"GCDViewController",@"HighLevelViewController",@"MVCStatusViewController",@"MVVMViewController",@"Draw_LayoutSubViewsViewController",@"AutoLayoutViewController",@"FirstViewController",@"LoginViewController",@"RequestNetViewController"].mutableCopy;
+    _fileNameArray = @[@"某对象连续创建和子视图frame大于父视图问题",@"内存管理",@"多线程 大全",@"知识点 IOS（高级版）",@"iOS的设计模式 MVC介绍",@"iOS的设计模式 MVVM介绍（ReactiveCocoa版见压缩包）",@"iOS的设计模式 MVVM介绍（非ReactiveCocoa版本）",@"drawRect&layoutSubviews方法比较",@"AutoLayout:xib和storyboard使用"].mutableCopy;
+       _titileArray = @[@"BtnNewAgainViewController",@"MemoryManagerViewController",@"GCDViewController",@"HighLevelViewController",@"MVCStatusViewController",@"",@"TableViewController",@"Draw_LayoutSubViewsViewController",@"AutoLayoutViewController"].mutableCopy;
 }
 
 - (void)setUI {
