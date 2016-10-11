@@ -760,7 +760,6 @@
 				73D15AEE1CEEAAD6008855FB /* 单tab的下拉菜单 */,
 				73D15AED1CEEAAB0008855FB /* TabBar封装 */,
 				73D15AEC1CEEAA85008855FB /* 坐标系转换 */,
-				30DC002E1D03BD3F005EAD0C /* AutoLayout xib和storyboard使用 */,
 				3091A7A01CEE1C20003B97F4 /* 工具箱 */,
 				308B97801CCA899400BDA0FA /* Supporting Files */,
 			);
@@ -926,6 +925,7 @@
 				3091A76C1CEE1A64003B97F4 /* TestTotalViewController.m */,
 				3095902F1CFF226600176AAC /* iOS的 编程思想和设计模式 总结 */,
 				7304B8221CF29B87005CA459 /* 知识点 IOS（高级版） */,
+				30DC002E1D03BD3F005EAD0C /* AutoLayout xib和storyboard使用 */,
 				309590501CFF22B600176AAC /* drawRect&layoutSubviews方法比较 */,
 				73D15AF71CEEAE4D008855FB /* 内存管理 */,
 				73D15AF81CEEAE56008855FB /* 多线程 */,
