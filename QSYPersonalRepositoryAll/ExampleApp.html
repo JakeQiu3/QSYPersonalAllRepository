@@ -39,8 +39,7 @@
                                      }
                                      
                                      bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
-// 'testJavascriptHandler' handler里的data打印：log
-                                                            log('ObjC called testJavascriptHandler with', data)
+                                    log('ObjC called testJavascriptHandler with', data)
                                                             var responseData = { 'Javascript Says':'Right back atcha!' }
 // 'testJavascriptHandler' handler里的data打印：log
                                                             log('JS responding with', responseData)
@@ -54,7 +53,6 @@
                                      callbackButton.onclick = function(e) {
                                      e.preventDefault()
                                      log('JS calling handler "testObjcCallback"')
-//'testObjcCallback' bridge的handler的名字；{'foo': 'bar'}：返回data；
                                      bridge.callHandler('testObjcCallback', {'foo': 'bar'}, function(response) {
                                                         log('JS got response', response)
                                                         })

@@ -95,7 +95,7 @@
     //         NSLog(@"responseData: %@",responseData);
     //    }];
     //  添加 3button
-    [self redenerButtons:self.myWebView];
+//    [self redenerButtons:self.myWebView];
     //  加载html文件
     [self loadExamplePage:self.myWebView];
     
@@ -259,11 +259,11 @@
     //        [webView reload];//刷新
     //    [webView stopLoading];//停止刷新
     //    }
-    
+#warning 少 iOS调用 html中的JS函数
     //    =========== =========== =========== ===========
     //  0. iOS调用js和 js调用iOS : 首先创建JSContext 对象
-    JSContext *context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    //  js调用iOS
+    JSContext *context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];// 获取该webview要加载的html对应的js环境 context 或者采用下面的方法
+      //  用context的下标取出html中的function
     context[@"testExecute"] = ^(){
         NSArray *args = [JSContext currentArguments];// 获取参数的数组
         for (id obj in args) {
@@ -292,6 +292,16 @@
     [context2 evaluateScript:jsStr2];
     NSString *jsStr3=@"testobject.TestTowParameterSecondParameter('参数A','参数B')";
     [context2 evaluateScript:jsStr3];
+    
+    
+#warning =======少 调试JSContext 调用JS的html的代码==============
+    JSContext *context1c = [[JSContext alloc] init];
+    [context1c evaluateScript:@"function add(a,b) {return a + b; }"];
+    JSValue *addFunction = context1c[@"add"];
+    JSValue *sum = [addFunction callWithArguments:@[@7,@12]];
+    
+    
+    
     
     // =========== =========== =========== =========== ===========
     
