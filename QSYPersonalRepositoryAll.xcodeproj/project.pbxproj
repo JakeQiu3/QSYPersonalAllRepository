@@ -150,7 +150,6 @@
 		7323B4AC1D2BB1C200CE6790 /* NSString+hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4A41D2BB1C200CE6790 /* NSString+hash.m */; };
 		7323B4AD1D2BB1C200CE6790 /* QsyJudgementStrAndArrTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4A61D2BB1C200CE6790 /* QsyJudgementStrAndArrTool.m */; };
 		7323B4AE1D2BB1C200CE6790 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4A81D2BB1C200CE6790 /* UIView+Extension.m */; };
-		733B1D381DB9B32500C58CD0 /* licecap(gif软件) sip识色软件.zip in Resources */ = {isa = PBXBuildFile; fileRef = 733B1D371DB9B32500C58CD0 /* licecap(gif软件) sip识色软件.zip */; };
 		734075341D124876000652E0 /* TestSynthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 734075331D124876000652E0 /* TestSynthesize.m */; };
 		7358D9D61D05642600B7484C /* FreezeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358D9D51D05642500B7484C /* FreezeViewController.m */; };
 		7358D9E21D05644400B7484C /* DQKFreezeWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358D9D91D05644400B7484C /* DQKFreezeWindowView.m */; };
@@ -478,7 +477,6 @@
 		7323B4A61D2BB1C200CE6790 /* QsyJudgementStrAndArrTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QsyJudgementStrAndArrTool.m; sourceTree = "<group>"; };
 		7323B4A71D2BB1C200CE6790 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		7323B4A81D2BB1C200CE6790 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		733B1D371DB9B32500C58CD0 /* licecap(gif软件) sip识色软件.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "licecap(gif软件) sip识色软件.zip"; sourceTree = "<group>"; };
 		734075321D124876000652E0 /* TestSynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSynthesize.h; sourceTree = "<group>"; };
 		734075331D124876000652E0 /* TestSynthesize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSynthesize.m; sourceTree = "<group>"; };
 		7358D9D41D05642500B7484C /* FreezeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreezeViewController.h; sourceTree = "<group>"; };
@@ -737,7 +735,6 @@
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				731BBF141D24B6CB00B14CF2 /* Common.h */,
-				733B1D371DB9B32500C58CD0 /* licecap(gif软件) sip识色软件.zip */,
 				3091A7A21CEE1D00003B97F4 /* 知识点总测试 */,
 				73D600FE1D7D5D2300DCCAC7 /* Runtime魔法拦截系统方法举例 */,
 				736679051D752BED00B39376 /* 清除缓存工具 */,
@@ -1890,7 +1887,6 @@
 				30DC007C1D0484C3005EAD0C /* 1.jpg in Resources */,
 				3091A7191CEE1A32003B97F4 /* hhh.png in Resources */,
 				73037E7A1D2A5A530017D024 /* tableViewTest.storyboard in Resources */,
-				733B1D381DB9B32500C58CD0 /* licecap(gif软件) sip识色软件.zip in Resources */,
 				73D15B131CEED943008855FB /* Info.plist in Resources */,
 				730C490C1D23B46D00707722 /* WebViewJavascriptBridge - demo.zip in Resources */,
 				3095903F1CFF228100176AAC /* 传统的MVC.png in Resources */,
