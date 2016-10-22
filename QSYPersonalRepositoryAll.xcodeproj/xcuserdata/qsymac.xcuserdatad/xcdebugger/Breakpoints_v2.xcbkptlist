@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
             endingLineNumber = "85"
-            landmarkName = "-configPickerView"
-            landmarkType = "5">
+            landmarkName = "-initBtn"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
