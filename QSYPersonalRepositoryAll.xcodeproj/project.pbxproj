@@ -228,6 +228,7 @@
 		73DEED961D0674EA00FE72DE /* CacultorFunctionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */; };
 		73DEF33D1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73DEF33C1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */; };
 		73E5F5941D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */; };
+		73F869F01DD9B9220084A971 /* UIImage+Resizable.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F869EF1DD9B9220084A971 /* UIImage+Resizable.m */; };
 		73FCE1CB1D1D1C190000BF20 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */; };
 /* End PBXBuildFile section */
 
@@ -616,6 +617,8 @@
 		73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacultorFunctionProgram.m; sourceTree = "<group>"; };
 		73DEF33C1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ReactiveCocoa Demo 注册搜索嵌套信号.zip"; sourceTree = "<group>"; };
 		73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf"; sourceTree = "<group>"; };
+		73F869EE1DD9B9220084A971 /* UIImage+Resizable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resizable.h"; sourceTree = "<group>"; };
+		73F869EF1DD9B9220084A971 /* UIImage+Resizable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resizable.m"; sourceTree = "<group>"; };
 		73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -903,6 +906,8 @@
 				73D15B001CEEBC54008855FB /* UIImage+FixOrientation.m */,
 				7304B8351CF2DCE9005CA459 /* ChangeAnimationView.h */,
 				7304B8361CF2DCE9005CA459 /* ChangeAnimationView.m */,
+				73F869EE1DD9B9220084A971 /* UIImage+Resizable.h */,
+				73F869EF1DD9B9220084A971 /* UIImage+Resizable.m */,
 			);
 			name = "工具箱";
 			sourceTree = "<group>";
@@ -2023,6 +2028,7 @@
 				3091A77D1CEE1A64003B97F4 /* MASLayoutConstraint.m in Sources */,
 				3091A7731CEE1A64003B97F4 /* FMDatabase.m in Sources */,
 				3091A78A1CEE1A64003B97F4 /* GCDViewController.m in Sources */,
+				73F869F01DD9B9220084A971 /* UIImage+Resizable.m in Sources */,
 				7313C0601D62B3EA00404EDF /* ActivityView.mm in Sources */,
 				7323B4A91D2BB1C200CE6790 /* KNBannerView.m in Sources */,
 				7304B8341CF2DCC2005CA459 /* ChangeAnimationViewController.m in Sources */,
