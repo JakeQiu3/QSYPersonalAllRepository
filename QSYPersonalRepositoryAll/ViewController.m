@@ -65,13 +65,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Class cls;
-//    不同类型(特指出结构体类型)和字符串之间转换
     cls = NSClassFromString(_titileArray[indexPath.row]);
     UIViewController *viewC = [[cls alloc] init];
     [self.navigationController pushViewController:viewC animated:YES];
 }
 
-// 收到memory warning 。。。。
+// memory warning 。。。。
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     

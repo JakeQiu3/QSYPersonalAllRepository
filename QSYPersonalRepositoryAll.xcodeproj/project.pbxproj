@@ -15,7 +15,6 @@
 		303F38D61D3B9E6600630F31 /* RightCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38D51D3B9E6600630F31 /* RightCollectionView.m */; };
 		303F38DA1D3BA34900630F31 /* RightColHeaderResuableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */; };
 		303F38DD1D3BA41000630F31 /* RightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */; };
-		305458561D0F06DE002B039E /* 同步异步 和 串行并行队列.png in Resources */ = {isa = PBXBuildFile; fileRef = 305458551D0F06DE002B039E /* 同步异步 和 串行并行队列.png */; };
 		308B97821CCA899400BDA0FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 308B97811CCA899400BDA0FA /* main.m */; };
 		308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B97891CCA899400BDA0FA /* Main.storyboard */; };
 		308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B978C1CCA899400BDA0FA /* Assets.xcassets */; };
@@ -35,13 +34,8 @@
 		3091A79B1CEE1A64003B97F4 /* 自定义tabbarDemo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3091A7721CEE1A64003B97F4 /* 自定义tabbarDemo.zip */; };
 		3091A79D1CEE1ABD003B97F4 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3091A79C1CEE1ABD003B97F4 /* libsqlite3.0.tbd */; };
 		3095902E1CF4B67200176AAC /* 面试题总结.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3095902D1CF4B67200176AAC /* 面试题总结.xml */; };
-		3095903F1CFF228100176AAC /* 传统的MVC.png in Resources */ = {isa = PBXBuildFile; fileRef = 309590331CFF228100176AAC /* 传统的MVC.png */; };
-		309590401CFF228100176AAC /* MVC的控制器瘦身.png in Resources */ = {isa = PBXBuildFile; fileRef = 309590341CFF228100176AAC /* MVC的控制器瘦身.png */; };
-		309590411CFF228100176AAC /* 新型的MVVM.png in Resources */ = {isa = PBXBuildFile; fileRef = 309590351CFF228100176AAC /* 新型的MVVM.png */; };
-		309590421CFF228100176AAC /* VM和V通过ReactiveCocoa实现绑定.png in Resources */ = {isa = PBXBuildFile; fileRef = 309590361CFF228100176AAC /* VM和V通过ReactiveCocoa实现绑定.png */; };
 		309590581CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590521CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m */; };
 		309590591CFF22C000176AAC /* DrawRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590541CFF22C000176AAC /* DrawRectView.m */; };
-		3095905A1CFF22C000176AAC /* navigation_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 309590551CFF22C000176AAC /* navigation_close.png */; };
 		3095905B1CFF22C000176AAC /* LayoutSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590571CFF22C000176AAC /* LayoutSubView.m */; };
 		309590621CFF241D00176AAC /* NewExecutorBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590611CFF241D00176AAC /* NewExecutorBlock.m */; };
 		30C976A71D3BB1C500614EBC /* PostMallCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */; };
@@ -92,16 +86,13 @@
 		734075341D124876000652E0 /* TestSynthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 734075331D124876000652E0 /* TestSynthesize.m */; };
 		7358D9D61D05642600B7484C /* FreezeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358D9D51D05642500B7484C /* FreezeViewController.m */; };
 		7363D6D31D0572CD00991477 /* 日历的Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7363D6D21D0572CD00991477 /* 日历的Demo.zip */; };
-		736584B31D22570A0088CDAB /* git使用流程指南.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 736584B21D22570A0088CDAB /* git使用流程指南.jpg */; };
 		736584B81D22652C0088CDAB /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 736584B71D22652C0088CDAB /* test.js */; };
 		736584BA1D2266620088CDAB /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 736584B91D2266620088CDAB /* test.html */; };
-		736584BC1D22676D0088CDAB /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 736584BB1D22676D0088CDAB /* test.png */; };
 		736584BE1D227C710088CDAB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736584BD1D227C710088CDAB /* JavaScriptCore.framework */; };
 		736584C51D228C890088CDAB /* TestJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 736584C41D228C890088CDAB /* TestJSObject.m */; };
 		736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736679071D752C0D00B39376 /* ClearCacheViewController.m */; };
 		7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736679081D752C0D00B39376 /* ClearCacheViewController.xib */; };
 		736EA2791DF0154200FC4C1C /* rescoures in Resources */ = {isa = PBXBuildFile; fileRef = 736EA2781DF0154200FC4C1C /* rescoures */; };
-		73982A931D10F1C000E74B69 /* 可变和不可变的copy，mutableCopy.png in Resources */ = {isa = PBXBuildFile; fileRef = 73982A921D10F1C000E74B69 /* 可变和不可变的copy，mutableCopy.png */; };
 		73982A991D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 73982A981D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m */; };
 		739B57791DF01B2400C8C9B0 /* DQKFreezeWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739B56BB1DF01B2400C8C9B0 /* DQKFreezeWindowView.m */; };
 		739B577A1DF01B2400C8C9B0 /* DQKMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 739B56BD1DF01B2400C8C9B0 /* DQKMainViewCell.m */; };
@@ -204,7 +195,6 @@
 		73DEED901D0662D400FE72DE /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */; };
 		73DEED931D06744900FE72DE /* 5种编程思想和5种设计模式的比较.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73DEED921D06744900FE72DE /* 5种编程思想和5种设计模式的比较.xml */; };
 		73DEED961D0674EA00FE72DE /* CacultorFunctionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */; };
-		73DEF33D1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73DEF33C1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */; };
 		73E5F5941D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */; };
 		73FCE1CB1D1D1C190000BF20 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */; };
 /* End PBXBuildFile section */
@@ -225,7 +215,6 @@
 		303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightColHeaderResuableView.m; sourceTree = "<group>"; };
 		303F38DB1D3BA41000630F31 /* RightCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCollectionViewCell.h; sourceTree = "<group>"; };
 		303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCollectionViewCell.m; sourceTree = "<group>"; };
-		305458551D0F06DE002B039E /* 同步异步 和 串行并行队列.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同步异步 和 串行并行队列.png"; sourceTree = "<group>"; };
 		308B977D1CCA899400BDA0FA /* QSYPersonalRepositoryAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSYPersonalRepositoryAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308B97811CCA899400BDA0FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		308B978A1CCA899400BDA0FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -259,15 +248,10 @@
 		3091A7721CEE1A64003B97F4 /* 自定义tabbarDemo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "自定义tabbarDemo.zip"; sourceTree = "<group>"; };
 		3091A79C1CEE1ABD003B97F4 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		3095902D1CF4B67200176AAC /* 面试题总结.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "面试题总结.xml"; sourceTree = "<group>"; };
-		309590331CFF228100176AAC /* 传统的MVC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "传统的MVC.png"; sourceTree = "<group>"; };
-		309590341CFF228100176AAC /* MVC的控制器瘦身.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVC的控制器瘦身.png"; sourceTree = "<group>"; };
-		309590351CFF228100176AAC /* 新型的MVVM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新型的MVVM.png"; sourceTree = "<group>"; };
-		309590361CFF228100176AAC /* VM和V通过ReactiveCocoa实现绑定.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VM和V通过ReactiveCocoa实现绑定.png"; sourceTree = "<group>"; };
 		309590511CFF22C000176AAC /* Draw&LayoutSubViewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Draw&LayoutSubViewsViewController.h"; sourceTree = "<group>"; };
 		309590521CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Draw&LayoutSubViewsViewController.m"; sourceTree = "<group>"; };
 		309590531CFF22C000176AAC /* DrawRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawRectView.h; sourceTree = "<group>"; };
 		309590541CFF22C000176AAC /* DrawRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawRectView.m; sourceTree = "<group>"; };
-		309590551CFF22C000176AAC /* navigation_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_close.png; sourceTree = "<group>"; };
 		309590561CFF22C000176AAC /* LayoutSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutSubView.h; sourceTree = "<group>"; };
 		309590571CFF22C000176AAC /* LayoutSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutSubView.m; sourceTree = "<group>"; };
 		309590601CFF241D00176AAC /* NewExecutorBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewExecutorBlock.h; sourceTree = "<group>"; };
@@ -367,7 +351,6 @@
 		736679071D752C0D00B39376 /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
 		736679081D752C0D00B39376 /* ClearCacheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClearCacheViewController.xib; sourceTree = "<group>"; };
 		736EA2781DF0154200FC4C1C /* rescoures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rescoures; sourceTree = "<group>"; };
-		73982A921D10F1C000E74B69 /* 可变和不可变的copy，mutableCopy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "可变和不可变的copy，mutableCopy.png"; sourceTree = "<group>"; };
 		73982A971D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RunAtDeallocBlock.h"; sourceTree = "<group>"; };
 		73982A981D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RunAtDeallocBlock.m"; sourceTree = "<group>"; };
 		739B56BA1DF01B2400C8C9B0 /* DQKFreezeWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQKFreezeWindowView.h; sourceTree = "<group>"; };
@@ -648,11 +631,7 @@
 		308B97741CCA899400BDA0FA = {
 			isa = PBXGroup;
 			children = (
-				7323B4931D2B8E1100CE6790 /* LocalAuthentication.framework */,
-				736584BD1D227C710088CDAB /* JavaScriptCore.framework */,
-				730CFB431D1A963600B62765 /* WebKit.framework */,
-				73D15AFD1CEEB46D008855FB /* AVFoundation.framework */,
-				3091A79C1CEE1ABD003B97F4 /* libsqlite3.0.tbd */,
+				7366B6FD1DF13FA10052E1E1 /* Frameworks */,
 				308B977F1CCA899400BDA0FA /* QSYPersonalRepositoryAll */,
 				308B977E1CCA899400BDA0FA /* Products */,
 			);
@@ -669,36 +648,13 @@
 		308B977F1CCA899400BDA0FA /* QSYPersonalRepositoryAll */ = {
 			isa = PBXGroup;
 			children = (
-				739B56B71DF01B2400C8C9B0 /* 工具箱 */,
 				30DC004A1D03D200005EAD0C /* AppDelegate.h */,
 				30DC004B1D03D200005EAD0C /* AppDelegate.m */,
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				3091A7A21CEE1D00003B97F4 /* 知识点总测试 */,
-				73D600FE1D7D5D2300DCCAC7 /* Runtime魔法拦截系统方法举例 */,
-				736679051D752BED00B39376 /* 清除缓存工具 */,
-				73B04E231D61C3A700171F0C /* 自定义和系统菊花转起来 */,
-				308DA7F91D3E77D000A97FA9 /* 混合Tab (<=2)的下拉菜单 */,
-				303F38CD1D3B99CB00630F31 /* 左Tab右CollectionView */,
-				303F38C51D3B327800630F31 /* 自定义含确认button的弹出框 */,
-				73DA62041D53776B00F61160 /* 单功能PickerView */,
-				303F38BA1D3B1B4600630F31 /* 多功能PickerView */,
-				7323B4951D2B9D2A00CE6790 /* 广告位轮播 */,
-				7323B48C1D2B8B0600CE6790 /* TouchID使用 */,
-				736584B11D2256FC0088CDAB /* Git使用的逻辑指南 */,
-				730CFB351D1A29EF00B62765 /* WebView使用介绍 */,
-				7358D9D31D0563F600B7484C /* 冻结cell列表 */,
-				7304B8311CF2DC78005CA459 /* 改变动画 */,
-				7304B8301CF2D9D6005CA459 /* 导航条隐藏和渐变 */,
-				73D15B091CEED8E9008855FB /* 计时器 */,
-				73D15AF91CEEB345008855FB /* 二维码和条形码 */,
-				73D15AF61CEEAD98008855FB /* Masonry 适配 */,
-				73D15AF41CEEAC97008855FB /* Json和XML解析 */,
-				73D15AF21CEEAC27008855FB /* 数据库工具之FMDB */,
-				73D15AF01CEEAB70008855FB /* 数据库工具之sqlite3.0 */,
-				73D15AEE1CEEAAD6008855FB /* 单tab的下拉菜单 */,
-				73D15AED1CEEAAB0008855FB /* TabBar封装 */,
-				73D15AEC1CEEAA85008855FB /* 坐标系转换 */,
+				7366B6FC1DF13F570052E1E1 /* 工具箱使用 */,
+				739B56B71DF01B2400C8C9B0 /* 工具箱 */,
 				308B97801CCA899400BDA0FA /* Supporting Files */,
 			);
 			path = QSYPersonalRepositoryAll;
@@ -761,10 +717,6 @@
 			children = (
 				73DEF33C1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */,
 				73DEED921D06744900FE72DE /* 5种编程思想和5种设计模式的比较.xml */,
-				309590331CFF228100176AAC /* 传统的MVC.png */,
-				309590341CFF228100176AAC /* MVC的控制器瘦身.png */,
-				309590351CFF228100176AAC /* 新型的MVVM.png */,
-				309590361CFF228100176AAC /* VM和V通过ReactiveCocoa实现绑定.png */,
 				73CA05061DAB796D00072618 /* ReactiveCocoa Framework(框架的旧包).zip */,
 				73BD08041DACBD3600BF99C7 /* 设计模式 */,
 				73DEED971D06756300FE72DE /* 编程思想 */,
@@ -779,7 +731,6 @@
 				309590521CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m */,
 				309590531CFF22C000176AAC /* DrawRectView.h */,
 				309590541CFF22C000176AAC /* DrawRectView.m */,
-				309590551CFF22C000176AAC /* navigation_close.png */,
 				309590561CFF22C000176AAC /* LayoutSubView.h */,
 				309590571CFF22C000176AAC /* LayoutSubView.m */,
 			);
@@ -1015,10 +966,52 @@
 			name = "清除缓存工具";
 			sourceTree = "<group>";
 		};
+		7366B6FC1DF13F570052E1E1 /* 工具箱使用 */ = {
+			isa = PBXGroup;
+			children = (
+				73D600FE1D7D5D2300DCCAC7 /* Runtime魔法拦截系统方法举例 */,
+				736679051D752BED00B39376 /* 清除缓存工具 */,
+				73B04E231D61C3A700171F0C /* 自定义和系统菊花转起来 */,
+				308DA7F91D3E77D000A97FA9 /* 混合Tab (<=2)的下拉菜单 */,
+				303F38CD1D3B99CB00630F31 /* 左Tab右CollectionView */,
+				303F38C51D3B327800630F31 /* 自定义含确认button的弹出框 */,
+				73DA62041D53776B00F61160 /* 单功能PickerView */,
+				303F38BA1D3B1B4600630F31 /* 多功能PickerView */,
+				7323B4951D2B9D2A00CE6790 /* 广告位轮播 */,
+				7323B48C1D2B8B0600CE6790 /* TouchID使用 */,
+				736584B11D2256FC0088CDAB /* Git使用的逻辑指南 */,
+				730CFB351D1A29EF00B62765 /* WebView使用介绍 */,
+				7358D9D31D0563F600B7484C /* 冻结cell列表 */,
+				7304B8311CF2DC78005CA459 /* 改变动画 */,
+				7304B8301CF2D9D6005CA459 /* 导航条隐藏和渐变 */,
+				73D15B091CEED8E9008855FB /* 计时器 */,
+				73D15AF91CEEB345008855FB /* 二维码和条形码 */,
+				73D15AF61CEEAD98008855FB /* Masonry 适配 */,
+				73D15AF41CEEAC97008855FB /* Json和XML解析 */,
+				73D15AF21CEEAC27008855FB /* 数据库工具之FMDB */,
+				73D15AF01CEEAB70008855FB /* 数据库工具之sqlite3.0 */,
+				73D15AEE1CEEAAD6008855FB /* 单tab的下拉菜单 */,
+				73D15AED1CEEAAB0008855FB /* TabBar封装 */,
+				73D15AEC1CEEAA85008855FB /* 坐标系转换 */,
+			);
+			name = "工具箱使用";
+			sourceTree = "<group>";
+		};
+		7366B6FD1DF13FA10052E1E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7323B4931D2B8E1100CE6790 /* LocalAuthentication.framework */,
+				736584BD1D227C710088CDAB /* JavaScriptCore.framework */,
+				730CFB431D1A963600B62765 /* WebKit.framework */,
+				73D15AFD1CEEB46D008855FB /* AVFoundation.framework */,
+				3091A79C1CEE1ABD003B97F4 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		73982A9A1D112FBB00E74B69 /* 抽象类具有copy和mutableCopy功能 */ = {
 			isa = PBXGroup;
 			children = (
-				73982A921D10F1C000E74B69 /* 可变和不可变的copy，mutableCopy.png */,
 				7304B8261CF29CB1005CA459 /* UserCopy.h */,
 				7304B8271CF29CB1005CA459 /* UserCopy.m */,
 			);
@@ -1655,7 +1648,6 @@
 		73D15AF81CEEAE56008855FB /* 多线程 */ = {
 			isa = PBXGroup;
 			children = (
-				305458551D0F06DE002B039E /* 同步异步 和 串行并行队列.png */,
 				3091A74C1CEE1A64003B97F4 /* GCDViewController.h */,
 				3091A7611CEE1A64003B97F4 /* GCDViewController.m */,
 			);
@@ -1811,27 +1803,18 @@
 				73BD08021DACBCF900BF99C7 /* MVVM包（ReactiveCocoa包）.zip in Resources */,
 				30CB778A1D3001CB00C3DDEC /* AutoLayoutViewController.xib in Resources */,
 				73B04E251D61CAF700171F0C /* 商品分类数据.plist in Resources */,
-				309590401CFF228100176AAC /* MVC的控制器瘦身.png in Resources */,
 				736584B81D22652C0088CDAB /* test.js in Resources */,
 				73214C1E1D1B7CFA00A766D2 /* IMYWebView-iOS通用demo.zip in Resources */,
 				308B97901CCA899400BDA0FA /* LaunchScreen.storyboard in Resources */,
 				736584BA1D2266620088CDAB /* test.html in Resources */,
-				736584BC1D22676D0088CDAB /* test.png in Resources */,
 				739B57841DF01B2400C8C9B0 /* Info.plist in Resources */,
 				73D15B1B1CEEE07B008855FB /* DemoView.xib in Resources */,
 				736EA2791DF0154200FC4C1C /* rescoures in Resources */,
-				309590421CFF228100176AAC /* VM和V通过ReactiveCocoa实现绑定.png in Resources */,
-				73982A931D10F1C000E74B69 /* 可变和不可变的copy，mutableCopy.png in Resources */,
-				73DEF33D1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip in Resources */,
 				30E65E471D5268CA0090442A /* date.json in Resources */,
 				739B578F1DF01B2400C8C9B0 /* Info.plist in Resources */,
 				7363D6D31D0572CD00991477 /* 日历的Demo.zip in Resources */,
-				3095905A1CFF22C000176AAC /* navigation_close.png in Resources */,
-				736584B31D22570A0088CDAB /* git使用流程指南.jpg in Resources */,
 				739B57A21DF01B2400C8C9B0 /* departmentCitysServices.plist in Resources */,
-				309590411CFF228100176AAC /* 新型的MVVM.png in Resources */,
 				730CFB3A1D1A306100B62765 /* index.html in Resources */,
-				305458561D0F06DE002B039E /* 同步异步 和 串行并行队列.png in Resources */,
 				7323B46F1D2B4F5900CE6790 /* customTest.xib in Resources */,
 				300783CB1D3A937B00E349D6 /* xib和storyboard使用看这个就够了.zip in Resources */,
 				73D601031D7D734C00DCCAC7 /* JSPatch的紧急修复上线Demo.zip in Resources */,
@@ -1840,7 +1823,6 @@
 				308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */,
 				73037E7A1D2A5A530017D024 /* tableViewTest.storyboard in Resources */,
 				730C490C1D23B46D00707722 /* WebViewJavascriptBridge - demo.zip in Resources */,
-				3095903F1CFF228100176AAC /* 传统的MVC.png in Resources */,
 				73CA05071DAB796D00072618 /* ReactiveCocoa Framework(框架的旧包).zip in Resources */,
 				7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */,
 				308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */,
@@ -2120,6 +2102,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2144,6 +2127,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
