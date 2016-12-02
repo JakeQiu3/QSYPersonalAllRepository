@@ -13,7 +13,7 @@
 
 //聊天气泡背景拉伸
 +(UIImage *)resizableImage:(NSString *)name{
-    UIImage *image = [UIImage imageNamed:imageName];
+    UIImage *image = [UIImage imageNamed:name];
     //自适应：宽度百分之50，高度百分之50
     image =  [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
     return image;

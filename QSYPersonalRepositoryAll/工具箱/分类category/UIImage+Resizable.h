@@ -16,7 +16,7 @@
  *  @param name ：传入的图片name
  *  @return ：UIImage图片
  */
-+(UIImage *)resizableImage:(NSString *)name
++(UIImage *)resizableImage:(NSString *)name;
 
 
 @end
