@@ -11,7 +11,7 @@
 {
     UITableView *_tableView;
     NSMutableArray *_fileNameArray;
-    NSMutableArray *_titileArray;
+    NSMutableArray *_classNameArray;
 }
 
 @end
@@ -28,7 +28,7 @@
 - (void)loadData {
 //   成为iOS顶尖高手，你必须来这里(这里有最好的开源项目和文章： http://www.jianshu.com/p/8dda0caf47ea
     _fileNameArray = @[@"知识点总测试",@"Xib和Storyboard使用汇总",@"坐标系转换",@"单tab的下拉菜单",@"Masonry 适配",@"Json和XML解析",@"数据库工具之FMDB",@"数据库工具之sqlite3.0",@"TabBar封装",@"二维码和条形码",@"计时器",@"导航条的隐藏和渐变处理",@"改变动画",@"冻结cell列表",@"加载Webview",@"加载WKWebview",@"TouchID使用",@"广告位轮播",@"自定义含button的弹出框",@"左Tab右Tab或Col",@"混合Tab (<=2)的下拉菜单",@"无交互的滑动栏间PickerView",@"有交互的滑动栏pickerView",@"清除缓存工具",@"自定义和系统菊花转起来"].mutableCopy;
-    _titileArray = @[@"TestTotalViewController",@"AutoLayoutViewController",@"TapAExitOtherViewController",@"PullDownMenuViewController",@"MasonryContraintViewController",@"JsonAndXmlParserViewController",@"FmdbViewController",@"SqliteDatabaseViewController",@"",@"CaptureDeviceViewController",@"MZTLViewController",@"NavBarViewController",@"ChangeAnimationViewController",@"FreezeViewController",@"WebViewDemoViewController",@"WKWebViewDemoViewController",@"TouchIdViewController",@"BannerViewController",@"CustomAlertViewController",@"TabActionColViewController",@"MutlipleTwoTabAndOneTabViewController",@"QSYSinglePickerView",@"MulitplePickerViewController",@"ClearCacheViewController",@"UserDefinedLoadingViewController"].mutableCopy;//
+    _classNameArray = @[@"TestTotalViewController",@"AutoLayoutViewController",@"TapAExitOtherViewController",@"PullDownMenuViewController",@"MasonryContraintViewController",@"JsonAndXmlParserViewController",@"FmdbViewController",@"SqliteDatabaseViewController",@"",@"CaptureDeviceViewController",@"MZTLViewController",@"NavBarViewController",@"ChangeAnimationViewController",@"FreezeViewController",@"WebViewDemoViewController",@"WKWebViewDemoViewController",@"TouchIdViewController",@"BannerViewController",@"CustomAlertViewController",@"TabActionColViewController",@"MutlipleTwoTabAndOneTabViewController",@"QSYSinglePickerView",@"MulitplePickerViewController",@"ClearCacheViewController",@"UserDefinedLoadingViewController"].mutableCopy;//
 }
 
 - (void)setUI {
@@ -49,7 +49,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _titileArray.count;
+    return _classNameArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,7 +65,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Class cls;
-    cls = NSClassFromString(_titileArray[indexPath.row]);
+    cls = NSClassFromString(_classNameArray[indexPath.row]);
     UIViewController *viewC = [[cls alloc] init];
     [self.navigationController pushViewController:viewC animated:YES];
 }
