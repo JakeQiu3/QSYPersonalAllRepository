@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		300783CB1D3A937B00E349D6 /* xib和storyboard使用看这个就够了.zip in Resources */ = {isa = PBXBuildFile; fileRef = 300783CA1D3A937B00E349D6 /* xib和storyboard使用看这个就够了.zip */; };
+		14E77DE16BA863AD85E61D38 /* Pods_QSYPersonalRepositoryAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1490020758E109E907029F62 /* Pods_QSYPersonalRepositoryAll.framework */; };
 		303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */; };
 		303F38C81D3B32C800630F31 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38C71D3B32C800630F31 /* CustomAlertViewController.m */; };
 		303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */; };
@@ -31,9 +31,7 @@
 		3091A7941CEE1A64003B97F4 /* TapAExitOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A76B1CEE1A64003B97F4 /* TapAExitOtherViewController.m */; };
 		3091A7951CEE1A64003B97F4 /* TestTotalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A76C1CEE1A64003B97F4 /* TestTotalViewController.m */; };
 		3091A7971CEE1A64003B97F4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091A76E1CEE1A64003B97F4 /* User.m */; };
-		3091A79B1CEE1A64003B97F4 /* 自定义tabbarDemo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3091A7721CEE1A64003B97F4 /* 自定义tabbarDemo.zip */; };
 		3091A79D1CEE1ABD003B97F4 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3091A79C1CEE1ABD003B97F4 /* libsqlite3.0.tbd */; };
-		3095902E1CF4B67200176AAC /* 面试题总结.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3095902D1CF4B67200176AAC /* 面试题总结.xml */; };
 		309590581CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590521CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m */; };
 		309590591CFF22C000176AAC /* DrawRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590541CFF22C000176AAC /* DrawRectView.m */; };
 		3095905B1CFF22C000176AAC /* LayoutSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590571CFF22C000176AAC /* LayoutSubView.m */; };
@@ -47,7 +45,6 @@
 		30DC00681D04845F005EAD0C /* MVCStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC00631D04845F005EAD0C /* MVCStatusViewController.m */; };
 		30DC00691D04845F005EAD0C /* WeiboStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC00651D04845F005EAD0C /* WeiboStatus.m */; };
 		30DC006A1D04845F005EAD0C /* StatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC00671D04845F005EAD0C /* StatusTableViewCell.m */; };
-		30E65E471D5268CA0090442A /* date.json in Resources */ = {isa = PBXBuildFile; fileRef = 30E65E461D5268CA0090442A /* date.json */; };
 		73037E7A1D2A5A530017D024 /* tableViewTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73037E791D2A5A530017D024 /* tableViewTest.storyboard */; };
 		73037E801D2A6CD50017D024 /* Sb0TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73037E7F1D2A6CD50017D024 /* Sb0TableViewController.m */; };
 		73037E831D2A71C60017D024 /* Sb1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73037E821D2A71C60017D024 /* Sb1TableViewCell.m */; };
@@ -57,14 +54,11 @@
 		7304B8281CF29CB1005CA459 /* UserCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7304B8271CF29CB1005CA459 /* UserCopy.m */; };
 		7304B82F1CF2D9D3005CA459 /* NavBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7304B82E1CF2D9D3005CA459 /* NavBarViewController.m */; };
 		7304B8341CF2DCC2005CA459 /* ChangeAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7304B8331CF2DCC2005CA459 /* ChangeAnimationViewController.m */; };
-		730A25EB1D17C5DF002A263C /* _objc_msgForward_demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 730A25EA1D17C5DF002A263C /* _objc_msgForward_demo.zip */; };
 		730C49071D23B3E400707722 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 730C49001D23B3E400707722 /* WebViewJavascriptBridge_JS.m */; };
 		730C49081D23B3E400707722 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 730C49021D23B3E400707722 /* WebViewJavascriptBridge.m */; };
 		730C49091D23B3E400707722 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 730C49031D23B3E400707722 /* WKWebViewJavascriptBridge.m */; };
 		730C490A1D23B3E400707722 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 730C49051D23B3E400707722 /* WebViewJavascriptBridgeBase.m */; };
-		730C490C1D23B46D00707722 /* WebViewJavascriptBridge - demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 730C490B1D23B46D00707722 /* WebViewJavascriptBridge - demo.zip */; };
 		730CFB381D1A2A1500B62765 /* WebViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB371D1A2A1500B62765 /* WebViewDemoViewController.m */; };
-		730CFB3A1D1A306100B62765 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 730CFB391D1A306100B62765 /* index.html */; };
 		730CFB3D1D1A74D500B62765 /* WKWebViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB3C1D1A74D500B62765 /* WKWebViewDemoViewController.m */; };
 		730CFB441D1A963600B62765 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730CFB431D1A963600B62765 /* WebKit.framework */; };
 		730CFB4D1D1A966D00B62765 /* IMYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB471D1A966D00B62765 /* IMYWebView.m */; };
@@ -72,7 +66,6 @@
 		730CFB4F1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB4C1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m */; };
 		7313C05C1D62B35F00404EDF /* UserDefinedLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7313C05B1D62B35F00404EDF /* UserDefinedLoadingViewController.m */; };
 		731FFF0B1D3C703700F65E0F /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 731FFF0A1D3C703700F65E0F /* BaseModel.m */; };
-		73214C1E1D1B7CFA00A766D2 /* IMYWebView-iOS通用demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73214C1D1D1B7CFA00A766D2 /* IMYWebView-iOS通用demo.zip */; };
 		7323B46F1D2B4F5900CE6790 /* customTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7323B46E1D2B4F5900CE6790 /* customTest.xib */; };
 		7323B4721D2B506900CE6790 /* CustomTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4711D2B506900CE6790 /* CustomTestView.m */; };
 		7323B4771D2B5D3B00CE6790 /* Sb1DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4761D2B5D3B00CE6790 /* Sb1DetailViewController.m */; };
@@ -85,14 +78,13 @@
 		7323B4981D2B9D6300CE6790 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4971D2B9D6300CE6790 /* BannerViewController.m */; };
 		734075341D124876000652E0 /* TestSynthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 734075331D124876000652E0 /* TestSynthesize.m */; };
 		7358D9D61D05642600B7484C /* FreezeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358D9D51D05642500B7484C /* FreezeViewController.m */; };
-		7363D6D31D0572CD00991477 /* 日历的Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7363D6D21D0572CD00991477 /* 日历的Demo.zip */; };
 		736584B81D22652C0088CDAB /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 736584B71D22652C0088CDAB /* test.js */; };
 		736584BA1D2266620088CDAB /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 736584B91D2266620088CDAB /* test.html */; };
 		736584BE1D227C710088CDAB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736584BD1D227C710088CDAB /* JavaScriptCore.framework */; };
 		736584C51D228C890088CDAB /* TestJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 736584C41D228C890088CDAB /* TestJSObject.m */; };
 		736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736679071D752C0D00B39376 /* ClearCacheViewController.m */; };
 		7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736679081D752C0D00B39376 /* ClearCacheViewController.xib */; };
-		736EA2791DF0154200FC4C1C /* rescoures in Resources */ = {isa = PBXBuildFile; fileRef = 736EA2781DF0154200FC4C1C /* rescoures */; };
+		73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */; };
 		73982A991D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 73982A981D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m */; };
 		739B57791DF01B2400C8C9B0 /* DQKFreezeWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739B56BB1DF01B2400C8C9B0 /* DQKFreezeWindowView.m */; };
 		739B577A1DF01B2400C8C9B0 /* DQKMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 739B56BD1DF01B2400C8C9B0 /* DQKMainViewCell.m */; };
@@ -170,17 +162,58 @@
 		739B57C21DF01B2400C8C9B0 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739B57741DF01B2400C8C9B0 /* SVIndefiniteAnimatedView.m */; };
 		739B57C31DF01B2400C8C9B0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 739B57761DF01B2400C8C9B0 /* SVProgressHUD.bundle */; };
 		739B57C41DF01B2400C8C9B0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 739B57781DF01B2400C8C9B0 /* SVProgressHUD.m */; };
-		73B04E251D61CAF700171F0C /* 商品分类数据.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73B04E241D61CAF700171F0C /* 商品分类数据.plist */; };
-		73BD08021DACBCF900BF99C7 /* MVVM包（ReactiveCocoa包）.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BD08011DACBCF900BF99C7 /* MVVM包（ReactiveCocoa包）.zip */; };
-		73CA01681DAB3A5200072618 /* YiRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CA01651DAB3A5200072618 /* YiRefreshFooter.m */; };
-		73CA01691DAB3A5200072618 /* YiRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CA01671DAB3A5200072618 /* YiRefreshHeader.m */; };
-		73CA016D1DAB3A9700072618 /* CustomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CA016C1DAB3A9700072618 /* CustomModel.m */; };
-		73CA01701DAB3D1B00072618 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CA016F1DAB3D1B00072618 /* CustomTableViewCell.m */; };
-		73CA01731DAB3D6600072618 /* TableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CA01721DAB3D6600072618 /* TableViewModel.m */; };
-		73CA01781DAB3D6D00072618 /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CA01751DAB3D6D00072618 /* TableViewDataSource.m */; };
-		73CA01791DAB3D6D00072618 /* TableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CA01771DAB3D6D00072618 /* TableViewDelegate.m */; };
-		73CA017C1DAB3D7700072618 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CA017B1DAB3D7700072618 /* TableViewController.m */; };
-		73CA05071DAB796D00072618 /* ReactiveCocoa Framework(框架的旧包).zip in Resources */ = {isa = PBXBuildFile; fileRef = 73CA05061DAB796D00072618 /* ReactiveCocoa Framework(框架的旧包).zip */; };
+		73BA9A9C1DF5442300C0BCA6 /* 见QSYRAC_MVVM.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9A9B1DF5442300C0BCA6 /* 见QSYRAC_MVVM.xml */; };
+		73BA9AAC1DF5452B00C0BCA6 /* objc_msgForward_demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9A9E1DF5452B00C0BCA6 /* objc_msgForward_demo.zip */; };
+		73BA9AAE1DF5452B00C0BCA6 /* IMYWebView-iOS通用demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA01DF5452B00C0BCA6 /* IMYWebView-iOS通用demo.zip */; };
+		73BA9AAF1DF5452B00C0BCA6 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA11DF5452B00C0BCA6 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */; };
+		73BA9AB01DF5452B00C0BCA6 /* JSPatch的紧急修复上线Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA21DF5452B00C0BCA6 /* JSPatch的紧急修复上线Demo.zip */; };
+		73BA9AB21DF5452B00C0BCA6 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA41DF5452B00C0BCA6 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */; };
+		73BA9AB31DF5452B00C0BCA6 /* ReactiveCocoa Framework(框架的旧包).zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA51DF5452B00C0BCA6 /* ReactiveCocoa Framework(框架的旧包).zip */; };
+		73BA9AB41DF5452B00C0BCA6 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BA9AA61DF5452B00C0BCA6 /* ReactiveCocoa.framework */; };
+		73BA9AB51DF5452B00C0BCA6 /* WebViewJavascriptBridge - demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA71DF5452B00C0BCA6 /* WebViewJavascriptBridge - demo.zip */; };
+		73BA9AB61DF5452B00C0BCA6 /* xib和storyboard使用看这个就够了.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA81DF5452B00C0BCA6 /* xib和storyboard使用看这个就够了.zip */; };
+		73BA9AB71DF5452B00C0BCA6 /* 仿微信选择图片Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA91DF5452B00C0BCA6 /* 仿微信选择图片Demo.zip */; };
+		73BA9AB81DF5452B00C0BCA6 /* 日历的Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AAA1DF5452B00C0BCA6 /* 日历的Demo.zip */; };
+		73BA9AB91DF5452B00C0BCA6 /* 自定义tabbarDemo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AAB1DF5452B00C0BCA6 /* 自定义tabbarDemo.zip */; };
+		73BA9AE01DF5455800C0BCA6 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ABB1DF5455800C0BCA6 /* 1.jpg */; };
+		73BA9AE11DF5455800C0BCA6 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ABC1DF5455800C0BCA6 /* 10.jpg */; };
+		73BA9AE21DF5455800C0BCA6 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ABD1DF5455800C0BCA6 /* 11.jpg */; };
+		73BA9AE31DF5455800C0BCA6 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ABE1DF5455800C0BCA6 /* 12.jpg */; };
+		73BA9AE41DF5455800C0BCA6 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ABF1DF5455800C0BCA6 /* 13.jpg */; };
+		73BA9AE51DF5455800C0BCA6 /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AC01DF5455800C0BCA6 /* 14.jpg */; };
+		73BA9AE61DF5455800C0BCA6 /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AC11DF5455800C0BCA6 /* 15.jpg */; };
+		73BA9AE71DF5455800C0BCA6 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AC21DF5455800C0BCA6 /* 2.jpg */; };
+		73BA9AE81DF5455800C0BCA6 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AC31DF5455800C0BCA6 /* 3.jpg */; };
+		73BA9AE91DF5455800C0BCA6 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AC41DF5455800C0BCA6 /* 4.jpg */; };
+		73BA9AEA1DF5455800C0BCA6 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AC51DF5455800C0BCA6 /* 5.jpg */; };
+		73BA9AEB1DF5455800C0BCA6 /* 5种编程思想和5种设计模式的比较.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AC61DF5455800C0BCA6 /* 5种编程思想和5种设计模式的比较.xml */; };
+		73BA9AEC1DF5455800C0BCA6 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AC71DF5455800C0BCA6 /* 6.jpg */; };
+		73BA9AED1DF5455800C0BCA6 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AC81DF5455800C0BCA6 /* 7.jpg */; };
+		73BA9AEE1DF5455800C0BCA6 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AC91DF5455800C0BCA6 /* 8.jpg */; };
+		73BA9AEF1DF5455800C0BCA6 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ACA1DF5455800C0BCA6 /* 9.jpg */; };
+		73BA9AF01DF5455800C0BCA6 /* git使用流程指南.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ACB1DF5455800C0BCA6 /* git使用流程指南.jpg */; };
+		73BA9AF11DF5455800C0BCA6 /* hhh.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ACC1DF5455800C0BCA6 /* hhh.png */; };
+		73BA9AF21DF5455800C0BCA6 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ACD1DF5455800C0BCA6 /* index.html */; };
+		73BA9AF31DF5455800C0BCA6 /* movielist.json in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ACE1DF5455800C0BCA6 /* movielist.json */; };
+		73BA9AF41DF5455800C0BCA6 /* MVC的控制器瘦身.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ACF1DF5455800C0BCA6 /* MVC的控制器瘦身.png */; };
+		73BA9AF51DF5455800C0BCA6 /* navigation_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AD01DF5455800C0BCA6 /* navigation_back.png */; };
+		73BA9AF61DF5455800C0BCA6 /* navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AD11DF5455800C0BCA6 /* navigation_back@2x.png */; };
+		73BA9AF71DF5455800C0BCA6 /* navigation_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AD21DF5455800C0BCA6 /* navigation_back@3x.png */; };
+		73BA9AF81DF5455800C0BCA6 /* navigation_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AD31DF5455800C0BCA6 /* navigation_close.png */; };
+		73BA9AF91DF5455800C0BCA6 /* navigation_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AD41DF5455800C0BCA6 /* navigation_close@2x.png */; };
+		73BA9AFA1DF5455800C0BCA6 /* navigation_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AD51DF5455800C0BCA6 /* navigation_close@3x.png */; };
+		73BA9AFB1DF5455800C0BCA6 /* StatusInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AD61DF5455800C0BCA6 /* StatusInfo.plist */; };
+		73BA9AFC1DF5455800C0BCA6 /* Teacher.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AD71DF5455800C0BCA6 /* Teacher.xml */; };
+		73BA9AFE1DF5455800C0BCA6 /* VM和V通过ReactiveCocoa实现绑定.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AD91DF5455800C0BCA6 /* VM和V通过ReactiveCocoa实现绑定.png */; };
+		73BA9AFF1DF5455800C0BCA6 /* 传统的MVC.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADA1DF5455800C0BCA6 /* 传统的MVC.png */; };
+		73BA9B001DF5455800C0BCA6 /* 可变和不可变的copy，mutableCopy.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADB1DF5455800C0BCA6 /* 可变和不可变的copy，mutableCopy.png */; };
+		73BA9B011DF5455800C0BCA6 /* 同步异步 和 串行并行队列.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADC1DF5455800C0BCA6 /* 同步异步 和 串行并行队列.png */; };
+		73BA9B021DF5455800C0BCA6 /* 商品分类数据.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADD1DF5455800C0BCA6 /* 商品分类数据.plist */; };
+		73BA9B031DF5455800C0BCA6 /* 新型的MVVM.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADE1DF5455800C0BCA6 /* 新型的MVVM.png */; };
+		73BA9B041DF5455800C0BCA6 /* 面试题总结.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */; };
+		73BA9B061DF5463A00C0BCA6 /* date.json in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9B051DF5463A00C0BCA6 /* date.json */; };
+		73C7A3441DF55E6800A58D4E /* HandleDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C7A3431DF55E6800A58D4E /* HandleDicTransferModel.m */; };
+		73C7A3491DF5630A00A58D4E /* DicTransferModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */; };
 		73D15AFC1CEEB3E4008855FB /* CaptureDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15AFB1CEEB3E4008855FB /* CaptureDeviceViewController.m */; };
 		73D15AFE1CEEB46D008855FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D15AFD1CEEB46D008855FB /* AVFoundation.framework */; };
 		73D15B0C1CEED90C008855FB /* MZTLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15B0B1CEED90C008855FB /* MZTLViewController.m */; };
@@ -189,18 +222,28 @@
 		73D15B2F1CEF3DD1008855FB /* Uuu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D15B2E1CEF3DD1008855FB /* Uuu.xib */; };
 		73D15B331CEF4118008855FB /* tttViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15B311CEF4118008855FB /* tttViewController.m */; };
 		73D601011D7D5D4900DCCAC7 /* MyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D601001D7D5D4900DCCAC7 /* MyString.m */; };
-		73D601031D7D734C00DCCAC7 /* JSPatch的紧急修复上线Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73D601021D7D734C00DCCAC7 /* JSPatch的紧急修复上线Demo.zip */; };
-		73D9C1411D420E55001C60CE /* 仿微信选择图片Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */; };
 		73DA620B1D5378F800F61160 /* QSYSinglePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DA620A1D5378F800F61160 /* QSYSinglePickerView.m */; };
 		73DEED901D0662D400FE72DE /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */; };
-		73DEED931D06744900FE72DE /* 5种编程思想和5种设计模式的比较.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73DEED921D06744900FE72DE /* 5种编程思想和5种设计模式的比较.xml */; };
 		73DEED961D0674EA00FE72DE /* CacultorFunctionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */; };
-		73E5F5941D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */; };
 		73FCE1CB1D1D1C190000BF20 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		73C7B1F01DF69E1E003471F2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		300783CA1D3A937B00E349D6 /* xib和storyboard使用看这个就够了.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "xib和storyboard使用看这个就够了.zip"; sourceTree = "<group>"; };
+		0026EFF5CCFFB5336D396DBD /* Pods-QSYPersonalRepositoryAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSYPersonalRepositoryAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-QSYPersonalRepositoryAll/Pods-QSYPersonalRepositoryAll.release.xcconfig"; sourceTree = "<group>"; };
+		1490020758E109E907029F62 /* Pods_QSYPersonalRepositoryAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QSYPersonalRepositoryAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		303F38BB1D3B1B6400630F31 /* MulitplePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulitplePickerViewController.h; sourceTree = "<group>"; };
 		303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulitplePickerViewController.m; sourceTree = "<group>"; };
 		303F38C61D3B32C800630F31 /* CustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewController.h; sourceTree = "<group>"; };
@@ -245,9 +288,7 @@
 		3091A76B1CEE1A64003B97F4 /* TapAExitOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapAExitOtherViewController.m; sourceTree = "<group>"; };
 		3091A76C1CEE1A64003B97F4 /* TestTotalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTotalViewController.m; sourceTree = "<group>"; };
 		3091A76E1CEE1A64003B97F4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		3091A7721CEE1A64003B97F4 /* 自定义tabbarDemo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "自定义tabbarDemo.zip"; sourceTree = "<group>"; };
 		3091A79C1CEE1ABD003B97F4 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		3095902D1CF4B67200176AAC /* 面试题总结.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "面试题总结.xml"; sourceTree = "<group>"; };
 		309590511CFF22C000176AAC /* Draw&LayoutSubViewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Draw&LayoutSubViewsViewController.h"; sourceTree = "<group>"; };
 		309590521CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Draw&LayoutSubViewsViewController.m"; sourceTree = "<group>"; };
 		309590531CFF22C000176AAC /* DrawRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawRectView.h; sourceTree = "<group>"; };
@@ -273,7 +314,6 @@
 		30DC00651D04845F005EAD0C /* WeiboStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboStatus.m; sourceTree = "<group>"; };
 		30DC00661D04845F005EAD0C /* StatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusTableViewCell.h; sourceTree = "<group>"; };
 		30DC00671D04845F005EAD0C /* StatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTableViewCell.m; sourceTree = "<group>"; };
-		30E65E461D5268CA0090442A /* date.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = date.json; sourceTree = "<group>"; };
 		73037E791D2A5A530017D024 /* tableViewTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = tableViewTest.storyboard; sourceTree = "<group>"; };
 		73037E7E1D2A6CD50017D024 /* Sb0TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sb0TableViewController.h; sourceTree = "<group>"; };
 		73037E7F1D2A6CD50017D024 /* Sb0TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sb0TableViewController.m; sourceTree = "<group>"; };
@@ -291,7 +331,6 @@
 		7304B82E1CF2D9D3005CA459 /* NavBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarViewController.m; sourceTree = "<group>"; };
 		7304B8321CF2DCC2005CA459 /* ChangeAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeAnimationViewController.h; sourceTree = "<group>"; };
 		7304B8331CF2DCC2005CA459 /* ChangeAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeAnimationViewController.m; sourceTree = "<group>"; };
-		730A25EA1D17C5DF002A263C /* _objc_msgForward_demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = _objc_msgForward_demo.zip; sourceTree = "<group>"; };
 		730C48FF1D23B3E400707722 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
 		730C49001D23B3E400707722 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
 		730C49011D23B3E400707722 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
@@ -300,10 +339,8 @@
 		730C49041D23B3E400707722 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		730C49051D23B3E400707722 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		730C49061D23B3E400707722 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
-		730C490B1D23B46D00707722 /* WebViewJavascriptBridge - demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "WebViewJavascriptBridge - demo.zip"; sourceTree = "<group>"; };
 		730CFB361D1A2A1500B62765 /* WebViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDemoViewController.h; sourceTree = "<group>"; };
 		730CFB371D1A2A1500B62765 /* WebViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDemoViewController.m; sourceTree = "<group>"; };
-		730CFB391D1A306100B62765 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		730CFB3B1D1A74D500B62765 /* WKWebViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewDemoViewController.h; sourceTree = "<group>"; };
 		730CFB3C1D1A74D500B62765 /* WKWebViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDemoViewController.m; sourceTree = "<group>"; };
 		730CFB431D1A963600B62765 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -317,7 +354,6 @@
 		7313C05B1D62B35F00404EDF /* UserDefinedLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefinedLoadingViewController.m; sourceTree = "<group>"; };
 		731FFF0A1D3C703700F65E0F /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		731FFF0C1D3C705500F65E0F /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
-		73214C1D1D1B7CFA00A766D2 /* IMYWebView-iOS通用demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "IMYWebView-iOS通用demo.zip"; sourceTree = "<group>"; };
 		7323B46E1D2B4F5900CE6790 /* customTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = customTest.xib; sourceTree = "<group>"; };
 		7323B4701D2B506900CE6790 /* CustomTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTestView.h; sourceTree = "<group>"; };
 		7323B4711D2B506900CE6790 /* CustomTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTestView.m; sourceTree = "<group>"; };
@@ -339,18 +375,17 @@
 		734075331D124876000652E0 /* TestSynthesize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSynthesize.m; sourceTree = "<group>"; };
 		7358D9D41D05642500B7484C /* FreezeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreezeViewController.h; sourceTree = "<group>"; };
 		7358D9D51D05642500B7484C /* FreezeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreezeViewController.m; sourceTree = "<group>"; };
-		7363D6D21D0572CD00991477 /* 日历的Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "日历的Demo.zip"; sourceTree = "<group>"; };
 		736584B21D22570A0088CDAB /* git使用流程指南.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "git使用流程指南.jpg"; sourceTree = "<group>"; };
 		736584B71D22652C0088CDAB /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 		736584B91D2266620088CDAB /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		736584BB1D22676D0088CDAB /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		736584BD1D227C710088CDAB /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		736584C31D228C890088CDAB /* TestJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestJSObject.h; sourceTree = "<group>"; };
 		736584C41D228C890088CDAB /* TestJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestJSObject.m; sourceTree = "<group>"; };
 		736679061D752C0D00B39376 /* ClearCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
 		736679071D752C0D00B39376 /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
 		736679081D752C0D00B39376 /* ClearCacheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClearCacheViewController.xib; sourceTree = "<group>"; };
-		736EA2781DF0154200FC4C1C /* rescoures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rescoures; sourceTree = "<group>"; };
+		73801AF71DF65C4300E9EC42 /* SubDicTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDicTransferModel.h; sourceTree = "<group>"; };
+		73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDicTransferModel.m; sourceTree = "<group>"; };
 		73982A971D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RunAtDeallocBlock.h"; sourceTree = "<group>"; };
 		73982A981D1129CF00E74B69 /* NSObject+RunAtDeallocBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RunAtDeallocBlock.m"; sourceTree = "<group>"; };
 		739B56BA1DF01B2400C8C9B0 /* DQKFreezeWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQKFreezeWindowView.h; sourceTree = "<group>"; };
@@ -511,27 +546,62 @@
 		739B57761DF01B2400C8C9B0 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		739B57771DF01B2400C8C9B0 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		739B57781DF01B2400C8C9B0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
-		73B04E241D61CAF700171F0C /* 商品分类数据.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "商品分类数据.plist"; sourceTree = "<group>"; };
 		73B04E271D61ECCA00171F0C /* TabOrColDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabOrColDelegate.h; sourceTree = "<group>"; };
-		73BD08011DACBCF900BF99C7 /* MVVM包（ReactiveCocoa包）.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "MVVM包（ReactiveCocoa包）.zip"; sourceTree = "<group>"; };
-		73CA01641DAB3A5200072618 /* YiRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiRefreshFooter.h; sourceTree = "<group>"; };
-		73CA01651DAB3A5200072618 /* YiRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiRefreshFooter.m; sourceTree = "<group>"; };
-		73CA01661DAB3A5200072618 /* YiRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiRefreshHeader.h; sourceTree = "<group>"; };
-		73CA01671DAB3A5200072618 /* YiRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiRefreshHeader.m; sourceTree = "<group>"; };
-		73CA016B1DAB3A9700072618 /* CustomModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomModel.h; sourceTree = "<group>"; };
-		73CA016C1DAB3A9700072618 /* CustomModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomModel.m; sourceTree = "<group>"; };
-		73CA016E1DAB3D1B00072618 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
-		73CA016F1DAB3D1B00072618 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
-		73CA01711DAB3D6600072618 /* TableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewModel.h; sourceTree = "<group>"; };
-		73CA01721DAB3D6600072618 /* TableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewModel.m; sourceTree = "<group>"; };
-		73CA01741DAB3D6D00072618 /* TableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
-		73CA01751DAB3D6D00072618 /* TableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSource.m; sourceTree = "<group>"; };
-		73CA01761DAB3D6D00072618 /* TableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDelegate.h; sourceTree = "<group>"; };
-		73CA01771DAB3D6D00072618 /* TableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDelegate.m; sourceTree = "<group>"; };
-		73CA017A1DAB3D7700072618 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		73CA017B1DAB3D7700072618 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		73BA9A9B1DF5442300C0BCA6 /* 见QSYRAC_MVVM.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "见QSYRAC_MVVM.xml"; sourceTree = "<group>"; };
+		73BA9A9E1DF5452B00C0BCA6 /* objc_msgForward_demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = objc_msgForward_demo.zip; sourceTree = "<group>"; };
+		73BA9AA01DF5452B00C0BCA6 /* IMYWebView-iOS通用demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "IMYWebView-iOS通用demo.zip"; sourceTree = "<group>"; };
+		73BA9AA11DF5452B00C0BCA6 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf"; sourceTree = "<group>"; };
+		73BA9AA21DF5452B00C0BCA6 /* JSPatch的紧急修复上线Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "JSPatch的紧急修复上线Demo.zip"; sourceTree = "<group>"; };
+		73BA9AA41DF5452B00C0BCA6 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ReactiveCocoa Demo 注册搜索嵌套信号.zip"; sourceTree = "<group>"; };
+		73BA9AA51DF5452B00C0BCA6 /* ReactiveCocoa Framework(框架的旧包).zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ReactiveCocoa Framework(框架的旧包).zip"; sourceTree = "<group>"; };
+		73BA9AA61DF5452B00C0BCA6 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
+		73BA9AA71DF5452B00C0BCA6 /* WebViewJavascriptBridge - demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "WebViewJavascriptBridge - demo.zip"; sourceTree = "<group>"; };
+		73BA9AA81DF5452B00C0BCA6 /* xib和storyboard使用看这个就够了.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "xib和storyboard使用看这个就够了.zip"; sourceTree = "<group>"; };
+		73BA9AA91DF5452B00C0BCA6 /* 仿微信选择图片Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "仿微信选择图片Demo.zip"; sourceTree = "<group>"; };
+		73BA9AAA1DF5452B00C0BCA6 /* 日历的Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "日历的Demo.zip"; sourceTree = "<group>"; };
+		73BA9AAB1DF5452B00C0BCA6 /* 自定义tabbarDemo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "自定义tabbarDemo.zip"; sourceTree = "<group>"; };
+		73BA9ABB1DF5455800C0BCA6 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		73BA9ABC1DF5455800C0BCA6 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		73BA9ABD1DF5455800C0BCA6 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		73BA9ABE1DF5455800C0BCA6 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		73BA9ABF1DF5455800C0BCA6 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		73BA9AC01DF5455800C0BCA6 /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
+		73BA9AC11DF5455800C0BCA6 /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
+		73BA9AC21DF5455800C0BCA6 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		73BA9AC31DF5455800C0BCA6 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		73BA9AC41DF5455800C0BCA6 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		73BA9AC51DF5455800C0BCA6 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		73BA9AC61DF5455800C0BCA6 /* 5种编程思想和5种设计模式的比较.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "5种编程思想和5种设计模式的比较.xml"; sourceTree = "<group>"; };
+		73BA9AC71DF5455800C0BCA6 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		73BA9AC81DF5455800C0BCA6 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		73BA9AC91DF5455800C0BCA6 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		73BA9ACA1DF5455800C0BCA6 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		73BA9ACB1DF5455800C0BCA6 /* git使用流程指南.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "git使用流程指南.jpg"; sourceTree = "<group>"; };
+		73BA9ACC1DF5455800C0BCA6 /* hhh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hhh.png; sourceTree = "<group>"; };
+		73BA9ACD1DF5455800C0BCA6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		73BA9ACE1DF5455800C0BCA6 /* movielist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movielist.json; sourceTree = "<group>"; };
+		73BA9ACF1DF5455800C0BCA6 /* MVC的控制器瘦身.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MVC的控制器瘦身.png"; sourceTree = "<group>"; };
+		73BA9AD01DF5455800C0BCA6 /* navigation_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_back.png; sourceTree = "<group>"; };
+		73BA9AD11DF5455800C0BCA6 /* navigation_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back@2x.png"; sourceTree = "<group>"; };
+		73BA9AD21DF5455800C0BCA6 /* navigation_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back@3x.png"; sourceTree = "<group>"; };
+		73BA9AD31DF5455800C0BCA6 /* navigation_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_close.png; sourceTree = "<group>"; };
+		73BA9AD41DF5455800C0BCA6 /* navigation_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_close@2x.png"; sourceTree = "<group>"; };
+		73BA9AD51DF5455800C0BCA6 /* navigation_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_close@3x.png"; sourceTree = "<group>"; };
+		73BA9AD61DF5455800C0BCA6 /* StatusInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StatusInfo.plist; sourceTree = "<group>"; };
+		73BA9AD71DF5455800C0BCA6 /* Teacher.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Teacher.xml; sourceTree = "<group>"; };
+		73BA9AD91DF5455800C0BCA6 /* VM和V通过ReactiveCocoa实现绑定.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VM和V通过ReactiveCocoa实现绑定.png"; sourceTree = "<group>"; };
+		73BA9ADA1DF5455800C0BCA6 /* 传统的MVC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "传统的MVC.png"; sourceTree = "<group>"; };
+		73BA9ADB1DF5455800C0BCA6 /* 可变和不可变的copy，mutableCopy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "可变和不可变的copy，mutableCopy.png"; sourceTree = "<group>"; };
+		73BA9ADC1DF5455800C0BCA6 /* 同步异步 和 串行并行队列.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "同步异步 和 串行并行队列.png"; sourceTree = "<group>"; };
+		73BA9ADD1DF5455800C0BCA6 /* 商品分类数据.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "商品分类数据.plist"; sourceTree = "<group>"; };
+		73BA9ADE1DF5455800C0BCA6 /* 新型的MVVM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新型的MVVM.png"; sourceTree = "<group>"; };
+		73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "面试题总结.xml"; sourceTree = "<group>"; };
+		73BA9B051DF5463A00C0BCA6 /* date.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = date.json; sourceTree = "<group>"; };
+		73C7A3421DF55E6800A58D4E /* HandleDicTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleDicTransferModel.h; sourceTree = "<group>"; };
+		73C7A3431DF55E6800A58D4E /* HandleDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleDicTransferModel.m; sourceTree = "<group>"; };
+		73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DicTransferModelViewController.m; sourceTree = "<group>"; };
+		73C7A3481DF5630A00A58D4E /* DicTransferModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DicTransferModelViewController.h; sourceTree = "<group>"; };
 		73CA017F1DAB41DF00072618 /* QSYPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSYPrefixHeader.pch; sourceTree = "<group>"; };
-		73CA05061DAB796D00072618 /* ReactiveCocoa Framework(框架的旧包).zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ReactiveCocoa Framework(框架的旧包).zip"; sourceTree = "<group>"; };
 		73D15AFA1CEEB3E4008855FB /* CaptureDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureDeviceViewController.h; sourceTree = "<group>"; };
 		73D15AFB1CEEB3E4008855FB /* CaptureDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureDeviceViewController.m; sourceTree = "<group>"; };
 		73D15AFD1CEEB46D008855FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -545,18 +615,14 @@
 		73D15B311CEF4118008855FB /* tttViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tttViewController.m; sourceTree = "<group>"; };
 		73D600FF1D7D5D4900DCCAC7 /* MyString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyString.h; sourceTree = "<group>"; };
 		73D601001D7D5D4900DCCAC7 /* MyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyString.m; sourceTree = "<group>"; };
-		73D601021D7D734C00DCCAC7 /* JSPatch的紧急修复上线Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "JSPatch的紧急修复上线Demo.zip"; sourceTree = "<group>"; };
-		73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "仿微信选择图片Demo.zip"; sourceTree = "<group>"; };
 		73DA62091D5378F800F61160 /* QSYSinglePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSYSinglePickerView.h; sourceTree = "<group>"; };
 		73DA620A1D5378F800F61160 /* QSYSinglePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSYSinglePickerView.m; sourceTree = "<group>"; };
 		73DEED8E1D0662D400FE72DE /* CaculatorMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculatorMaker.h; sourceTree = "<group>"; };
 		73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculatorMaker.m; sourceTree = "<group>"; };
-		73DEED921D06744900FE72DE /* 5种编程思想和5种设计模式的比较.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "5种编程思想和5种设计模式的比较.xml"; sourceTree = "<group>"; };
 		73DEED941D0674EA00FE72DE /* CacultorFunctionProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacultorFunctionProgram.h; sourceTree = "<group>"; };
 		73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacultorFunctionProgram.m; sourceTree = "<group>"; };
-		73DEF33C1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ReactiveCocoa Demo 注册搜索嵌套信号.zip"; sourceTree = "<group>"; };
-		73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf"; sourceTree = "<group>"; };
 		73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
+		E7B0C80440F31CFC20BAA4BB /* Pods-QSYPersonalRepositoryAll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSYPersonalRepositoryAll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QSYPersonalRepositoryAll/Pods-QSYPersonalRepositoryAll.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,10 +631,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7323B4941D2B8E1100CE6790 /* LocalAuthentication.framework in Frameworks */,
+				73BA9AB41DF5452B00C0BCA6 /* ReactiveCocoa.framework in Frameworks */,
 				736584BE1D227C710088CDAB /* JavaScriptCore.framework in Frameworks */,
 				730CFB441D1A963600B62765 /* WebKit.framework in Frameworks */,
 				73D15AFE1CEEB46D008855FB /* AVFoundation.framework in Frameworks */,
 				3091A79D1CEE1ABD003B97F4 /* libsqlite3.0.tbd in Frameworks */,
+				14E77DE16BA863AD85E61D38 /* Pods_QSYPersonalRepositoryAll.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,18 +656,9 @@
 			name = MVC;
 			sourceTree = "<group>";
 		};
-		303816B51D0710B500046B3D /* MVVM(ReactCocoa框架依赖版) */ = {
-			isa = PBXGroup;
-			children = (
-				73BD08011DACBCF900BF99C7 /* MVVM包（ReactiveCocoa包）.zip */,
-			);
-			name = "MVVM(ReactCocoa框架依赖版)";
-			sourceTree = "<group>";
-		};
 		303F38BA1D3B1B4600630F31 /* 多功能PickerView */ = {
 			isa = PBXGroup;
 			children = (
-				30E65E461D5268CA0090442A /* date.json */,
 				303F38BB1D3B1B6400630F31 /* MulitplePickerViewController.h */,
 				303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */,
 			);
@@ -634,6 +693,7 @@
 				7366B6FD1DF13FA10052E1E1 /* Frameworks */,
 				308B977F1CCA899400BDA0FA /* QSYPersonalRepositoryAll */,
 				308B977E1CCA899400BDA0FA /* Products */,
+				84281F8D1CFE4123D091309A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -655,6 +715,8 @@
 				3091A7A21CEE1D00003B97F4 /* 知识点总测试 */,
 				7366B6FC1DF13F570052E1E1 /* 工具箱使用 */,
 				739B56B71DF01B2400C8C9B0 /* 工具箱 */,
+				73BA9ABA1DF5455800C0BCA6 /* rescoures */,
+				73BA9A9D1DF5452B00C0BCA6 /* 压缩包Demo */,
 				308B97801CCA899400BDA0FA /* Supporting Files */,
 			);
 			path = QSYPersonalRepositoryAll;
@@ -666,7 +728,6 @@
 				73CA017F1DAB41DF00072618 /* QSYPrefixHeader.pch */,
 				3091A7591CEE1A64003B97F4 /* User.h */,
 				3091A76E1CEE1A64003B97F4 /* User.m */,
-				736EA2781DF0154200FC4C1C /* rescoures */,
 				308B97891CCA899400BDA0FA /* Main.storyboard */,
 				308B97911CCA899400BDA0FA /* Info.plist */,
 				308B978E1CCA899400BDA0FA /* LaunchScreen.storyboard */,
@@ -688,10 +749,9 @@
 		3091A7A21CEE1D00003B97F4 /* 知识点总测试 */ = {
 			isa = PBXGroup;
 			children = (
-				73D9C1401D420E55001C60CE /* 仿微信选择图片Demo.zip */,
-				73D601021D7D734C00DCCAC7 /* JSPatch的紧急修复上线Demo.zip */,
 				3091A7571CEE1A64003B97F4 /* TestTotalViewController.h */,
 				3091A76C1CEE1A64003B97F4 /* TestTotalViewController.m */,
+				73C7A3411DF55B6600A58D4E /* 字典转模型大全 */,
 				3095902F1CFF226600176AAC /* iOS的 编程思想和设计模式 总结 */,
 				7304B8221CF29B87005CA459 /* 知识点 IOS（高级版） */,
 				30DC002E1D03BD3F005EAD0C /* AutoLayout xib和storyboard使用 */,
@@ -715,9 +775,6 @@
 		3095902F1CFF226600176AAC /* iOS的 编程思想和设计模式 总结 */ = {
 			isa = PBXGroup;
 			children = (
-				73DEF33C1D06BB6500FE72DE /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */,
-				73DEED921D06744900FE72DE /* 5种编程思想和5种设计模式的比较.xml */,
-				73CA05061DAB796D00072618 /* ReactiveCocoa Framework(框架的旧包).zip */,
 				73BD08041DACBD3600BF99C7 /* 设计模式 */,
 				73DEED971D06756300FE72DE /* 编程思想 */,
 			);
@@ -740,7 +797,6 @@
 		30C976A11D3BAD1500614EBC /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				73B04E241D61CAF700171F0C /* 商品分类数据.plist */,
 				73B04E271D61ECCA00171F0C /* TabOrColDelegate.h */,
 				30C976A51D3BB1C500614EBC /* PostMallCategoryModel.h */,
 				30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */,
@@ -753,7 +809,6 @@
 		30DC002E1D03BD3F005EAD0C /* AutoLayout xib和storyboard使用 */ = {
 			isa = PBXGroup;
 			children = (
-				300783CA1D3A937B00E349D6 /* xib和storyboard使用看这个就够了.zip */,
 				7323B4731D2B50F700CE6790 /* init代码和xib 的自定义某控件的方法 */,
 				7323B4741D2B514600CE6790 /* Tableview系列 */,
 				30DC00581D048287005EAD0C /* AutoLayoutViewController.h */,
@@ -799,8 +854,6 @@
 			children = (
 				7304B8231CF29BC9005CA459 /* HighLevelViewController.h */,
 				7304B8241CF29BC9005CA459 /* HighLevelViewController.m */,
-				730A25EA1D17C5DF002A263C /* _objc_msgForward_demo.zip */,
-				3095902D1CF4B67200176AAC /* 面试题总结.xml */,
 				73982A9A1D112FBB00E74B69 /* 抽象类具有copy和mutableCopy功能 */,
 				730CFB341D1A231900B62765 /* NSObject的dealloc方法 */,
 				734075351D124930000652E0 /* 测试synthesize */,
@@ -845,10 +898,8 @@
 				73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */,
 				736584C31D228C890088CDAB /* TestJSObject.h */,
 				736584C41D228C890088CDAB /* TestJSObject.m */,
-				73E5F5931D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */,
 				736584B91D2266620088CDAB /* test.html */,
 				736584B71D22652C0088CDAB /* test.js */,
-				736584BB1D22676D0088CDAB /* test.png */,
 				730CFB3B1D1A74D500B62765 /* WKWebViewDemoViewController.h */,
 				730CFB3C1D1A74D500B62765 /* WKWebViewDemoViewController.m */,
 				736584B41D2258330088CDAB /* Demo和libs */,
@@ -917,6 +968,17 @@
 			name = "广告位轮播";
 			sourceTree = "<group>";
 		};
+		732F902F1DF68A02007AA02D /* 手动转 */ = {
+			isa = PBXGroup;
+			children = (
+				73C7A3421DF55E6800A58D4E /* HandleDicTransferModel.h */,
+				73C7A3431DF55E6800A58D4E /* HandleDicTransferModel.m */,
+				73801AF71DF65C4300E9EC42 /* SubDicTransferModel.h */,
+				73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */,
+			);
+			name = "手动转";
+			sourceTree = "<group>";
+		};
 		734075351D124930000652E0 /* 测试synthesize */ = {
 			isa = PBXGroup;
 			children = (
@@ -929,7 +991,6 @@
 		7358D9D31D0563F600B7484C /* 冻结cell列表 */ = {
 			isa = PBXGroup;
 			children = (
-				7363D6D21D0572CD00991477 /* 日历的Demo.zip */,
 				7358D9D41D05642500B7484C /* FreezeViewController.h */,
 				7358D9D51D05642500B7484C /* FreezeViewController.m */,
 			);
@@ -947,11 +1008,8 @@
 		736584B41D2258330088CDAB /* Demo和libs */ = {
 			isa = PBXGroup;
 			children = (
-				730C490B1D23B46D00707722 /* WebViewJavascriptBridge - demo.zip */,
-				73214C1D1D1B7CFA00A766D2 /* IMYWebView-iOS通用demo.zip */,
 				730CFB451D1A966D00B62765 /* Classes */,
 				73FCE1BD1D1CC8510000BF20 /* WebViewJavascriptBridge */,
-				730CFB391D1A306100B62765 /* index.html */,
 			);
 			name = "Demo和libs";
 			sourceTree = "<group>";
@@ -1005,6 +1063,7 @@
 				730CFB431D1A963600B62765 /* WebKit.framework */,
 				73D15AFD1CEEB46D008855FB /* AVFoundation.framework */,
 				3091A79C1CEE1ABD003B97F4 /* libsqlite3.0.tbd */,
+				1490020758E109E907029F62 /* Pods_QSYPersonalRepositoryAll.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1485,11 +1544,73 @@
 			name = Col;
 			sourceTree = "<group>";
 		};
+		73BA9A9D1DF5452B00C0BCA6 /* 压缩包Demo */ = {
+			isa = PBXGroup;
+			children = (
+				73BA9A9E1DF5452B00C0BCA6 /* objc_msgForward_demo.zip */,
+				73BA9AA01DF5452B00C0BCA6 /* IMYWebView-iOS通用demo.zip */,
+				73BA9AA11DF5452B00C0BCA6 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */,
+				73BA9AA21DF5452B00C0BCA6 /* JSPatch的紧急修复上线Demo.zip */,
+				73BA9AA41DF5452B00C0BCA6 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */,
+				73BA9AA51DF5452B00C0BCA6 /* ReactiveCocoa Framework(框架的旧包).zip */,
+				73BA9AA61DF5452B00C0BCA6 /* ReactiveCocoa.framework */,
+				73BA9AA71DF5452B00C0BCA6 /* WebViewJavascriptBridge - demo.zip */,
+				73BA9AA81DF5452B00C0BCA6 /* xib和storyboard使用看这个就够了.zip */,
+				73BA9AA91DF5452B00C0BCA6 /* 仿微信选择图片Demo.zip */,
+				73BA9AAA1DF5452B00C0BCA6 /* 日历的Demo.zip */,
+				73BA9AAB1DF5452B00C0BCA6 /* 自定义tabbarDemo.zip */,
+			);
+			path = "压缩包Demo";
+			sourceTree = "<group>";
+		};
+		73BA9ABA1DF5455800C0BCA6 /* rescoures */ = {
+			isa = PBXGroup;
+			children = (
+				73BA9AC61DF5455800C0BCA6 /* 5种编程思想和5种设计模式的比较.xml */,
+				73BA9ACB1DF5455800C0BCA6 /* git使用流程指南.jpg */,
+				73BA9ACF1DF5455800C0BCA6 /* MVC的控制器瘦身.png */,
+				73BA9ACE1DF5455800C0BCA6 /* movielist.json */,
+				73BA9B051DF5463A00C0BCA6 /* date.json */,
+				73BA9AD61DF5455800C0BCA6 /* StatusInfo.plist */,
+				73BA9AD71DF5455800C0BCA6 /* Teacher.xml */,
+				73BA9AD91DF5455800C0BCA6 /* VM和V通过ReactiveCocoa实现绑定.png */,
+				73BA9ADA1DF5455800C0BCA6 /* 传统的MVC.png */,
+				73BA9ADB1DF5455800C0BCA6 /* 可变和不可变的copy，mutableCopy.png */,
+				73BA9ADC1DF5455800C0BCA6 /* 同步异步 和 串行并行队列.png */,
+				73BA9ADD1DF5455800C0BCA6 /* 商品分类数据.plist */,
+				73BA9ADE1DF5455800C0BCA6 /* 新型的MVVM.png */,
+				73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */,
+				73BA9ACD1DF5455800C0BCA6 /* index.html */,
+				73BA9ABB1DF5455800C0BCA6 /* 1.jpg */,
+				73BA9ABC1DF5455800C0BCA6 /* 10.jpg */,
+				73BA9ABD1DF5455800C0BCA6 /* 11.jpg */,
+				73BA9ABE1DF5455800C0BCA6 /* 12.jpg */,
+				73BA9ABF1DF5455800C0BCA6 /* 13.jpg */,
+				73BA9AC01DF5455800C0BCA6 /* 14.jpg */,
+				73BA9AC11DF5455800C0BCA6 /* 15.jpg */,
+				73BA9AC21DF5455800C0BCA6 /* 2.jpg */,
+				73BA9AC31DF5455800C0BCA6 /* 3.jpg */,
+				73BA9AC41DF5455800C0BCA6 /* 4.jpg */,
+				73BA9AC51DF5455800C0BCA6 /* 5.jpg */,
+				73BA9AC71DF5455800C0BCA6 /* 6.jpg */,
+				73BA9AC81DF5455800C0BCA6 /* 7.jpg */,
+				73BA9AC91DF5455800C0BCA6 /* 8.jpg */,
+				73BA9ACA1DF5455800C0BCA6 /* 9.jpg */,
+				73BA9ACC1DF5455800C0BCA6 /* hhh.png */,
+				73BA9AD01DF5455800C0BCA6 /* navigation_back.png */,
+				73BA9AD11DF5455800C0BCA6 /* navigation_back@2x.png */,
+				73BA9AD21DF5455800C0BCA6 /* navigation_back@3x.png */,
+				73BA9AD31DF5455800C0BCA6 /* navigation_close.png */,
+				73BA9AD41DF5455800C0BCA6 /* navigation_close@2x.png */,
+				73BA9AD51DF5455800C0BCA6 /* navigation_close@3x.png */,
+			);
+			path = rescoures;
+			sourceTree = "<group>";
+		};
 		73BD08031DACBD0700BF99C7 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				303816B51D0710B500046B3D /* MVVM(ReactCocoa框架依赖版) */,
-				73CA015D1DAB387100072618 /* MVVM(非ReactCocoa框架依赖版) */,
+				73BA9A9B1DF5442300C0BCA6 /* 见QSYRAC_MVVM.xml */,
 			);
 			name = MVVM;
 			sourceTree = "<group>";
@@ -1503,75 +1624,14 @@
 			name = "设计模式";
 			sourceTree = "<group>";
 		};
-		73CA015D1DAB387100072618 /* MVVM(非ReactCocoa框架依赖版) */ = {
+		73C7A3411DF55B6600A58D4E /* 字典转模型大全 */ = {
 			isa = PBXGroup;
 			children = (
-				73CA015E1DAB38BB00072618 /* Model */,
-				73CA015F1DAB38CB00072618 /* View */,
-				73CA01601DAB38E300072618 /* Controller */,
-				73CA01611DAB38F500072618 /* ViewModel */,
-				73CA01621DAB392300072618 /* TableViewProtocol */,
-				73CA01631DAB399700072618 /* Libs */,
+				73C7A3481DF5630A00A58D4E /* DicTransferModelViewController.h */,
+				73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */,
+				732F902F1DF68A02007AA02D /* 手动转 */,
 			);
-			name = "MVVM(非ReactCocoa框架依赖版)";
-			sourceTree = "<group>";
-		};
-		73CA015E1DAB38BB00072618 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				73CA016B1DAB3A9700072618 /* CustomModel.h */,
-				73CA016C1DAB3A9700072618 /* CustomModel.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		73CA015F1DAB38CB00072618 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				73CA016E1DAB3D1B00072618 /* CustomTableViewCell.h */,
-				73CA016F1DAB3D1B00072618 /* CustomTableViewCell.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		73CA01601DAB38E300072618 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				73CA017A1DAB3D7700072618 /* TableViewController.h */,
-				73CA017B1DAB3D7700072618 /* TableViewController.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		73CA01611DAB38F500072618 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				73CA01711DAB3D6600072618 /* TableViewModel.h */,
-				73CA01721DAB3D6600072618 /* TableViewModel.m */,
-			);
-			name = ViewModel;
-			sourceTree = "<group>";
-		};
-		73CA01621DAB392300072618 /* TableViewProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				73CA01741DAB3D6D00072618 /* TableViewDataSource.h */,
-				73CA01751DAB3D6D00072618 /* TableViewDataSource.m */,
-				73CA01761DAB3D6D00072618 /* TableViewDelegate.h */,
-				73CA01771DAB3D6D00072618 /* TableViewDelegate.m */,
-			);
-			name = TableViewProtocol;
-			sourceTree = "<group>";
-		};
-		73CA01631DAB399700072618 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				73CA01641DAB3A5200072618 /* YiRefreshFooter.h */,
-				73CA01651DAB3A5200072618 /* YiRefreshFooter.m */,
-				73CA01661DAB3A5200072618 /* YiRefreshHeader.h */,
-				73CA01671DAB3A5200072618 /* YiRefreshHeader.m */,
-			);
-			name = Libs;
+			name = "字典转模型大全";
 			sourceTree = "<group>";
 		};
 		73D15AEC1CEEAA85008855FB /* 坐标系转换 */ = {
@@ -1586,7 +1646,6 @@
 		73D15AED1CEEAAB0008855FB /* TabBar封装 */ = {
 			isa = PBXGroup;
 			children = (
-				3091A7721CEE1A64003B97F4 /* 自定义tabbarDemo.zip */,
 			);
 			name = "TabBar封装";
 			sourceTree = "<group>";
@@ -1738,6 +1797,15 @@
 			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
+		84281F8D1CFE4123D091309A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7B0C80440F31CFC20BAA4BB /* Pods-QSYPersonalRepositoryAll.debug.xcconfig */,
+				0026EFF5CCFFB5336D396DBD /* Pods-QSYPersonalRepositoryAll.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1745,9 +1813,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 308B97941CCA899400BDA0FA /* Build configuration list for PBXNativeTarget "QSYPersonalRepositoryAll" */;
 			buildPhases = (
+				F5355C8E15FD60A6D9E30BA4 /* [CP] Check Pods Manifest.lock */,
 				308B97791CCA899400BDA0FA /* Sources */,
 				308B977A1CCA899400BDA0FA /* Frameworks */,
 				308B977B1CCA899400BDA0FA /* Resources */,
+				73C7B1F01DF69E1E003471F2 /* Embed Frameworks */,
+				18EEBDD2B3407D7225007590 /* [CP] Embed Pods Frameworks */,
+				06B64FD89794CB50F31988D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1796,44 +1868,124 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				730A25EB1D17C5DF002A263C /* _objc_msgForward_demo.zip in Resources */,
 				7323B4811D2B648000CE6790 /* TestTableViewCell.xib in Resources */,
-				73DEED931D06744900FE72DE /* 5种编程思想和5种设计模式的比较.xml in Resources */,
-				73E5F5941D261D00002E3F25 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf in Resources */,
-				73BD08021DACBCF900BF99C7 /* MVVM包（ReactiveCocoa包）.zip in Resources */,
+				73BA9AFE1DF5455800C0BCA6 /* VM和V通过ReactiveCocoa实现绑定.png in Resources */,
+				73BA9AE41DF5455800C0BCA6 /* 13.jpg in Resources */,
 				30CB778A1D3001CB00C3DDEC /* AutoLayoutViewController.xib in Resources */,
-				73B04E251D61CAF700171F0C /* 商品分类数据.plist in Resources */,
+				73BA9AB51DF5452B00C0BCA6 /* WebViewJavascriptBridge - demo.zip in Resources */,
+				73BA9B001DF5455800C0BCA6 /* 可变和不可变的copy，mutableCopy.png in Resources */,
+				73BA9AF91DF5455800C0BCA6 /* navigation_close@2x.png in Resources */,
+				73BA9AAE1DF5452B00C0BCA6 /* IMYWebView-iOS通用demo.zip in Resources */,
+				73BA9AAF1DF5452B00C0BCA6 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf in Resources */,
+				73BA9AE01DF5455800C0BCA6 /* 1.jpg in Resources */,
+				73BA9AAC1DF5452B00C0BCA6 /* objc_msgForward_demo.zip in Resources */,
+				73BA9AE71DF5455800C0BCA6 /* 2.jpg in Resources */,
+				73BA9A9C1DF5442300C0BCA6 /* 见QSYRAC_MVVM.xml in Resources */,
+				73BA9B061DF5463A00C0BCA6 /* date.json in Resources */,
+				73BA9AFA1DF5455800C0BCA6 /* navigation_close@3x.png in Resources */,
 				736584B81D22652C0088CDAB /* test.js in Resources */,
-				73214C1E1D1B7CFA00A766D2 /* IMYWebView-iOS通用demo.zip in Resources */,
+				73BA9AE51DF5455800C0BCA6 /* 14.jpg in Resources */,
+				73BA9AEF1DF5455800C0BCA6 /* 9.jpg in Resources */,
+				73BA9AFB1DF5455800C0BCA6 /* StatusInfo.plist in Resources */,
 				308B97901CCA899400BDA0FA /* LaunchScreen.storyboard in Resources */,
 				736584BA1D2266620088CDAB /* test.html in Resources */,
+				73BA9AE81DF5455800C0BCA6 /* 3.jpg in Resources */,
+				73BA9AB21DF5452B00C0BCA6 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip in Resources */,
 				739B57841DF01B2400C8C9B0 /* Info.plist in Resources */,
 				73D15B1B1CEEE07B008855FB /* DemoView.xib in Resources */,
-				736EA2791DF0154200FC4C1C /* rescoures in Resources */,
-				30E65E471D5268CA0090442A /* date.json in Resources */,
+				73BA9AEB1DF5455800C0BCA6 /* 5种编程思想和5种设计模式的比较.xml in Resources */,
+				73BA9AF61DF5455800C0BCA6 /* navigation_back@2x.png in Resources */,
 				739B578F1DF01B2400C8C9B0 /* Info.plist in Resources */,
-				7363D6D31D0572CD00991477 /* 日历的Demo.zip in Resources */,
+				73BA9AFC1DF5455800C0BCA6 /* Teacher.xml in Resources */,
+				73BA9AB91DF5452B00C0BCA6 /* 自定义tabbarDemo.zip in Resources */,
+				73BA9B021DF5455800C0BCA6 /* 商品分类数据.plist in Resources */,
+				73BA9AEC1DF5455800C0BCA6 /* 6.jpg in Resources */,
 				739B57A21DF01B2400C8C9B0 /* departmentCitysServices.plist in Resources */,
-				730CFB3A1D1A306100B62765 /* index.html in Resources */,
+				73BA9AF71DF5455800C0BCA6 /* navigation_back@3x.png in Resources */,
+				73BA9AF11DF5455800C0BCA6 /* hhh.png in Resources */,
+				73BA9B011DF5455800C0BCA6 /* 同步异步 和 串行并行队列.png in Resources */,
 				7323B46F1D2B4F5900CE6790 /* customTest.xib in Resources */,
-				300783CB1D3A937B00E349D6 /* xib和storyboard使用看这个就够了.zip in Resources */,
-				73D601031D7D734C00DCCAC7 /* JSPatch的紧急修复上线Demo.zip in Resources */,
-				73D9C1411D420E55001C60CE /* 仿微信选择图片Demo.zip in Resources */,
-				3091A79B1CEE1A64003B97F4 /* 自定义tabbarDemo.zip in Resources */,
 				308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */,
 				73037E7A1D2A5A530017D024 /* tableViewTest.storyboard in Resources */,
-				730C490C1D23B46D00707722 /* WebViewJavascriptBridge - demo.zip in Resources */,
-				73CA05071DAB796D00072618 /* ReactiveCocoa Framework(框架的旧包).zip in Resources */,
+				73BA9AB31DF5452B00C0BCA6 /* ReactiveCocoa Framework(框架的旧包).zip in Resources */,
+				73BA9AB61DF5452B00C0BCA6 /* xib和storyboard使用看这个就够了.zip in Resources */,
+				73BA9AE61DF5455800C0BCA6 /* 15.jpg in Resources */,
 				7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */,
 				308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */,
+				73BA9AF01DF5455800C0BCA6 /* git使用流程指南.jpg in Resources */,
+				73BA9B031DF5455800C0BCA6 /* 新型的MVVM.png in Resources */,
+				73BA9AF21DF5455800C0BCA6 /* index.html in Resources */,
+				73BA9AE11DF5455800C0BCA6 /* 10.jpg in Resources */,
+				73BA9AB71DF5452B00C0BCA6 /* 仿微信选择图片Demo.zip in Resources */,
+				73BA9AF31DF5455800C0BCA6 /* movielist.json in Resources */,
 				73D15B2F1CEF3DD1008855FB /* Uuu.xib in Resources */,
-				3095902E1CF4B67200176AAC /* 面试题总结.xml in Resources */,
 				73FCE1CB1D1D1C190000BF20 /* ExampleApp.html in Resources */,
+				73BA9B041DF5455800C0BCA6 /* 面试题总结.xml in Resources */,
+				73BA9AB01DF5452B00C0BCA6 /* JSPatch的紧急修复上线Demo.zip in Resources */,
+				73BA9AF81DF5455800C0BCA6 /* navigation_close.png in Resources */,
+				73BA9AFF1DF5455800C0BCA6 /* 传统的MVC.png in Resources */,
+				73BA9AE31DF5455800C0BCA6 /* 12.jpg in Resources */,
+				73BA9AF51DF5455800C0BCA6 /* navigation_back.png in Resources */,
+				73BA9AF41DF5455800C0BCA6 /* MVC的控制器瘦身.png in Resources */,
+				73BA9AE91DF5455800C0BCA6 /* 4.jpg in Resources */,
+				73BA9AEE1DF5455800C0BCA6 /* 8.jpg in Resources */,
 				739B57C31DF01B2400C8C9B0 /* SVProgressHUD.bundle in Resources */,
+				73BA9AEA1DF5455800C0BCA6 /* 5.jpg in Resources */,
+				73BA9AED1DF5455800C0BCA6 /* 7.jpg in Resources */,
+				73BA9AB81DF5452B00C0BCA6 /* 日历的Demo.zip in Resources */,
+				73BA9AE21DF5455800C0BCA6 /* 11.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06B64FD89794CB50F31988D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSYPersonalRepositoryAll/Pods-QSYPersonalRepositoryAll-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18EEBDD2B3407D7225007590 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSYPersonalRepositoryAll/Pods-QSYPersonalRepositoryAll-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5355C8E15FD60A6D9E30BA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		308B97791CCA899400BDA0FA /* Sources */ = {
@@ -1842,7 +1994,6 @@
 			files = (
 				739B57831DF01B2400C8C9B0 /* UIView+Extension.m in Sources */,
 				739B579E1DF01B2400C8C9B0 /* SinglePickerView.m in Sources */,
-				73CA017C1DAB3D7700072618 /* TableViewController.m in Sources */,
 				739B57821DF01B2400C8C9B0 /* QsyJudgementStrAndArrTool.m in Sources */,
 				739B57BA1DF01B2400C8C9B0 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				308DA7FD1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m in Sources */,
@@ -1877,7 +2028,6 @@
 				739B57B51DF01B2400C8C9B0 /* AFSecurityPolicy.m in Sources */,
 				739B57951DF01B2400C8C9B0 /* NSDictionary+Array+QSYLog.m in Sources */,
 				739B57B71DF01B2400C8C9B0 /* AFURLRequestSerialization.m in Sources */,
-				73CA01681DAB3A5200072618 /* YiRefreshFooter.m in Sources */,
 				73DEED961D0674EA00FE72DE /* CacultorFunctionProgram.m in Sources */,
 				739B57921DF01B2400C8C9B0 /* MHScanViewController.m in Sources */,
 				739B577C1DF01B2400C8C9B0 /* DQKSectionViewCell.m in Sources */,
@@ -1887,15 +2037,16 @@
 				303F38D61D3B9E6600630F31 /* RightCollectionView.m in Sources */,
 				309590591CFF22C000176AAC /* DrawRectView.m in Sources */,
 				739B57BE1DF01B2400C8C9B0 /* UIImageView+AFNetworking.m in Sources */,
+				73C7A3491DF5630A00A58D4E /* DicTransferModelViewController.m in Sources */,
 				3091A7951CEE1A64003B97F4 /* TestTotalViewController.m in Sources */,
 				739B57811DF01B2400C8C9B0 /* NSString+hash.m in Sources */,
-				73CA01781DAB3D6D00072618 /* TableViewDataSource.m in Sources */,
 				739B57AF1DF01B2400C8C9B0 /* XML&JsonParser.m in Sources */,
 				739B57BC1DF01B2400C8C9B0 /* UIAlertView+AFNetworking.m in Sources */,
 				731FFF0B1D3C703700F65E0F /* BaseModel.m in Sources */,
 				303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */,
 				736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */,
 				3091A7891CEE1A64003B97F4 /* FmdbViewController.m in Sources */,
+				73C7A3441DF55E6800A58D4E /* HandleDicTransferModel.m in Sources */,
 				739B57A51DF01B2400C8C9B0 /* QSYActivityView.m in Sources */,
 				739B57A81DF01B2400C8C9B0 /* FMDatabasePool.m in Sources */,
 				739B57801DF01B2400C8C9B0 /* NSData+QsyCache.m in Sources */,
@@ -1921,22 +2072,18 @@
 				7323B48F1D2B8B2A00CE6790 /* TouchIdViewController.m in Sources */,
 				309590581CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m in Sources */,
 				739B578C1DF01B2400C8C9B0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				73CA016D1DAB3A9700072618 /* CustomModel.m in Sources */,
 				739B579D1DF01B2400C8C9B0 /* MultiplePickerView.m in Sources */,
 				303F38DA1D3BA34900630F31 /* RightColHeaderResuableView.m in Sources */,
 				739B57871DF01B2400C8C9B0 /* MASConstraintMaker.m in Sources */,
-				73CA01691DAB3A5200072618 /* YiRefreshHeader.m in Sources */,
 				30DC00601D048287005EAD0C /* TestModel.m in Sources */,
 				739B57971DF01B2400C8C9B0 /* UIImage+_fixOrientation.m in Sources */,
 				739B57931DF01B2400C8C9B0 /* ClearCacheTool.m in Sources */,
 				739B57861DF01B2400C8C9B0 /* MASConstraint.m in Sources */,
-				73CA01791DAB3D6D00072618 /* TableViewDelegate.m in Sources */,
 				3091A7971CEE1A64003B97F4 /* User.m in Sources */,
 				739B57B61DF01B2400C8C9B0 /* AFURLConnectionOperation.m in Sources */,
 				730C49071D23B3E400707722 /* WebViewJavascriptBridge_JS.m in Sources */,
 				730CFB4E1D1A966D00B62765 /* IMY_NJKWebViewProgress.m in Sources */,
 				73D601011D7D5D4900DCCAC7 /* MyString.m in Sources */,
-				73CA01731DAB3D6600072618 /* TableViewModel.m in Sources */,
 				739B57B01DF01B2400C8C9B0 /* AFDownloadRequestOperation.m in Sources */,
 				739B579C1DF01B2400C8C9B0 /* ImageBtn.m in Sources */,
 				739B57991DF01B2400C8C9B0 /* UIImage+Resizable.m in Sources */,
@@ -1973,7 +2120,6 @@
 				730CFB4F1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m in Sources */,
 				739B57901DF01B2400C8C9B0 /* MZTimerLabel.m in Sources */,
 				739B579A1DF01B2400C8C9B0 /* NSObject+Swizzle.m in Sources */,
-				73CA01701DAB3D1B00072618 /* CustomTableViewCell.m in Sources */,
 				739B57981DF01B2400C8C9B0 /* UIImage+FixOrientation.m in Sources */,
 				739B578E1DF01B2400C8C9B0 /* ViewController+MASAdditions.m in Sources */,
 				739B577D1DF01B2400C8C9B0 /* DQKSignView.m in Sources */,
@@ -1982,6 +2128,7 @@
 				739B57AA1DF01B2400C8C9B0 /* FMResultSet.m in Sources */,
 				739B57891DF01B2400C8C9B0 /* MASViewAttribute.m in Sources */,
 				73D15AFC1CEEB3E4008855FB /* CaptureDeviceViewController.m in Sources */,
+				73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */,
 				30DC004F1D03D200005EAD0C /* ViewController.m in Sources */,
 				7323B47A1D2B61DB00CE6790 /* Sb0TableViewCell.m in Sources */,
 				73037E8B1D2A77680017D024 /* Sb1Model.m in Sources */,
@@ -2100,13 +2247,16 @@
 		};
 		308B97951CCA899400BDA0FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7B0C80440F31CFC20BAA4BB /* Pods-QSYPersonalRepositoryAll.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/QSYPersonalRepositoryAll",
+					"$(PROJECT_DIR)/QSYPersonalRepositoryAll/压缩包Demo",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QSYPersonalRepositoryAll/QSYPrefixHeader.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
@@ -2120,18 +2270,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wnqsy.com.QSYPersonalRepositoryAll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 			};
 			name = Debug;
 		};
 		308B97961CCA899400BDA0FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0026EFF5CCFFB5336D396DBD /* Pods-QSYPersonalRepositoryAll.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/QSYPersonalRepositoryAll",
+					"$(PROJECT_DIR)/QSYPersonalRepositoryAll/压缩包Demo",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QSYPersonalRepositoryAll/QSYPrefixHeader.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
@@ -2145,6 +2299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wnqsy.com.QSYPersonalRepositoryAll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 			};
 			name = Release;
 		};
