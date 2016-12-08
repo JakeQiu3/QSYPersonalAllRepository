@@ -84,7 +84,6 @@
 		736584C51D228C890088CDAB /* TestJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 736584C41D228C890088CDAB /* TestJSObject.m */; };
 		736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736679071D752C0D00B39376 /* ClearCacheViewController.m */; };
 		7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736679081D752C0D00B39376 /* ClearCacheViewController.xib */; };
-		7378E5391DF7D69000390627 /* MantleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E5381DF7D69000390627 /* MantleModel.m */; };
 		7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53B1DF7D6C500390627 /* JsonTransferModel.m */; };
 		7378E5401DF7D6EA00390627 /* ExtensionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53F1DF7D6EA00390627 /* ExtensionModel.m */; };
 		73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */; };
@@ -228,6 +227,7 @@
 		73DA620B1D5378F800F61160 /* QSYSinglePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DA620A1D5378F800F61160 /* QSYSinglePickerView.m */; };
 		73DEED901D0662D400FE72DE /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */; };
 		73DEED961D0674EA00FE72DE /* CacultorFunctionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */; };
+		73ECA2841DF946D7009CA249 /* SubJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73ECA2831DF946D7009CA249 /* SubJsonModel.m */; };
 		73FCE1CB1D1D1C190000BF20 /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */; };
 /* End PBXBuildFile section */
 
@@ -387,8 +387,6 @@
 		736679061D752C0D00B39376 /* ClearCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
 		736679071D752C0D00B39376 /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
 		736679081D752C0D00B39376 /* ClearCacheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClearCacheViewController.xib; sourceTree = "<group>"; };
-		7378E5371DF7D69000390627 /* MantleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MantleModel.h; sourceTree = "<group>"; };
-		7378E5381DF7D69000390627 /* MantleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MantleModel.m; sourceTree = "<group>"; };
 		7378E53A1DF7D6C500390627 /* JsonTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTransferModel.h; sourceTree = "<group>"; };
 		7378E53B1DF7D6C500390627 /* JsonTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTransferModel.m; sourceTree = "<group>"; };
 		7378E53E1DF7D6EA00390627 /* ExtensionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionModel.h; sourceTree = "<group>"; };
@@ -630,6 +628,8 @@
 		73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculatorMaker.m; sourceTree = "<group>"; };
 		73DEED941D0674EA00FE72DE /* CacultorFunctionProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacultorFunctionProgram.h; sourceTree = "<group>"; };
 		73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacultorFunctionProgram.m; sourceTree = "<group>"; };
+		73ECA2821DF946D7009CA249 /* SubJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubJsonModel.h; sourceTree = "<group>"; };
+		73ECA2831DF946D7009CA249 /* SubJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubJsonModel.m; sourceTree = "<group>"; };
 		73FCE1CA1D1D1C190000BF20 /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 		E7B0C80440F31CFC20BAA4BB /* Pods-QSYPersonalRepositoryAll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSYPersonalRepositoryAll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QSYPersonalRepositoryAll/Pods-QSYPersonalRepositoryAll.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1082,17 +1082,10 @@
 			children = (
 				7378E53A1DF7D6C500390627 /* JsonTransferModel.h */,
 				7378E53B1DF7D6C500390627 /* JsonTransferModel.m */,
+				73ECA2821DF946D7009CA249 /* SubJsonModel.h */,
+				73ECA2831DF946D7009CA249 /* SubJsonModel.m */,
 			);
 			name = JsonModel;
-			sourceTree = "<group>";
-		};
-		7378E5361DF7D66700390627 /* Mantle */ = {
-			isa = PBXGroup;
-			children = (
-				7378E5371DF7D69000390627 /* MantleModel.h */,
-				7378E5381DF7D69000390627 /* MantleModel.m */,
-			);
-			name = Mantle;
 			sourceTree = "<group>";
 		};
 		7378E53D1DF7D6CA00390627 /* MJExtension */ = {
@@ -1665,7 +1658,6 @@
 			children = (
 				73C7A3481DF5630A00A58D4E /* DicTransferModelViewController.h */,
 				73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */,
-				7378E5361DF7D66700390627 /* Mantle */,
 				7378E5351DF7B08E00390627 /* JsonModel */,
 				7378E53D1DF7D6CA00390627 /* MJExtension */,
 				732F902F1DF68A02007AA02D /* 手动转 */,
@@ -2125,6 +2117,7 @@
 				73D601011D7D5D4900DCCAC7 /* MyString.m in Sources */,
 				739B57B01DF01B2400C8C9B0 /* AFDownloadRequestOperation.m in Sources */,
 				739B579C1DF01B2400C8C9B0 /* ImageBtn.m in Sources */,
+				73ECA2841DF946D7009CA249 /* SubJsonModel.m in Sources */,
 				739B57991DF01B2400C8C9B0 /* UIImage+Resizable.m in Sources */,
 				3091A78D1CEE1A64003B97F4 /* MasonryContraintViewController.m in Sources */,
 				30DC006A1D04845F005EAD0C /* StatusTableViewCell.m in Sources */,
@@ -2171,7 +2164,6 @@
 				73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */,
 				30DC004F1D03D200005EAD0C /* ViewController.m in Sources */,
 				7323B47A1D2B61DB00CE6790 /* Sb0TableViewCell.m in Sources */,
-				7378E5391DF7D69000390627 /* MantleModel.m in Sources */,
 				73037E8B1D2A77680017D024 /* Sb1Model.m in Sources */,
 				7378E5401DF7D6EA00390627 /* ExtensionModel.m in Sources */,
 				73037E801D2A6CD50017D024 /* Sb0TableViewController.m in Sources */,

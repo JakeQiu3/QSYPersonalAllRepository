@@ -9,7 +9,9 @@
 #import "DicTransferModelViewController.h"
 #import "HandleDicTransferModel.h"
 #import "SubDicTransferModel.h"
-#import "MantleModel.h"
+#import "JsonTransferModel.h"
+#import "ExtensionModel.h"
+
 @interface DicTransferModelViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *_tableView;
@@ -39,8 +41,9 @@
                    @{
                        @"url":@"www.baidu.com",
                        @"state":@"0",
-                       @"updatedAt":@"2016年12月20日17点30分56秒",
+                       @"updatedAt":@"283682876828753", //时间戳
                        @"id":@1,
+                       @"temperature":@"36.8", //温度
                        @"ansNumber":@"12",
                        @"number":@"11",
                        @"question":@"你确定这是你要的东西？",
@@ -53,8 +56,9 @@
                    @{
                        @"url":@"www.alibaba.com",
                        @"state":@"0",
-                       @"updatedAt":@"2015年9月20日7点36分16秒",
+                       @"updatedAt":@"626387168963593",
                        @"id":@2,
+                       @"temperature":@"35.3", //温度
                        @"ansNumber":@"22",
                        @"number":@"21",
                        @"question":@"你确定这是你要的东西？",
@@ -67,8 +71,9 @@
                    @{
                        @"url":@"www.tentent.com",
                        @"state":@"1",
-                       @"updatedAt":@"2016年10月20日17点30分56秒",
+                       @"updatedAt":@"123456786498",
                        @"id":@3,
+                       @"temperature":@"37.5", //温度
                        @"ansNumber":@"32",
                        @"number":@"31",
                        @"question":@"你确定这是你要的东西？",
@@ -80,11 +85,27 @@
                        },
                    ];
     // 手动 字典转 模型
-    [self manualTransferModel];
-    // Mantle 转模型
-    [self mantleTransferModel];
+    //    [self manualTransferModel];
+    // JsonModel 转模型
+    [self jsonTransferModel];
+    [self extensionTransferModel];
 }
 
+- (void)extensionTransferModel {
+    NSDictionary *dict = @{
+                           @"name" : @"Jack",
+                           @"icon" : @"lufy.png",
+                           @"age" : @20,
+                           @"height" : @"1.55",
+                           @"money" : @100.9,
+                           @"sex" : @(SexFemale),
+                           @"gay" : @"true"
+                           //   @"gay" : @"1"
+                           //   @"gay" : @"NO"
+                           };
+    ExtensionModel *model = [ExtensionModel objectWithKeyValues:dict];
+    NSLog(@"%@",model);
+}
 - (void)manualTransferModel {
     NSMutableArray *modelArr = [[NSMutableArray alloc] init];
     [_dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -100,13 +121,29 @@
     }];
 }
 
-- (void)mantleTransferModel {
-    NSMutableArray *modelArr = [[NSMutableArray alloc] init];
-    [_dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        MantleModel *mantleModel = [[MantleModel alloc] initWithDictionary:obj error:nil];
-        [modelArr addObject:mantleModel];
-    }];
-    NSLog(@"生成的模型数组：%@",modelArr);
+- (void)jsonTransferModel {
+    NSDictionary*dict =
+    @{@"id":@"aaa",
+      @"country":@"China",
+      @"dialCode":@"ccc",
+      @"isInEurope":@"true",
+      @"test":@12,
+      @"orderId": @104,
+      @"totalPrice": @13.45,
+      @"product": @{
+              @"id": @"123",
+              @"name": @"Product name",
+              @"price": @"12.95"
+              },
+      @"numArray":@[ @{@"id":@"ttt",
+                       @"name":@"China",
+                       @"price":@"true"},
+                     @{@"id":@"ttt",
+                       @"name":@"China",
+                       @"price":@"true"}]
+      };
+    JsonTransferModel *model = [[JsonTransferModel alloc]initWithDictionary:dict error:nil];
+    NSLog(@"%@",model);
 }
 
 - (void)setUI {

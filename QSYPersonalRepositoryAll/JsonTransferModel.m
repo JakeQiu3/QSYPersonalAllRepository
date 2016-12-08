@@ -8,7 +8,26 @@
 //
 
 #import "JsonTransferModel.h"
+#import "SubJsonModel.h"
 
 @implementation JsonTransferModel
 
+// keyMapper 修改
++ (JSONKeyMapper *)keyMapper {
+    JSONKeyMapper *mapper = [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
+                                       @{
+                                         @"Test": @"test",
+                                         @"dialNumber": @"dialCode",
+                                         @"numArr":@"numArray"
+                                         }
+                             ];
+    return mapper;
+}
+
+//+ (NSMutableArray *)arrayOfDictionariesFromModels:(NSArray *)array {
+//    NSArray *aaArr =[];
+//}
+//+ (NSMutableDictionary *)dictionaryOfDictionariesFromModels:(NSDictionary *)dictionary {
+//    
+//}
 @end
