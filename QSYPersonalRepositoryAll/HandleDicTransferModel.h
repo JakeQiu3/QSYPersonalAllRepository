@@ -7,8 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef NS_ENUM(NSUInteger) {
+    QSYIssueStateOnlyRead, //只读
+    QSYIssueStateWriteRead // 读写
+} QSYIssueState;
+
 @class SubDicTransferModel;
 @interface HandleDicTransferModel : NSObject
+@property (nonatomic, copy, readonly) NSURL *URL;
+@property (nonatomic, assign, readonly) QSYIssueState state;
+@property (nonatomic, copy, readonly) NSDate *updatedAt;
+
 @property (nonatomic, copy) NSString *ID;
 @property (nonatomic, strong) NSNumber *num;
 @property (nonatomic, copy) NSString *question;

@@ -9,6 +9,7 @@
 #import "DicTransferModelViewController.h"
 #import "HandleDicTransferModel.h"
 #import "SubDicTransferModel.h"
+#import "MantleModel.h"
 @interface DicTransferModelViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *_tableView;
@@ -28,10 +29,17 @@
     // Do any additional setup after loading the view.
 }
 
+
+//@property (nonatomic, copy, readonly) NSURL *URL;
+//@property (nonatomic, assign, readonly) QSYIssueState state;
+//@property (nonatomic, copy, readonly) NSDate *updatedAt;
 - (void)initData {
     _classArray = [[NSArray alloc] initWithObjects:@"", nil];
     _dataArray = @[
                    @{
+                       @"url":@"www.baidu.com",
+                       @"state":@"0",
+                       @"updatedAt":@"2016年12月20日17点30分56秒",
                        @"id":@1,
                        @"ansNumber":@"12",
                        @"number":@"11",
@@ -43,6 +51,9 @@
                        @"allQueAnswer": @{@"question":@"我就是测测什么鬼1？",@"answer":@"不知道什么鬼，所以测测啊1"}
                        },
                    @{
+                       @"url":@"www.alibaba.com",
+                       @"state":@"0",
+                       @"updatedAt":@"2015年9月20日7点36分16秒",
                        @"id":@2,
                        @"ansNumber":@"22",
                        @"number":@"21",
@@ -54,6 +65,9 @@
                        @"allQueAnswer": @{@"question":@"我就是测测什么鬼2？",@"answer":@"不知道什么鬼，所以测测啊2"}
                        },
                    @{
+                       @"url":@"www.tentent.com",
+                       @"state":@"1",
+                       @"updatedAt":@"2016年10月20日17点30分56秒",
                        @"id":@3,
                        @"ansNumber":@"32",
                        @"number":@"31",
@@ -65,8 +79,10 @@
                        @"allQueAnswer": @{@"question":@"我就是测测什么鬼3？",@"answer":@"不知道什么鬼，所以测测啊3"}
                        },
                    ];
-    // 手动 字典转模型
+    // 手动 字典转 模型
     [self manualTransferModel];
+    // Mantle 转模型
+    [self mantleTransferModel];
 }
 
 - (void)manualTransferModel {
@@ -82,6 +98,15 @@
         SubDicTransferModel *subModel = (SubDicTransferModel *)model.allQueAnsModel;
         NSLog(@"模型内有数组：%@,模型内有模型：%@,%@",model.answers,subModel.question,subModel.answer);
     }];
+}
+
+- (void)mantleTransferModel {
+    NSMutableArray *modelArr = [[NSMutableArray alloc] init];
+    [_dataArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        MantleModel *mantleModel = [[MantleModel alloc] initWithDictionary:obj error:nil];
+        [modelArr addObject:mantleModel];
+    }];
+    NSLog(@"生成的模型数组：%@",modelArr);
 }
 
 - (void)setUI {
