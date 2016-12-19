@@ -76,6 +76,7 @@
 		7323B4921D2B8B6600CE6790 /* TouchIdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4911D2B8B6600CE6790 /* TouchIdManager.m */; };
 		7323B4941D2B8E1100CE6790 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7323B4931D2B8E1100CE6790 /* LocalAuthentication.framework */; };
 		7323B4981D2B9D6300CE6790 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4971D2B9D6300CE6790 /* BannerViewController.m */; };
+		732780D31E07873000B399D0 /* LBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 732780D21E07873000B399D0 /* LBUtil.m */; };
 		734075341D124876000652E0 /* TestSynthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 734075331D124876000652E0 /* TestSynthesize.m */; };
 		7358D9D61D05642600B7484C /* FreezeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358D9D51D05642500B7484C /* FreezeViewController.m */; };
 		736584B81D22652C0088CDAB /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 736584B71D22652C0088CDAB /* test.js */; };
@@ -388,6 +389,11 @@
 		7323B4931D2B8E1100CE6790 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		7323B4961D2B9D6300CE6790 /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		7323B4971D2B9D6300CE6790 /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		732780CE1E0786E500B399D0 /* LBMacroCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBMacroCommon.h; sourceTree = "<group>"; };
+		732780CF1E0786E500B399D0 /* LBMacroNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBMacroNet.h; sourceTree = "<group>"; };
+		732780D01E0786E500B399D0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		732780D11E07873000B399D0 /* LBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBUtil.h; sourceTree = "<group>"; };
+		732780D21E07873000B399D0 /* LBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBUtil.m; sourceTree = "<group>"; };
 		734075321D124876000652E0 /* TestSynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSynthesize.h; sourceTree = "<group>"; };
 		734075331D124876000652E0 /* TestSynthesize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSynthesize.m; sourceTree = "<group>"; };
 		7358D9D41D05642500B7484C /* FreezeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreezeViewController.h; sourceTree = "<group>"; };
@@ -1138,9 +1144,11 @@
 			name = MJExtension;
 			sourceTree = "<group>";
 		};
-		738DEA271E029DF4003E30D2 /* 工具类Tools */ = {
+		738DEA271E029DF4003E30D2 /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
+				732780D11E07873000B399D0 /* LBUtil.h */,
+				732780D21E07873000B399D0 /* LBUtil.m */,
 				738DEA661E02A147003E30D2 /* QsyTest.bundle */,
 				738DEA281E029DFE003E30D2 /* LBCommon.h */,
 				738DEA291E029DFE003E30D2 /* LBCommon.m */,
@@ -1159,6 +1167,7 @@
 				738DEA361E029DFE003E30D2 /* LBValidate.h */,
 				738DEA371E029DFE003E30D2 /* LBValidate.m */,
 			);
+			name = "工具类";
 			path = "工具类Tools";
 			sourceTree = "<group>";
 		};
@@ -1174,7 +1183,7 @@
 		739B56B71DF01B2400C8C9B0 /* 工具箱 */ = {
 			isa = PBXGroup;
 			children = (
-				738DEA271E029DF4003E30D2 /* 工具类Tools */,
+				738DEA271E029DF4003E30D2 /* 工具类 */,
 				739B56B81DF01B2400C8C9B0 /* demo工具 */,
 				739B56F81DF01B2400C8C9B0 /* 分类category */,
 				739B57061DF01B2400C8C9B0 /* 宏定义Grand */,
@@ -1338,6 +1347,9 @@
 		739B57061DF01B2400C8C9B0 /* 宏定义Grand */ = {
 			isa = PBXGroup;
 			children = (
+				732780CE1E0786E500B399D0 /* LBMacroCommon.h */,
+				732780CF1E0786E500B399D0 /* LBMacroNet.h */,
+				732780D01E0786E500B399D0 /* PrefixHeader.pch */,
 				739B57071DF01B2400C8C9B0 /* Common.h */,
 			);
 			path = "宏定义Grand";
@@ -2248,6 +2260,7 @@
 				739B57AA1DF01B2400C8C9B0 /* FMResultSet.m in Sources */,
 				739B57891DF01B2400C8C9B0 /* MASViewAttribute.m in Sources */,
 				73D15AFC1CEEB3E4008855FB /* CaptureDeviceViewController.m in Sources */,
+				732780D31E07873000B399D0 /* LBUtil.m in Sources */,
 				738DEA3D1E029DFF003E30D2 /* LBTransform.m in Sources */,
 				73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */,
 				30DC004F1D03D200005EAD0C /* ViewController.m in Sources */,
