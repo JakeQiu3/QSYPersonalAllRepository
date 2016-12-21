@@ -212,6 +212,8 @@
 		300C827F1E0AD05B003C28F9 /* wmd.js in Resources */ = {isa = PBXBuildFile; fileRef = 300C82161E0AD05B003C28F9 /* wmd.js */; };
 		300C82801E0AD05B003C28F9 /* zhuanlandaren.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C82171E0AD05B003C28F9 /* zhuanlandaren.png */; };
 		300C82811E0AD05B003C28F9 /* 第三方登录流程.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C82181E0AD05B003C28F9 /* 第三方登录流程.png */; };
+		300C82AF1E0AD3A4003C28F9 /* 生成动态的验证码（demo）.zip in Resources */ = {isa = PBXBuildFile; fileRef = 300C82AE1E0AD3A4003C28F9 /* 生成动态的验证码（demo）.zip */; };
+		300C82B11E0AD4E4003C28F9 /* 搜索oc和swift版.zip in Resources */ = {isa = PBXBuildFile; fileRef = 300C82B01E0AD4E4003C28F9 /* 搜索oc和swift版.zip */; };
 		303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */; };
 		303F38C81D3B32C800630F31 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38C71D3B32C800630F31 /* CustomAlertViewController.m */; };
 		303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */; };
@@ -382,11 +384,8 @@
 		73BA9A9C1DF5442300C0BCA6 /* 见QSYRAC_MVVM.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9A9B1DF5442300C0BCA6 /* 见QSYRAC_MVVM.xml */; };
 		73BA9AAC1DF5452B00C0BCA6 /* objc_msgForward_demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9A9E1DF5452B00C0BCA6 /* objc_msgForward_demo.zip */; };
 		73BA9AAE1DF5452B00C0BCA6 /* IMYWebView-iOS通用demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA01DF5452B00C0BCA6 /* IMYWebView-iOS通用demo.zip */; };
-		73BA9AAF1DF5452B00C0BCA6 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA11DF5452B00C0BCA6 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */; };
 		73BA9AB01DF5452B00C0BCA6 /* JSPatch的紧急修复上线Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA21DF5452B00C0BCA6 /* JSPatch的紧急修复上线Demo.zip */; };
 		73BA9AB21DF5452B00C0BCA6 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA41DF5452B00C0BCA6 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */; };
-		73BA9AB31DF5452B00C0BCA6 /* ReactiveCocoa Framework(框架的旧包).zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA51DF5452B00C0BCA6 /* ReactiveCocoa Framework(框架的旧包).zip */; };
-		73BA9AB41DF5452B00C0BCA6 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BA9AA61DF5452B00C0BCA6 /* ReactiveCocoa.framework */; };
 		73BA9AB51DF5452B00C0BCA6 /* WebViewJavascriptBridge - demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA71DF5452B00C0BCA6 /* WebViewJavascriptBridge - demo.zip */; };
 		73BA9AB61DF5452B00C0BCA6 /* xib和storyboard使用看这个就够了.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA81DF5452B00C0BCA6 /* xib和storyboard使用看这个就够了.zip */; };
 		73BA9AB71DF5452B00C0BCA6 /* 仿微信选择图片Demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9AA91DF5452B00C0BCA6 /* 仿微信选择图片Demo.zip */; };
@@ -670,6 +669,8 @@
 		300C82161E0AD05B003C28F9 /* wmd.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wmd.js; sourceTree = "<group>"; };
 		300C82171E0AD05B003C28F9 /* zhuanlandaren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhuanlandaren.png; sourceTree = "<group>"; };
 		300C82181E0AD05B003C28F9 /* 第三方登录流程.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "第三方登录流程.png"; sourceTree = "<group>"; };
+		300C82AE1E0AD3A4003C28F9 /* 生成动态的验证码（demo）.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "生成动态的验证码（demo）.zip"; sourceTree = "<group>"; };
+		300C82B01E0AD4E4003C28F9 /* 搜索oc和swift版.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "搜索oc和swift版.zip"; sourceTree = "<group>"; };
 		303F38BB1D3B1B6400630F31 /* MulitplePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulitplePickerViewController.h; sourceTree = "<group>"; };
 		303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulitplePickerViewController.m; sourceTree = "<group>"; };
 		303F38C61D3B32C800630F31 /* CustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewController.h; sourceTree = "<group>"; };
@@ -1004,11 +1005,8 @@
 		73BA9A9B1DF5442300C0BCA6 /* 见QSYRAC_MVVM.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "见QSYRAC_MVVM.xml"; sourceTree = "<group>"; };
 		73BA9A9E1DF5452B00C0BCA6 /* objc_msgForward_demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = objc_msgForward_demo.zip; sourceTree = "<group>"; };
 		73BA9AA01DF5452B00C0BCA6 /* IMYWebView-iOS通用demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "IMYWebView-iOS通用demo.zip"; sourceTree = "<group>"; };
-		73BA9AA11DF5452B00C0BCA6 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf"; sourceTree = "<group>"; };
 		73BA9AA21DF5452B00C0BCA6 /* JSPatch的紧急修复上线Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "JSPatch的紧急修复上线Demo.zip"; sourceTree = "<group>"; };
 		73BA9AA41DF5452B00C0BCA6 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ReactiveCocoa Demo 注册搜索嵌套信号.zip"; sourceTree = "<group>"; };
-		73BA9AA51DF5452B00C0BCA6 /* ReactiveCocoa Framework(框架的旧包).zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ReactiveCocoa Framework(框架的旧包).zip"; sourceTree = "<group>"; };
-		73BA9AA61DF5452B00C0BCA6 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
 		73BA9AA71DF5452B00C0BCA6 /* WebViewJavascriptBridge - demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "WebViewJavascriptBridge - demo.zip"; sourceTree = "<group>"; };
 		73BA9AA81DF5452B00C0BCA6 /* xib和storyboard使用看这个就够了.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "xib和storyboard使用看这个就够了.zip"; sourceTree = "<group>"; };
 		73BA9AA91DF5452B00C0BCA6 /* 仿微信选择图片Demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "仿微信选择图片Demo.zip"; sourceTree = "<group>"; };
@@ -1087,7 +1085,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7323B4941D2B8E1100CE6790 /* LocalAuthentication.framework in Frameworks */,
-				73BA9AB41DF5452B00C0BCA6 /* ReactiveCocoa.framework in Frameworks */,
 				736584BE1D227C710088CDAB /* JavaScriptCore.framework in Frameworks */,
 				730CFB441D1A963600B62765 /* WebKit.framework in Frameworks */,
 				73D15AFE1CEEB46D008855FB /* AVFoundation.framework in Frameworks */,
@@ -1111,10 +1108,10 @@
 		300C80DB1E0ACD5A003C28F9 /* 传值(其中cell的block传值还不错) */ = {
 			isa = PBXGroup;
 			children = (
+				300C81391E0ACD5A003C28F9 /* 购物车传值（demo） */,
 				300C80DC1E0ACD5A003C28F9 /* Block传值 */,
 				300C80E21E0ACD5A003C28F9 /* 代理 */,
 				300C80E41E0ACD5A003C28F9 /* 单例 */,
-				300C81391E0ACD5A003C28F9 /* 购物车传值 */,
 				300C81451E0ACD5A003C28F9 /* 通知传值 */,
 			);
 			path = "传值(其中cell的block传值还不错)";
@@ -1245,13 +1242,14 @@
 			path = "iOS的单例模式（singleton） - sakulafly的专栏 - 博客频道 - CSDN.NET_files";
 			sourceTree = "<group>";
 		};
-		300C81391E0ACD5A003C28F9 /* 购物车传值 */ = {
+		300C81391E0ACD5A003C28F9 /* 购物车传值（demo） */ = {
 			isa = PBXGroup;
 			children = (
 				300C813A1E0ACD5A003C28F9 /* Controller */,
 				300C813D1E0ACD5A003C28F9 /* Model */,
 				300C81421E0ACD5A003C28F9 /* View */,
 			);
+			name = "购物车传值（demo）";
 			path = "购物车传值";
 			sourceTree = "<group>";
 		};
@@ -1504,7 +1502,7 @@
 				7366B6FC1DF13F570052E1E1 /* 工具箱使用介绍 */,
 				739B56B71DF01B2400C8C9B0 /* 工具箱 */,
 				73BA9ABA1DF5455800C0BCA6 /* rescoures bundle */,
-				73BA9A9D1DF5452B00C0BCA6 /* 压缩包Demo */,
+				73BA9A9D1DF5452B00C0BCA6 /* Demos */,
 				308B97801CCA899400BDA0FA /* Supporting Files */,
 			);
 			path = QSYPersonalRepositoryAll;
@@ -2365,22 +2363,22 @@
 			name = Col;
 			sourceTree = "<group>";
 		};
-		73BA9A9D1DF5452B00C0BCA6 /* 压缩包Demo */ = {
+		73BA9A9D1DF5452B00C0BCA6 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				300C82B01E0AD4E4003C28F9 /* 搜索oc和swift版.zip */,
+				300C82AE1E0AD3A4003C28F9 /* 生成动态的验证码（demo）.zip */,
 				73BA9A9E1DF5452B00C0BCA6 /* objc_msgForward_demo.zip */,
 				73BA9AA01DF5452B00C0BCA6 /* IMYWebView-iOS通用demo.zip */,
-				73BA9AA11DF5452B00C0BCA6 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf */,
 				73BA9AA21DF5452B00C0BCA6 /* JSPatch的紧急修复上线Demo.zip */,
-				73BA9AA41DF5452B00C0BCA6 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */,
-				73BA9AA51DF5452B00C0BCA6 /* ReactiveCocoa Framework(框架的旧包).zip */,
-				73BA9AA61DF5452B00C0BCA6 /* ReactiveCocoa.framework */,
 				73BA9AA71DF5452B00C0BCA6 /* WebViewJavascriptBridge - demo.zip */,
+				73BA9AA41DF5452B00C0BCA6 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip */,
 				73BA9AA81DF5452B00C0BCA6 /* xib和storyboard使用看这个就够了.zip */,
 				73BA9AA91DF5452B00C0BCA6 /* 仿微信选择图片Demo.zip */,
 				73BA9AAA1DF5452B00C0BCA6 /* 日历的Demo.zip */,
 				73BA9AAB1DF5452B00C0BCA6 /* 自定义tabbarDemo.zip */,
 			);
+			name = Demos;
 			path = "压缩包Demo";
 			sourceTree = "<group>";
 		};
@@ -2740,8 +2738,8 @@
 				300C82701E0AD05B003C28F9 /* repoAddr2.js in Resources */,
 				300C82691E0AD05B003C28F9 /* o.html in Resources */,
 				300C823B1E0AD05B003C28F9 /* ask_float_fonts_css-6b30a53970eb5c3a2a045e3df585b475.css in Resources */,
-				73BA9AAF1DF5452B00C0BCA6 /* iOS开发进阶 PDF电子书下载 带书签目录 完整版.pdf in Resources */,
 				300C81531E0ACD5A003C28F9 /* account-pay_cce0650.js in Resources */,
+				300C82AF1E0AD3A4003C28F9 /* 生成动态的验证码（demo）.zip in Resources */,
 				73BA9AE01DF5455800C0BCA6 /* 1.jpg in Resources */,
 				73BA9AAC1DF5452B00C0BCA6 /* objc_msgForward_demo.zip in Resources */,
 				300C814A1E0ACD5A003C28F9 /* Block传值                      第一个页面.png in Resources */,
@@ -2844,10 +2842,10 @@
 				308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */,
 				300C81821E0ACD5A003C28F9 /* main(1).js in Resources */,
 				73037E7A1D2A5A530017D024 /* tableViewTest.storyboard in Resources */,
+				300C82B11E0AD4E4003C28F9 /* 搜索oc和swift版.zip in Resources */,
 				300C82561E0AD05B003C28F9 /* jquery.form.js in Resources */,
 				300C81801E0ACD5A003C28F9 /* logger.js in Resources */,
 				300C82451E0AD05B003C28F9 /* container.html in Resources */,
-				73BA9AB31DF5452B00C0BCA6 /* ReactiveCocoa Framework(框架的旧包).zip in Resources */,
 				73BA9AB61DF5452B00C0BCA6 /* xib和storyboard使用看这个就够了.zip in Resources */,
 				300C822D1E0AD05B003C28F9 /* ad-ms1578.js in Resources */,
 				300C82221E0AD05B003C28F9 /* 20151123175257333 in Resources */,
