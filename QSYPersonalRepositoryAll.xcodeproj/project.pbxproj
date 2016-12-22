@@ -214,6 +214,18 @@
 		300C82811E0AD05B003C28F9 /* 第三方登录流程.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C82181E0AD05B003C28F9 /* 第三方登录流程.png */; };
 		300C82AF1E0AD3A4003C28F9 /* 生成动态的验证码（demo）.zip in Resources */ = {isa = PBXBuildFile; fileRef = 300C82AE1E0AD3A4003C28F9 /* 生成动态的验证码（demo）.zip */; };
 		300C82B11E0AD4E4003C28F9 /* 搜索oc和swift版.zip in Resources */ = {isa = PBXBuildFile; fileRef = 300C82B01E0AD4E4003C28F9 /* 搜索oc和swift版.zip */; };
+		300C82B31E0AD706003C28F9 /* 地图.zip in Resources */ = {isa = PBXBuildFile; fileRef = 300C82B21E0AD706003C28F9 /* 地图.zip */; };
+		300C82C21E0AD7E9003C28F9 /* 19-CALayer.pptx in Resources */ = {isa = PBXBuildFile; fileRef = 300C82B51E0AD7E9003C28F9 /* 19-CALayer.pptx */; };
+		300C82C31E0AD7E9003C28F9 /* 20-核心动画.pptx in Resources */ = {isa = PBXBuildFile; fileRef = 300C82B61E0AD7E9003C28F9 /* 20-核心动画.pptx */; };
+		300C82C41E0AD7E9003C28F9 /* CALayer1-简介.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = 300C82B81E0AD7E9003C28F9 /* CALayer1-简介.webarchive */; };
+		300C82C51E0AD7E9003C28F9 /* CALayer2-创建新的层.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = 300C82B91E0AD7E9003C28F9 /* CALayer2-创建新的层.webarchive */; };
+		300C82C61E0AD7E9003C28F9 /* CALayer3-层的属性.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = 300C82BA1E0AD7E9003C28F9 /* CALayer3-层的属性.webarchive */; };
+		300C82C71E0AD7E9003C28F9 /* CALayer4-自定义层.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = 300C82BB1E0AD7E9003C28F9 /* CALayer4-自定义层.webarchive */; };
+		300C82C81E0AD7E9003C28F9 /* CATransform3DKeyPath.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C82BC1E0AD7E9003C28F9 /* CATransform3DKeyPath.png */; };
+		300C82C91E0AD7E9003C28F9 /* Core Animation1-简介.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = 300C82BE1E0AD7E9003C28F9 /* Core Animation1-简介.webarchive */; };
+		300C82CA1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = 300C82BF1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive */; };
+		300C82CB1E0AD7E9003C28F9 /* transform的属性列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C82C01E0AD7E9003C28F9 /* transform的属性列表.png */; };
+		300C82CC1E0AD7E9003C28F9 /* 转场动画类型.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C82C11E0AD7E9003C28F9 /* 转场动画类型.png */; };
 		303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */; };
 		303F38C81D3B32C800630F31 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38C71D3B32C800630F31 /* CustomAlertViewController.m */; };
 		303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */; };
@@ -671,6 +683,18 @@
 		300C82181E0AD05B003C28F9 /* 第三方登录流程.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "第三方登录流程.png"; sourceTree = "<group>"; };
 		300C82AE1E0AD3A4003C28F9 /* 生成动态的验证码（demo）.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "生成动态的验证码（demo）.zip"; sourceTree = "<group>"; };
 		300C82B01E0AD4E4003C28F9 /* 搜索oc和swift版.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "搜索oc和swift版.zip"; sourceTree = "<group>"; };
+		300C82B21E0AD706003C28F9 /* 地图.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "地图.zip"; sourceTree = "<group>"; };
+		300C82B51E0AD7E9003C28F9 /* 19-CALayer.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "19-CALayer.pptx"; sourceTree = "<group>"; };
+		300C82B61E0AD7E9003C28F9 /* 20-核心动画.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "20-核心动画.pptx"; sourceTree = "<group>"; };
+		300C82B81E0AD7E9003C28F9 /* CALayer1-简介.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "CALayer1-简介.webarchive"; sourceTree = "<group>"; };
+		300C82B91E0AD7E9003C28F9 /* CALayer2-创建新的层.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "CALayer2-创建新的层.webarchive"; sourceTree = "<group>"; };
+		300C82BA1E0AD7E9003C28F9 /* CALayer3-层的属性.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "CALayer3-层的属性.webarchive"; sourceTree = "<group>"; };
+		300C82BB1E0AD7E9003C28F9 /* CALayer4-自定义层.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "CALayer4-自定义层.webarchive"; sourceTree = "<group>"; };
+		300C82BC1E0AD7E9003C28F9 /* CATransform3DKeyPath.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CATransform3DKeyPath.png; sourceTree = "<group>"; };
+		300C82BE1E0AD7E9003C28F9 /* Core Animation1-简介.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Core Animation1-简介.webarchive"; sourceTree = "<group>"; };
+		300C82BF1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Core Animation2-CABasicAnimation.webarchive"; sourceTree = "<group>"; };
+		300C82C01E0AD7E9003C28F9 /* transform的属性列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transform的属性列表.png"; sourceTree = "<group>"; };
+		300C82C11E0AD7E9003C28F9 /* 转场动画类型.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "转场动画类型.png"; sourceTree = "<group>"; };
 		303F38BB1D3B1B6400630F31 /* MulitplePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulitplePickerViewController.h; sourceTree = "<group>"; };
 		303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulitplePickerViewController.m; sourceTree = "<group>"; };
 		303F38C61D3B32C800630F31 /* CustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewController.h; sourceTree = "<group>"; };
@@ -1429,6 +1453,40 @@
 			path = "开源中国iOS客户端学习——(十二)用户登陆 - 新风作浪的博客专栏 - 博客频道 - CSDN.NET_files";
 			sourceTree = "<group>";
 		};
+		300C82B41E0AD7E9003C28F9 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				300C82B51E0AD7E9003C28F9 /* 19-CALayer.pptx */,
+				300C82B61E0AD7E9003C28F9 /* 20-核心动画.pptx */,
+				300C82B71E0AD7E9003C28F9 /* CALayer文档资料 */,
+				300C82BC1E0AD7E9003C28F9 /* CATransform3DKeyPath.png */,
+				300C82BD1E0AD7E9003C28F9 /* CoreAnimation文档资料 */,
+				300C82C11E0AD7E9003C28F9 /* 转场动画类型.png */,
+			);
+			path = "动画";
+			sourceTree = "<group>";
+		};
+		300C82B71E0AD7E9003C28F9 /* CALayer文档资料 */ = {
+			isa = PBXGroup;
+			children = (
+				300C82B81E0AD7E9003C28F9 /* CALayer1-简介.webarchive */,
+				300C82B91E0AD7E9003C28F9 /* CALayer2-创建新的层.webarchive */,
+				300C82BA1E0AD7E9003C28F9 /* CALayer3-层的属性.webarchive */,
+				300C82BB1E0AD7E9003C28F9 /* CALayer4-自定义层.webarchive */,
+			);
+			path = "CALayer文档资料";
+			sourceTree = "<group>";
+		};
+		300C82BD1E0AD7E9003C28F9 /* CoreAnimation文档资料 */ = {
+			isa = PBXGroup;
+			children = (
+				300C82BE1E0AD7E9003C28F9 /* Core Animation1-简介.webarchive */,
+				300C82BF1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive */,
+				300C82C01E0AD7E9003C28F9 /* transform的属性列表.png */,
+			);
+			path = "CoreAnimation文档资料";
+			sourceTree = "<group>";
+		};
 		303816B41D070CE800046B3D /* MVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1537,6 +1595,7 @@
 			children = (
 				3091A7571CEE1A64003B97F4 /* TestTotalViewController.h */,
 				3091A76C1CEE1A64003B97F4 /* TestTotalViewController.m */,
+				300C82B41E0AD7E9003C28F9 /* 动画 */,
 				300C81AD1E0AD05B003C28F9 /* 登录注册 */,
 				300C81AA1E0ACF56003C28F9 /* 打包测试IPA程序 */,
 				300C80DB1E0ACD5A003C28F9 /* 传值(其中cell的block传值还不错) */,
@@ -2366,6 +2425,7 @@
 		73BA9A9D1DF5452B00C0BCA6 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				300C82B21E0AD706003C28F9 /* 地图.zip */,
 				300C82B01E0AD4E4003C28F9 /* 搜索oc和swift版.zip */,
 				300C82AE1E0AD3A4003C28F9 /* 生成动态的验证码（demo）.zip */,
 				73BA9A9E1DF5452B00C0BCA6 /* objc_msgForward_demo.zip */,
@@ -2699,6 +2759,7 @@
 				73BA9AFE1DF5455800C0BCA6 /* VM和V通过ReactiveCocoa实现绑定.png in Resources */,
 				300C81971E0ACD5A003C28F9 /* style(2).css in Resources */,
 				300C824E1E0AD05B003C28F9 /* ico_list.gif in Resources */,
+				300C82CB1E0AD7E9003C28F9 /* transform的属性列表.png in Resources */,
 				300C82551E0AD05B003C28F9 /* jquery.cookie.js in Resources */,
 				300C81AC1E0ACF56003C28F9 /* ①打包测试程序.pdf in Resources */,
 				300C816C1E0ACD5A003C28F9 /* get in Resources */,
@@ -2774,6 +2835,7 @@
 				300C82501E0AD05B003C28F9 /* ico_summary.gif in Resources */,
 				300C81751E0ACD5A003C28F9 /* index.css in Resources */,
 				73BA9AE81DF5455800C0BCA6 /* 3.jpg in Resources */,
+				300C82C21E0AD7E9003C28F9 /* 19-CALayer.pptx in Resources */,
 				300C81561E0ACD5A003C28F9 /* ad.js in Resources */,
 				300C821B1E0AD05B003C28F9 /* 1_duxinfeng2010.jpg in Resources */,
 				300C81941E0ACD5A003C28F9 /* showblogmedal.ashx in Resources */,
@@ -2799,6 +2861,7 @@
 				300C82671E0AD05B003C28F9 /* notify.js in Resources */,
 				73BA9AFC1DF5455800C0BCA6 /* Teacher.xml in Resources */,
 				300C81621E0ACD5A003C28F9 /* blog_detail.css in Resources */,
+				300C82C61E0AD7E9003C28F9 /* CALayer3-层的属性.webarchive in Resources */,
 				300C82421E0AD05B003C28F9 /* cnick.js in Resources */,
 				300C81501E0ACD5A003C28F9 /* iOS的单例模式（singleton） - sakulafly的专栏 - 博客频道 - CSDN.NET.html in Resources */,
 				300C82791E0AD05B003C28F9 /* style1.css in Resources */,
@@ -2838,9 +2901,11 @@
 				300C816F1E0ACD5A003C28F9 /* helper-utils-moplus-monitor_b54cd5f.js in Resources */,
 				300C82541E0AD05B003C28F9 /* jquery-1.11.1.min.js in Resources */,
 				73BA9B011DF5455800C0BCA6 /* 同步异步 和 串行并行队列.png in Resources */,
+				300C82CA1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive in Resources */,
 				7323B46F1D2B4F5900CE6790 /* customTest.xib in Resources */,
 				308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */,
 				300C81821E0ACD5A003C28F9 /* main(1).js in Resources */,
+				300C82C71E0AD7E9003C28F9 /* CALayer4-自定义层.webarchive in Resources */,
 				73037E7A1D2A5A530017D024 /* tableViewTest.storyboard in Resources */,
 				300C82B11E0AD4E4003C28F9 /* 搜索oc和swift版.zip in Resources */,
 				300C82561E0AD05B003C28F9 /* jquery.form.js in Resources */,
@@ -2882,6 +2947,7 @@
 				300C819C1E0ACD5A003C28F9 /* tracking.js in Resources */,
 				300C824A1E0AD05B003C28F9 /* fp.html in Resources */,
 				300C826E1E0AD05B003C28F9 /* pubads_impl_76.js in Resources */,
+				300C82C31E0AD7E9003C28F9 /* 20-核心动画.pptx in Resources */,
 				300C82311E0AD05B003C28F9 /* ad.js in Resources */,
 				300C82471E0AD05B003C28F9 /* default.css in Resources */,
 				300C824F1E0AD05B003C28F9 /* ico_rss.gif in Resources */,
@@ -2899,6 +2965,7 @@
 				73BA9B041DF5455800C0BCA6 /* 面试题总结.xml in Resources */,
 				73BA9AB01DF5452B00C0BCA6 /* JSPatch的紧急修复上线Demo.zip in Resources */,
 				300C827B1E0AD05B003C28F9 /* top.png in Resources */,
+				300C82B31E0AD706003C28F9 /* 地图.zip in Resources */,
 				300C82411E0AD05B003C28F9 /* category_icon.jpg in Resources */,
 				300C82251E0AD05B003C28F9 /* 3_jiaozhuking.jpg in Resources */,
 				300C81721E0ACD5A003C28F9 /* ico_list.gif in Resources */,
@@ -2930,6 +2997,8 @@
 				73BA9AE91DF5455800C0BCA6 /* 4.jpg in Resources */,
 				300C815E1E0ACD5A003C28F9 /* bds_s_v2.js in Resources */,
 				300C82401E0AD05B003C28F9 /* category.js in Resources */,
+				300C82C91E0AD7E9003C28F9 /* Core Animation1-简介.webarchive in Resources */,
+				300C82CC1E0AD7E9003C28F9 /* 转场动画类型.png in Resources */,
 				300C826D1E0AD05B003C28F9 /* pub_footer_2014.css in Resources */,
 				300C816E1E0ACD5A003C28F9 /* gpt.js in Resources */,
 				73BA9AEE1DF5455800C0BCA6 /* 8.jpg in Resources */,
@@ -2945,7 +3014,10 @@
 				300C81771E0ACD5A003C28F9 /* job_reco.css in Resources */,
 				300C81871E0ACD5A003C28F9 /* new.gif in Resources */,
 				300C81841E0ACD5A003C28F9 /* markdown_views.css in Resources */,
+				300C82C51E0AD7E9003C28F9 /* CALayer2-创建新的层.webarchive in Resources */,
 				300C81881E0ACD5A003C28F9 /* newblog.min.js in Resources */,
+				300C82C41E0AD7E9003C28F9 /* CALayer1-简介.webarchive in Resources */,
+				300C82C81E0AD7E9003C28F9 /* CATransform3DKeyPath.png in Resources */,
 				300C826A1E0AD05B003C28F9 /* oojs.js in Resources */,
 				73BA9AED1DF5455800C0BCA6 /* 7.jpg in Resources */,
 				300C81A81E0ACD5A003C28F9 /* 通知传值A界面，接收后改变的.png in Resources */,
