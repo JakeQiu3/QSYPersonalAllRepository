@@ -253,6 +253,9 @@
 		309590581CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590521CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m */; };
 		309590591CFF22C000176AAC /* DrawRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590541CFF22C000176AAC /* DrawRectView.m */; };
 		3095905B1CFF22C000176AAC /* LayoutSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590571CFF22C000176AAC /* LayoutSubView.m */; };
+		30C70A631E0C39760098AEAB /* NavBarScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C70A5F1E0C39760098AEAB /* NavBarScrollViewController.m */; };
+		30C70A641E0C39760098AEAB /* UseNavBarScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C70A611E0C39760098AEAB /* UseNavBarScrollViewController.m */; };
+		30C70A651E0C39760098AEAB /* 美团外卖tableview和collectionView的商品展示联动.zip in Resources */ = {isa = PBXBuildFile; fileRef = 30C70A621E0C39760098AEAB /* 美团外卖tableview和collectionView的商品展示联动.zip */; };
 		30C976A71D3BB1C500614EBC /* PostMallCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */; };
 		30CB778A1D3001CB00C3DDEC /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30CB77891D3001CB00C3DDEC /* AutoLayoutViewController.xib */; };
 		30DC004E1D03D200005EAD0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC004B1D03D200005EAD0C /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -746,6 +749,11 @@
 		309590541CFF22C000176AAC /* DrawRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawRectView.m; sourceTree = "<group>"; };
 		309590561CFF22C000176AAC /* LayoutSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutSubView.h; sourceTree = "<group>"; };
 		309590571CFF22C000176AAC /* LayoutSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutSubView.m; sourceTree = "<group>"; };
+		30C70A5E1E0C39760098AEAB /* NavBarScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarScrollViewController.h; sourceTree = "<group>"; };
+		30C70A5F1E0C39760098AEAB /* NavBarScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarScrollViewController.m; sourceTree = "<group>"; };
+		30C70A601E0C39760098AEAB /* UseNavBarScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseNavBarScrollViewController.h; sourceTree = "<group>"; };
+		30C70A611E0C39760098AEAB /* UseNavBarScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseNavBarScrollViewController.m; sourceTree = "<group>"; };
+		30C70A621E0C39760098AEAB /* 美团外卖tableview和collectionView的商品展示联动.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "美团外卖tableview和collectionView的商品展示联动.zip"; sourceTree = "<group>"; };
 		30C976A51D3BB1C500614EBC /* PostMallCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMallCategoryModel.h; sourceTree = "<group>"; };
 		30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMallCategoryModel.m; sourceTree = "<group>"; };
 		30CB77891D3001CB00C3DDEC /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
@@ -1593,6 +1601,7 @@
 		3091A7A21CEE1D00003B97F4 /* 知识点总测试 */ = {
 			isa = PBXGroup;
 			children = (
+				30C70A5D1E0C39760098AEAB /* 暂用1 */,
 				3091A7571CEE1A64003B97F4 /* TestTotalViewController.h */,
 				3091A76C1CEE1A64003B97F4 /* TestTotalViewController.m */,
 				300C82B41E0AD7E9003C28F9 /* 动画 */,
@@ -1641,6 +1650,18 @@
 				309590571CFF22C000176AAC /* LayoutSubView.m */,
 			);
 			name = "drawRect&layoutSubviews方法比较";
+			sourceTree = "<group>";
+		};
+		30C70A5D1E0C39760098AEAB /* 暂用1 */ = {
+			isa = PBXGroup;
+			children = (
+				30C70A5E1E0C39760098AEAB /* NavBarScrollViewController.h */,
+				30C70A5F1E0C39760098AEAB /* NavBarScrollViewController.m */,
+				30C70A601E0C39760098AEAB /* UseNavBarScrollViewController.h */,
+				30C70A611E0C39760098AEAB /* UseNavBarScrollViewController.m */,
+				30C70A621E0C39760098AEAB /* 美团外卖tableview和collectionView的商品展示联动.zip */,
+			);
+			path = "暂用1";
 			sourceTree = "<group>";
 		};
 		30C976A11D3BAD1500614EBC /* Lib */ = {
@@ -2998,6 +3019,7 @@
 				300C815E1E0ACD5A003C28F9 /* bds_s_v2.js in Resources */,
 				300C82401E0AD05B003C28F9 /* category.js in Resources */,
 				300C82C91E0AD7E9003C28F9 /* Core Animation1-简介.webarchive in Resources */,
+				30C70A651E0C39760098AEAB /* 美团外卖tableview和collectionView的商品展示联动.zip in Resources */,
 				300C82CC1E0AD7E9003C28F9 /* 转场动画类型.png in Resources */,
 				300C826D1E0AD05B003C28F9 /* pub_footer_2014.css in Resources */,
 				300C816E1E0ACD5A003C28F9 /* gpt.js in Resources */,
@@ -3202,6 +3224,7 @@
 				7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */,
 				739B579B1DF01B2400C8C9B0 /* CustumAlertView.m in Sources */,
 				730C490A1D23B3E400707722 /* WebViewJavascriptBridgeBase.m in Sources */,
+				30C70A631E0C39760098AEAB /* NavBarScrollViewController.m in Sources */,
 				303F38DD1D3BA41000630F31 /* RightCollectionViewCell.m in Sources */,
 				30DC004E1D03D200005EAD0C /* AppDelegate.m in Sources */,
 				300C81A51E0ACD5A003C28F9 /* VLHiOptionalViewControllerCell.m in Sources */,
@@ -3211,6 +3234,7 @@
 				730CFB3D1D1A74D500B62765 /* WKWebViewDemoViewController.m in Sources */,
 				739B57C01DF01B2400C8C9B0 /* UIRefreshControl+AFNetworking.m in Sources */,
 				738DEA231E029DB1003E30D2 /* UIColor+LBExtension.m in Sources */,
+				30C70A641E0C39760098AEAB /* UseNavBarScrollViewController.m in Sources */,
 				739B57AC1DF01B2400C8C9B0 /* SqliteDataHandle.m in Sources */,
 				3091A78A1CEE1A64003B97F4 /* GCDViewController.m in Sources */,
 				7304B8341CF2DCC2005CA459 /* ChangeAnimationViewController.m in Sources */,
