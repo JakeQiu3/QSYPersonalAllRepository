@@ -306,6 +306,7 @@
 		7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53B1DF7D6C500390627 /* JsonTransferModel.m */; };
 		7378E5401DF7D6EA00390627 /* ExtensionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53F1DF7D6EA00390627 /* ExtensionModel.m */; };
 		737A1EC21E0D1F4F000ACDF4 /* 美团navigationbar效果.zip in Resources */ = {isa = PBXBuildFile; fileRef = 737A1EC11E0D1F4F000ACDF4 /* 美团navigationbar效果.zip */; };
+		737A1EC41E0D5C3B000ACDF4 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 737A1EC31E0D5C3B000ACDF4 /* index.html */; };
 		73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */; };
 		738DEA221E029DB1003E30D2 /* NSString+LBHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA191E029DB1003E30D2 /* NSString+LBHash.m */; };
 		738DEA231E029DB1003E30D2 /* UIColor+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA1B1E029DB1003E30D2 /* UIColor+LBExtension.m */; };
@@ -848,6 +849,7 @@
 		7378E53E1DF7D6EA00390627 /* ExtensionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionModel.h; sourceTree = "<group>"; };
 		7378E53F1DF7D6EA00390627 /* ExtensionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionModel.m; sourceTree = "<group>"; };
 		737A1EC11E0D1F4F000ACDF4 /* 美团navigationbar效果.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "美团navigationbar效果.zip"; sourceTree = "<group>"; };
+		737A1EC31E0D5C3B000ACDF4 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		73801AF71DF65C4300E9EC42 /* SubDicTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDicTransferModel.h; sourceTree = "<group>"; };
 		73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDicTransferModel.m; sourceTree = "<group>"; };
 		738DEA181E029DB1003E30D2 /* NSString+LBHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBHash.h"; sourceTree = "<group>"; };
@@ -1565,6 +1567,7 @@
 				30DC004A1D03D200005EAD0C /* AppDelegate.h */,
 				30DC004B1D03D200005EAD0C /* AppDelegate.m */,
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
+				737A1EC31E0D5C3B000ACDF4 /* index.html */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */,
 				7366B6FC1DF13F570052E1E1 /* 工具箱  使用介绍 */,
@@ -2904,6 +2907,7 @@
 				300C825B1E0AD05B003C28F9 /* langchao-4lu-database-banner-960-90-30k.html in Resources */,
 				300C822F1E0AD05B003C28F9 /* ad-ms1580_3.js in Resources */,
 				300C817B1E0ACD5A003C28F9 /* jquery.form.js in Resources */,
+				737A1EC41E0D5C3B000ACDF4 /* index.html in Resources */,
 				738DEA671E02A147003E30D2 /* QsyTest.bundle in Resources */,
 				73BA9AEC1DF5455800C0BCA6 /* 6.jpg in Resources */,
 				739B57A21DF01B2400C8C9B0 /* departmentCitysServices.plist in Resources */,
