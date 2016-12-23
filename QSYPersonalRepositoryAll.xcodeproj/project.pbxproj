@@ -305,6 +305,7 @@
 		7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736679081D752C0D00B39376 /* ClearCacheViewController.xib */; };
 		7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53B1DF7D6C500390627 /* JsonTransferModel.m */; };
 		7378E5401DF7D6EA00390627 /* ExtensionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53F1DF7D6EA00390627 /* ExtensionModel.m */; };
+		737A1EC21E0D1F4F000ACDF4 /* 美团navigationbar效果.zip in Resources */ = {isa = PBXBuildFile; fileRef = 737A1EC11E0D1F4F000ACDF4 /* 美团navigationbar效果.zip */; };
 		73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */; };
 		738DEA221E029DB1003E30D2 /* NSString+LBHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA191E029DB1003E30D2 /* NSString+LBHash.m */; };
 		738DEA231E029DB1003E30D2 /* UIColor+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA1B1E029DB1003E30D2 /* UIColor+LBExtension.m */; };
@@ -846,6 +847,7 @@
 		7378E53B1DF7D6C500390627 /* JsonTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTransferModel.m; sourceTree = "<group>"; };
 		7378E53E1DF7D6EA00390627 /* ExtensionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionModel.h; sourceTree = "<group>"; };
 		7378E53F1DF7D6EA00390627 /* ExtensionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionModel.m; sourceTree = "<group>"; };
+		737A1EC11E0D1F4F000ACDF4 /* 美团navigationbar效果.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "美团navigationbar效果.zip"; sourceTree = "<group>"; };
 		73801AF71DF65C4300E9EC42 /* SubDicTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDicTransferModel.h; sourceTree = "<group>"; };
 		73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDicTransferModel.m; sourceTree = "<group>"; };
 		738DEA181E029DB1003E30D2 /* NSString+LBHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBHash.h"; sourceTree = "<group>"; };
@@ -1564,11 +1566,11 @@
 				30DC004B1D03D200005EAD0C /* AppDelegate.m */,
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
-				3091A7A21CEE1D00003B97F4 /* 知识点总测试 */,
-				7366B6FC1DF13F570052E1E1 /* 工具箱使用介绍 */,
-				739B56B71DF01B2400C8C9B0 /* 工具箱 */,
-				73BA9ABA1DF5455800C0BCA6 /* rescoures bundle */,
-				73BA9A9D1DF5452B00C0BCA6 /* Demos */,
+				3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */,
+				7366B6FC1DF13F570052E1E1 /* 工具箱  使用介绍 */,
+				739B56B71DF01B2400C8C9B0 /* 你想要的 工具 这里都有 */,
+				73BA9A9D1DF5452B00C0BCA6 /* 要看 Demos 这里就够了 */,
+				73BA9ABA1DF5455800C0BCA6 /* 本项目的资源包 */,
 				308B97801CCA899400BDA0FA /* Supporting Files */,
 			);
 			path = QSYPersonalRepositoryAll;
@@ -1598,7 +1600,7 @@
 			name = "混合Tab (<=2)的下拉菜单";
 			sourceTree = "<group>";
 		};
-		3091A7A21CEE1D00003B97F4 /* 知识点总测试 */ = {
+		3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */ = {
 			isa = PBXGroup;
 			children = (
 				30C70A5D1E0C39760098AEAB /* 暂用1 */,
@@ -1618,7 +1620,7 @@
 				73D15AF71CEEAE4D008855FB /* 内存管理 */,
 				73D15AF81CEEAE56008855FB /* 多线程 */,
 			);
-			name = "知识点总测试";
+			name = "OC知识点  看这些就够了";
 			sourceTree = "<group>";
 		};
 		309590261CF4B5B300176AAC /* 连续创建对象和子父视图frame */ = {
@@ -1871,7 +1873,7 @@
 			name = "清除缓存工具";
 			sourceTree = "<group>";
 		};
-		7366B6FC1DF13F570052E1E1 /* 工具箱使用介绍 */ = {
+		7366B6FC1DF13F570052E1E1 /* 工具箱  使用介绍 */ = {
 			isa = PBXGroup;
 			children = (
 				73D600FE1D7D5D2300DCCAC7 /* Runtime魔法拦截系统方法举例 */,
@@ -1899,7 +1901,7 @@
 				73D15AED1CEEAAB0008855FB /* TabBar封装 */,
 				73D15AEC1CEEAA85008855FB /* 坐标系转换 */,
 			);
-			name = "工具箱使用介绍";
+			name = "工具箱  使用介绍";
 			sourceTree = "<group>";
 		};
 		7366B6FD1DF13FA10052E1E1 /* Frameworks */ = {
@@ -1962,7 +1964,7 @@
 			path = "工具类Tools";
 			sourceTree = "<group>";
 		};
-		739B56B71DF01B2400C8C9B0 /* 工具箱 */ = {
+		739B56B71DF01B2400C8C9B0 /* 你想要的 工具 这里都有 */ = {
 			isa = PBXGroup;
 			children = (
 				738DEA271E029DF4003E30D2 /* 工具类 */,
@@ -1974,6 +1976,7 @@
 				739B572B1DF01B2400C8C9B0 /* 数据库database */,
 				739B57471DF01B2400C8C9B0 /* 网络Network */,
 			);
+			name = "你想要的 工具 这里都有";
 			path = "工具箱";
 			sourceTree = "<group>";
 		};
@@ -2443,9 +2446,10 @@
 			name = Col;
 			sourceTree = "<group>";
 		};
-		73BA9A9D1DF5452B00C0BCA6 /* Demos */ = {
+		73BA9A9D1DF5452B00C0BCA6 /* 要看 Demos 这里就够了 */ = {
 			isa = PBXGroup;
 			children = (
+				737A1EC11E0D1F4F000ACDF4 /* 美团navigationbar效果.zip */,
 				300C82B21E0AD706003C28F9 /* 地图.zip */,
 				300C82B01E0AD4E4003C28F9 /* 搜索oc和swift版.zip */,
 				300C82AE1E0AD3A4003C28F9 /* 生成动态的验证码（demo）.zip */,
@@ -2459,11 +2463,11 @@
 				73BA9AAA1DF5452B00C0BCA6 /* 日历的Demo.zip */,
 				73BA9AAB1DF5452B00C0BCA6 /* 自定义tabbarDemo.zip */,
 			);
-			name = Demos;
+			name = "要看 Demos 这里就够了";
 			path = "压缩包Demo";
 			sourceTree = "<group>";
 		};
-		73BA9ABA1DF5455800C0BCA6 /* rescoures bundle */ = {
+		73BA9ABA1DF5455800C0BCA6 /* 本项目的资源包 */ = {
 			isa = PBXGroup;
 			children = (
 				73BA9AC61DF5455800C0BCA6 /* 5种编程思想和5种设计模式的比较.xml */,
@@ -2504,7 +2508,7 @@
 				73BA9AD41DF5455800C0BCA6 /* navigation_close@2x.png */,
 				73BA9AD51DF5455800C0BCA6 /* navigation_close@3x.png */,
 			);
-			name = "rescoures bundle";
+			name = "本项目的资源包";
 			path = rescoures;
 			sourceTree = "<group>";
 		};
@@ -2975,6 +2979,7 @@
 				73BA9AF31DF5455800C0BCA6 /* movielist.json in Resources */,
 				300C82521E0AD05B003C28F9 /* job_reco.css in Resources */,
 				300C81891E0ACD5A003C28F9 /* notify.js in Resources */,
+				737A1EC21E0D1F4F000ACDF4 /* 美团navigationbar效果.zip in Resources */,
 				73D15B2F1CEF3DD1008855FB /* Uuu.xib in Resources */,
 				300C82611E0AD05B003C28F9 /* MathJax.js in Resources */,
 				300C825E1E0AD05B003C28F9 /* login.js in Resources */,

@@ -5,9 +5,9 @@
 //  Created by qsy on 16/11/17.
 //  Copyright © 2016年 qsy. All rights reserved.
 //
-
+#pragma mark 少
 /**
- *  类注释：通用类
+ *
  */
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
