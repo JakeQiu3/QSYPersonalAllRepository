@@ -445,6 +445,8 @@
 		73BA9B031DF5455800C0BCA6 /* 新型的MVVM.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADE1DF5455800C0BCA6 /* 新型的MVVM.png */; };
 		73BA9B041DF5455800C0BCA6 /* 面试题总结.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */; };
 		73BA9B061DF5463A00C0BCA6 /* date.json in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9B051DF5463A00C0BCA6 /* date.json */; };
+		73BB232F1E10F25100B93BBF /* K线图.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BB232E1E10F25100B93BBF /* K线图.zip */; };
+		73BB23351E11056900B93BBF /* Navigation随scrollView滚动(自定义VC).zip in Resources */ = {isa = PBXBuildFile; fileRef = 73BB23341E11056900B93BBF /* Navigation随scrollView滚动(自定义VC).zip */; };
 		73C7A3441DF55E6800A58D4E /* HandleDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C7A3431DF55E6800A58D4E /* HandleDicTransferModel.m */; };
 		73C7A3491DF5630A00A58D4E /* DicTransferModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */; };
 		73D15AFC1CEEB3E4008855FB /* CaptureDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15AFB1CEEB3E4008855FB /* CaptureDeviceViewController.m */; };
@@ -1085,6 +1087,8 @@
 		73BA9ADE1DF5455800C0BCA6 /* 新型的MVVM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新型的MVVM.png"; sourceTree = "<group>"; };
 		73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "面试题总结.xml"; sourceTree = "<group>"; };
 		73BA9B051DF5463A00C0BCA6 /* date.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = date.json; sourceTree = "<group>"; };
+		73BB232E1E10F25100B93BBF /* K线图.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "K线图.zip"; sourceTree = "<group>"; };
+		73BB23341E11056900B93BBF /* Navigation随scrollView滚动(自定义VC).zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "Navigation随scrollView滚动(自定义VC).zip"; sourceTree = "<group>"; };
 		73C7A3421DF55E6800A58D4E /* HandleDicTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleDicTransferModel.h; sourceTree = "<group>"; };
 		73C7A3431DF55E6800A58D4E /* HandleDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleDicTransferModel.m; sourceTree = "<group>"; };
 		73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DicTransferModelViewController.m; sourceTree = "<group>"; };
@@ -2452,6 +2456,8 @@
 		73BA9A9D1DF5452B00C0BCA6 /* 要看 Demos 这里就够了 */ = {
 			isa = PBXGroup;
 			children = (
+				73BB23341E11056900B93BBF /* Navigation随scrollView滚动(自定义VC).zip */,
+				73BB232E1E10F25100B93BBF /* K线图.zip */,
 				737A1EC11E0D1F4F000ACDF4 /* 美团navigationbar效果.zip */,
 				300C82B21E0AD706003C28F9 /* 地图.zip */,
 				300C82B01E0AD4E4003C28F9 /* 搜索oc和swift版.zip */,
@@ -2880,6 +2886,7 @@
 				300C823D1E0AD05B003C28F9 /* bdsstyle.css in Resources */,
 				73BA9AEB1DF5455800C0BCA6 /* 5种编程思想和5种设计模式的比较.xml in Resources */,
 				73BA9AF61DF5455800C0BCA6 /* navigation_back@2x.png in Resources */,
+				73BB232F1E10F25100B93BBF /* K线图.zip in Resources */,
 				739B578F1DF01B2400C8C9B0 /* Info.plist in Resources */,
 				300C82301E0AD05B003C28F9 /* ad-ms1581_4.js in Resources */,
 				300C81851E0ACD5A003C28F9 /* MathJax.js in Resources */,
@@ -2906,6 +2913,7 @@
 				300C819F1E0ACD5A003C28F9 /* wmd.js in Resources */,
 				300C825B1E0AD05B003C28F9 /* langchao-4lu-database-banner-960-90-30k.html in Resources */,
 				300C822F1E0AD05B003C28F9 /* ad-ms1580_3.js in Resources */,
+				73BB23351E11056900B93BBF /* Navigation随scrollView滚动(自定义VC).zip in Resources */,
 				300C817B1E0ACD5A003C28F9 /* jquery.form.js in Resources */,
 				737A1EC41E0D5C3B000ACDF4 /* index.html in Resources */,
 				738DEA671E02A147003E30D2 /* QsyTest.bundle in Resources */,
