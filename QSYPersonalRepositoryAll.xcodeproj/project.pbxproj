@@ -249,6 +249,7 @@
 		309590581CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590521CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m */; };
 		309590591CFF22C000176AAC /* DrawRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590541CFF22C000176AAC /* DrawRectView.m */; };
 		3095905B1CFF22C000176AAC /* LayoutSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 309590571CFF22C000176AAC /* LayoutSubView.m */; };
+		30BCD6A81E228BA2003B7768 /* 每天3个demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 30BCD6A71E228BA2003B7768 /* 每天3个demo.zip */; };
 		30C70A631E0C39760098AEAB /* NavBarScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C70A5F1E0C39760098AEAB /* NavBarScrollViewController.m */; };
 		30C70A641E0C39760098AEAB /* UseNavBarScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C70A611E0C39760098AEAB /* UseNavBarScrollViewController.m */; };
 		30C70A651E0C39760098AEAB /* 美团外卖tableview和collectionView的商品展示联动.zip in Resources */ = {isa = PBXBuildFile; fileRef = 30C70A621E0C39760098AEAB /* 美团外卖tableview和collectionView的商品展示联动.zip */; };
@@ -742,6 +743,7 @@
 		309590541CFF22C000176AAC /* DrawRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawRectView.m; sourceTree = "<group>"; };
 		309590561CFF22C000176AAC /* LayoutSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutSubView.h; sourceTree = "<group>"; };
 		309590571CFF22C000176AAC /* LayoutSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutSubView.m; sourceTree = "<group>"; };
+		30BCD6A71E228BA2003B7768 /* 每天3个demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "每天3个demo.zip"; sourceTree = "<group>"; };
 		30C70A5E1E0C39760098AEAB /* NavBarScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarScrollViewController.h; sourceTree = "<group>"; };
 		30C70A5F1E0C39760098AEAB /* NavBarScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarScrollViewController.m; sourceTree = "<group>"; };
 		30C70A601E0C39760098AEAB /* UseNavBarScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseNavBarScrollViewController.h; sourceTree = "<group>"; };
@@ -1532,6 +1534,7 @@
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				737A1EC31E0D5C3B000ACDF4 /* index.html */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
+				30BCD6A71E228BA2003B7768 /* 每天3个demo.zip */,
 				3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */,
 				7366B6FC1DF13F570052E1E1 /* 工具箱  使用介绍 */,
 				739B56B71DF01B2400C8C9B0 /* 你想要的 工具 这里都有 */,
@@ -2777,6 +2780,7 @@
 				300C81961E0ACD5A003C28F9 /* style(1).css in Resources */,
 				300C814F1E0ACD5A003C28F9 /* 代理反向传值.png in Resources */,
 				300C82391E0AD05B003C28F9 /* ask_float_block.css in Resources */,
+				30BCD6A81E228BA2003B7768 /* 每天3个demo.zip in Resources */,
 				300C82431E0AD05B003C28F9 /* comment.js in Resources */,
 				300C81A91E0ACD5A003C28F9 /* 通知传值B界面 ，值改变后发送通知的.png in Resources */,
 				300C827F1E0AD05B003C28F9 /* wmd.js in Resources */,
