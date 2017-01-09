@@ -292,6 +292,7 @@
 		30AD66341E23D18300AFA089 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AD66181E23D18300AFA089 /* MZTimerLabel.m */; };
 		30AD66361E23D41700AFA089 /* NavBarScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AD66351E23D41700AFA089 /* NavBarScrollViewController.m */; };
 		30AD663B1E23D48100AFA089 /* UseNavBarScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AD663A1E23D48100AFA089 /* UseNavBarScrollViewController.m */; };
+		30AD663D1E23D74B00AFA089 /* 每天3个demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 30AD663C1E23D74B00AFA089 /* 每天3个demo.zip */; };
 		30C976A71D3BB1C500614EBC /* PostMallCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */; };
 		30CB778A1D3001CB00C3DDEC /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30CB77891D3001CB00C3DDEC /* AutoLayoutViewController.xib */; };
 		30DC004E1D03D200005EAD0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC004B1D03D200005EAD0C /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -817,6 +818,7 @@
 		30AD66371E23D42A00AFA089 /* NavBarScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarScrollViewController.h; sourceTree = "<group>"; };
 		30AD66391E23D48100AFA089 /* UseNavBarScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseNavBarScrollViewController.h; sourceTree = "<group>"; };
 		30AD663A1E23D48100AFA089 /* UseNavBarScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseNavBarScrollViewController.m; sourceTree = "<group>"; };
+		30AD663C1E23D74B00AFA089 /* 每天3个demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "每天3个demo.zip"; sourceTree = "<group>"; };
 		30C976A51D3BB1C500614EBC /* PostMallCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMallCategoryModel.h; sourceTree = "<group>"; };
 		30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMallCategoryModel.m; sourceTree = "<group>"; };
 		30CB77891D3001CB00C3DDEC /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
@@ -1531,6 +1533,7 @@
 				30DC004B1D03D200005EAD0C /* AppDelegate.m */,
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
+				30AD663C1E23D74B00AFA089 /* 每天3个demo.zip */,
 				3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */,
 				7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */,
 				739B56B71DF01B2400C8C9B0 /* 你想要的 工具箱 这里都有 */,
@@ -2831,6 +2834,7 @@
 				300C82231E0AD05B003C28F9 /* 3_duxinfeng2010.jpg in Resources */,
 				300C81681E0ACD5A003C28F9 /* container.html in Resources */,
 				300C822E1E0AD05B003C28F9 /* ad-ms1579_2.js in Resources */,
+				30AD663D1E23D74B00AFA089 /* 每天3个demo.zip in Resources */,
 				300C81811E0ACD5A003C28F9 /* login.js in Resources */,
 				300C823D1E0AD05B003C28F9 /* bdsstyle.css in Resources */,
 				73BA9AEB1DF5455800C0BCA6 /* 5种编程思想和5种设计模式的比较.xml in Resources */,
