@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LBUtil.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource> {
     UITableView *_tableView;
     NSMutableArray *_fileNameArray;
@@ -21,6 +22,7 @@
     [super viewDidLoad];
     [self loadData];
     [self setUI];
+    [LBUtil lb_getCurrentViewController];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -98,10 +98,6 @@
 		300C819F1E0ACD5A003C28F9 /* wmd.js in Resources */ = {isa = PBXBuildFile; fileRef = 300C81361E0ACD5A003C28F9 /* wmd.js */; };
 		300C81A01E0ACD5A003C28F9 /* 单例   .m文件.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C81371E0ACD5A003C28F9 /* 单例   .m文件.png */; };
 		300C81A11E0ACD5A003C28F9 /* 单例  .h文件.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C81381E0ACD5A003C28F9 /* 单例  .h文件.png */; };
-		300C81A21E0ACD5A003C28F9 /* VLHiOptionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 300C813C1E0ACD5A003C28F9 /* VLHiOptionalViewController.m */; };
-		300C81A31E0ACD5A003C28F9 /* VLHiOptionalCountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 300C813F1E0ACD5A003C28F9 /* VLHiOptionalCountModel.m */; };
-		300C81A41E0ACD5A003C28F9 /* VLHiOptionalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 300C81411E0ACD5A003C28F9 /* VLHiOptionalModel.m */; };
-		300C81A51E0ACD5A003C28F9 /* VLHiOptionalViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 300C81441E0ACD5A003C28F9 /* VLHiOptionalViewControllerCell.m */; };
 		300C81A61E0ACD5A003C28F9 /* A界面界面消失的时候移除通知.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C81461E0ACD5A003C28F9 /* A界面界面消失的时候移除通知.png */; };
 		300C81A71E0ACD5A003C28F9 /* 通知传值.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C81471E0ACD5A003C28F9 /* 通知传值.png */; };
 		300C81A81E0ACD5A003C28F9 /* 通知传值A界面，接收后改变的.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C81481E0ACD5A003C28F9 /* 通知传值A界面，接收后改变的.png */; };
@@ -297,6 +293,7 @@
 		732780D31E07873000B399D0 /* LBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 732780D21E07873000B399D0 /* LBUtil.m */; };
 		734075341D124876000652E0 /* TestSynthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 734075331D124876000652E0 /* TestSynthesize.m */; };
 		7358D9D61D05642600B7484C /* FreezeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358D9D51D05642500B7484C /* FreezeViewController.m */; };
+		7360A3B91E126C8300AED160 /* 暂时压缩.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7360A3B81E126C8300AED160 /* 暂时压缩.zip */; };
 		736584B81D22652C0088CDAB /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 736584B71D22652C0088CDAB /* test.js */; };
 		736584BA1D2266620088CDAB /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 736584B91D2266620088CDAB /* test.html */; };
 		736584BE1D227C710088CDAB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736584BD1D227C710088CDAB /* JavaScriptCore.framework */; };
@@ -570,14 +567,6 @@
 		300C81361E0ACD5A003C28F9 /* wmd.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wmd.js; sourceTree = "<group>"; };
 		300C81371E0ACD5A003C28F9 /* 单例   .m文件.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单例   .m文件.png"; sourceTree = "<group>"; };
 		300C81381E0ACD5A003C28F9 /* 单例  .h文件.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单例  .h文件.png"; sourceTree = "<group>"; };
-		300C813B1E0ACD5A003C28F9 /* VLHiOptionalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLHiOptionalViewController.h; sourceTree = "<group>"; };
-		300C813C1E0ACD5A003C28F9 /* VLHiOptionalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLHiOptionalViewController.m; sourceTree = "<group>"; };
-		300C813E1E0ACD5A003C28F9 /* VLHiOptionalCountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLHiOptionalCountModel.h; sourceTree = "<group>"; };
-		300C813F1E0ACD5A003C28F9 /* VLHiOptionalCountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLHiOptionalCountModel.m; sourceTree = "<group>"; };
-		300C81401E0ACD5A003C28F9 /* VLHiOptionalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLHiOptionalModel.h; sourceTree = "<group>"; };
-		300C81411E0ACD5A003C28F9 /* VLHiOptionalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLHiOptionalModel.m; sourceTree = "<group>"; };
-		300C81431E0ACD5A003C28F9 /* VLHiOptionalViewControllerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLHiOptionalViewControllerCell.h; sourceTree = "<group>"; };
-		300C81441E0ACD5A003C28F9 /* VLHiOptionalViewControllerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLHiOptionalViewControllerCell.m; sourceTree = "<group>"; };
 		300C81461E0ACD5A003C28F9 /* A界面界面消失的时候移除通知.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "A界面界面消失的时候移除通知.png"; sourceTree = "<group>"; };
 		300C81471E0ACD5A003C28F9 /* 通知传值.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通知传值.png"; sourceTree = "<group>"; };
 		300C81481E0ACD5A003C28F9 /* 通知传值A界面，接收后改变的.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通知传值A界面，接收后改变的.png"; sourceTree = "<group>"; };
@@ -837,6 +826,7 @@
 		734075331D124876000652E0 /* TestSynthesize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSynthesize.m; sourceTree = "<group>"; };
 		7358D9D41D05642500B7484C /* FreezeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreezeViewController.h; sourceTree = "<group>"; };
 		7358D9D51D05642500B7484C /* FreezeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreezeViewController.m; sourceTree = "<group>"; };
+		7360A3B81E126C8300AED160 /* 暂时压缩.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "暂时压缩.zip"; sourceTree = "<group>"; };
 		736584B21D22570A0088CDAB /* git使用流程指南.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "git使用流程指南.jpg"; sourceTree = "<group>"; };
 		736584B71D22652C0088CDAB /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 		736584B91D2266620088CDAB /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
@@ -1285,41 +1275,10 @@
 		300C81391E0ACD5A003C28F9 /* 购物车传值（demo） */ = {
 			isa = PBXGroup;
 			children = (
-				300C813A1E0ACD5A003C28F9 /* Controller */,
-				300C813D1E0ACD5A003C28F9 /* Model */,
-				300C81421E0ACD5A003C28F9 /* View */,
+				7360A3B81E126C8300AED160 /* 暂时压缩.zip */,
 			);
 			name = "购物车传值（demo）";
 			path = "购物车传值";
-			sourceTree = "<group>";
-		};
-		300C813A1E0ACD5A003C28F9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				300C813B1E0ACD5A003C28F9 /* VLHiOptionalViewController.h */,
-				300C813C1E0ACD5A003C28F9 /* VLHiOptionalViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		300C813D1E0ACD5A003C28F9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				300C813E1E0ACD5A003C28F9 /* VLHiOptionalCountModel.h */,
-				300C813F1E0ACD5A003C28F9 /* VLHiOptionalCountModel.m */,
-				300C81401E0ACD5A003C28F9 /* VLHiOptionalModel.h */,
-				300C81411E0ACD5A003C28F9 /* VLHiOptionalModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		300C81421E0ACD5A003C28F9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				300C81431E0ACD5A003C28F9 /* VLHiOptionalViewControllerCell.h */,
-				300C81441E0ACD5A003C28F9 /* VLHiOptionalViewControllerCell.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		300C81451E0ACD5A003C28F9 /* 通知传值 */ = {
@@ -2930,6 +2889,7 @@
 				300C817C1E0ACD5A003C28F9 /* jquery.js in Resources */,
 				300C814E1E0ACD5A003C28F9 /* block反向传值.png in Resources */,
 				73BA9AF71DF5455800C0BCA6 /* navigation_back@3x.png in Resources */,
+				7360A3B91E126C8300AED160 /* 暂时压缩.zip in Resources */,
 				73BA9AF11DF5455800C0BCA6 /* hhh.png in Resources */,
 				300C81741E0ACD5A003C28F9 /* ico_summary.gif in Resources */,
 				300C82731E0AD05B003C28F9 /* share.js in Resources */,
@@ -3205,14 +3165,12 @@
 				739B57A11DF01B2400C8C9B0 /* ExpandScaleBtn.m in Sources */,
 				730CFB381D1A2A1500B62765 /* WebViewDemoViewController.m in Sources */,
 				7323B48F1D2B8B2A00CE6790 /* TouchIdViewController.m in Sources */,
-				300C81A21E0ACD5A003C28F9 /* VLHiOptionalViewController.m in Sources */,
 				309590581CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m in Sources */,
 				738DEA241E029DB1003E30D2 /* UIImage+LBExtension.m in Sources */,
 				739B578C1DF01B2400C8C9B0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				739B579D1DF01B2400C8C9B0 /* MultiplePickerView.m in Sources */,
 				303F38DA1D3BA34900630F31 /* RightColHeaderResuableView.m in Sources */,
 				739B57871DF01B2400C8C9B0 /* MASConstraintMaker.m in Sources */,
-				300C81A31E0ACD5A003C28F9 /* VLHiOptionalCountModel.m in Sources */,
 				30DC00601D048287005EAD0C /* TestModel.m in Sources */,
 				739B57971DF01B2400C8C9B0 /* UIImage+_fixOrientation.m in Sources */,
 				739B57931DF01B2400C8C9B0 /* ClearCacheTool.m in Sources */,
@@ -3220,7 +3178,6 @@
 				3091A7971CEE1A64003B97F4 /* User.m in Sources */,
 				739B57B61DF01B2400C8C9B0 /* AFURLConnectionOperation.m in Sources */,
 				730C49071D23B3E400707722 /* WebViewJavascriptBridge_JS.m in Sources */,
-				300C81A41E0ACD5A003C28F9 /* VLHiOptionalModel.m in Sources */,
 				730CFB4E1D1A966D00B62765 /* IMY_NJKWebViewProgress.m in Sources */,
 				73D601011D7D5D4900DCCAC7 /* MyString.m in Sources */,
 				739B57B01DF01B2400C8C9B0 /* AFDownloadRequestOperation.m in Sources */,
@@ -3244,7 +3201,6 @@
 				30C70A631E0C39760098AEAB /* NavBarScrollViewController.m in Sources */,
 				303F38DD1D3BA41000630F31 /* RightCollectionViewCell.m in Sources */,
 				30DC004E1D03D200005EAD0C /* AppDelegate.m in Sources */,
-				300C81A51E0ACD5A003C28F9 /* VLHiOptionalViewControllerCell.m in Sources */,
 				739B57B31DF01B2400C8C9B0 /* AFHTTPSessionManager.m in Sources */,
 				730CFB4D1D1A966D00B62765 /* IMYWebView.m in Sources */,
 				7323B4771D2B5D3B00CE6790 /* Sb1DetailViewController.m in Sources */,
