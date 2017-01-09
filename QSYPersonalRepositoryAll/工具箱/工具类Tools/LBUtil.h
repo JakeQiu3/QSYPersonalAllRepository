@@ -2,9 +2,7 @@
 //  LBUtil.h
 //  LBExpandDemo
 #pragma mark 少
-//  验证各种字符串、字典、数组、邮箱、电话、身份证、MD5加密、
-//  时间和日期的转换
-//  获取当前控制器、第一响应者、最大的size、iphone支持的语言。
+//  验证各种字符串、字典、数组、邮箱、电话、身份证、MD5加密 + 时间和日期的转换 + 编码、字典数组和data互转+ 获取当前控制器、第一响应者、获取最大的CGSize + iphone支持的语言。
 //
 //  Created by qsy on 16/11/15.
 //  Copyright © 2016年 qsy. All rights reserved.
