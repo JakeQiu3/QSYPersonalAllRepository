@@ -15,7 +15,6 @@
 #define boundsWidth self.view.bounds.size.width
 #define boundsHeight self.view.bounds.size.height
 //html学习网站： http://www.w3school.com.cn
-# pragma mark 1.js和html的交互原理： DOM：过文档对象模型。 通过获取html的DOM来访问每一个单独的元素，实现对html的增删改查。 JavaScript可以读取使用DOM，通过DOM可以访问Html的每个节点以及元素。   2. getElementById() 和 getElementsByTagName()：这两种方法，可查找整个 HTML 文档中的任何 HTML 元素。
 
 @interface WebViewDemoViewController ()<UIWebViewDelegate>
 // 导航条左侧的关闭和返回按钮
@@ -57,8 +56,8 @@
     }
     self.view.backgroundColor = [UIColor grayColor];//webview的 scrollview的superView
     [self setUpNavItems];
-//    [self loadWebView];//加载url或本地的html
-        [self loadWebView2];
+    [self loadWebView];//加载url或本地的html
+//        [self loadWebView2];
 }
 
 - (void)setUpNavItems {
@@ -644,7 +643,7 @@
     return _swipingBackgoundView;
 }
 
-#pragma mark 少 使webview 最适合屏幕的高度:见方法1和2
+#pragma mark 备注 少 使webview 最适合屏幕的高度:见方法1和2
 - (void)fitSizeWebView1:(UIWebView *)webView {
     //    防止获取的网页的大小，比webview小而带来的仅仅返回 获取得网页大小，而不是最适合大小。故先设置成当前的webview高度为1
     CGRect frame = webView.frame;
