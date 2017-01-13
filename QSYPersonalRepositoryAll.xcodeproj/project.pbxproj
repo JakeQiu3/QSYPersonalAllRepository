@@ -334,7 +334,9 @@
 		732780D31E07873000B399D0 /* LBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 732780D21E07873000B399D0 /* LBUtil.m */; };
 		734075341D124876000652E0 /* TestSynthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 734075331D124876000652E0 /* TestSynthesize.m */; };
 		7358D9D61D05642600B7484C /* FreezeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358D9D51D05642500B7484C /* FreezeViewController.m */; };
-		736584B81D22652C0088CDAB /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 736584B71D22652C0088CDAB /* test.js */; };
+		735C80631E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */; };
+		735C80661E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */; };
+		735C80681E28DA090066B007 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 735C80671E28DA090066B007 /* test.html */; };
 		736584BE1D227C710088CDAB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736584BD1D227C710088CDAB /* JavaScriptCore.framework */; };
 		736584C51D228C890088CDAB /* TestJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 736584C41D228C890088CDAB /* TestJSObject.m */; };
 		736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736679071D752C0D00B39376 /* ClearCacheViewController.m */; };
@@ -418,7 +420,7 @@
 		73BA9B021DF5455800C0BCA6 /* 商品分类数据.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADD1DF5455800C0BCA6 /* 商品分类数据.plist */; };
 		73BA9B041DF5455800C0BCA6 /* 面试题总结.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */; };
 		73BA9B061DF5463A00C0BCA6 /* date.json in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9B051DF5463A00C0BCA6 /* date.json */; };
-		73C428001E27588F0047EC92 /* WebViewDelegateInterceptUrlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C427FF1E27588F0047EC92 /* WebViewDelegateInterceptUrlsViewController.m */; };
+		73C428001E27588F0047EC92 /* WebViewDelegateCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C427FF1E27588F0047EC92 /* WebViewDelegateCaptureViewController.m */; };
 		73C7A3441DF55E6800A58D4E /* HandleDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C7A3431DF55E6800A58D4E /* HandleDicTransferModel.m */; };
 		73C7A3491DF5630A00A58D4E /* DicTransferModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */; };
 		73D15AFC1CEEB3E4008855FB /* CaptureDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15AFB1CEEB3E4008855FB /* CaptureDeviceViewController.m */; };
@@ -871,8 +873,12 @@
 		734075331D124876000652E0 /* TestSynthesize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSynthesize.m; sourceTree = "<group>"; };
 		7358D9D41D05642500B7484C /* FreezeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreezeViewController.h; sourceTree = "<group>"; };
 		7358D9D51D05642500B7484C /* FreezeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreezeViewController.m; sourceTree = "<group>"; };
+		735C80611E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewViaJavaScriptCoreViewController.h; sourceTree = "<group>"; };
+		735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewViaJavaScriptCoreViewController.m; sourceTree = "<group>"; };
+		735C80641E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeLibViewController.h; sourceTree = "<group>"; };
+		735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeLibViewController.m; sourceTree = "<group>"; };
+		735C80671E28DA090066B007 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		736584B21D22570A0088CDAB /* git使用流程指南.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "git使用流程指南.jpg"; sourceTree = "<group>"; };
-		736584B71D22652C0088CDAB /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 		736584BD1D227C710088CDAB /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		736584C31D228C890088CDAB /* TestJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestJSObject.h; sourceTree = "<group>"; };
 		736584C41D228C890088CDAB /* TestJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestJSObject.m; sourceTree = "<group>"; };
@@ -1008,8 +1014,8 @@
 		73BA9ADE1DF5455800C0BCA6 /* 新型的MVVM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新型的MVVM.png"; sourceTree = "<group>"; };
 		73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "面试题总结.xml"; sourceTree = "<group>"; };
 		73BA9B051DF5463A00C0BCA6 /* date.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = date.json; sourceTree = "<group>"; };
-		73C427FE1E27588F0047EC92 /* WebViewDelegateInterceptUrlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDelegateInterceptUrlsViewController.h; sourceTree = "<group>"; };
-		73C427FF1E27588F0047EC92 /* WebViewDelegateInterceptUrlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDelegateInterceptUrlsViewController.m; sourceTree = "<group>"; };
+		73C427FE1E27588F0047EC92 /* WebViewDelegateCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDelegateCaptureViewController.h; sourceTree = "<group>"; };
+		73C427FF1E27588F0047EC92 /* WebViewDelegateCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDelegateCaptureViewController.m; sourceTree = "<group>"; };
 		73C7A3421DF55E6800A58D4E /* HandleDicTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleDicTransferModel.h; sourceTree = "<group>"; };
 		73C7A3431DF55E6800A58D4E /* HandleDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleDicTransferModel.m; sourceTree = "<group>"; };
 		73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DicTransferModelViewController.m; sourceTree = "<group>"; };
@@ -1762,14 +1768,18 @@
 		730CFB351D1A29EF00B62765 /* H5和native的交互(WebView和wkwebview) */ = {
 			isa = PBXGroup;
 			children = (
-				73C427FE1E27588F0047EC92 /* WebViewDelegateInterceptUrlsViewController.h */,
-				73C427FF1E27588F0047EC92 /* WebViewDelegateInterceptUrlsViewController.m */,
+				73C427FE1E27588F0047EC92 /* WebViewDelegateCaptureViewController.h */,
+				73C427FF1E27588F0047EC92 /* WebViewDelegateCaptureViewController.m */,
+				73BA9ACD1DF5455800C0BCA6 /* 9Y.html */,
+				735C80611E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.h */,
+				735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */,
+				735C80641E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.h */,
+				735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */,
+				735C80671E28DA090066B007 /* test.html */,
 				730CFB361D1A2A1500B62765 /* WebViewDemoViewController.h */,
 				730CFB371D1A2A1500B62765 /* WebViewDemoViewController.m */,
 				736584C31D228C890088CDAB /* TestJSObject.h */,
 				736584C41D228C890088CDAB /* TestJSObject.m */,
-				73BA9ACD1DF5455800C0BCA6 /* 9Y.html */,
-				736584B71D22652C0088CDAB /* test.js */,
 				730CFB3B1D1A74D500B62765 /* WKWebViewDemoViewController.h */,
 				730CFB3C1D1A74D500B62765 /* WKWebViewDemoViewController.m */,
 				736584B41D2258330088CDAB /* Demo和libs */,
@@ -1897,6 +1907,7 @@
 		7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */ = {
 			isa = PBXGroup;
 			children = (
+				730CFB351D1A29EF00B62765 /* H5和native的交互(WebView和wkwebview) */,
 				30AD66381E23D46100AFA089 /* NavBar联动使用 */,
 				73D600FE1D7D5D2300DCCAC7 /* Runtime魔法拦截系统方法举例 */,
 				736679051D752BED00B39376 /* 清除缓存工具 */,
@@ -1909,7 +1920,6 @@
 				7323B4951D2B9D2A00CE6790 /* 广告位轮播 */,
 				7323B48C1D2B8B0600CE6790 /* TouchID使用 */,
 				736584B11D2256FC0088CDAB /* Git使用的逻辑指南 */,
-				730CFB351D1A29EF00B62765 /* H5和native的交互(WebView和wkwebview) */,
 				7358D9D31D0563F600B7484C /* 冻结cell列表 */,
 				7304B8311CF2DC78005CA459 /* 改变动画 */,
 				7304B8301CF2D9D6005CA459 /* 导航条隐藏和渐变 */,
@@ -2641,7 +2651,6 @@
 				73BA9B061DF5463A00C0BCA6 /* date.json in Resources */,
 				300C82681E0AD05B003C28F9 /* nova_fp.html in Resources */,
 				73BA9AFA1DF5455800C0BCA6 /* navigation_close@3x.png in Resources */,
-				736584B81D22652C0088CDAB /* test.js in Resources */,
 				73BA9AE51DF5455800C0BCA6 /* 14.jpg in Resources */,
 				73BA9AEF1DF5455800C0BCA6 /* 9.jpg in Resources */,
 				300C821A1E0AD05B003C28F9 /* 100x100.jpg in Resources */,
@@ -2736,6 +2745,7 @@
 				300C81761E0ACD5A003C28F9 /* JavaScript1.js in Resources */,
 				300C82751E0AD05B003C28F9 /* showdown.js in Resources */,
 				73BA9AE61DF5455800C0BCA6 /* 15.jpg in Resources */,
+				735C80681E28DA090066B007 /* test.html in Resources */,
 				300C82641E0AD05B003C28F9 /* msg.popup.js in Resources */,
 				7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */,
 				308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */,
@@ -2957,6 +2967,7 @@
 				73C7A3441DF55E6800A58D4E /* HandleDicTransferModel.m in Sources */,
 				739B57A51DF01B2400C8C9B0 /* QSYActivityView.m in Sources */,
 				739B57A81DF01B2400C8C9B0 /* FMDatabasePool.m in Sources */,
+				735C80631E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m in Sources */,
 				739B57A31DF01B2400C8C9B0 /* QSMultiplePullDownMenu.m in Sources */,
 				739B57A71DF01B2400C8C9B0 /* FMDatabaseAdditions.m in Sources */,
 				730C49081D23B3E400707722 /* WebViewJavascriptBridge.m in Sources */,
@@ -2999,7 +3010,7 @@
 				739B579F1DF01B2400C8C9B0 /* MXPullDownMenu.m in Sources */,
 				7323B4721D2B506900CE6790 /* CustomTestView.m in Sources */,
 				30AD66221E23D18300AFA089 /* KNBannerView.m in Sources */,
-				73C428001E27588F0047EC92 /* WebViewDelegateInterceptUrlsViewController.m in Sources */,
+				73C428001E27588F0047EC92 /* WebViewDelegateCaptureViewController.m in Sources */,
 				7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */,
 				739B579B1DF01B2400C8C9B0 /* CustumAlertView.m in Sources */,
 				730C490A1D23B3E400707722 /* WebViewJavascriptBridgeBase.m in Sources */,
@@ -3028,6 +3039,7 @@
 				739B579A1DF01B2400C8C9B0 /* NSObject+Swizzle.m in Sources */,
 				739B57981DF01B2400C8C9B0 /* UIImage+FixOrientation.m in Sources */,
 				303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */,
+				735C80661E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m in Sources */,
 				73037E831D2A71C60017D024 /* Sb1TableViewCell.m in Sources */,
 				739B57AA1DF01B2400C8C9B0 /* FMResultSet.m in Sources */,
 				73D15AFC1CEEB3E4008855FB /* CaptureDeviceViewController.m in Sources */,
