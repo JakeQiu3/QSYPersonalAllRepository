@@ -110,6 +110,7 @@ static int logMaxLength = 500;
 }
 
 - (void)injectJavascriptFile {
+//  少： 生成预处理的js代码  核心
     NSString *js = WebViewJavascriptBridge_js();
     [self _evaluateJavascript:js];
     if (self.startupMessageQueue) {
@@ -170,6 +171,7 @@ static int logMaxLength = 500;
 
 - (void)_dispatchMessage:(WVJBMessage*)message {
     NSString *messageJSON = [self _serializeMessage:message pretty:NO];
+    //少：打印发送的json消息
     [self _log:@"SEND" json:messageJSON];
     messageJSON = [messageJSON stringByReplacingOccurrencesOfString:@"\\" withString:@"\\\\"];
     messageJSON = [messageJSON stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
@@ -179,9 +181,10 @@ static int logMaxLength = 500;
     messageJSON = [messageJSON stringByReplacingOccurrencesOfString:@"\f" withString:@"\\f"];
     messageJSON = [messageJSON stringByReplacingOccurrencesOfString:@"\u2028" withString:@"\\u2028"];
     messageJSON = [messageJSON stringByReplacingOccurrencesOfString:@"\u2029" withString:@"\\u2029"];
-    
+    // 少：把json（该json为字典（包含该js的方法名handlerName、传递的参数data、返回值）经过）转换成可执行的javascriptCommand
     NSString* javascriptCommand = [NSString stringWithFormat:@"WebViewJavascriptBridge._handleMessageFromObjC('%@');", messageJSON];
     if ([[NSThread currentThread] isMainThread]) {
+//        少：真正到了执行JS代码的时候了：调用的是webview的stringByEvaluatingJavaScriptFromString
         [self _evaluateJavascript:javascriptCommand];
 
     } else {

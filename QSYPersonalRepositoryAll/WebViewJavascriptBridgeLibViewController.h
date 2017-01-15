@@ -2,7 +2,7 @@
 //  WebViewJavascriptBridgeLibViewController.h
 //  QSYPersonalRepositoryAll
 /**
- *  WebViewJavascriptBridge开源库本质：通过webview的代理拦截scheme，
+ *  WebViewJavascriptBridge开源库：本质通过webview的代理拦截scheme，
  *  后注入相应的JS
  *
  */

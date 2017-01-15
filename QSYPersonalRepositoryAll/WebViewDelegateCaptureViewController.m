@@ -119,6 +119,15 @@
     } else {
         [self closeAction:nil];
     }
+    //    常用：html 页面切换方法：前进、后退、刷新和停止刷新
+    //    if (webView.canGoBack) {
+    //        [webView goBack];//返回
+    //    } else if (webView.canGoForward) {
+    //        [webView goForward];//前进
+    //    } else {
+    //        [webView reload];//刷新
+    //    [webView stopLoading];//停止刷新
+    //    }
 }
 
 - (void)closeAction:(UIButton *)closeBtn {
@@ -488,6 +497,22 @@
     return _swipePanGesture;
 }
 
+#pragma mark 少 使webview 最适合屏幕的高度:见下面方法
+- (void)fitSizeWebView1:(UIWebView *)webView {
+    //    防止获取的网页的大小，比webview小而带来的仅仅返回 获取得网页大小，而不是最适合大小。故先设置成当前的webview高度为1
+    CGRect frame = webView.frame;
+    frame.size.height = 1;
+    webView.frame = frame;
+    CGSize fittingSize = [webView sizeThatFits:CGSizeZero];
+    frame.size = fittingSize;
+    webView.frame = frame;
+}
+- (void)fitSizeWebView2:(UIWebView *)webView {
+    CGRect frame = webView.frame;
+    CGFloat webBodyHeight = [[webView stringByEvaluatingJavaScriptFromString:@"document.body.scrollHeight"] floatValue];
+    frame.size.height = webBodyHeight;
+    webView.frame = frame;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

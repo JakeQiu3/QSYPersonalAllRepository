@@ -226,6 +226,9 @@
 		303F38D61D3B9E6600630F31 /* RightCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38D51D3B9E6600630F31 /* RightCollectionView.m */; };
 		303F38DA1D3BA34900630F31 /* RightColHeaderResuableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */; };
 		303F38DD1D3BA41000630F31 /* RightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */; };
+		304AD11A1E2A816300F9EB2B /* WebViewJavascriptBridge pre版本.zip in Resources */ = {isa = PBXBuildFile; fileRef = 304AD1191E2A816300F9EB2B /* WebViewJavascriptBridge pre版本.zip */; };
+		305AFB3D1E2B952700CEA28E /* javascriptCoreTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 305AFB3C1E2B952700CEA28E /* javascriptCoreTest.html */; };
+		305AFB3F1E2BA07100CEA28E /* XFBlogDemo-master.zip in Resources */ = {isa = PBXBuildFile; fileRef = 305AFB3E1E2BA07100CEA28E /* XFBlogDemo-master.zip */; };
 		308B97821CCA899400BDA0FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 308B97811CCA899400BDA0FA /* main.m */; };
 		308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B97891CCA899400BDA0FA /* Main.storyboard */; };
 		308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B978C1CCA899400BDA0FA /* Assets.xcassets */; };
@@ -309,11 +312,6 @@
 		73037E8B1D2A77680017D024 /* Sb1Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 73037E8A1D2A77680017D024 /* Sb1Model.m */; };
 		7304B82F1CF2D9D3005CA459 /* NavBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7304B82E1CF2D9D3005CA459 /* NavBarViewController.m */; };
 		7304B8341CF2DCC2005CA459 /* ChangeAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7304B8331CF2DCC2005CA459 /* ChangeAnimationViewController.m */; };
-		730C49071D23B3E400707722 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 730C49001D23B3E400707722 /* WebViewJavascriptBridge_JS.m */; };
-		730C49081D23B3E400707722 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 730C49021D23B3E400707722 /* WebViewJavascriptBridge.m */; };
-		730C49091D23B3E400707722 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 730C49031D23B3E400707722 /* WKWebViewJavascriptBridge.m */; };
-		730C490A1D23B3E400707722 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 730C49051D23B3E400707722 /* WebViewJavascriptBridgeBase.m */; };
-		730CFB381D1A2A1500B62765 /* WebViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB371D1A2A1500B62765 /* WebViewDemoViewController.m */; };
 		730CFB3D1D1A74D500B62765 /* WKWebViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB3C1D1A74D500B62765 /* WKWebViewDemoViewController.m */; };
 		730CFB441D1A963600B62765 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730CFB431D1A963600B62765 /* WebKit.framework */; };
 		730CFB4D1D1A966D00B62765 /* IMYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB471D1A966D00B62765 /* IMYWebView.m */; };
@@ -336,7 +334,7 @@
 		7358D9D61D05642600B7484C /* FreezeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358D9D51D05642500B7484C /* FreezeViewController.m */; };
 		735C80631E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */; };
 		735C80661E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */; };
-		735C80681E28DA090066B007 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 735C80671E28DA090066B007 /* test.html */; };
+		735C80681E28DA090066B007 /* tesJavascriptBridge.html in Resources */ = {isa = PBXBuildFile; fileRef = 735C80671E28DA090066B007 /* tesJavascriptBridge.html */; };
 		736584BE1D227C710088CDAB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736584BD1D227C710088CDAB /* JavaScriptCore.framework */; };
 		736584C51D228C890088CDAB /* TestJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 736584C41D228C890088CDAB /* TestJSObject.m */; };
 		736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736679071D752C0D00B39376 /* ClearCacheViewController.m */; };
@@ -678,6 +676,9 @@
 		303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightColHeaderResuableView.m; sourceTree = "<group>"; };
 		303F38DB1D3BA41000630F31 /* RightCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCollectionViewCell.h; sourceTree = "<group>"; };
 		303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCollectionViewCell.m; sourceTree = "<group>"; };
+		304AD1191E2A816300F9EB2B /* WebViewJavascriptBridge pre版本.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "WebViewJavascriptBridge pre版本.zip"; sourceTree = "<group>"; };
+		305AFB3C1E2B952700CEA28E /* javascriptCoreTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = javascriptCoreTest.html; sourceTree = "<group>"; };
+		305AFB3E1E2BA07100CEA28E /* XFBlogDemo-master.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "XFBlogDemo-master.zip"; sourceTree = "<group>"; };
 		308B977D1CCA899400BDA0FA /* QSYPersonalRepositoryAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSYPersonalRepositoryAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308B97811CCA899400BDA0FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		308B978A1CCA899400BDA0FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -824,16 +825,6 @@
 		7304B82E1CF2D9D3005CA459 /* NavBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarViewController.m; sourceTree = "<group>"; };
 		7304B8321CF2DCC2005CA459 /* ChangeAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeAnimationViewController.h; sourceTree = "<group>"; };
 		7304B8331CF2DCC2005CA459 /* ChangeAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeAnimationViewController.m; sourceTree = "<group>"; };
-		730C48FF1D23B3E400707722 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
-		730C49001D23B3E400707722 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
-		730C49011D23B3E400707722 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		730C49021D23B3E400707722 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		730C49031D23B3E400707722 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		730C49041D23B3E400707722 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		730C49051D23B3E400707722 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
-		730C49061D23B3E400707722 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
-		730CFB361D1A2A1500B62765 /* WebViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDemoViewController.h; sourceTree = "<group>"; };
-		730CFB371D1A2A1500B62765 /* WebViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDemoViewController.m; sourceTree = "<group>"; };
 		730CFB3B1D1A74D500B62765 /* WKWebViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewDemoViewController.h; sourceTree = "<group>"; };
 		730CFB3C1D1A74D500B62765 /* WKWebViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDemoViewController.m; sourceTree = "<group>"; };
 		730CFB431D1A963600B62765 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -877,7 +868,7 @@
 		735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewViaJavaScriptCoreViewController.m; sourceTree = "<group>"; };
 		735C80641E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeLibViewController.h; sourceTree = "<group>"; };
 		735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeLibViewController.m; sourceTree = "<group>"; };
-		735C80671E28DA090066B007 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		735C80671E28DA090066B007 /* tesJavascriptBridge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = tesJavascriptBridge.html; sourceTree = "<group>"; };
 		736584B21D22570A0088CDAB /* git使用流程指南.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "git使用流程指南.jpg"; sourceTree = "<group>"; };
 		736584BD1D227C710088CDAB /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		736584C31D228C890088CDAB /* TestJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestJSObject.h; sourceTree = "<group>"; };
@@ -1442,6 +1433,34 @@
 			name = "左Tab右CollectionView";
 			sourceTree = "<group>";
 		};
+		305AFB3A1E2B919300CEA28E /* Webview */ = {
+			isa = PBXGroup;
+			children = (
+				73C427FE1E27588F0047EC92 /* WebViewDelegateCaptureViewController.h */,
+				73C427FF1E27588F0047EC92 /* WebViewDelegateCaptureViewController.m */,
+				73BA9ACD1DF5455800C0BCA6 /* 9Y.html */,
+				305AFB3E1E2BA07100CEA28E /* XFBlogDemo-master.zip */,
+				735C80611E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.h */,
+				735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */,
+				736584C31D228C890088CDAB /* TestJSObject.h */,
+				736584C41D228C890088CDAB /* TestJSObject.m */,
+				305AFB3C1E2B952700CEA28E /* javascriptCoreTest.html */,
+				735C80641E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.h */,
+				735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */,
+				735C80671E28DA090066B007 /* tesJavascriptBridge.html */,
+			);
+			name = Webview;
+			sourceTree = "<group>";
+		};
+		305AFB3B1E2B91A600CEA28E /* WKWebview */ = {
+			isa = PBXGroup;
+			children = (
+				730CFB3B1D1A74D500B62765 /* WKWebViewDemoViewController.h */,
+				730CFB3C1D1A74D500B62765 /* WKWebViewDemoViewController.m */,
+			);
+			name = WKWebview;
+			sourceTree = "<group>";
+		};
 		308B97741CCA899400BDA0FA = {
 			isa = PBXGroup;
 			children = (
@@ -1765,26 +1784,14 @@
 			name = "改变动画";
 			sourceTree = "<group>";
 		};
-		730CFB351D1A29EF00B62765 /* H5和native的交互(WebView和wkwebview) */ = {
+		730CFB351D1A29EF00B62765 /* 混合开发H5和native的交互(WebView和wkwebview) */ = {
 			isa = PBXGroup;
 			children = (
-				73C427FE1E27588F0047EC92 /* WebViewDelegateCaptureViewController.h */,
-				73C427FF1E27588F0047EC92 /* WebViewDelegateCaptureViewController.m */,
-				73BA9ACD1DF5455800C0BCA6 /* 9Y.html */,
-				735C80611E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.h */,
-				735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */,
-				735C80641E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.h */,
-				735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */,
-				735C80671E28DA090066B007 /* test.html */,
-				730CFB361D1A2A1500B62765 /* WebViewDemoViewController.h */,
-				730CFB371D1A2A1500B62765 /* WebViewDemoViewController.m */,
-				736584C31D228C890088CDAB /* TestJSObject.h */,
-				736584C41D228C890088CDAB /* TestJSObject.m */,
-				730CFB3B1D1A74D500B62765 /* WKWebViewDemoViewController.h */,
-				730CFB3C1D1A74D500B62765 /* WKWebViewDemoViewController.m */,
+				305AFB3B1E2B91A600CEA28E /* WKWebview */,
+				305AFB3A1E2B919300CEA28E /* Webview */,
 				736584B41D2258330088CDAB /* Demo和libs */,
 			);
-			name = "H5和native的交互(WebView和wkwebview)";
+			name = "混合开发H5和native的交互(WebView和wkwebview)";
 			sourceTree = "<group>";
 		};
 		730CFB451D1A966D00B62765 /* Classes */ = {
@@ -1792,9 +1799,9 @@
 			children = (
 				730CFB461D1A966D00B62765 /* IMYWebView.h */,
 				730CFB471D1A966D00B62765 /* IMYWebView.m */,
-				730CFB481D1A966D00B62765 /* UIWebViewProgress */,
 				730CFB4B1D1A966D00B62765 /* WYWeakScriptMessageDelegate.h */,
 				730CFB4C1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m */,
+				730CFB481D1A966D00B62765 /* UIWebViewProgress */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1888,8 +1895,8 @@
 		736584B41D2258330088CDAB /* Demo和libs */ = {
 			isa = PBXGroup;
 			children = (
+				304AD1191E2A816300F9EB2B /* WebViewJavascriptBridge pre版本.zip */,
 				730CFB451D1A966D00B62765 /* Classes */,
-				73FCE1BD1D1CC8510000BF20 /* WebViewJavascriptBridge */,
 			);
 			name = "Demo和libs";
 			sourceTree = "<group>";
@@ -1907,7 +1914,7 @@
 		7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */ = {
 			isa = PBXGroup;
 			children = (
-				730CFB351D1A29EF00B62765 /* H5和native的交互(WebView和wkwebview) */,
+				730CFB351D1A29EF00B62765 /* 混合开发H5和native的交互(WebView和wkwebview) */,
 				30AD66381E23D46100AFA089 /* NavBar联动使用 */,
 				73D600FE1D7D5D2300DCCAC7 /* Runtime魔法拦截系统方法举例 */,
 				736679051D752BED00B39376 /* 清除缓存工具 */,
@@ -2496,21 +2503,6 @@
 			name = "函数式编程";
 			sourceTree = "<group>";
 		};
-		73FCE1BD1D1CC8510000BF20 /* WebViewJavascriptBridge */ = {
-			isa = PBXGroup;
-			children = (
-				730C48FF1D23B3E400707722 /* WebViewJavascriptBridge_JS.h */,
-				730C49001D23B3E400707722 /* WebViewJavascriptBridge_JS.m */,
-				730C49011D23B3E400707722 /* WebViewJavascriptBridge.h */,
-				730C49021D23B3E400707722 /* WebViewJavascriptBridge.m */,
-				730C49031D23B3E400707722 /* WKWebViewJavascriptBridge.m */,
-				730C49041D23B3E400707722 /* WKWebViewJavascriptBridge.h */,
-				730C49051D23B3E400707722 /* WebViewJavascriptBridgeBase.m */,
-				730C49061D23B3E400707722 /* WebViewJavascriptBridgeBase.h */,
-			);
-			path = WebViewJavascriptBridge;
-			sourceTree = "<group>";
-		};
 		84281F8D1CFE4123D091309A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2689,6 +2681,8 @@
 				300C82811E0AD05B003C28F9 /* 第三方登录流程.png in Resources */,
 				300C82671E0AD05B003C28F9 /* notify.js in Resources */,
 				73BA9AFC1DF5455800C0BCA6 /* Teacher.xml in Resources */,
+				305AFB3D1E2B952700CEA28E /* javascriptCoreTest.html in Resources */,
+				304AD11A1E2A816300F9EB2B /* WebViewJavascriptBridge pre版本.zip in Resources */,
 				300C81621E0ACD5A003C28F9 /* blog_detail.css in Resources */,
 				300C82C61E0AD7E9003C28F9 /* CALayer3-层的属性.webarchive in Resources */,
 				300C82421E0AD05B003C28F9 /* cnick.js in Resources */,
@@ -2745,7 +2739,7 @@
 				300C81761E0ACD5A003C28F9 /* JavaScript1.js in Resources */,
 				300C82751E0AD05B003C28F9 /* showdown.js in Resources */,
 				73BA9AE61DF5455800C0BCA6 /* 15.jpg in Resources */,
-				735C80681E28DA090066B007 /* test.html in Resources */,
+				735C80681E28DA090066B007 /* tesJavascriptBridge.html in Resources */,
 				300C82641E0AD05B003C28F9 /* msg.popup.js in Resources */,
 				7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */,
 				308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */,
@@ -2837,6 +2831,7 @@
 				300C81571E0ACD5A003C28F9 /* allmobilize.min.js in Resources */,
 				300C81781E0ACD5A003C28F9 /* job_reco.js in Resources */,
 				300C815C1E0ACD5A003C28F9 /* ask_float_fonts_css-6b30a53970eb5c3a2a045e3df585b475.css in Resources */,
+				305AFB3F1E2BA07100CEA28E /* XFBlogDemo-master.zip in Resources */,
 				300C821D1E0AD05B003C28F9 /* 20130522130726077 in Resources */,
 				73BA9AEA1DF5455800C0BCA6 /* 5.jpg in Resources */,
 				300C818C1E0ACD5A003C28F9 /* pub_footer_2014.css in Resources */,
@@ -2970,18 +2965,15 @@
 				735C80631E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m in Sources */,
 				739B57A31DF01B2400C8C9B0 /* QSMultiplePullDownMenu.m in Sources */,
 				739B57A71DF01B2400C8C9B0 /* FMDatabaseAdditions.m in Sources */,
-				730C49081D23B3E400707722 /* WebViewJavascriptBridge.m in Sources */,
 				3091A7911CEE1A64003B97F4 /* PullDownMenuViewController.m in Sources */,
 				308B97821CCA899400BDA0FA /* main.m in Sources */,
 				73DA620B1D5378F800F61160 /* QSYSinglePickerView.m in Sources */,
 				30AD66361E23D41700AFA089 /* NavBarScrollViewController.m in Sources */,
 				73037E861D2A720E0017D024 /* Sb1ViewController.m in Sources */,
-				730C49091D23B3E400707722 /* WKWebViewJavascriptBridge.m in Sources */,
 				30AD66321E23D18300AFA089 /* ViewController+MASAdditions.m in Sources */,
 				739B57A41DF01B2400C8C9B0 /* ActivityView.mm in Sources */,
 				303F38D31D3B9A5700630F31 /* TabActionColView.m in Sources */,
 				739B57A11DF01B2400C8C9B0 /* ExpandScaleBtn.m in Sources */,
-				730CFB381D1A2A1500B62765 /* WebViewDemoViewController.m in Sources */,
 				7323B48F1D2B8B2A00CE6790 /* TouchIdViewController.m in Sources */,
 				309590581CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m in Sources */,
 				738DEA241E029DB1003E30D2 /* UIImage+LBExtension.m in Sources */,
@@ -2991,7 +2983,6 @@
 				739B57971DF01B2400C8C9B0 /* UIImage+_fixOrientation.m in Sources */,
 				3091A7971CEE1A64003B97F4 /* User.m in Sources */,
 				30AD66301E23D18300AFA089 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				730C49071D23B3E400707722 /* WebViewJavascriptBridge_JS.m in Sources */,
 				730CFB4E1D1A966D00B62765 /* IMY_NJKWebViewProgress.m in Sources */,
 				73D601011D7D5D4900DCCAC7 /* MyString.m in Sources */,
 				738DEA381E029DFE003E30D2 /* LBCommon.m in Sources */,
@@ -3013,7 +3004,6 @@
 				73C428001E27588F0047EC92 /* WebViewDelegateCaptureViewController.m in Sources */,
 				7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */,
 				739B579B1DF01B2400C8C9B0 /* CustumAlertView.m in Sources */,
-				730C490A1D23B3E400707722 /* WebViewJavascriptBridgeBase.m in Sources */,
 				303F38DD1D3BA41000630F31 /* RightCollectionViewCell.m in Sources */,
 				30DC004E1D03D200005EAD0C /* AppDelegate.m in Sources */,
 				730CFB4D1D1A966D00B62765 /* IMYWebView.m in Sources */,
