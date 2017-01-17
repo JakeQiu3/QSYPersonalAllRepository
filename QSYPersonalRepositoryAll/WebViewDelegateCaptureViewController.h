@@ -1,7 +1,7 @@
 //
 //  WebViewDelegateInterceptUrlsViewController.h
 //  QSYPersonalRepositoryAll
-//  本webview的功能：
+//  实现的功能：
 /**
  *  webview的基本使用
  *  自定义导航条的返回和关闭按钮

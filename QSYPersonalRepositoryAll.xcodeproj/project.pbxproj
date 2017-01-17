@@ -227,8 +227,6 @@
 		303F38DA1D3BA34900630F31 /* RightColHeaderResuableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38D91D3BA34900630F31 /* RightColHeaderResuableView.m */; };
 		303F38DD1D3BA41000630F31 /* RightCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */; };
 		304AD11A1E2A816300F9EB2B /* WebViewJavascriptBridge pre版本.zip in Resources */ = {isa = PBXBuildFile; fileRef = 304AD1191E2A816300F9EB2B /* WebViewJavascriptBridge pre版本.zip */; };
-		305AFB3D1E2B952700CEA28E /* javascriptCoreTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 305AFB3C1E2B952700CEA28E /* javascriptCoreTest.html */; };
-		305AFB3F1E2BA07100CEA28E /* XFBlogDemo-master.zip in Resources */ = {isa = PBXBuildFile; fileRef = 305AFB3E1E2BA07100CEA28E /* XFBlogDemo-master.zip */; };
 		308B97821CCA899400BDA0FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 308B97811CCA899400BDA0FA /* main.m */; };
 		308B978B1CCA899400BDA0FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B97891CCA899400BDA0FA /* Main.storyboard */; };
 		308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B978C1CCA899400BDA0FA /* Assets.xcassets */; };
@@ -295,7 +293,6 @@
 		30AD66341E23D18300AFA089 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AD66181E23D18300AFA089 /* MZTimerLabel.m */; };
 		30AD66361E23D41700AFA089 /* NavBarScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AD66351E23D41700AFA089 /* NavBarScrollViewController.m */; };
 		30AD663B1E23D48100AFA089 /* UseNavBarScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AD663A1E23D48100AFA089 /* UseNavBarScrollViewController.m */; };
-		30AD663D1E23D74B00AFA089 /* 每天3个demo.zip in Resources */ = {isa = PBXBuildFile; fileRef = 30AD663C1E23D74B00AFA089 /* 每天3个demo.zip */; };
 		30C976A71D3BB1C500614EBC /* PostMallCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */; };
 		30CB778A1D3001CB00C3DDEC /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30CB77891D3001CB00C3DDEC /* AutoLayoutViewController.xib */; };
 		30DC004E1D03D200005EAD0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC004B1D03D200005EAD0C /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -336,7 +333,6 @@
 		735C80661E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */; };
 		735C80681E28DA090066B007 /* tesJavascriptBridge.html in Resources */ = {isa = PBXBuildFile; fileRef = 735C80671E28DA090066B007 /* tesJavascriptBridge.html */; };
 		736584BE1D227C710088CDAB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736584BD1D227C710088CDAB /* JavaScriptCore.framework */; };
-		736584C51D228C890088CDAB /* TestJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 736584C41D228C890088CDAB /* TestJSObject.m */; };
 		736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736679071D752C0D00B39376 /* ClearCacheViewController.m */; };
 		7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736679081D752C0D00B39376 /* ClearCacheViewController.xib */; };
 		7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53B1DF7D6C500390627 /* JsonTransferModel.m */; };
@@ -418,6 +414,14 @@
 		73BA9B021DF5455800C0BCA6 /* 商品分类数据.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADD1DF5455800C0BCA6 /* 商品分类数据.plist */; };
 		73BA9B041DF5455800C0BCA6 /* 面试题总结.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */; };
 		73BA9B061DF5463A00C0BCA6 /* date.json in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9B051DF5463A00C0BCA6 /* date.json */; };
+		73C2B8031E2DE9E5008702B9 /* WebviewCorrelationJSExport.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2B8021E2DE9E5008702B9 /* WebviewCorrelationJSExport.m */; };
+		73C2B8051E2DEB1B008702B9 /* MX5NewsContent.html in Resources */ = {isa = PBXBuildFile; fileRef = 73C2B8041E2DEB1B008702B9 /* MX5NewsContent.html */; };
+		73C2B8091E2DEE55008702B9 /* XFHTMLConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2B8081E2DEE55008702B9 /* XFHTMLConfigurator.m */; };
+		73C2B80C1E2DEE5C008702B9 /* XFContentFragmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2B80B1E2DEE5C008702B9 /* XFContentFragmentModel.m */; };
+		73C2B80F1E2DEE67008702B9 /* XFNewsContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2B80E1E2DEE67008702B9 /* XFNewsContentModel.m */; };
+		73C2B8121E2DEE8F008702B9 /* XFNewsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2B8111E2DEE8F008702B9 /* XFNewsListModel.m */; };
+		73C2B8141E2E17DA008702B9 /* Error.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C2B8131E2E17DA008702B9 /* Error.png */; };
+		73C2B81B1E2E1AC8008702B9 /* lanInfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73C2B81D1E2E1AC8008702B9 /* lanInfoPlist.strings */; };
 		73C428001E27588F0047EC92 /* WebViewDelegateCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C427FF1E27588F0047EC92 /* WebViewDelegateCaptureViewController.m */; };
 		73C7A3441DF55E6800A58D4E /* HandleDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C7A3431DF55E6800A58D4E /* HandleDicTransferModel.m */; };
 		73C7A3491DF5630A00A58D4E /* DicTransferModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */; };
@@ -677,8 +681,6 @@
 		303F38DB1D3BA41000630F31 /* RightCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightCollectionViewCell.h; sourceTree = "<group>"; };
 		303F38DC1D3BA41000630F31 /* RightCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightCollectionViewCell.m; sourceTree = "<group>"; };
 		304AD1191E2A816300F9EB2B /* WebViewJavascriptBridge pre版本.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "WebViewJavascriptBridge pre版本.zip"; sourceTree = "<group>"; };
-		305AFB3C1E2B952700CEA28E /* javascriptCoreTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = javascriptCoreTest.html; sourceTree = "<group>"; };
-		305AFB3E1E2BA07100CEA28E /* XFBlogDemo-master.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "XFBlogDemo-master.zip"; sourceTree = "<group>"; };
 		308B977D1CCA899400BDA0FA /* QSYPersonalRepositoryAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSYPersonalRepositoryAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		308B97811CCA899400BDA0FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		308B978A1CCA899400BDA0FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -794,7 +796,6 @@
 		30AD66371E23D42A00AFA089 /* NavBarScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarScrollViewController.h; sourceTree = "<group>"; };
 		30AD66391E23D48100AFA089 /* UseNavBarScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseNavBarScrollViewController.h; sourceTree = "<group>"; };
 		30AD663A1E23D48100AFA089 /* UseNavBarScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseNavBarScrollViewController.m; sourceTree = "<group>"; };
-		30AD663C1E23D74B00AFA089 /* 每天3个demo.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "每天3个demo.zip"; sourceTree = "<group>"; };
 		30C976A51D3BB1C500614EBC /* PostMallCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMallCategoryModel.h; sourceTree = "<group>"; };
 		30C976A61D3BB1C500614EBC /* PostMallCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMallCategoryModel.m; sourceTree = "<group>"; };
 		30CB77891D3001CB00C3DDEC /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
@@ -871,8 +872,6 @@
 		735C80671E28DA090066B007 /* tesJavascriptBridge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = tesJavascriptBridge.html; sourceTree = "<group>"; };
 		736584B21D22570A0088CDAB /* git使用流程指南.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "git使用流程指南.jpg"; sourceTree = "<group>"; };
 		736584BD1D227C710088CDAB /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		736584C31D228C890088CDAB /* TestJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestJSObject.h; sourceTree = "<group>"; };
-		736584C41D228C890088CDAB /* TestJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestJSObject.m; sourceTree = "<group>"; };
 		736679061D752C0D00B39376 /* ClearCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
 		736679071D752C0D00B39376 /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
 		736679081D752C0D00B39376 /* ClearCacheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClearCacheViewController.xib; sourceTree = "<group>"; };
@@ -1005,6 +1004,22 @@
 		73BA9ADE1DF5455800C0BCA6 /* 新型的MVVM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新型的MVVM.png"; sourceTree = "<group>"; };
 		73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "面试题总结.xml"; sourceTree = "<group>"; };
 		73BA9B051DF5463A00C0BCA6 /* date.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = date.json; sourceTree = "<group>"; };
+		73C2B8011E2DE9E5008702B9 /* WebviewCorrelationJSExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewCorrelationJSExport.h; sourceTree = "<group>"; };
+		73C2B8021E2DE9E5008702B9 /* WebviewCorrelationJSExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebviewCorrelationJSExport.m; sourceTree = "<group>"; };
+		73C2B8041E2DEB1B008702B9 /* MX5NewsContent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = MX5NewsContent.html; sourceTree = "<group>"; };
+		73C2B8071E2DEE55008702B9 /* XFHTMLConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFHTMLConfigurator.h; sourceTree = "<group>"; };
+		73C2B8081E2DEE55008702B9 /* XFHTMLConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFHTMLConfigurator.m; sourceTree = "<group>"; };
+		73C2B80A1E2DEE5C008702B9 /* XFContentFragmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFContentFragmentModel.h; sourceTree = "<group>"; };
+		73C2B80B1E2DEE5C008702B9 /* XFContentFragmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFContentFragmentModel.m; sourceTree = "<group>"; };
+		73C2B80D1E2DEE67008702B9 /* XFNewsContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewsContentModel.h; sourceTree = "<group>"; };
+		73C2B80E1E2DEE67008702B9 /* XFNewsContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewsContentModel.m; sourceTree = "<group>"; };
+		73C2B8101E2DEE8F008702B9 /* XFNewsListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewsListModel.h; sourceTree = "<group>"; };
+		73C2B8111E2DEE8F008702B9 /* XFNewsListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewsListModel.m; sourceTree = "<group>"; };
+		73C2B8131E2E17DA008702B9 /* Error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Error.png; sourceTree = "<group>"; };
+		73C2B8171E2E1A17008702B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		73C2B8181E2E1A17008702B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		73C2B81C1E2E1AC8008702B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/lanInfoPlist.strings; sourceTree = "<group>"; };
+		73C2B81E1E2E1ACB008702B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/lanInfoPlist.strings"; sourceTree = "<group>"; };
 		73C427FE1E27588F0047EC92 /* WebViewDelegateCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDelegateCaptureViewController.h; sourceTree = "<group>"; };
 		73C427FF1E27588F0047EC92 /* WebViewDelegateCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDelegateCaptureViewController.m; sourceTree = "<group>"; };
 		73C7A3421DF55E6800A58D4E /* HandleDicTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleDicTransferModel.h; sourceTree = "<group>"; };
@@ -1436,18 +1451,9 @@
 		305AFB3A1E2B919300CEA28E /* Webview */ = {
 			isa = PBXGroup;
 			children = (
-				73C427FE1E27588F0047EC92 /* WebViewDelegateCaptureViewController.h */,
-				73C427FF1E27588F0047EC92 /* WebViewDelegateCaptureViewController.m */,
-				73BA9ACD1DF5455800C0BCA6 /* 9Y.html */,
-				305AFB3E1E2BA07100CEA28E /* XFBlogDemo-master.zip */,
-				735C80611E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.h */,
-				735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */,
-				736584C31D228C890088CDAB /* TestJSObject.h */,
-				736584C41D228C890088CDAB /* TestJSObject.m */,
-				305AFB3C1E2B952700CEA28E /* javascriptCoreTest.html */,
-				735C80641E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.h */,
-				735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */,
-				735C80671E28DA090066B007 /* tesJavascriptBridge.html */,
+				73C2B7FE1E2DE817008702B9 /* webview的基本使用 */,
+				73C2B7FF1E2DE825008702B9 /* webview的JavaScriptCore */,
+				73C2B8001E2DE852008702B9 /* webview的JavaScriptBridge */,
 			);
 			name = Webview;
 			sourceTree = "<group>";
@@ -1486,7 +1492,6 @@
 				30DC004B1D03D200005EAD0C /* AppDelegate.m */,
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
-				30AD663C1E23D74B00AFA089 /* 每天3个demo.zip */,
 				3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */,
 				7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */,
 				739B56B71DF01B2400C8C9B0 /* 你想要的 工具箱 这里都有 */,
@@ -2343,6 +2348,56 @@
 			name = "设计模式";
 			sourceTree = "<group>";
 		};
+		73C2B7FE1E2DE817008702B9 /* webview的基本使用 */ = {
+			isa = PBXGroup;
+			children = (
+				73C427FE1E27588F0047EC92 /* WebViewDelegateCaptureViewController.h */,
+				73C427FF1E27588F0047EC92 /* WebViewDelegateCaptureViewController.m */,
+				73BA9ACD1DF5455800C0BCA6 /* 9Y.html */,
+			);
+			name = "webview的基本使用";
+			sourceTree = "<group>";
+		};
+		73C2B7FF1E2DE825008702B9 /* webview的JavaScriptCore */ = {
+			isa = PBXGroup;
+			children = (
+				735C80611E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.h */,
+				735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */,
+				73C2B8011E2DE9E5008702B9 /* WebviewCorrelationJSExport.h */,
+				73C2B8021E2DE9E5008702B9 /* WebviewCorrelationJSExport.m */,
+				73C2B8061E2DEE0C008702B9 /* data(暂时写在本地，生成一个html的标签字符串) */,
+			);
+			name = "webview的JavaScriptCore";
+			sourceTree = "<group>";
+		};
+		73C2B8001E2DE852008702B9 /* webview的JavaScriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				735C80641E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.h */,
+				735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */,
+				735C80671E28DA090066B007 /* tesJavascriptBridge.html */,
+			);
+			name = "webview的JavaScriptBridge";
+			sourceTree = "<group>";
+		};
+		73C2B8061E2DEE0C008702B9 /* data(暂时写在本地，生成一个html的标签字符串) */ = {
+			isa = PBXGroup;
+			children = (
+				73C2B8131E2E17DA008702B9 /* Error.png */,
+				73C2B8041E2DEB1B008702B9 /* MX5NewsContent.html */,
+				73C2B80D1E2DEE67008702B9 /* XFNewsContentModel.h */,
+				73C2B80E1E2DEE67008702B9 /* XFNewsContentModel.m */,
+				73C2B8071E2DEE55008702B9 /* XFHTMLConfigurator.h */,
+				73C2B8081E2DEE55008702B9 /* XFHTMLConfigurator.m */,
+				73C2B80A1E2DEE5C008702B9 /* XFContentFragmentModel.h */,
+				73C2B80B1E2DEE5C008702B9 /* XFContentFragmentModel.m */,
+				73C2B8101E2DEE8F008702B9 /* XFNewsListModel.h */,
+				73C2B8111E2DEE8F008702B9 /* XFNewsListModel.m */,
+				73C2B81D1E2E1AC8008702B9 /* lanInfoPlist.strings */,
+			);
+			name = "data(暂时写在本地，生成一个html的标签字符串)";
+			sourceTree = "<group>";
+		};
 		73C7A3411DF55B6600A58D4E /* 字典转模型大全 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2559,6 +2614,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 308B97741CCA899400BDA0FA;
 			productRefGroup = 308B977E1CCA899400BDA0FA /* Products */;
@@ -2650,6 +2706,7 @@
 				300C81921E0ACD5A003C28F9 /* share.js in Resources */,
 				300C819E1E0ACD5A003C28F9 /* vote.js in Resources */,
 				73BA9AFB1DF5455800C0BCA6 /* StatusInfo.plist in Resources */,
+				73C2B8051E2DEB1B008702B9 /* MX5NewsContent.html in Resources */,
 				308B97901CCA899400BDA0FA /* LaunchScreen.storyboard in Resources */,
 				300C814C1E0ACD5A003C28F9 /* Block传值 （详细）.png in Resources */,
 				300C82191E0AD05B003C28F9 /* 开源中国iOS客户端学习——(十二)用户登陆 - 新风作浪的博客专栏 - 博客频道 - CSDN.NET.html in Resources */,
@@ -2669,7 +2726,6 @@
 				300C82231E0AD05B003C28F9 /* 3_duxinfeng2010.jpg in Resources */,
 				300C81681E0ACD5A003C28F9 /* container.html in Resources */,
 				300C822E1E0AD05B003C28F9 /* ad-ms1579_2.js in Resources */,
-				30AD663D1E23D74B00AFA089 /* 每天3个demo.zip in Resources */,
 				300C81811E0ACD5A003C28F9 /* login.js in Resources */,
 				300C823D1E0AD05B003C28F9 /* bdsstyle.css in Resources */,
 				73BA9AEB1DF5455800C0BCA6 /* 5种编程思想和5种设计模式的比较.xml in Resources */,
@@ -2681,7 +2737,6 @@
 				300C82811E0AD05B003C28F9 /* 第三方登录流程.png in Resources */,
 				300C82671E0AD05B003C28F9 /* notify.js in Resources */,
 				73BA9AFC1DF5455800C0BCA6 /* Teacher.xml in Resources */,
-				305AFB3D1E2B952700CEA28E /* javascriptCoreTest.html in Resources */,
 				304AD11A1E2A816300F9EB2B /* WebViewJavascriptBridge pre版本.zip in Resources */,
 				300C81621E0ACD5A003C28F9 /* blog_detail.css in Resources */,
 				300C82C61E0AD7E9003C28F9 /* CALayer3-层的属性.webarchive in Resources */,
@@ -2734,6 +2789,7 @@
 				300C82561E0AD05B003C28F9 /* jquery.form.js in Resources */,
 				300C81801E0ACD5A003C28F9 /* logger.js in Resources */,
 				300C82451E0AD05B003C28F9 /* container.html in Resources */,
+				73C2B8141E2E17DA008702B9 /* Error.png in Resources */,
 				300C822D1E0AD05B003C28F9 /* ad-ms1578.js in Resources */,
 				300C82221E0AD05B003C28F9 /* 20151123175257333 in Resources */,
 				300C81761E0ACD5A003C28F9 /* JavaScript1.js in Resources */,
@@ -2750,6 +2806,7 @@
 				300C81A71E0ACD5A003C28F9 /* 通知传值.png in Resources */,
 				300C822B1E0AD05B003C28F9 /* acom.html in Resources */,
 				300C82581E0AD05B003C28F9 /* langchao-2lu-download-homepage-daohangtiaoxia-banner-728-90-30k.html in Resources */,
+				73C2B81B1E2E1AC8008702B9 /* lanInfoPlist.strings in Resources */,
 				300C816B1E0ACD5A003C28F9 /* follow.html in Resources */,
 				73BA9AF21DF5455800C0BCA6 /* 9Y.html in Resources */,
 				300C821E1E0AD05B003C28F9 /* 20130522133457849 in Resources */,
@@ -2831,7 +2888,6 @@
 				300C81571E0ACD5A003C28F9 /* allmobilize.min.js in Resources */,
 				300C81781E0ACD5A003C28F9 /* job_reco.js in Resources */,
 				300C815C1E0ACD5A003C28F9 /* ask_float_fonts_css-6b30a53970eb5c3a2a045e3df585b475.css in Resources */,
-				305AFB3F1E2BA07100CEA28E /* XFBlogDemo-master.zip in Resources */,
 				300C821D1E0AD05B003C28F9 /* 20130522130726077 in Resources */,
 				73BA9AEA1DF5455800C0BCA6 /* 5.jpg in Resources */,
 				300C818C1E0ACD5A003C28F9 /* pub_footer_2014.css in Resources */,
@@ -2918,6 +2974,7 @@
 				738DEA3E1E029DFF003E30D2 /* LBUI.m in Sources */,
 				739B579E1DF01B2400C8C9B0 /* SinglePickerView.m in Sources */,
 				308DA7FD1D3E789900A97FA9 /* MutlipleTwoTabAndOneTabViewController.m in Sources */,
+				73C2B8121E2DEE8F008702B9 /* XFNewsListModel.m in Sources */,
 				739B57941DF01B2400C8C9B0 /* ChangeAnimationView.m in Sources */,
 				3095905B1CFF22C000176AAC /* LayoutSubView.m in Sources */,
 				30AD66191E23D18300AFA089 /* FrostedView.m in Sources */,
@@ -2932,7 +2989,6 @@
 				739B57AE1DF01B2400C8C9B0 /* GDataXMLNode.m in Sources */,
 				739B57AB1DF01B2400C8C9B0 /* FmdbHandleObject.m in Sources */,
 				30AD663B1E23D48100AFA089 /* UseNavBarScrollViewController.m in Sources */,
-				736584C51D228C890088CDAB /* TestJSObject.m in Sources */,
 				739B57A61DF01B2400C8C9B0 /* FMDatabase.m in Sources */,
 				30AD661A1E23D18300AFA089 /* MHScanViewController.m in Sources */,
 				3091A7871CEE1A64003B97F4 /* BtnNewAgainViewController.m in Sources */,
@@ -2951,11 +3007,13 @@
 				30AD662E1E23D18300AFA089 /* MASViewConstraint.m in Sources */,
 				309590591CFF22C000176AAC /* DrawRectView.m in Sources */,
 				30AD662B1E23D18300AFA089 /* MASConstraintMaker.m in Sources */,
+				73C2B80C1E2DEE5C008702B9 /* XFContentFragmentModel.m in Sources */,
 				73C7A3491DF5630A00A58D4E /* DicTransferModelViewController.m in Sources */,
 				3091A7951CEE1A64003B97F4 /* TestTotalViewController.m in Sources */,
 				739B57AF1DF01B2400C8C9B0 /* XML&JsonParser.m in Sources */,
 				731FFF0B1D3C703700F65E0F /* BaseModel.m in Sources */,
 				303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */,
+				73C2B8031E2DE9E5008702B9 /* WebviewCorrelationJSExport.m in Sources */,
 				30AD661B1E23D18300AFA089 /* ClearCacheTool.m in Sources */,
 				736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */,
 				3091A7891CEE1A64003B97F4 /* FmdbViewController.m in Sources */,
@@ -3019,6 +3077,7 @@
 				739B57AD1DF01B2400C8C9B0 /* JSONKit.m in Sources */,
 				734075341D124876000652E0 /* TestSynthesize.m in Sources */,
 				738DEA3F1E029DFF003E30D2 /* LBValidate.m in Sources */,
+				73C2B80F1E2DEE67008702B9 /* XFNewsContentModel.m in Sources */,
 				738DEA261E029DB1003E30D2 /* UITextView+LBPlaceholder.m in Sources */,
 				30AD66271E23D18300AFA089 /* UIView+Extension.m in Sources */,
 				738DEA3A1E029DFE003E30D2 /* LBFormat.m in Sources */,
@@ -3029,6 +3088,7 @@
 				739B579A1DF01B2400C8C9B0 /* NSObject+Swizzle.m in Sources */,
 				739B57981DF01B2400C8C9B0 /* UIImage+FixOrientation.m in Sources */,
 				303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */,
+				73C2B8091E2DEE55008702B9 /* XFHTMLConfigurator.m in Sources */,
 				735C80661E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m in Sources */,
 				73037E831D2A71C60017D024 /* Sb1TableViewCell.m in Sources */,
 				739B57AA1DF01B2400C8C9B0 /* FMResultSet.m in Sources */,
@@ -3063,6 +3123,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				308B978A1CCA899400BDA0FA /* Base */,
+				73C2B8171E2E1A17008702B9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -3071,8 +3132,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				308B978F1CCA899400BDA0FA /* Base */,
+				73C2B8181E2E1A17008702B9 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		73C2B81D1E2E1AC8008702B9 /* lanInfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73C2B81C1E2E1AC8008702B9 /* en */,
+				73C2B81E1E2E1ACB008702B9 /* zh-Hans */,
+			);
+			name = lanInfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -3082,6 +3153,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -3126,6 +3198,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

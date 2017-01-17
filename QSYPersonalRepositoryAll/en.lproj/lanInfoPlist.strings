@@ -1,0 +1,10 @@
+/* 
+  lanInfoPlist.strings
+  QSYPersonalRepositoryAll
+
+  Created by 邱少依 on 2017/1/17.
+  Copyright © 2017年 QSY. All rights reserved.
+*/
+CFBundleDisplayName = "hello world";
+"加载中…" = "Loading…";
+"相关新闻" = "Correlation News";
