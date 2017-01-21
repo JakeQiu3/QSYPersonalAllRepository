@@ -330,7 +330,6 @@
 		732780D31E07873000B399D0 /* LBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 732780D21E07873000B399D0 /* LBUtil.m */; };
 		734075341D124876000652E0 /* TestSynthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 734075331D124876000652E0 /* TestSynthesize.m */; };
 		7358D9D61D05642600B7484C /* FreezeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358D9D51D05642500B7484C /* FreezeViewController.m */; };
-		7359B19B1E322C100059F8D7 /* Crow5包.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7359B19A1E322C100059F8D7 /* Crow5包.zip */; };
 		735C80631E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */; };
 		735C80661E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */; };
 		735C80681E28DA090066B007 /* tesJavascriptBridge.html in Resources */ = {isa = PBXBuildFile; fileRef = 735C80671E28DA090066B007 /* tesJavascriptBridge.html */; };
@@ -868,7 +867,6 @@
 		734075331D124876000652E0 /* TestSynthesize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSynthesize.m; sourceTree = "<group>"; };
 		7358D9D41D05642500B7484C /* FreezeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreezeViewController.h; sourceTree = "<group>"; };
 		7358D9D51D05642500B7484C /* FreezeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreezeViewController.m; sourceTree = "<group>"; };
-		7359B19A1E322C100059F8D7 /* Crow5包.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "Crow5包.zip"; sourceTree = "<group>"; };
 		735C80611E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewViaJavaScriptCoreViewController.h; sourceTree = "<group>"; };
 		735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewViaJavaScriptCoreViewController.m; sourceTree = "<group>"; };
 		735C80641E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeLibViewController.h; sourceTree = "<group>"; };
@@ -1924,7 +1922,6 @@
 		7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */ = {
 			isa = PBXGroup;
 			children = (
-				7359B19A1E322C100059F8D7 /* Crow5包.zip */,
 				730CFB351D1A29EF00B62765 /* 混合开发H5和native的交互(WebView和wkwebview) */,
 				30AD66381E23D46100AFA089 /* NavBar联动使用 */,
 				73D600FE1D7D5D2300DCCAC7 /* Runtime魔法拦截系统方法举例 */,
@@ -2907,7 +2904,6 @@
 				300C82C41E0AD7E9003C28F9 /* CALayer1-简介.webarchive in Resources */,
 				30AD66331E23D18300AFA089 /* Info.plist in Resources */,
 				30AD65D21E23D00700AFA089 /* 美团navigationbar效果.zip in Resources */,
-				7359B19B1E322C100059F8D7 /* Crow5包.zip in Resources */,
 				300C82C81E0AD7E9003C28F9 /* CATransform3DKeyPath.png in Resources */,
 				300C826A1E0AD05B003C28F9 /* oojs.js in Resources */,
 				73BA9AED1DF5455800C0BCA6 /* 7.jpg in Resources */,
