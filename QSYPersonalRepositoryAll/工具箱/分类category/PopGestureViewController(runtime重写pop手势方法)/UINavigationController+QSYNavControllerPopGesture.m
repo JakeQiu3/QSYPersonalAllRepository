@@ -9,8 +9,8 @@
 /**
  *  runtime setter 方法
  *
- *  @param self       要绑定到的对象
- *  @param key        方法或者常量字符串地址
+ *  @param self       值：要绑定到的对象，常是self
+ *  @param key        值：该getter方法名（若是的话，那么getter中的参数可以直接用_cmd） 或者 常量字符串地址
  *  @param value      属性名 （若 基本数据类型，需强转）
  * @param objc_AssociationPolicy 属性修饰
  */
