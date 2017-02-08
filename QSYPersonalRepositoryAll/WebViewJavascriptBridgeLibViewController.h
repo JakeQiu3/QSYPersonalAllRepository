@@ -4,6 +4,7 @@
 /**
  *  WebViewJavascriptBridge开源库：本质通过webview的代理拦截scheme，
  *  后注入相应的JS
+ *  详见： http://www.cnblogs.com/jiang-xiao-yan/p/5345755.html
  *
  */
 

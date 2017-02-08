@@ -26,7 +26,6 @@
 @end
 
 @interface WebviewCorrelationJSExport : NSObject <WebviewCorrelationJSExport>
-
 @property (nonatomic, weak) id<WebViewExportDelegate> delegate;
 
 @end

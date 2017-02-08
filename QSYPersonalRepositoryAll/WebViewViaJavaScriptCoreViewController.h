@@ -8,6 +8,7 @@
  *2、字体大小调整
  *3、黑夜模式
  *4、国际化
+ *5、参考：http://xuyafei.cn/post/cocoatouch/tu-wen-hun-pai
  */
 //  Created by 邱少依 on 2017/1/13.
 //  Copyright © 2017年 QSY. All rights reserved.

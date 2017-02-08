@@ -315,7 +315,7 @@
 		730CFB4E1D1A966D00B62765 /* IMY_NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB4A1D1A966D00B62765 /* IMY_NJKWebViewProgress.m */; };
 		730CFB4F1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB4C1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m */; };
 		7313C05C1D62B35F00404EDF /* UserDefinedLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7313C05B1D62B35F00404EDF /* UserDefinedLoadingViewController.m */; };
-		731B64381E2F2E1B001854CA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 731B64371E2F2E1B001854CA /* index.html */; };
+		731B64381E2F2E1B001854CA /* index 稳哥.html in Resources */ = {isa = PBXBuildFile; fileRef = 731B64371E2F2E1B001854CA /* index 稳哥.html */; };
 		731FFF0B1D3C703700F65E0F /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 731FFF0A1D3C703700F65E0F /* BaseModel.m */; };
 		7323B46F1D2B4F5900CE6790 /* customTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7323B46E1D2B4F5900CE6790 /* customTest.xib */; };
 		7323B4721D2B506900CE6790 /* CustomTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4711D2B506900CE6790 /* CustomTestView.m */; };
@@ -838,7 +838,7 @@
 		730CFB4C1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
 		7313C05A1D62B35F00404EDF /* UserDefinedLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefinedLoadingViewController.h; sourceTree = "<group>"; };
 		7313C05B1D62B35F00404EDF /* UserDefinedLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefinedLoadingViewController.m; sourceTree = "<group>"; };
-		731B64371E2F2E1B001854CA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		731B64371E2F2E1B001854CA /* index 稳哥.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index 稳哥.html"; sourceTree = "<group>"; };
 		731FFF0A1D3C703700F65E0F /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		731FFF0C1D3C705500F65E0F /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		7323B46E1D2B4F5900CE6790 /* customTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = customTest.xib; sourceTree = "<group>"; };
@@ -1494,7 +1494,7 @@
 				30DC004B1D03D200005EAD0C /* AppDelegate.m */,
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
-				731B64371E2F2E1B001854CA /* index.html */,
+				731B64371E2F2E1B001854CA /* index 稳哥.html */,
 				3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */,
 				7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */,
 				739B56B71DF01B2400C8C9B0 /* 你想要的 工具箱 这里都有 */,
@@ -2763,7 +2763,7 @@
 				73BA9AEC1DF5455800C0BCA6 /* 6.jpg in Resources */,
 				739B57A21DF01B2400C8C9B0 /* departmentCitysServices.plist in Resources */,
 				300C82441E0AD05B003C28F9 /* comment1.css in Resources */,
-				731B64381E2F2E1B001854CA /* index.html in Resources */,
+				731B64381E2F2E1B001854CA /* index 稳哥.html in Resources */,
 				300C82241E0AD05B003C28F9 /* 3_gary5510.jpg in Resources */,
 				300C826F1E0AD05B003C28F9 /* pv.aspx in Resources */,
 				300C825C1E0AD05B003C28F9 /* lightapp.js in Resources */,
