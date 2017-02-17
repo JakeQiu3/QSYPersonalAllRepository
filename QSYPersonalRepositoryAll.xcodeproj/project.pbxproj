@@ -219,6 +219,7 @@
 		300C82CA1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = 300C82BF1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive */; };
 		300C82CB1E0AD7E9003C28F9 /* transform的属性列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C82C01E0AD7E9003C28F9 /* transform的属性列表.png */; };
 		300C82CC1E0AD7E9003C28F9 /* 转场动画类型.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C82C11E0AD7E9003C28F9 /* 转场动画类型.png */; };
+		300CF85A1E5678060052D032 /* 3文章编辑素材库.zip in Resources */ = {isa = PBXBuildFile; fileRef = 300CF8591E5678060052D032 /* 3文章编辑素材库.zip */; };
 		303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */; };
 		303F38C81D3B32C800630F31 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38C71D3B32C800630F31 /* CustomAlertViewController.m */; };
 		303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */; };
@@ -667,6 +668,7 @@
 		300C82BF1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Core Animation2-CABasicAnimation.webarchive"; sourceTree = "<group>"; };
 		300C82C01E0AD7E9003C28F9 /* transform的属性列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transform的属性列表.png"; sourceTree = "<group>"; };
 		300C82C11E0AD7E9003C28F9 /* 转场动画类型.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "转场动画类型.png"; sourceTree = "<group>"; };
+		300CF8591E5678060052D032 /* 3文章编辑素材库.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "3文章编辑素材库.zip"; sourceTree = "<group>"; };
 		303F38BB1D3B1B6400630F31 /* MulitplePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulitplePickerViewController.h; sourceTree = "<group>"; };
 		303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulitplePickerViewController.m; sourceTree = "<group>"; };
 		303F38C61D3B32C800630F31 /* CustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewController.h; sourceTree = "<group>"; };
@@ -1492,6 +1494,7 @@
 			children = (
 				30DC004A1D03D200005EAD0C /* AppDelegate.h */,
 				30DC004B1D03D200005EAD0C /* AppDelegate.m */,
+				300CF8591E5678060052D032 /* 3文章编辑素材库.zip */,
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				731B64371E2F2E1B001854CA /* index 稳哥.html */,
@@ -2909,6 +2912,7 @@
 				73BA9AED1DF5455800C0BCA6 /* 7.jpg in Resources */,
 				300C81A81E0ACD5A003C28F9 /* 通知传值A界面，接收后改变的.png in Resources */,
 				30AD65CA1E23D00700AFA089 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip in Resources */,
+				300CF85A1E5678060052D032 /* 3文章编辑素材库.zip in Resources */,
 				73BA9AE21DF5455800C0BCA6 /* 11.jpg in Resources */,
 				300C81671E0ACD5A003C28F9 /* consult_5b07d2e.js in Resources */,
 				300C818D1E0ACD5A003C28F9 /* pubads_impl_73.js in Resources */,
