@@ -337,6 +337,7 @@
 		736584BE1D227C710088CDAB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736584BD1D227C710088CDAB /* JavaScriptCore.framework */; };
 		736679091D752C0D00B39376 /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736679071D752C0D00B39376 /* ClearCacheViewController.m */; };
 		7366790A1D752C0D00B39376 /* ClearCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736679081D752C0D00B39376 /* ClearCacheViewController.xib */; };
+		737485641E56E88A00373120 /* 二维码分享和封装.zip in Resources */ = {isa = PBXBuildFile; fileRef = 737485631E56E88A00373120 /* 二维码分享和封装.zip */; };
 		7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53B1DF7D6C500390627 /* JsonTransferModel.m */; };
 		7378E5401DF7D6EA00390627 /* ExtensionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53F1DF7D6EA00390627 /* ExtensionModel.m */; };
 		73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */; };
@@ -879,6 +880,7 @@
 		736679061D752C0D00B39376 /* ClearCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
 		736679071D752C0D00B39376 /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
 		736679081D752C0D00B39376 /* ClearCacheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClearCacheViewController.xib; sourceTree = "<group>"; };
+		737485631E56E88A00373120 /* 二维码分享和封装.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "二维码分享和封装.zip"; sourceTree = "<group>"; };
 		7378E53A1DF7D6C500390627 /* JsonTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTransferModel.h; sourceTree = "<group>"; };
 		7378E53B1DF7D6C500390627 /* JsonTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTransferModel.m; sourceTree = "<group>"; };
 		7378E53E1DF7D6EA00390627 /* ExtensionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionModel.h; sourceTree = "<group>"; };
@@ -1588,6 +1590,7 @@
 		30AD65B51E23D00700AFA089 /* 要看 Demos 这里就够了 */ = {
 			isa = PBXGroup;
 			children = (
+				737485631E56E88A00373120 /* 二维码分享和封装.zip */,
 				30AD65D91E23D18300AFA089 /* 二维码工具 */,
 				30AD65DE1E23D18300AFA089 /* 计算file和folder大小和remove */,
 				30AD65E21E23D18300AFA089 /* FreezeWindowView（冻结列表工具） */,
@@ -2898,6 +2901,7 @@
 				300C821D1E0AD05B003C28F9 /* 20130522130726077 in Resources */,
 				73BA9AEA1DF5455800C0BCA6 /* 5.jpg in Resources */,
 				300C818C1E0ACD5A003C28F9 /* pub_footer_2014.css in Resources */,
+				737485641E56E88A00373120 /* 二维码分享和封装.zip in Resources */,
 				300C81911E0ACD5A003C28F9 /* s in Resources */,
 				300C81771E0ACD5A003C28F9 /* job_reco.css in Resources */,
 				300C81871E0ACD5A003C28F9 /* new.gif in Resources */,
