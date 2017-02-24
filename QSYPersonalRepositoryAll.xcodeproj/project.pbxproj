@@ -340,6 +340,7 @@
 		737485641E56E88A00373120 /* 二维码分享和封装.zip in Resources */ = {isa = PBXBuildFile; fileRef = 737485631E56E88A00373120 /* 二维码分享和封装.zip */; };
 		7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53B1DF7D6C500390627 /* JsonTransferModel.m */; };
 		7378E5401DF7D6EA00390627 /* ExtensionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53F1DF7D6EA00390627 /* ExtensionModel.m */; };
+		737A1F2F1E6051B4003FA90A /* 已经修改的webview.zip in Resources */ = {isa = PBXBuildFile; fileRef = 737A1F2E1E6051B4003FA90A /* 已经修改的webview.zip */; };
 		73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */; };
 		738DEA221E029DB1003E30D2 /* NSString+LBHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA191E029DB1003E30D2 /* NSString+LBHash.m */; };
 		738DEA231E029DB1003E30D2 /* UIColor+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA1B1E029DB1003E30D2 /* UIColor+LBExtension.m */; };
@@ -885,6 +886,7 @@
 		7378E53B1DF7D6C500390627 /* JsonTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTransferModel.m; sourceTree = "<group>"; };
 		7378E53E1DF7D6EA00390627 /* ExtensionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionModel.h; sourceTree = "<group>"; };
 		7378E53F1DF7D6EA00390627 /* ExtensionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionModel.m; sourceTree = "<group>"; };
+		737A1F2E1E6051B4003FA90A /* 已经修改的webview.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "已经修改的webview.zip"; sourceTree = "<group>"; };
 		73801AF71DF65C4300E9EC42 /* SubDicTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDicTransferModel.h; sourceTree = "<group>"; };
 		73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDicTransferModel.m; sourceTree = "<group>"; };
 		738DEA181E029DB1003E30D2 /* NSString+LBHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBHash.h"; sourceTree = "<group>"; };
@@ -2385,6 +2387,7 @@
 				735C80641E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.h */,
 				735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */,
 				735C80671E28DA090066B007 /* tesJavascriptBridge.html */,
+				737A1F2E1E6051B4003FA90A /* 已经修改的webview.zip */,
 			);
 			name = "webview的JavaScriptBridge";
 			sourceTree = "<group>";
@@ -2872,6 +2875,7 @@
 				300C82511E0AD05B003C28F9 /* JavaScript1.js in Resources */,
 				300C826C1E0AD05B003C28F9 /* prettify.js in Resources */,
 				300C815F1E0ACD5A003C28F9 /* bdsstyle.css in Resources */,
+				737A1F2F1E6051B4003FA90A /* 已经修改的webview.zip in Resources */,
 				300C81A01E0ACD5A003C28F9 /* 单例   .m文件.png in Resources */,
 				73BA9AE31DF5455800C0BCA6 /* 12.jpg in Resources */,
 				300C82321E0AD05B003C28F9 /* adscout.php in Resources */,
