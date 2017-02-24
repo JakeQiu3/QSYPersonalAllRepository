@@ -19,7 +19,7 @@
         log('window.onerror: ' + err)
       }
     
-      /*少：JS端的这段代码是固定的，必须要放到js中*/
+      /*少：JS端的这段代码是固定的，必须要放到js中，内部的src是相当于NSRequest的Url，可在webview的代理方法 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType; 被拦截到*/
       function setupWebViewJavascriptBridge(callback) {
         if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
         if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
@@ -31,7 +31,7 @@
         setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
       }
     
-      /*少：与OC交互的所有JS方法都要放在此处注册，才能调用通过JS调用OC或者让OC调用这里的JS*/
+      /*少：与OC交互的所有JS方法都要放在此处注册，才能调用通过JS调用OC或者让OC调用这里的JS。切记：不在此html文件中写的不会被调用*/
       setupWebViewJavascriptBridge(function(bridge) {
        var uniqueId = 1
        function log(message, data) {

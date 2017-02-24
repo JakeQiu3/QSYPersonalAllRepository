@@ -150,15 +150,15 @@
     }
 }
 
-//在拦截url后，先通过-isBridgeLoadedURL:方法判断URL是否是需要bridge的URL，若是，则通过injectJavascriptFile方法注入JS；否则判断URL是否是队列消息，若是，则执行查询命令JS并刷新消息队列；最后，URL被识别为未知的消息，执行。
+// 在拦截url后，先通过-isBridgeLoadedURL:方法判断URL是否是需要bridge的URL，若是，则通过injectJavascriptFile方法注入JS；否则判断URL是否是队列消息，若是，则执行查询命令JS并刷新消息队列；最后，URL被识别为未知的消息，执行。
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     if (webView != _webView) { return YES; }
     NSURL *url = [request URL];
     __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
-    if ([_base isCorrectProcotocolScheme:url]) {
-        if ([_base isBridgeLoadedURL:url]) {
+    if ([_base isCorrectProcotocolScheme:url]) {// scheme 是约定协议的@"wvjbscheme"
+        if ([_base isBridgeLoadedURL:url]) {// host 是约定的@"__BRIDGE_LOADED__"
             [_base injectJavascriptFile];
-        } else if ([_base isQueueMessageURL:url]) {
+        } else if ([_base isQueueMessageURL:url]) {// host是约定的@"__WVJB_QUEUE_MESSAGE__"
             NSString *messageQueueString = [self _evaluateJavascript:[_base webViewJavascriptFetchQueyCommand]];
             [_base flushMessageQueue:messageQueueString];
         } else {

@@ -69,7 +69,7 @@
     /*
      * @parameter handlerName ：注册的OC方法供js调用；
      * @parameter data ：js传递给OC的参数，可不传
-                        responseCallback: OC通过该block执行回调，把返回值的传递给JS
+     * @parameter responseCallback: OC通过该block执行回调，把返回值的传递给JS
      */
     [self.bridge registerHandler:@"getUserIdFromObjC" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSLog(@"这是我的OC方法，看JS调不调,js call getUserIdFromObjC, data from js is %@", data);
@@ -90,9 +90,9 @@
     }];
     
     
-    //补充2：这样行么？答案可以告诉你，确定是不行的。
+    //补充2：只在OC中注册和调用handler，这样行么？答案可以告诉你，确定是不行的。
     [self.bridge registerHandler:@"qsyLoveYou" handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"我就看看回调了么%@",data);
+        NSLog(@"我就看看回调了么%@，可以肯定的是就是没调用",data);
     }];
     
     [self.bridge callHandler:@"qsyLoveYou" data:@"我爱你少一"];
@@ -126,6 +126,7 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     NSLog(@"加载出错:%@",error);
 }
+
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     if (webView!=_myWebView) {
         return YES;

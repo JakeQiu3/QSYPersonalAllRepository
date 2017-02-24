@@ -194,6 +194,7 @@ static int logMaxLength = 500;
     }
 }
 
+#pragma mark 对字符串进行序列化json和反序列化变为object
 - (NSString *)_serializeMessage:(id)message pretty:(BOOL)pretty{
     return [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:message options:(NSJSONWritingOptions)(pretty ? NSJSONWritingPrettyPrinted : 0) error:nil] encoding:NSUTF8StringEncoding];
 }
