@@ -9,9 +9,9 @@
 #import "WebViewJavascriptBridge.h"
 
 #if __has_feature(objc_arc_weak)
-    #define WVJB_WEAK __weak
+#define WVJB_WEAK __weak
 #else
-    #define WVJB_WEAK __unsafe_unretained
+#define WVJB_WEAK __unsafe_unretained
 #endif
 
 @implementation WebViewJavascriptBridge {
@@ -53,10 +53,12 @@
     [self callHandler:handlerName data:data responseCallback:nil];
 }
 
+// Native传递给JS：要传递给js的data，和要js回调过来的block，已经协定的方法名 一起保存起来，作为NSDictionary传递出去。
 - (void)callHandler:(NSString *)handlerName data:(id)data responseCallback:(WVJBResponseCallback)responseCallback {
     [_base sendData:data responseCallback:responseCallback handlerName:handlerName];
 }
 
+// Native传递给JS：Native端注册时调用，提供的是key：方法名，value是一个回调block 的字典
 - (void)registerHandler:(NSString *)handlerName handler:(WVJBHandler)handler {
     _base.messageHandlers[handlerName] = [handler copy];
 }
@@ -71,6 +73,7 @@
     _webViewDelegate = nil;
 }
 
+// baseBridge的 delegate 方法
 - (NSString*) _evaluateJavascript:(NSString*)javascriptCommand
 {
     return [_webView stringByEvaluatingJavaScriptFromString:javascriptCommand];
@@ -132,6 +135,15 @@
     _webView.delegate = nil;
 }
 
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    if (webView != _webView) { return; }
+    
+    __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
+    if (strongDelegate && [strongDelegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
+        [strongDelegate webViewDidStartLoad:webView];
+    }
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     if (webView != _webView) { return; }
     
@@ -150,16 +162,28 @@
     }
 }
 
-// 在拦截url后，先通过-isBridgeLoadedURL:方法判断URL是否是需要bridge的URL，若是，则通过injectJavascriptFile方法注入JS；否则判断URL是否是队列消息，若是，则执行查询命令JS并刷新消息队列；最后，URL被识别为未知的消息，执行。
+// 该方法触发的时机：每次url指针从定向！具体包括：loadRequest加载具体的html时、加载html中某js的url时、stringByEvaluatingJavaScriptFromString执行某js代码中有loadRequest的Url
+
+//拦截url: 方法判断URL是否是需要bridge的URL，若是，则通过injectJavascriptFile方法注入JS；否则判断URL是否是QueueMessage，若是，则执行查询命令JS并刷新消息队列；最后，URL被识别为未知的消息，执行。
+
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
     if (webView != _webView) { return YES; }
     NSURL *url = [request URL];
+    //    url的变化：从本地html文件（只加载一次）到，到加载html文件内部的src像wvjbscheme://__BRIDGE_LOADED__（只加载一次），再到wvjbscheme://__WVJB_QUEUE_MESSAGE__(其中该url可以有多个加载，因为该messagingIframe.src会被多次调用，只要涉及到有send数据就会调用到，也就是说只要js中执行了 callHandler就会调用该src对应的url)。
     __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
     if ([_base isCorrectProcotocolScheme:url]) {// scheme 是约定协议的@"wvjbscheme"
         if ([_base isBridgeLoadedURL:url]) {// host 是约定的@"__BRIDGE_LOADED__"
             [_base injectJavascriptFile];
-        } else if ([_base isQueueMessageURL:url]) {// host是约定的@"__WVJB_QUEUE_MESSAGE__"
-            NSString *messageQueueString = [self _evaluateJavascript:[_base webViewJavascriptFetchQueyCommand]];
+        } else if ([_base isQueueMessageURL:url]) {// host是约定的@"__WVJB_QUEUE_MESSAGE__"  即 该约定的队列中含有队列消息
+            NSString *messageQueueString = [self _evaluateJavascript:[_base webViewJavascriptFetchQueyCommand]];// 从js中获取该消息队列的数组（该数组中存放的是一个个message字典）的json，并从js中获取到返回的数据，如：
+#pragma mark OC中执行完JS代码，JS返回OC的数据
+            //            {
+            //            "data" : "我的Id是999",
+            //            "callbackId" : "cb_1_1488090658069",
+            //            "handlerName" : "getUserIdFromObjC"
+            //        }
+            
             [_base flushMessageQueue:messageQueueString];
         } else {
             [_base logUnkownMessage:url];
@@ -172,14 +196,6 @@
     }
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    if (webView != _webView) { return; }
-    
-    __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
-    if (strongDelegate && [strongDelegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
-        [strongDelegate webViewDidStartLoad:webView];
-    }
-}
 
 #endif
 

@@ -41,6 +41,8 @@ static int logMaxLength = 500;
     _uniqueId = 0;
 }
 
+#pragma mark Native端发送数据给JS
+//获取对应的Native传递来的数据：并发送Data。 无论本地html还是注入的html或Native中执行中的执行callHandler就会调用当前方法
 - (void)sendData:(id)data responseCallback:(WVJBResponseCallback)responseCallback handlerName:(NSString*)handlerName {
     NSMutableDictionary* message = [NSMutableDictionary dictionary];
     
@@ -57,9 +59,11 @@ static int logMaxLength = 500;
     if (handlerName) {
         message[@"handlerName"] = handlerName;
     }
+    //OC调用JS：需要告诉JS 当前回调的Id callbackId，参数 data，哪个协议方法 handlerName，的一个字典。
     [self _queueMessage:message];
 }
 
+#pragma mark JS端传递过来的 数组json（messageQueueString）给Native
 - (void)flushMessageQueue:(NSString *)messageQueueString{
     if (messageQueueString == nil || messageQueueString.length == 0) {
         NSLog(@"WebViewJavascriptBridge: WARNING: ObjC got nil while fetching the message queue JSON from webview. This can happen if the WebViewJavascriptBridge JS is not currently present in the webview, e.g if the webview just loaded a new page.");
@@ -74,21 +78,22 @@ static int logMaxLength = 500;
         }
         [self _log:@"RCVD" json:message];
         
+        // JS传递的 message 可能有2种：第1种是直接返回给Native的返回值，不需要Native处理再返回，含有@"responseId"字段； 第2种返回给Native数据并需要Native处理后，反馈给JS的，含有@"callbackId"字段。故下面的if判断：
         NSString* responseId = message[@"responseId"];
         if (responseId) {
             WVJBResponseCallback responseCallback = _responseCallbacks[responseId];
-            responseCallback(message[@"responseData"]);
+            responseCallback(message[@"responseData"]);//传递responseData 给Native，会跳转到WebViewJavascriptBridgeLibViewController类中的callHandler方法中
             [self.responseCallbacks removeObjectForKey:responseId];
         } else {
             WVJBResponseCallback responseCallback = NULL;
             NSString* callbackId = message[@"callbackId"];
             if (callbackId) {
-                responseCallback = ^(id responseData) {
+                responseCallback = ^(id responseData) {// 该block会从WebViewJavascriptBridgeLibViewController类的handler执行后，调用执行把Native的数据传递给JS。
                     if (responseData == nil) {
                         responseData = [NSNull null];
                     }
-                    
                     WVJBMessage* msg = @{ @"responseId":callbackId, @"responseData":responseData };
+#pragma mark 从Native端响应后，回调的数据msg，返回给JS
                     [self _queueMessage:msg];
                 };
             } else {
@@ -96,14 +101,14 @@ static int logMaxLength = 500;
                     // Do nothing
                 };
             }
-            
+            //  根据js传递来的方法名（该方法名Native和JS约定好的）message[@"handlerName"]，从Native 端根据已经保存的 self.messageHandlers, 获取到本地的block回调。
             WVJBHandler handler = self.messageHandlers[message[@"handlerName"]];
             
             if (!handler) {
                 NSLog(@"WVJBNoHandlerException, No handler for message from JS: %@", message);
                 continue;
             }
-            
+            // 调用WVJBHandler block，会跳转到WebViewJavascriptBridgeLibViewController类中 对应的registerHandler方法中block实现。
             handler(message[@"data"], responseCallback);
         }
     }
@@ -111,8 +116,9 @@ static int logMaxLength = 500;
 
 - (void)injectJavascriptFile {
 //  少： 生成预处理的js代码  核心
+//  注意：每次注入JS文件都做了一个处理self.startupMessageQueue = nil;
     NSString *js = WebViewJavascriptBridge_js();
-    [self _evaluateJavascript:js];
+    [self _evaluateJavascript:js];// 该方法的调用时会在内部再次调用src，即 webview会再次调用url重定向的delegate方法 shouldStartLoadWithRequest。执行完后再执行下面的if判断
     if (self.startupMessageQueue) {
         NSArray* queue = self.startupMessageQueue;
         self.startupMessageQueue = nil;
@@ -157,9 +163,11 @@ static int logMaxLength = 500;
 // Private
 // -------------------------------------------
 
+// base的协议方法
 - (void) _evaluateJavascript:(NSString *)javascriptCommand {
     [self.delegate _evaluateJavascript:javascriptCommand];
 }
+
 
 - (void)_queueMessage:(WVJBMessage*)message {
     if (self.startupMessageQueue) {
@@ -169,6 +177,7 @@ static int logMaxLength = 500;
     }
 }
 
+#pragma mark Native端的数据message字典 传递给 JS，并供JS端调用
 - (void)_dispatchMessage:(WVJBMessage*)message {
     NSString *messageJSON = [self _serializeMessage:message pretty:NO];
     //少：打印发送的json消息
@@ -194,7 +203,7 @@ static int logMaxLength = 500;
     }
 }
 
-#pragma mark 对字符串进行序列化json和反序列化变为object
+#pragma mark 对字符串进行序列化json和反序列化 变为 object（字典或数组）;UTF-8编码：NSString*hStr =@"你好啊"; encode后转化为 &#x4F60;&#x597D;&#x554A; 这样做是为了兼容ASCII
 - (NSString *)_serializeMessage:(id)message pretty:(BOOL)pretty{
     return [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:message options:(NSJSONWritingOptions)(pretty ? NSJSONWritingPrettyPrinted : 0) error:nil] encoding:NSUTF8StringEncoding];
 }

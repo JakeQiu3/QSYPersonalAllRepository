@@ -219,7 +219,6 @@
 		300C82CA1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = 300C82BF1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive */; };
 		300C82CB1E0AD7E9003C28F9 /* transform的属性列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C82C01E0AD7E9003C28F9 /* transform的属性列表.png */; };
 		300C82CC1E0AD7E9003C28F9 /* 转场动画类型.png in Resources */ = {isa = PBXBuildFile; fileRef = 300C82C11E0AD7E9003C28F9 /* 转场动画类型.png */; };
-		300CF85A1E5678060052D032 /* 3文章编辑素材库.zip in Resources */ = {isa = PBXBuildFile; fileRef = 300CF8591E5678060052D032 /* 3文章编辑素材库.zip */; };
 		303F38BD1D3B1B6400630F31 /* MulitplePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */; };
 		303F38C81D3B32C800630F31 /* CustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38C71D3B32C800630F31 /* CustomAlertViewController.m */; };
 		303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303F38CF1D3B9A0900630F31 /* TabActionColViewController.m */; };
@@ -340,7 +339,6 @@
 		737485641E56E88A00373120 /* 二维码分享和封装.zip in Resources */ = {isa = PBXBuildFile; fileRef = 737485631E56E88A00373120 /* 二维码分享和封装.zip */; };
 		7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53B1DF7D6C500390627 /* JsonTransferModel.m */; };
 		7378E5401DF7D6EA00390627 /* ExtensionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53F1DF7D6EA00390627 /* ExtensionModel.m */; };
-		737A1F2F1E6051B4003FA90A /* 已经修改的webview.zip in Resources */ = {isa = PBXBuildFile; fileRef = 737A1F2E1E6051B4003FA90A /* 已经修改的webview.zip */; };
 		73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */; };
 		738DEA221E029DB1003E30D2 /* NSString+LBHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA191E029DB1003E30D2 /* NSString+LBHash.m */; };
 		738DEA231E029DB1003E30D2 /* UIColor+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA1B1E029DB1003E30D2 /* UIColor+LBExtension.m */; };
@@ -670,7 +668,6 @@
 		300C82BF1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Core Animation2-CABasicAnimation.webarchive"; sourceTree = "<group>"; };
 		300C82C01E0AD7E9003C28F9 /* transform的属性列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transform的属性列表.png"; sourceTree = "<group>"; };
 		300C82C11E0AD7E9003C28F9 /* 转场动画类型.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "转场动画类型.png"; sourceTree = "<group>"; };
-		300CF8591E5678060052D032 /* 3文章编辑素材库.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "3文章编辑素材库.zip"; sourceTree = "<group>"; };
 		303F38BB1D3B1B6400630F31 /* MulitplePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulitplePickerViewController.h; sourceTree = "<group>"; };
 		303F38BC1D3B1B6400630F31 /* MulitplePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulitplePickerViewController.m; sourceTree = "<group>"; };
 		303F38C61D3B32C800630F31 /* CustomAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewController.h; sourceTree = "<group>"; };
@@ -886,7 +883,6 @@
 		7378E53B1DF7D6C500390627 /* JsonTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTransferModel.m; sourceTree = "<group>"; };
 		7378E53E1DF7D6EA00390627 /* ExtensionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionModel.h; sourceTree = "<group>"; };
 		7378E53F1DF7D6EA00390627 /* ExtensionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionModel.m; sourceTree = "<group>"; };
-		737A1F2E1E6051B4003FA90A /* 已经修改的webview.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "已经修改的webview.zip"; sourceTree = "<group>"; };
 		73801AF71DF65C4300E9EC42 /* SubDicTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDicTransferModel.h; sourceTree = "<group>"; };
 		73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDicTransferModel.m; sourceTree = "<group>"; };
 		738DEA181E029DB1003E30D2 /* NSString+LBHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBHash.h"; sourceTree = "<group>"; };
@@ -1498,7 +1494,6 @@
 			children = (
 				30DC004A1D03D200005EAD0C /* AppDelegate.h */,
 				30DC004B1D03D200005EAD0C /* AppDelegate.m */,
-				300CF8591E5678060052D032 /* 3文章编辑素材库.zip */,
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				731B64371E2F2E1B001854CA /* index 稳哥.html */,
@@ -2387,7 +2382,6 @@
 				735C80641E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.h */,
 				735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */,
 				735C80671E28DA090066B007 /* tesJavascriptBridge.html */,
-				737A1F2E1E6051B4003FA90A /* 已经修改的webview.zip */,
 			);
 			name = "webview的JavaScriptBridge";
 			sourceTree = "<group>";
@@ -2875,7 +2869,6 @@
 				300C82511E0AD05B003C28F9 /* JavaScript1.js in Resources */,
 				300C826C1E0AD05B003C28F9 /* prettify.js in Resources */,
 				300C815F1E0ACD5A003C28F9 /* bdsstyle.css in Resources */,
-				737A1F2F1E6051B4003FA90A /* 已经修改的webview.zip in Resources */,
 				300C81A01E0ACD5A003C28F9 /* 单例   .m文件.png in Resources */,
 				73BA9AE31DF5455800C0BCA6 /* 12.jpg in Resources */,
 				300C82321E0AD05B003C28F9 /* adscout.php in Resources */,
@@ -2920,7 +2913,6 @@
 				73BA9AED1DF5455800C0BCA6 /* 7.jpg in Resources */,
 				300C81A81E0ACD5A003C28F9 /* 通知传值A界面，接收后改变的.png in Resources */,
 				30AD65CA1E23D00700AFA089 /* ReactiveCocoa Demo 注册搜索嵌套信号.zip in Resources */,
-				300CF85A1E5678060052D032 /* 3文章编辑素材库.zip in Resources */,
 				73BA9AE21DF5455800C0BCA6 /* 11.jpg in Resources */,
 				300C81671E0ACD5A003C28F9 /* consult_5b07d2e.js in Resources */,
 				300C818D1E0ACD5A003C28F9 /* pubads_impl_73.js in Resources */,

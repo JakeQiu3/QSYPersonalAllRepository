@@ -39,9 +39,9 @@
 }
 
 - (void)creatJSBridge {
-    // 给哪个webview建立JS与OjbC的沟通桥梁
+    // 给哪个webview建立JS与OjbC的沟通桥梁：内部给webview设置了delegate为WebViewJavascriptBridge对象，并给WebViewJavascriptBridgeBase 设置了delegate也为WebViewJavascriptBridge对象
     self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.myWebView];
-    [self.bridge setWebViewDelegate:self];
+    [self.bridge setWebViewDelegate:self];// 并不是给WebViewJavascriptBridge对象设置delegate为self，只是WebViewJavascriptBridge的一个变量指针指向当前控制器，然后根据是否response 当前控制器的某些方法，去执行对应的方法（也就是下面的webview的代理方法）
 }
 
 - (void)renderButtons:(UIWebView*)webView {
@@ -77,6 +77,8 @@
             responseCallback(@{@"userId": @"123456"});
         }
     }];
+    
+#pragma mark 点击button时，JS调用OC时，会回调下面的block
     [self.bridge registerHandler:@"getBlogNameFromObjC" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSLog(@"js call getBlogNameFromObjC, data from js is %@", data);
         if (responseCallback) {// 反馈给JS的data数据
@@ -84,10 +86,10 @@
         }
     }];
     
-//    补充1：OC主动调用JS中已经公开的api方法getUserInfos，并传递参数data给JS
-    [self.bridge callHandler:@"getUserInfos" data:@"邱少一怎一个帅字了得" responseCallback:^(id responseData) {// JS返回给OC
-        NSLog(@"第1次调用的返回值 from js: %@", responseData);
-    }];
+    //    补充1：OC主动调用JS中已经公开的api方法getUserInfos，并传递参数data给JS
+//    [self.bridge callHandler:@"getUserInfos" data:@"邱少一怎一个帅字了得" responseCallback:^(id responseData) {// JS返回给OC
+//        NSLog(@"第1次调用的返回值 from js: %@", responseData);
+//    }];
     
     
     //补充2：只在OC中注册和调用handler，这样行么？答案可以告诉你，确定是不行的。
@@ -95,7 +97,7 @@
         NSLog(@"我就看看回调了么%@，可以肯定的是就是没调用",data);
     }];
     
-    [self.bridge callHandler:@"qsyLoveYou" data:@"我爱你少一"];
+//    [self.bridge callHandler:@"qsyLoveYou" data:@"我爱你少一"];
 }
 
 #pragma mark 2、OC调用JS：
@@ -109,8 +111,9 @@
 - (void)onOpenNewMan:(UIButton *)sender {
     //    [self.bridge callHandler:@"openWebviewBridgeNewMan"];
     //    [self.bridge callHandler:@"openWebviewBridgeNewMan" data:nil];
-     [self.bridge callHandler:@"openWebviewBridgeNewMan" data:@{@"name":@"把邱少一传给js看看会怎么样"} responseCallback:^(id responseData) {
-         NSLog(@"js方法执行完后，返回给OC的是:%@",responseData);
+    
+    [self.bridge callHandler:@"openWebviewBridgeNewMan" data:@{@"name":@"把邱少一传给js看看会怎么样"} responseCallback:^(id responseData) {
+        NSLog(@"js方法执行完后，返回给OC的是:%@",responseData);
     }];
 }
 
@@ -131,8 +134,8 @@
     if (webView!=_myWebView) {
         return YES;
     }
-    NSURL *totalUrl = [request URL];
-    NSString *requestStr = [totalUrl absoluteString];
+    // 初次进来是requestStr： file:///Users/qsymac/Library/Developer/CoreSimulator/Devices/7C12CD0C-8181-4BCC-8B8D-54E009DC2652/data/Containers/Bundle/Application/8162882D-273A-4180-9654-D3E342F1198C/QSYPersonalRepositoryAll.app/tesJavascriptBridge.html
+    NSString *requestStr = [[request URL] absoluteString];
     NSLog(@"当前执行的方法名：%@, get currentLoadUrl:%@",NSStringFromSelector(_cmd),requestStr);
     return YES;
 }
@@ -140,7 +143,7 @@
 //- (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id<WebPolicyDecisionListener>)listener
 //{
 //    NSURL *url = [request URL];
-//    
+//
 //}
 #pragma mark getter method
 - (UIWebView *)myWebView {

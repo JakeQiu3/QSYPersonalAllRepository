@@ -55,6 +55,7 @@
            responseCallback({'name':'邱少一','gender':'男','characteristic':'表脸，邱少一你确定你帅?!'})
            
        })
+                                   
        bridge.registerHandler('getUserInfos', function(data,responseCallback) {
          log("Get user information from ObjC:",data)
          responseCallback('我已经看到你的data，这是返回给你的，ObjC拿去,不谢')
