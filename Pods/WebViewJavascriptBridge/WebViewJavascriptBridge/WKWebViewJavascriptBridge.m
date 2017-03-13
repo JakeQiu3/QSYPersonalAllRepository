@@ -92,6 +92,17 @@
     }];
 }
 
+#pragma mark mk的navitationDelegate method
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    if (webView != _webView) { return; }
+    
+    __strong typeof(_webViewDelegate) strongDelegate = _webViewDelegate;
+    if (strongDelegate && [strongDelegate respondsToSelector:@selector(webView:didStartProvisionalNavigation:)]) {
+        [strongDelegate webView:webView didStartProvisionalNavigation:navigation];
+    }
+}
+
+
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
     if (webView != _webView) { return; }
@@ -125,15 +136,6 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
         [_webViewDelegate webView:webView decidePolicyForNavigationAction:navigationAction decisionHandler:decisionHandler];
     } else {
         decisionHandler(WKNavigationActionPolicyAllow);
-    }
-}
-
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
-    if (webView != _webView) { return; }
-    
-    __strong typeof(_webViewDelegate) strongDelegate = _webViewDelegate;
-    if (strongDelegate && [strongDelegate respondsToSelector:@selector(webView:didStartProvisionalNavigation:)]) {
-        [strongDelegate webView:webView didStartProvisionalNavigation:navigation];
     }
 }
 

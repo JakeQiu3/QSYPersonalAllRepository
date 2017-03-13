@@ -13,7 +13,7 @@
 
 typedef void (^WVJBResponseCallback)(id responseData);
 typedef void (^WVJBHandler)(id data, WVJBResponseCallback responseCallback);
-typedef NSDictionary WVJBMessage;// key是@“handleName” value是 对应的名字
+typedef NSDictionary WVJBMessage;// key是具体的 @“handleName” value是 对应的名字。
 
 // 该baseBridge中协议的作用：让其 delegate(Bridge)中的webview执行js
 @protocol WebViewJavascriptBridgeBaseDelegate <NSObject>
@@ -24,8 +24,8 @@ typedef NSDictionary WVJBMessage;// key是@“handleName” value是 对应的�
 
 
 @property (assign) id <WebViewJavascriptBridgeBaseDelegate> delegate;
-@property (strong, nonatomic) NSMutableArray* startupMessageQueue; //当前执行的消息数组。
-@property (strong, nonatomic) NSMutableDictionary* responseCallbacks;// 回调的字典 保存着 key：callbackId，value：WVJBResponseCallback 的数据block
+@property (strong, nonatomic) NSMutableArray* startupMessageQueue; // 当前执行的消息数组：保存着一个个字典为{@"handleName" : 商定的协议名称}
+@property (strong, nonatomic) NSMutableDictionary* responseCallbacks;// 回调的字典，key：callbackId，value：WVJBResponseCallback 的数据block
 @property (strong, nonatomic) NSMutableDictionary* messageHandlers;// OC端执行register时生成的字典key：handlerName方法名, value：WVJBHandler block
 @property (strong, nonatomic) WVJBHandler messageHandler;
 
