@@ -8,12 +8,14 @@
 
 #import "WKWebViewDemoViewController.h"
 #import <WebKit/WebKit.h>
-#import "SVProgressHUD.h"
+#define HTML @"<head></head><img src='http://www.nsu.edu.cn/v/2014v3/img/background/3.jpg' />"
 
-@interface WKWebViewDemoViewController ()<WKUIDelegate,WKNavigationDelegate>
+@interface WKWebViewDemoViewController ()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
+{
+    WKUserContentController* userContentController;
+}
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
-
 @end
 
 
@@ -23,71 +25,273 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-//    [self loadWK];
-    [self loadJSCode];
-//    [self loadWKWebView];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self loadWK];
+    //    [self loadJSCode]; // 手动调用js代码
     
     // Do any additional setup after loading the view.
 }
 
 - (void)loadWK {
-    _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+    // 1、配置环境
+    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+    // 1、1 设置偏好设置
+    config.preferences = [[WKPreferences alloc] init];
+    // 默认为0
+    config.preferences.minimumFontSize = 10;
+    // 默认认为YES
+    config.preferences.javaScriptEnabled = YES;
+    // 在iOS上默认为NO，表示不能自动通过窗口打开
+    config.preferences.javaScriptCanOpenWindowsAutomatically = NO;
+    //1、2 web内容处理池:未暴露api，暂时无用
+    config.processPool = [[WKProcessPool alloc] init];
+    //1、3 通过JS与webview内容交互,注册js方法:注入JS对象名称“AppModel”的js方法，当JS通过AppModel来调用时，我们可以在WKScriptMessageHandler代理中接收到。
+    userContentController= [[WKUserContentController alloc] init];
+    config.userContentController = userContentController;
+    [config.userContentController addScriptMessageHandler:self name:@"AppModel"];
+    
+    // 加载WKWebview
+    _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
     _webView.UIDelegate = self;
     _webView.navigationDelegate = self;
-    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"qsytest" withExtension:@"html"];
+    //    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
     [self.view addSubview:_webView];
+    
+    // 添加KVO监听
+    [self.webView addObserver:self
+                   forKeyPath:@"loading"
+                      options:NSKeyValueObservingOptionNew
+                      context:nil];
+    [self.webView addObserver:self
+                   forKeyPath:@"title"
+                      options:NSKeyValueObservingOptionNew
+                      context:nil];
+    [self.webView addObserver:self
+                   forKeyPath:@"estimatedProgress"
+                      options:NSKeyValueObservingOptionNew
+                      context:nil];
+    
+    
+    // 添加进入条
+    self.progressView = [[UIProgressView alloc] init];
+    self.progressView.frame = self.view.bounds;
+    [self.view addSubview:self.progressView];
+    self.progressView.backgroundColor = [UIColor redColor];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"后退" style:UIBarButtonItemStyleDone target:self action:@selector(goback)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"前进" style:UIBarButtonItemStyleDone target:self action:@selector(gofarward)];
+    
+}
+- (void)dealloc{
+    //这里需要注意，前面增加过的方法一定要remove。
+    [userContentController removeScriptMessageHandlerForName:@"sayhello"];
+    [self removeObserver:self forKeyPath:@"loading"];
+    [self removeObserver:self forKeyPath:@"title"];
+    [self removeObserver:self forKeyPath:@"estimatedProgress"];
+}
+#pragma mark 前进或后退的方法
+- (void)goback {
+    if ([self.webView canGoBack]) {
+        [self.webView goBack];
+    }
+}
+
+- (void)gofarward {
+    if ([self.webView canGoForward]) {
+        [self.webView goForward];
+    }
+}
+
+#pragma mark 添加观察者的方法
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"loading"]) {
+        NSLog(@"loading");
+    } else if ([keyPath isEqualToString:@"title"]) {
+        self.title = self.webView.title;
+    } else if ([keyPath isEqualToString:@"estimatedProgress"]) {
+        NSLog(@"progress: %f", self.webView.estimatedProgress);
+        self.progressView.progress = self.webView.estimatedProgress;
+    }
+}
+
+#pragma mark WKScriptMessageHandler 的代理方法：接受到js传递过来的body中的信息,OC在JS调用方法后做的处理
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+    // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray, NSDictionary, and NSNull类型
+    if ([message.name isEqualToString:@"AppModel"]) {
+        NSLog(@"我就是测一测:%@",message.body);
+    }
 }
 
 #pragma mark WKNavigationDelegate 的代理方法,执行状态回调
-
 // 页面开始加载某个iframe或frame时就会执行调用
+/**
+ *  页面开始加载时调用
+ *
+ *  @param webView    实现该代理的webview
+ *  @param navigation 当前navigation
+ */
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     
 }
+
 // 当某个iframe的内容开始返回时调用
+/**
+ *  当内容开始返回时调用
+ *
+ *  @param webView    实现该代理的webview
+ *  @param navigation 当前navigation
+ */
 - (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
     
 }
 // 页面加载完成之后调用
+/**
+ *  页面加载完成之后调用
+ *
+ *  @param webView    实现该代理的webview
+ *  @param navigation 当前navigation
+ */
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     
 }
+
 // 页面加载失败时调用
+/**
+ *  加载失败时调用
+ *
+ *  @param webView    实现该代理的webview
+ *  @param navigation 当前navigation
+ *  @param error      错误
+ */
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation {
     
 }
 
 // 接收到服务器跳转请求之后调用
+/**
+ *  接收到服务器跳转请求之后调用
+ *
+ *  @param webView      实现该代理的webview
+ *  @param navigation   当前navigation
+ */
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation {
     
 }
 
-// 在收到响应后，决定是否跳转
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
-    
+// 在发送请求之前，决定是否跳转
+/**
+ *  在发送请求之前，决定是否跳转
+ *
+ *  @param webView          实现该代理的webview
+ *  @param navigationAction 当前navigation
+ *  @param decisionHandler  是否调转block
+ */
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    NSString *hostName = navigationAction.request.URL.host.lowercaseString;
+    if (navigationAction.navigationType == WKNavigationTypeLinkActivated && [hostName containsString:@".baidu.com"]) { // 获取百度等跨域链接的地址
+        // 对于跨域，手动跳转
+        [[UIApplication sharedApplication] openURL:navigationAction.request.URL options:[NSDictionary dictionary] completionHandler:^(BOOL success) {
+        }];
+        // 不允许web内跳转
+        decisionHandler(WKNavigationActionPolicyCancel);
+    } else {
+        self.progressView.alpha = 1.0;
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
+    NSLog(@"%s", __FUNCTION__);
 }
 
-// 在发送请求之前，决定是否跳转
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
+// 在收到服务器response后，决定是否跳转
+/**
+ *  在收到响应后，决定是否跳转
+ *
+ *  @param webView            实现该代理的webview
+ *  @param navigationResponse 当前navigation
+ *  @param decisionHandler    是否跳转block
+ */
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
+    decisionHandler(WKNavigationResponsePolicyAllow);
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *__nullable credential))completionHandler {
+    NSLog(@"%s", __FUNCTION__);
+    completionHandler(NSURLSessionAuthChallengePerformDefaultHandling, nil);
+}
+
+- (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView {
+    NSLog(@"%s", __FUNCTION__);
 }
 
 #pragma mark WKUIDelegate 的代理方法:新增的方法
+// 创建一个新的WebView
+- (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
+    return [[WKWebView alloc] init];
+}
+
 // 用于WKWebView处理web界面的三种提示框(警告框、确认框、输入框)
 /**
- *  web界面中有弹出警告框时调用
+ *  web界面（不是Native界面）中有弹出警告框时调用，也就是说js端调用alert方法 或者 Native端手动调用时，就会调用执行该代理方法。
+ // 如：Native端的手动调用JS function: 每次页面完成都弹出来，大家可以在测试时再打开
+ NSString *js = @"callJsAlert()";
+ [self.webView evaluateJavaScript:js completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+ NSLog(@"response: %@ error: %@", response, error);
+ NSLog(@"call js alert by native");
+ }];
+ 
  *
  *  @param webView           实现该代理的webview
  *  @param message           警告框中的内容
  *  @param frame             主窗口
  *  @param completionHandler 警告框消失调用
  */
-- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(void (^)())completionHandler {
-    
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
+    NSLog(@"%s", __FUNCTION__);
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert" message:@"JS调用alert" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler();
+    }]];
+    [self presentViewController:alert animated:YES completion:NULL];
+    NSLog(@"%@", message);
 }
 
-#pragma mark 动态加载并运行JS代码
+// 确认信息时调用
+- (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL result))completionHandler {
+    NSLog(@"%s", __FUNCTION__);
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"confirm" message:@"JS调用confirm" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler(YES);
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler(NO);
+    }]];
+    [self presentViewController:alert animated:YES completion:NULL];
+    
+    NSLog(@"%@", message);
+}
+
+- (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(nullable NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * __nullable result))completionHandler {
+    NSLog(@"%s", __FUNCTION__);
+    
+    NSLog(@"%@", prompt);
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"textinput" message:@"JS调用输入框" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.textColor = [UIColor redColor];
+    }];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler([[alert.textFields lastObject] text]);
+    }]];
+    
+    [self presentViewController:alert animated:YES completion:NULL];
+}
+
+
+// 动态加载并运行JS代码
 - (void)loadJSCode {
     NSString *js = @"var count = document.images.length;for (var i = 0; i < count; i++) {var image = document.images[i];image.style.width=320;};window.alert('找到' + count + '张图');";
     // 根据JS字符串 初始化WKUserScript对象
@@ -99,191 +303,16 @@
     _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
     [_webView loadHTMLString:@"<head></head><imgea src='http://www.nsu.edu.cn/v/2014v3/img/background/3.jpg' /" baseURL:nil];
     [self.view addSubview:_webView];
-    
     // OC调用JS方法
     [_webView evaluateJavaScript:js completionHandler:nil];
     //OC注册供JS调用的方法
     [[_webView configuration].userContentController addScriptMessageHandler:self name:@"closeMe"];
-    
-}
-//OC在JS调用方法做的处理
-- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
-{
-    NSLog(@"JS 调用了 %@ 方法，传回参数 %@",message.name,message.body);
 }
 
-//
-//- (void)loadWKWebView {
-//    
-//    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-//    config.preferences = [[WKPreferences alloc] init];
-//    config.preferences.minimumFontSize =10;
-//    config.preferences.javaScriptEnabled = YES;
-//    config.preferences.javaScriptCanOpenWindowsAutomatically = NO;
-//    // web内容处理池
-//    config.processPool = [[WKProcessPool alloc] init];
-//    // 通过JS与webview内容交互
-//    config.userContentController = [[WKUserContentController alloc] init];
-//    
-//    _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
-//    _webView.UIDelegate = self;
-//    _webView.navigationDelegate = self;
-//    _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth |UIViewAutoresizingFlexibleHeight;
-//    _webView.scrollView.showsVerticalScrollIndicator = YES;
-//    _webView.scrollView.showsHorizontalScrollIndicator = NO;
-//    [self.view addSubview:_webView];
-//    
-//    [self loadWKWebViewRequest];
-//    
-//    // 添加KVO监听
-//    [_webView addObserver:self
-//               forKeyPath:@"loading"
-//                  options:NSKeyValueObservingOptionNew
-//                  context:nil];
-//    [_webView addObserver:self
-//               forKeyPath:@"title"
-//                  options:NSKeyValueObservingOptionNew
-//                  context:nil];
-//    [_webView addObserver:self
-//               forKeyPath:@"estimatedProgress"
-//                  options:NSKeyValueObservingOptionNew
-//                  context:nil];
-//    // 添加进度条
-//    [self addProgressView];
-//}
-//
-//- (void)addProgressView {
-//    // 添加进入条
-//    self.progressView = [[UIProgressView alloc] init];
-//    self.progressView.backgroundColor = [UIColor greenColor];
-//    self.progressView.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 1.5);
-//    [self.view addSubview:self.progressView];
-//}
-////WKWebView的基本用法：
-//// 加载网页
-//- (void)loadWKWebViewRequest {
-//    //    加载url
-//    self.payUrl = @"http://www.baidu.com";
-//    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.payUrl]]];
-//    
-//    //#pragma mark 动态加载并运行JS代码，加载html的字符串
-//    //    [_webView loadHTMLString:@"<head></head><imgea src='http://www.nsu.edu.cn/v/2014v3/img/background/3.jpg' />" baseURL:nil];
-//}
-//
-//#pragma mark WKNavigationDelegate 的代理方法
-////开始加载时执行
-//- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
-//// [SVProgressHUD showWithStatus:@"正在加载..."];
-//}
-//
-//// 当内容开始返回时,调用
-//- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
-//    NSLog(@"开始加载到数据");
-//}
-//
-//// 页面加载完成之后调用
-//- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-////    [SVProgressHUD dismiss];
-//}
-//
-//// 页面加载失败时调用
-//- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
-////    [SVProgressHUD dismiss];
-//}
-//
-//#pragma mark  页面的跳转 代理
-//// 接收到服务器跳转请求之后调用
-//- (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation {
-//   
-//}
-//
-//// 在收到响应后，决定是否跳转
-//- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
-//    
-//    decisionHandler(WKNavigationResponsePolicyAllow);
-//}
-//// 在发送请求之前，决定是否跳转
-//- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-//    decisionHandler(WKNavigationActionPolicyAllow);
-//    NSString *hostName =navigationAction.request.URL.host.lowercaseString;
-//    if (navigationAction.navigationType == WKNavigationTypeLinkActivated && ![hostName containsString:@".baidu.com"]) {
-//        // 对于跨域，需要手动跳转
-//        [[UIApplication sharedApplication] openURL:navigationAction.request.URL];
-//        //        不允许web内跳转:执行block 方法
-//        decisionHandler(WKNavigationActionPolicyCancel);
-//        
-//    } else {
-//        self.progressView.alpha = 1.0;
-//        decisionHandler(WKNavigationActionPolicyAllow);
-//    }
-//}
-//
-//- (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
-//    
-//    completionHandler(NSURLSessionAuthChallengePerformDefaultHandling, nil);
-//    
-//}
-////新的WKUIDelegate协议
-///**
-// *  web界面中有弹出警告框时调用
-// *
-// *  @param webView           实现该代理的webview
-// *  @param message            警告框中的内容
-// *  @param frame             主窗口
-// *  @param completionHandler 警告框消失调用
-// */
-//- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
-//    
-//    NSLog(@"类名和方法名：%s(第%d行),类的描述：%@",__PRETTY_FUNCTION__,__LINE__,NSStringFromClass([self class]));
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert" message:@"JS调用alert" preferredStyle:UIAlertControllerStyleAlert];
-//    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定"  style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        completionHandler();
-//    }];
-//    
-//    [alert addAction:confirmAction];
-//    [self presentViewController:alert animated:YES completion:NULL];
-//    
-//}
-//
-//
-//#pragma  KVO webview的属性，并做处理
-//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-//    
-//    if ([keyPath isEqualToString:@"loading"]) {
-//        //        NSLog(@"loading");
-//    }else if ([keyPath isEqualToString:@"title"]) {
-//        self.title = self.webView.title;
-//    } else if ([keyPath isEqualToString:@"estimatedProgress"]) {
-//        self.progressView.progress = self.webView.estimatedProgress;
-//    }
-//    // 加载完成
-//    if (!self.webView.loading) {
-//        // 手动调用JS代码
-//        // 每次页面完成都弹出来，大家可以在测试时再打开
-//        NSString *js = @"callJsAlert()";
-//        [self.webView evaluateJavaScript:js completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-//            
-//            NSLog(@"response: %@ error: %@", response, error);
-//            NSLog(@"call js alert by native");
-//        }];
-//        
-//        [UIView animateWithDuration:0.5 animations:^{
-//            self.progressView.alpha = 0;
-//        }];
-//    }
-//    
-//}
-//
-//#pragma mark - WKScriptMessageHandler
-//- (void)userContentController:(WKUserContentController *)userContentController
-//      didReceiveScriptMessage:(WKScriptMessage *)message {
-//    if ([message.name isEqualToString:@"TestModel"]) {
-//        // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray,
-//        // NSDictionary, and NSNull类型
-//        //        NSLog(@"%@", message.body);
-//
-//    }
-//}
+
+- (void)webViewDidClose:(WKWebView *)webView {
+    NSLog(@"%s", __FUNCTION__);
+}
 
 
 @end

@@ -340,6 +340,7 @@
 		7378E53C1DF7D6C500390627 /* JsonTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53B1DF7D6C500390627 /* JsonTransferModel.m */; };
 		7378E5401DF7D6EA00390627 /* ExtensionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7378E53F1DF7D6EA00390627 /* ExtensionModel.m */; };
 		73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */; };
+		738848761E7677B000846546 /* qsytest.html in Resources */ = {isa = PBXBuildFile; fileRef = 738848751E7677B000846546 /* qsytest.html */; };
 		738DEA221E029DB1003E30D2 /* NSString+LBHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA191E029DB1003E30D2 /* NSString+LBHash.m */; };
 		738DEA231E029DB1003E30D2 /* UIColor+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA1B1E029DB1003E30D2 /* UIColor+LBExtension.m */; };
 		738DEA241E029DB1003E30D2 /* UIImage+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA1D1E029DB1003E30D2 /* UIImage+LBExtension.m */; };
@@ -885,6 +886,7 @@
 		7378E53F1DF7D6EA00390627 /* ExtensionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionModel.m; sourceTree = "<group>"; };
 		73801AF71DF65C4300E9EC42 /* SubDicTransferModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDicTransferModel.h; sourceTree = "<group>"; };
 		73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDicTransferModel.m; sourceTree = "<group>"; };
+		738848751E7677B000846546 /* qsytest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = qsytest.html; sourceTree = "<group>"; };
 		738DEA181E029DB1003E30D2 /* NSString+LBHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBHash.h"; sourceTree = "<group>"; };
 		738DEA191E029DB1003E30D2 /* NSString+LBHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBHash.m"; sourceTree = "<group>"; };
 		738DEA1A1E029DB1003E30D2 /* UIColor+LBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LBExtension.h"; sourceTree = "<group>"; };
@@ -1467,6 +1469,7 @@
 			children = (
 				730CFB3B1D1A74D500B62765 /* WKWebViewDemoViewController.h */,
 				730CFB3C1D1A74D500B62765 /* WKWebViewDemoViewController.m */,
+				738848751E7677B000846546 /* qsytest.html */,
 			);
 			name = WKWebview;
 			sourceTree = "<group>";
@@ -2841,6 +2844,7 @@
 				300C82311E0AD05B003C28F9 /* ad.js in Resources */,
 				300C82471E0AD05B003C28F9 /* default.css in Resources */,
 				300C824F1E0AD05B003C28F9 /* ico_rss.gif in Resources */,
+				738848761E7677B000846546 /* qsytest.html in Resources */,
 				73BA9AF31DF5455800C0BCA6 /* movielist.json in Resources */,
 				300C82521E0AD05B003C28F9 /* job_reco.css in Resources */,
 				300C81891E0ACD5A003C28F9 /* notify.js in Resources */,
