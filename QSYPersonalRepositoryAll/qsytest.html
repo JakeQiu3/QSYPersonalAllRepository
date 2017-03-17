@@ -33,8 +33,8 @@
         <script type="text/javascript">
             
         function callJsAlert() {
-                alert('Objective-C call js to show alert');
-                // AppModel是我们所注入的对象：body中为 -> 给native传输的数据，数据类型可以为json。
+                alert('Objective-C call js to show alert');// alert中的数据为传递给Native的message。
+                //js调用该appModel，并postMessage：AppModel是我们所注入的对象：body中为 -> 给native传输的数据，数据类型可以为json。
                 window.webkit.messageHandlers.AppModel.postMessage({body: 'call js alert in js'});
             }
         

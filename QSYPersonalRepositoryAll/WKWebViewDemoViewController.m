@@ -8,12 +8,11 @@
 
 #import "WKWebViewDemoViewController.h"
 #import <WebKit/WebKit.h>
+#import "WeakScriptMessageDelegate.h"
 #define HTML @"<head></head><img src='http://www.nsu.edu.cn/v/2014v3/img/background/3.jpg' />"
 
 @interface WKWebViewDemoViewController ()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
-{
-    WKUserContentController* userContentController;
-}
+
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
 @end
@@ -47,9 +46,10 @@
     //1、2 web内容处理池:未暴露api，暂时无用
     config.processPool = [[WKProcessPool alloc] init];
     //1、3 通过JS与webview内容交互,注册js方法:注入JS对象名称“AppModel”的js方法，当JS通过AppModel来调用时，我们可以在WKScriptMessageHandler代理中接收到。
-    userContentController= [[WKUserContentController alloc] init];
-    config.userContentController = userContentController;
-    [config.userContentController addScriptMessageHandler:self name:@"AppModel"];
+    config.userContentController = [[WKUserContentController alloc] init];
+   
+    [config.userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"AppModel"];
+//     [config.userContentController addScriptMessageHandler:self name:@"AppModel"]; 该写法中会直接导致self被强引用，而不被释放。
     
     // 加载WKWebview
     _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
@@ -83,17 +83,18 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"后退" style:UIBarButtonItemStyleDone target:self action:@selector(goback)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"前进" style:UIBarButtonItemStyleDone target:self action:@selector(gofarward)];
-    
 }
+
 - (void)dealloc{
     //这里需要注意，前面增加过的方法一定要remove。
-    [userContentController removeScriptMessageHandlerForName:@"sayhello"];
-    [self removeObserver:self forKeyPath:@"loading"];
-    [self removeObserver:self forKeyPath:@"title"];
-    [self removeObserver:self forKeyPath:@"estimatedProgress"];
+    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"sayhello"];
+    [self.webView removeObserver:self forKeyPath:@"loading"];
+    [self.webView removeObserver:self forKeyPath:@"title"];
+    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 #pragma mark 前进或后退的方法
 - (void)goback {
+    [self.navigationController popViewControllerAnimated:YES];// 测试用
     if ([self.webView canGoBack]) {
         [self.webView goBack];
     }
@@ -117,7 +118,7 @@
     }
 }
 
-#pragma mark WKScriptMessageHandler 的代理方法：接受到js传递过来的body中的信息,OC在JS调用方法后做的处理
+#pragma mark WKScriptMessageHandler 的代理方法：接受到js调用时，传递过来的body中的信息,OC在JS调用方法后做的处理。如 html中执行了：window.webkit.messageHandlers.AppModel.postMessage({body: 'call js alert in js'});
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray, NSDictionary, and NSNull类型
     if ([message.name isEqualToString:@"AppModel"]) {
@@ -133,6 +134,7 @@
  *  @param webView    实现该代理的webview
  *  @param navigation 当前navigation
  */
+
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     
 }
@@ -255,7 +257,7 @@
         completionHandler();
     }]];
     [self presentViewController:alert animated:YES completion:NULL];
-    NSLog(@"%@", message);
+    NSLog(@"就是alert方法中传递过来的参数：%@", message);
 }
 
 // 确认信息时调用
@@ -274,6 +276,7 @@
     NSLog(@"%@", message);
 }
 
+// 文本输入时会调用
 - (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(nullable NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * __nullable result))completionHandler {
     NSLog(@"%s", __FUNCTION__);
     
@@ -306,7 +309,7 @@
     // OC调用JS方法
     [_webView evaluateJavaScript:js completionHandler:nil];
     //OC注册供JS调用的方法
-    [[_webView configuration].userContentController addScriptMessageHandler:self name:@"closeMe"];
+    [[_webView configuration].userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"closeMe"];
 }
 
 

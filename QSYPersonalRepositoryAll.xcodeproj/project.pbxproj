@@ -329,6 +329,7 @@
 		7323B4981D2B9D6300CE6790 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4971D2B9D6300CE6790 /* BannerViewController.m */; };
 		732780D31E07873000B399D0 /* LBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 732780D21E07873000B399D0 /* LBUtil.m */; };
 		734075341D124876000652E0 /* TestSynthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 734075331D124876000652E0 /* TestSynthesize.m */; };
+		734261C31E7BCF7D00455563 /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 734261C21E7BCF7D00455563 /* WeakScriptMessageDelegate.m */; };
 		7358D9D61D05642600B7484C /* FreezeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358D9D51D05642500B7484C /* FreezeViewController.m */; };
 		735C80631E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C80621E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.m */; };
 		735C80661E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735C80651E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m */; };
@@ -868,6 +869,8 @@
 		732780D21E07873000B399D0 /* LBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBUtil.m; sourceTree = "<group>"; };
 		734075321D124876000652E0 /* TestSynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSynthesize.h; sourceTree = "<group>"; };
 		734075331D124876000652E0 /* TestSynthesize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSynthesize.m; sourceTree = "<group>"; };
+		734261C11E7BCF7D00455563 /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		734261C21E7BCF7D00455563 /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
 		7358D9D41D05642500B7484C /* FreezeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreezeViewController.h; sourceTree = "<group>"; };
 		7358D9D51D05642500B7484C /* FreezeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreezeViewController.m; sourceTree = "<group>"; };
 		735C80611E28D6970066B007 /* WebViewViaJavaScriptCoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewViaJavaScriptCoreViewController.h; sourceTree = "<group>"; };
@@ -1471,6 +1474,8 @@
 			children = (
 				730CFB3B1D1A74D500B62765 /* WKWebViewDemoViewController.h */,
 				730CFB3C1D1A74D500B62765 /* WKWebViewDemoViewController.m */,
+				734261C11E7BCF7D00455563 /* WeakScriptMessageDelegate.h */,
+				734261C21E7BCF7D00455563 /* WeakScriptMessageDelegate.m */,
 				738848751E7677B000846546 /* qsytest.html */,
 				738848771E76A3E200846546 /* WKWebView_Swift版本.zip */,
 			);
@@ -3005,6 +3010,7 @@
 				739B57AE1DF01B2400C8C9B0 /* GDataXMLNode.m in Sources */,
 				739B57AB1DF01B2400C8C9B0 /* FmdbHandleObject.m in Sources */,
 				30AD663B1E23D48100AFA089 /* UseNavBarScrollViewController.m in Sources */,
+				734261C31E7BCF7D00455563 /* WeakScriptMessageDelegate.m in Sources */,
 				739B57A61DF01B2400C8C9B0 /* FMDatabase.m in Sources */,
 				30AD661A1E23D18300AFA089 /* MHScanViewController.m in Sources */,
 				3091A7871CEE1A64003B97F4 /* BtnNewAgainViewController.m in Sources */,
