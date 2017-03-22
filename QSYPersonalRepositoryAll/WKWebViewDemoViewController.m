@@ -26,10 +26,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self loadWK];
-    //    [self loadJSCode]; // 手动调用js代码
-    
-    // Do any additional setup after loading the view.
+//    [self loadWK];
+        [self loadJSCode]; // 手动调用js代码
 }
 
 - (void)loadWK {
@@ -57,7 +55,15 @@
     _webView.navigationDelegate = self;
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"qsytest" withExtension:@"html"];
     //    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
-    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
+    // 少：传递参数给html
+    NSMutableURLRequest * request = [[NSMutableURLRequest alloc]initWithURL:url];
+    NSString *bodyParams = [NSString stringWithFormat: @"?testId=%@", @"110"];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[bodyParams dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    
+    NSString *bodyParams2 = [NSString stringWithFormat: @"#testId=%@", @"110"];
+    [_webView loadRequest:request];
     [self.view addSubview:_webView];
     
     // 添加KVO监听
@@ -304,7 +310,7 @@
     [config.userContentController addUserScript:script];
     // wkwebview加载html
     _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
-    [_webView loadHTMLString:@"<head></head><imgea src='http://www.nsu.edu.cn/v/2014v3/img/background/3.jpg' /" baseURL:nil];
+    [_webView loadHTMLString:@"<image src='http://www.nsu.edu.cn/v/2014v3/img/background/3.jpg' />" baseURL:nil]; //
     [self.view addSubview:_webView];
     // OC调用JS方法
     [_webView evaluateJavaScript:js completionHandler:nil];

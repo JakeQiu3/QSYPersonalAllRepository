@@ -42,7 +42,7 @@ static int logMaxLength = 500;
 }
 
 #pragma mark Native端发送数据给JS
-//获取对应的Native传递来的数据：并发送Data。 无论本地html还是注入的html或Native中执行中的执行callHandler就会调用当前方法
+// 获取对应的Native传递来的数据：并发送Data。 无论本地html还是注入的html或Native中执行中的执行callHandler就会调用当前方法
 - (void)sendData:(id)data responseCallback:(WVJBResponseCallback)responseCallback handlerName:(NSString*)handlerName {
     NSMutableDictionary* message = [NSMutableDictionary dictionary];
     
@@ -59,7 +59,7 @@ static int logMaxLength = 500;
     if (handlerName) {
         message[@"handlerName"] = handlerName;
     }
-    //OC调用JS：需要告诉JS 当前回调的Id callbackId，参数 data，哪个协议方法 handlerName，的一个字典。
+    // OC调用JS：需要告诉JS 当前回调的Id：callbackId，参数：data，哪个协议方法 handlerName，的一个字典。
     [self _queueMessage:message];
 }
 

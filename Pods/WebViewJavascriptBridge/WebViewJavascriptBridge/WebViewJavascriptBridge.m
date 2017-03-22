@@ -162,7 +162,7 @@
     }
 }
 
-// 该方法触发的时机：每次url指针从定向！具体包括：loadRequest加载具体的html时、加载html中某js的url时、stringByEvaluatingJavaScriptFromString执行某js代码中有loadRequest的Url
+// 该方法触发的时机：每次url指针从定向！具体包括：loadRequest加载具体的html时、加载html中某js中含有url时、stringByEvaluatingJavaScriptFromString执行某js代码中有loadRequest的Url
 
 //拦截url: 方法判断URL是否是需要bridge的URL，若是，则通过injectJavascriptFile方法注入JS；否则判断URL是否是QueueMessage，若是，则执行查询命令JS并刷新消息队列；最后，URL被识别为未知的消息，执行。
 

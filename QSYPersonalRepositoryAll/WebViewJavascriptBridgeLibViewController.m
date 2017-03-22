@@ -100,7 +100,7 @@
 //    [self.bridge callHandler:@"qsyLoveYou" data:@"我爱你少一"];
 }
 
-#pragma mark 2、OC调用JS：
+#pragma mark 少 2、OC调用JS：
 //onOpenBlogArticle为OC中btn的click方法,通过bride执行callHandler调用js中名称为handlerName的方法，并可以将OC的data数据传递给js。这就实现了OC调用JS。
 //表现：在WebViewJavascriptBridge内部执行了
 //- (NSString*) _evaluateJavascript:(NSString*)javascriptCommand
