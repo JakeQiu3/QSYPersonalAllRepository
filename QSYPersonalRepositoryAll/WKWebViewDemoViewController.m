@@ -26,8 +26,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.automaticallyAdjustsScrollViewInsets = NO;
-//    [self loadWK];
-        [self loadJSCode]; // 手动调用js代码
+    [self loadWK];
+    //    [self loadJSCode]; // 手动调用js代码
 }
 
 - (void)loadWK {
@@ -45,25 +45,32 @@
     config.processPool = [[WKProcessPool alloc] init];
     //1、3 通过JS与webview内容交互,注册js方法:注入JS对象名称“AppModel”的js方法，当JS通过AppModel来调用时，我们可以在WKScriptMessageHandler代理中接收到。
     config.userContentController = [[WKUserContentController alloc] init];
-   
+    
     [config.userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"AppModel"];
-//     [config.userContentController addScriptMessageHandler:self name:@"AppModel"]; 该写法中会直接导致self被强引用，而不被释放。
+    //     [config.userContentController addScriptMessageHandler:self name:@"AppModel"]; 该写法中会直接导致self被强引用，而不被释放。
     
     // 加载WKWebview
     _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
     _webView.UIDelegate = self;
     _webView.navigationDelegate = self;
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"qsytest" withExtension:@"html"];
+    NSString *newStr = [NSString stringWithFormat:@"%@?id=100",[[NSBundle mainBundle] pathForResource:@"qsytest" ofType:@"html"]];
+    NSURL *newUrl = [NSURL URLWithString:newStr];
+    NSLog(@"%@",newUrl);
     //    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
     // 少：传递参数给html
-    NSMutableURLRequest * request = [[NSMutableURLRequest alloc]initWithURL:url];
-    NSString *bodyParams = [NSString stringWithFormat: @"?testId=%@", @"110"];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[bodyParams dataUsingEncoding:NSUTF8StringEncoding]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPMethod:@"GET"];
+    // 设置头
+    NSString *contentType = [NSString stringWithFormat:@"text/xml"];
+    [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
+    // 设置body
+    NSString *bodyParams = [NSString stringWithFormat:@"id=%@&password=%@&role=%@",@"111",@"admin222",@"33333"];
+    NSMutableData *postBody = [NSMutableData data];
+    [postBody appendData:[bodyParams dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPBody:postBody];
     
-    
-    NSString *bodyParams2 = [NSString stringWithFormat: @"#testId=%@", @"110"];
-    [_webView loadRequest:request];
+    [_webView loadRequest:[NSURLRequest requestWithURL:newUrl]];
     [self.view addSubview:_webView];
     
     // 添加KVO监听
@@ -118,6 +125,10 @@
         NSLog(@"loading");
     } else if ([keyPath isEqualToString:@"title"]) {
         self.title = self.webView.title;
+        //   self.title =
+        [self.webView evaluateJavaScript:@"window.location.protocol" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+            NSLog(@"查看获取的数据==%@==",result);
+        }];
     } else if ([keyPath isEqualToString:@"estimatedProgress"]) {
         NSLog(@"progress: %f", self.webView.estimatedProgress);
         self.progressView.progress = self.webView.estimatedProgress;
@@ -164,6 +175,8 @@
  */
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     
+    NSLog(@"加载success");
+
 }
 
 // 页面加载失败时调用
@@ -175,7 +188,7 @@
  *  @param error      错误
  */
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation {
-    
+    NSLog(@"加载失败了，这事谁都不能怪哦");
 }
 
 // 接收到服务器跳转请求之后调用
@@ -203,6 +216,7 @@
         // 对于跨域，手动跳转
         [[UIApplication sharedApplication] openURL:navigationAction.request.URL options:[NSDictionary dictionary] completionHandler:^(BOOL success) {
         }];
+        
         // 不允许web内跳转
         decisionHandler(WKNavigationActionPolicyCancel);
     } else {
