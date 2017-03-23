@@ -54,23 +54,33 @@
     _webView.UIDelegate = self;
     _webView.navigationDelegate = self;
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"qsytest" withExtension:@"html"];
-    NSString *newStr = [NSString stringWithFormat:@"%@?id=100",[[NSBundle mainBundle] pathForResource:@"qsytest" ofType:@"html"]];
-    NSURL *newUrl = [NSURL URLWithString:newStr];
-    NSLog(@"%@",newUrl);
     //    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
-    // 少：传递参数给html
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod:@"GET"];
-    // 设置头
-    NSString *contentType = [NSString stringWithFormat:@"text/xml"];
-    [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
-    // 设置body
-    NSString *bodyParams = [NSString stringWithFormat:@"id=%@&password=%@&role=%@",@"111",@"admin222",@"33333"];
-    NSMutableData *postBody = [NSMutableData data];
-    [postBody appendData:[bodyParams dataUsingEncoding:NSUTF8StringEncoding]];
-    [request setHTTPBody:postBody];
     
-    [_webView loadRequest:[NSURLRequest requestWithURL:newUrl]];
+    
+    //    // 少1：传递参数给 后端 的方式：在request中执行操作
+    //    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    //// 设置url
+    //    [request setURL:url];
+    // 设置Method
+    //    [request setHTTPMethod:@"POST"];
+    //    // 设置头
+    //    NSString *contentType = [NSString stringWithFormat:@"text/xml"];
+    //    [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
+    //    // 设置body
+    //    NSString *bodyParams = [NSString stringWithFormat:@"id=%@&password=%@&role=%@",@"111",@"admin222",@"33333"];
+    //    NSMutableData *postBody = [NSMutableData data];
+    //    [postBody appendData:[bodyParams dataUsingEncoding:NSUTF8StringEncoding]];
+    //    [request setHTTPBody:postBody];
+    
+    
+    // 少2：传递参数给前端的方式：
+    NSString *sourceString = [NSString stringWithFormat:@"document.cookie='id=%@,password=%@,role=%@'",@"111",@"admin222",@"33333"];
+    sourceString = [sourceString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    WKUserScript *cookieScript = [[WKUserScript alloc] initWithSource:sourceString injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+    [config.userContentController addUserScript:cookieScript];
+    
+    
+    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
     [self.view addSubview:_webView];
     
     // 添加KVO监听
@@ -125,9 +135,16 @@
         NSLog(@"loading");
     } else if ([keyPath isEqualToString:@"title"]) {
         self.title = self.webView.title;
-        //   self.title =
-        [self.webView evaluateJavaScript:@"window.location.protocol" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
-            NSLog(@"查看获取的数据==%@==",result);
+        [self.webView evaluateJavaScript:@"document.cookie" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+            NSLog(@"查看cookie中传递过来的参数== %@",result);
+//            NSString *resultStr = (NSString *)result;
+//            NSArray *resultArr = [resultStr componentsSeparatedByString:@","];
+//            for (NSString *str in resultArr) {
+//                NSLog(@"具体的某个参数：%@",str);
+//                if ([str containsString:@"id"]) {
+//                    self.title = [[str componentsSeparatedByString:@"="] lastObject]; //重新把参数设置给title
+//                }
+//            }
         }];
     } else if ([keyPath isEqualToString:@"estimatedProgress"]) {
         NSLog(@"progress: %f", self.webView.estimatedProgress);
@@ -138,8 +155,9 @@
 #pragma mark WKScriptMessageHandler 的代理方法：接受到js调用时，传递过来的body中的信息,OC在JS调用方法后做的处理。如 html中执行了：window.webkit.messageHandlers.AppModel.postMessage({body: 'call js alert in js'});
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray, NSDictionary, and NSNull类型
+    NSDictionary *dic = (NSDictionary *)message.body;
     if ([message.name isEqualToString:@"AppModel"]) {
-        NSLog(@"我就是测一测:%@",message.body);
+        NSLog(@"我就是测一测传递给我的body是啥:%@",dic);
     }
 }
 
@@ -173,10 +191,12 @@
  *  @param webView    实现该代理的webview
  *  @param navigation 当前navigation
  */
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    
-    NSLog(@"加载success");
 
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    NSLog(@"加载success");
+    [webView evaluateJavaScript:@"document.title" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+        NSLog(@"查看获取到的title is %@",result);
+    }];
 }
 
 // 页面加载失败时调用
@@ -274,7 +294,7 @@
     NSLog(@"%s", __FUNCTION__);
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert" message:@"JS调用alert" preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        completionHandler();
+        completionHandler();// 点击确定后，执行JS中的window.webkit.messageHandlers.AppModel.postMessage({body: 'call js alert in js'});该JS方法用于给OC传递数据，这时候就会调用 didReceiveScriptMessage 代理方法
     }]];
     [self presentViewController:alert animated:YES completion:NULL];
     NSLog(@"就是alert方法中传递过来的参数：%@", message);
@@ -332,9 +352,21 @@
     [[_webView configuration].userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"closeMe"];
 }
 
-
 - (void)webViewDidClose:(WKWebView *)webView {
     NSLog(@"%s", __FUNCTION__);
+}
+
+
+
+
+// OC回调JS
+- (void)ocToJs:(NSDictionary *)dic {
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *resultJs = [NSString stringWithFormat:@"window.init(%@)",jsonString];
+    [_webView evaluateJavaScript:resultJs completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+        NSLog(@"查看该js代码执行后的返回结果：%@",result);
+    }];
 }
 
 
