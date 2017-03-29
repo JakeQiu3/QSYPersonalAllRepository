@@ -9,6 +9,7 @@
 #import "WKWebViewDemoViewController.h"
 #import <WebKit/WebKit.h>
 #import "WeakScriptMessageDelegate.h"
+
 #define HTML @"<head></head><img src='http://www.nsu.edu.cn/v/2014v3/img/background/3.jpg' />"
 
 @interface WKWebViewDemoViewController ()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
