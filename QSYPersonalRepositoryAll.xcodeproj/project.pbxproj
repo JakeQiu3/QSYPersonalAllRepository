@@ -439,6 +439,12 @@
 		73D15B331CEF4118008855FB /* tttViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15B311CEF4118008855FB /* tttViewController.m */; };
 		73D601011D7D5D4900DCCAC7 /* MyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D601001D7D5D4900DCCAC7 /* MyString.m */; };
 		73DA620B1D5378F800F61160 /* QSYSinglePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DA620A1D5378F800F61160 /* QSYSinglePickerView.m */; };
+		73DBE8691E8FE32100DFD06D /* 我的宣教 -发送_spec.png in Resources */ = {isa = PBXBuildFile; fileRef = 73DBE8681E8FE32100DFD06D /* 我的宣教 -发送_spec.png */; };
+		73DBE86F1E8FE39D00DFD06D /* 图文咨询费-改价-自定义.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73DBE86A1E8FE39D00DFD06D /* 图文咨询费-改价-自定义.jpg */; };
+		73DBE8701E8FE39D00DFD06D /* 图文咨询费-改价.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73DBE86B1E8FE39D00DFD06D /* 图文咨询费-改价.jpg */; };
+		73DBE8711E8FE39D00DFD06D /* 图文咨询费-免费_spec.png in Resources */ = {isa = PBXBuildFile; fileRef = 73DBE86C1E8FE39D00DFD06D /* 图文咨询费-免费_spec.png */; };
+		73DBE8721E8FE39D00DFD06D /* 图文咨询费-免费.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73DBE86D1E8FE39D00DFD06D /* 图文咨询费-免费.jpg */; };
+		73DBE8731E8FE39D00DFD06D /* 图文咨询费-自定义价格.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73DBE86E1E8FE39D00DFD06D /* 图文咨询费-自定义价格.jpg */; };
 		73DEED901D0662D400FE72DE /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */; };
 		73DEED961D0674EA00FE72DE /* CacultorFunctionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DEED951D0674EA00FE72DE /* CacultorFunctionProgram.m */; };
 		73ECA2841DF946D7009CA249 /* SubJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73ECA2831DF946D7009CA249 /* SubJsonModel.m */; };
@@ -1053,6 +1059,12 @@
 		73D601001D7D5D4900DCCAC7 /* MyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyString.m; sourceTree = "<group>"; };
 		73DA62091D5378F800F61160 /* QSYSinglePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSYSinglePickerView.h; sourceTree = "<group>"; };
 		73DA620A1D5378F800F61160 /* QSYSinglePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSYSinglePickerView.m; sourceTree = "<group>"; };
+		73DBE8681E8FE32100DFD06D /* 我的宣教 -发送_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的宣教 -发送_spec.png"; sourceTree = "<group>"; };
+		73DBE86A1E8FE39D00DFD06D /* 图文咨询费-改价-自定义.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "图文咨询费-改价-自定义.jpg"; sourceTree = "<group>"; };
+		73DBE86B1E8FE39D00DFD06D /* 图文咨询费-改价.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "图文咨询费-改价.jpg"; sourceTree = "<group>"; };
+		73DBE86C1E8FE39D00DFD06D /* 图文咨询费-免费_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图文咨询费-免费_spec.png"; sourceTree = "<group>"; };
+		73DBE86D1E8FE39D00DFD06D /* 图文咨询费-免费.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "图文咨询费-免费.jpg"; sourceTree = "<group>"; };
+		73DBE86E1E8FE39D00DFD06D /* 图文咨询费-自定义价格.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "图文咨询费-自定义价格.jpg"; sourceTree = "<group>"; };
 		73DEED8E1D0662D400FE72DE /* CaculatorMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculatorMaker.h; sourceTree = "<group>"; };
 		73DEED8F1D0662D400FE72DE /* CaculatorMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculatorMaker.m; sourceTree = "<group>"; };
 		73DEED941D0674EA00FE72DE /* CacultorFunctionProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacultorFunctionProgram.h; sourceTree = "<group>"; };
@@ -1508,6 +1520,12 @@
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				731B64371E2F2E1B001854CA /* index 稳哥.html */,
+				73DBE8681E8FE32100DFD06D /* 我的宣教 -发送_spec.png */,
+				73DBE86A1E8FE39D00DFD06D /* 图文咨询费-改价-自定义.jpg */,
+				73DBE86B1E8FE39D00DFD06D /* 图文咨询费-改价.jpg */,
+				73DBE86C1E8FE39D00DFD06D /* 图文咨询费-免费_spec.png */,
+				73DBE86D1E8FE39D00DFD06D /* 图文咨询费-免费.jpg */,
+				73DBE86E1E8FE39D00DFD06D /* 图文咨询费-自定义价格.jpg */,
 				3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */,
 				7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */,
 				739B56B71DF01B2400C8C9B0 /* 你想要的 工具箱 这里都有 */,
@@ -2735,6 +2753,7 @@
 				300C81561E0ACD5A003C28F9 /* ad.js in Resources */,
 				300C821B1E0AD05B003C28F9 /* 1_duxinfeng2010.jpg in Resources */,
 				300C81941E0ACD5A003C28F9 /* showblogmedal.ashx in Resources */,
+				73DBE8711E8FE39D00DFD06D /* 图文咨询费-免费_spec.png in Resources */,
 				30AD65D01E23D00700AFA089 /* 日历的Demo.zip in Resources */,
 				300C823E1E0AD05B003C28F9 /* blog-icon-reply.png in Resources */,
 				300C818B1E0ACD5A003C28F9 /* prettify.js in Resources */,
@@ -2747,6 +2766,7 @@
 				300C823D1E0AD05B003C28F9 /* bdsstyle.css in Resources */,
 				73BA9AEB1DF5455800C0BCA6 /* 5种编程思想和5种设计模式的比较.xml in Resources */,
 				73BA9AF61DF5455800C0BCA6 /* navigation_back@2x.png in Resources */,
+				73DBE8731E8FE39D00DFD06D /* 图文咨询费-自定义价格.jpg in Resources */,
 				300C82301E0AD05B003C28F9 /* ad-ms1581_4.js in Resources */,
 				300C81851E0ACD5A003C28F9 /* MathJax.js in Resources */,
 				300C815B1E0ACD5A003C28F9 /* ask_float_block.js in Resources */,
@@ -2797,9 +2817,11 @@
 				300C827A1E0AD05B003C28F9 /* toolbar.js in Resources */,
 				300C816F1E0ACD5A003C28F9 /* helper-utils-moplus-monitor_b54cd5f.js in Resources */,
 				300C82541E0AD05B003C28F9 /* jquery-1.11.1.min.js in Resources */,
+				73DBE8721E8FE39D00DFD06D /* 图文咨询费-免费.jpg in Resources */,
 				73BA9B011DF5455800C0BCA6 /* 同步异步 和 串行并行队列.png in Resources */,
 				300C82CA1E0AD7E9003C28F9 /* Core Animation2-CABasicAnimation.webarchive in Resources */,
 				7323B46F1D2B4F5900CE6790 /* customTest.xib in Resources */,
+				73DBE86F1E8FE39D00DFD06D /* 图文咨询费-改价-自定义.jpg in Resources */,
 				308B978D1CCA899400BDA0FA /* Assets.xcassets in Resources */,
 				300C81821E0ACD5A003C28F9 /* main(1).js in Resources */,
 				300C82C71E0AD7E9003C28F9 /* CALayer4-自定义层.webarchive in Resources */,
@@ -2839,6 +2861,7 @@
 				30AD65D31E23D00700AFA089 /* 自定义tabbarDemo.zip in Resources */,
 				300C824C1E0AD05B003C28F9 /* gpt.js in Resources */,
 				300C819B1E0ACD5A003C28F9 /* top.png in Resources */,
+				73DBE8701E8FE39D00DFD06D /* 图文咨询费-改价.jpg in Resources */,
 				73BA9AE11DF5455800C0BCA6 /* 10.jpg in Resources */,
 				300C82271E0AD05B003C28F9 /* 3_zcl19920304.jpg in Resources */,
 				300C823C1E0AD05B003C28F9 /* bds_s_v2.js in Resources */,
@@ -2854,6 +2877,7 @@
 				300C824F1E0AD05B003C28F9 /* ico_rss.gif in Resources */,
 				738848761E7677B000846546 /* qsytest.html in Resources */,
 				73BA9AF31DF5455800C0BCA6 /* movielist.json in Resources */,
+				73DBE8691E8FE32100DFD06D /* 我的宣教 -发送_spec.png in Resources */,
 				300C82521E0AD05B003C28F9 /* job_reco.css in Resources */,
 				300C81891E0ACD5A003C28F9 /* notify.js in Resources */,
 				73D15B2F1CEF3DD1008855FB /* Uuu.xib in Resources */,
