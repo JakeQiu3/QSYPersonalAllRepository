@@ -315,7 +315,6 @@
 		730CFB4E1D1A966D00B62765 /* IMY_NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB4A1D1A966D00B62765 /* IMY_NJKWebViewProgress.m */; };
 		730CFB4F1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 730CFB4C1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m */; };
 		7313C05C1D62B35F00404EDF /* UserDefinedLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7313C05B1D62B35F00404EDF /* UserDefinedLoadingViewController.m */; };
-		731B64381E2F2E1B001854CA /* index 稳哥.html in Resources */ = {isa = PBXBuildFile; fileRef = 731B64371E2F2E1B001854CA /* index 稳哥.html */; };
 		731FFF0B1D3C703700F65E0F /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 731FFF0A1D3C703700F65E0F /* BaseModel.m */; };
 		7323B46F1D2B4F5900CE6790 /* customTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7323B46E1D2B4F5900CE6790 /* customTest.xib */; };
 		7323B4721D2B506900CE6790 /* CustomTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7323B4711D2B506900CE6790 /* CustomTestView.m */; };
@@ -419,6 +418,7 @@
 		73BA9B021DF5455800C0BCA6 /* 商品分类数据.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADD1DF5455800C0BCA6 /* 商品分类数据.plist */; };
 		73BA9B041DF5455800C0BCA6 /* 面试题总结.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */; };
 		73BA9B061DF5463A00C0BCA6 /* date.json in Resources */ = {isa = PBXBuildFile; fileRef = 73BA9B051DF5463A00C0BCA6 /* date.json */; };
+		73BECD6C1F3B19CC00A301FC /* NSString+PinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BECD6B1F3B19CC00A301FC /* NSString+PinYin.m */; };
 		73C2B8031E2DE9E5008702B9 /* WebviewCorrelationJSExport.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2B8021E2DE9E5008702B9 /* WebviewCorrelationJSExport.m */; };
 		73C2B8051E2DEB1B008702B9 /* MX5NewsContent.html in Resources */ = {isa = PBXBuildFile; fileRef = 73C2B8041E2DEB1B008702B9 /* MX5NewsContent.html */; };
 		73C2B8091E2DEE55008702B9 /* XFHTMLConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C2B8081E2DEE55008702B9 /* XFHTMLConfigurator.m */; };
@@ -430,6 +430,7 @@
 		73C428001E27588F0047EC92 /* WebViewDelegateCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C427FF1E27588F0047EC92 /* WebViewDelegateCaptureViewController.m */; };
 		73C7A3441DF55E6800A58D4E /* HandleDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C7A3431DF55E6800A58D4E /* HandleDicTransferModel.m */; };
 		73C7A3491DF5630A00A58D4E /* DicTransferModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */; };
+		73C8AA981F1C5687006F0324 /* FiftiesEffectiveCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C8AA971F1C5687006F0324 /* FiftiesEffectiveCodeViewController.m */; };
 		73D15AFC1CEEB3E4008855FB /* CaptureDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15AFB1CEEB3E4008855FB /* CaptureDeviceViewController.m */; };
 		73D15AFE1CEEB46D008855FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D15AFD1CEEB46D008855FB /* AVFoundation.framework */; };
 		73D15B0C1CEED90C008855FB /* MZTLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D15B0B1CEED90C008855FB /* MZTLViewController.m */; };
@@ -842,7 +843,6 @@
 		730CFB4C1D1A966D00B62765 /* WYWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
 		7313C05A1D62B35F00404EDF /* UserDefinedLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefinedLoadingViewController.h; sourceTree = "<group>"; };
 		7313C05B1D62B35F00404EDF /* UserDefinedLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefinedLoadingViewController.m; sourceTree = "<group>"; };
-		731B64371E2F2E1B001854CA /* index 稳哥.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index 稳哥.html"; sourceTree = "<group>"; };
 		731FFF0A1D3C703700F65E0F /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		731FFF0C1D3C705500F65E0F /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		7323B46E1D2B4F5900CE6790 /* customTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = customTest.xib; sourceTree = "<group>"; };
@@ -1015,6 +1015,8 @@
 		73BA9ADE1DF5455800C0BCA6 /* 新型的MVVM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新型的MVVM.png"; sourceTree = "<group>"; };
 		73BA9ADF1DF5455800C0BCA6 /* 面试题总结.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "面试题总结.xml"; sourceTree = "<group>"; };
 		73BA9B051DF5463A00C0BCA6 /* date.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = date.json; sourceTree = "<group>"; };
+		73BECD6A1F3B19CC00A301FC /* NSString+PinYin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin.h"; sourceTree = "<group>"; };
+		73BECD6B1F3B19CC00A301FC /* NSString+PinYin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin.m"; sourceTree = "<group>"; };
 		73C2B8011E2DE9E5008702B9 /* WebviewCorrelationJSExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewCorrelationJSExport.h; sourceTree = "<group>"; };
 		73C2B8021E2DE9E5008702B9 /* WebviewCorrelationJSExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebviewCorrelationJSExport.m; sourceTree = "<group>"; };
 		73C2B8041E2DEB1B008702B9 /* MX5NewsContent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = MX5NewsContent.html; sourceTree = "<group>"; };
@@ -1037,6 +1039,8 @@
 		73C7A3431DF55E6800A58D4E /* HandleDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleDicTransferModel.m; sourceTree = "<group>"; };
 		73C7A3471DF5630A00A58D4E /* DicTransferModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DicTransferModelViewController.m; sourceTree = "<group>"; };
 		73C7A3481DF5630A00A58D4E /* DicTransferModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DicTransferModelViewController.h; sourceTree = "<group>"; };
+		73C8AA961F1C5687006F0324 /* FiftiesEffectiveCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiftiesEffectiveCodeViewController.h; sourceTree = "<group>"; };
+		73C8AA971F1C5687006F0324 /* FiftiesEffectiveCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiftiesEffectiveCodeViewController.m; sourceTree = "<group>"; };
 		73CA017F1DAB41DF00072618 /* QSYPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSYPrefixHeader.pch; sourceTree = "<group>"; };
 		73D15AFA1CEEB3E4008855FB /* CaptureDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureDeviceViewController.h; sourceTree = "<group>"; };
 		73D15AFB1CEEB3E4008855FB /* CaptureDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureDeviceViewController.m; sourceTree = "<group>"; };
@@ -1507,7 +1511,8 @@
 				30DC004B1D03D200005EAD0C /* AppDelegate.m */,
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
-				731B64371E2F2E1B001854CA /* index 稳哥.html */,
+				73BECD6A1F3B19CC00A301FC /* NSString+PinYin.h */,
+				73BECD6B1F3B19CC00A301FC /* NSString+PinYin.m */,
 				3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */,
 				7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */,
 				739B56B71DF01B2400C8C9B0 /* 你想要的 工具箱 这里都有 */,
@@ -1547,6 +1552,7 @@
 			children = (
 				3091A7571CEE1A64003B97F4 /* TestTotalViewController.h */,
 				3091A76C1CEE1A64003B97F4 /* TestTotalViewController.m */,
+				73C8AA951F1C564A006F0324 /* 52个高效编码OC的方法 */,
 				300C82B41E0AD7E9003C28F9 /* 动画 */,
 				300C81AD1E0AD05B003C28F9 /* 登录注册 */,
 				300C81AA1E0ACF56003C28F9 /* 打包测试IPA程序 */,
@@ -2427,6 +2433,15 @@
 			name = "字典转模型大全";
 			sourceTree = "<group>";
 		};
+		73C8AA951F1C564A006F0324 /* 52个高效编码OC的方法 */ = {
+			isa = PBXGroup;
+			children = (
+				73C8AA961F1C5687006F0324 /* FiftiesEffectiveCodeViewController.h */,
+				73C8AA971F1C5687006F0324 /* FiftiesEffectiveCodeViewController.m */,
+			);
+			name = "52个高效编码OC的方法";
+			sourceTree = "<group>";
+		};
 		73D15AEC1CEEAA85008855FB /* 坐标系转换 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2777,7 +2792,6 @@
 				73BA9AEC1DF5455800C0BCA6 /* 6.jpg in Resources */,
 				739B57A21DF01B2400C8C9B0 /* departmentCitysServices.plist in Resources */,
 				300C82441E0AD05B003C28F9 /* comment1.css in Resources */,
-				731B64381E2F2E1B001854CA /* index 稳哥.html in Resources */,
 				300C82241E0AD05B003C28F9 /* 3_gary5510.jpg in Resources */,
 				300C826F1E0AD05B003C28F9 /* pv.aspx in Resources */,
 				300C825C1E0AD05B003C28F9 /* lightapp.js in Resources */,
@@ -3053,6 +3067,7 @@
 				30AD66321E23D18300AFA089 /* ViewController+MASAdditions.m in Sources */,
 				739B57A41DF01B2400C8C9B0 /* ActivityView.mm in Sources */,
 				303F38D31D3B9A5700630F31 /* TabActionColView.m in Sources */,
+				73BECD6C1F3B19CC00A301FC /* NSString+PinYin.m in Sources */,
 				739B57A11DF01B2400C8C9B0 /* ExpandScaleBtn.m in Sources */,
 				7323B48F1D2B8B2A00CE6790 /* TouchIdViewController.m in Sources */,
 				309590581CFF22C000176AAC /* Draw&LayoutSubViewsViewController.m in Sources */,
@@ -3111,6 +3126,7 @@
 				739B57981DF01B2400C8C9B0 /* UIImage+FixOrientation.m in Sources */,
 				303F38D01D3B9A0900630F31 /* TabActionColViewController.m in Sources */,
 				73C2B8091E2DEE55008702B9 /* XFHTMLConfigurator.m in Sources */,
+				73C8AA981F1C5687006F0324 /* FiftiesEffectiveCodeViewController.m in Sources */,
 				735C80661E28D7620066B007 /* WebViewJavascriptBridgeLibViewController.m in Sources */,
 				73037E831D2A71C60017D024 /* Sb1TableViewCell.m in Sources */,
 				739B57AA1DF01B2400C8C9B0 /* FMResultSet.m in Sources */,
