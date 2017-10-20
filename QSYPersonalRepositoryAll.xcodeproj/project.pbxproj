@@ -342,6 +342,8 @@
 		73801AF91DF65C4300E9EC42 /* SubDicTransferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */; };
 		738848761E7677B000846546 /* qsytest.html in Resources */ = {isa = PBXBuildFile; fileRef = 738848751E7677B000846546 /* qsytest.html */; };
 		738848781E76A3E300846546 /* WKWebView_Swift版本.zip in Resources */ = {isa = PBXBuildFile; fileRef = 738848771E76A3E200846546 /* WKWebView_Swift版本.zip */; };
+		738C03E21F99D8EB00AE96BA /* 高德和腾讯地图位置发送.zip in Resources */ = {isa = PBXBuildFile; fileRef = 738C03E11F99D8EB00AE96BA /* 高德和腾讯地图位置发送.zip */; };
+		738C03E41F99D96600AE96BA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 738C03E31F99D96500AE96BA /* index.html */; };
 		738DEA221E029DB1003E30D2 /* NSString+LBHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA191E029DB1003E30D2 /* NSString+LBHash.m */; };
 		738DEA231E029DB1003E30D2 /* UIColor+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA1B1E029DB1003E30D2 /* UIColor+LBExtension.m */; };
 		738DEA241E029DB1003E30D2 /* UIImage+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 738DEA1D1E029DB1003E30D2 /* UIImage+LBExtension.m */; };
@@ -892,6 +894,8 @@
 		73801AF81DF65C4300E9EC42 /* SubDicTransferModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDicTransferModel.m; sourceTree = "<group>"; };
 		738848751E7677B000846546 /* qsytest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = qsytest.html; sourceTree = "<group>"; };
 		738848771E76A3E200846546 /* WKWebView_Swift版本.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "WKWebView_Swift版本.zip"; sourceTree = "<group>"; };
+		738C03E11F99D8EB00AE96BA /* 高德和腾讯地图位置发送.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "高德和腾讯地图位置发送.zip"; sourceTree = "<group>"; };
+		738C03E31F99D96500AE96BA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		738DEA181E029DB1003E30D2 /* NSString+LBHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBHash.h"; sourceTree = "<group>"; };
 		738DEA191E029DB1003E30D2 /* NSString+LBHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBHash.m"; sourceTree = "<group>"; };
 		738DEA1A1E029DB1003E30D2 /* UIColor+LBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LBExtension.h"; sourceTree = "<group>"; };
@@ -1513,6 +1517,8 @@
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
 				73BECD6A1F3B19CC00A301FC /* NSString+PinYin.h */,
 				73BECD6B1F3B19CC00A301FC /* NSString+PinYin.m */,
+				738C03E11F99D8EB00AE96BA /* 高德和腾讯地图位置发送.zip */,
+				738C03E31F99D96500AE96BA /* index.html */,
 				3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */,
 				7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */,
 				739B56B71DF01B2400C8C9B0 /* 你想要的 工具箱 这里都有 */,
@@ -2737,6 +2743,7 @@
 				300C81521E0ACD5A003C28F9 /* 1_sakulafly.jpg in Resources */,
 				300C81921E0ACD5A003C28F9 /* share.js in Resources */,
 				300C819E1E0ACD5A003C28F9 /* vote.js in Resources */,
+				738C03E21F99D8EB00AE96BA /* 高德和腾讯地图位置发送.zip in Resources */,
 				73BA9AFB1DF5455800C0BCA6 /* StatusInfo.plist in Resources */,
 				73C2B8051E2DEB1B008702B9 /* MX5NewsContent.html in Resources */,
 				308B97901CCA899400BDA0FA /* LaunchScreen.storyboard in Resources */,
@@ -2795,6 +2802,7 @@
 				300C82241E0AD05B003C28F9 /* 3_gary5510.jpg in Resources */,
 				300C826F1E0AD05B003C28F9 /* pv.aspx in Resources */,
 				300C825C1E0AD05B003C28F9 /* lightapp.js in Resources */,
+				738C03E41F99D96600AE96BA /* index.html in Resources */,
 				300C81631E0ACD5A003C28F9 /* cnick.js in Resources */,
 				300C82621E0AD05B003C28F9 /* mkt(1).gif in Resources */,
 				30AD65C71E23D00700AFA089 /* K线图.zip in Resources */,
