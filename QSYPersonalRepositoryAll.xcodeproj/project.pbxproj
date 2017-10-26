@@ -302,6 +302,7 @@
 		30DC00681D04845F005EAD0C /* MVCStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC00631D04845F005EAD0C /* MVCStatusViewController.m */; };
 		30DC00691D04845F005EAD0C /* WeiboStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC00651D04845F005EAD0C /* WeiboStatus.m */; };
 		30DC006A1D04845F005EAD0C /* StatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC00671D04845F005EAD0C /* StatusTableViewCell.m */; };
+		7302FB1A1FA212CE009460C1 /* 传值和webjs交互.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7302FB191FA212CE009460C1 /* 传值和webjs交互.zip */; };
 		73037E7A1D2A5A530017D024 /* tableViewTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73037E791D2A5A530017D024 /* tableViewTest.storyboard */; };
 		73037E801D2A6CD50017D024 /* Sb0TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73037E7F1D2A6CD50017D024 /* Sb0TableViewController.m */; };
 		73037E831D2A71C60017D024 /* Sb1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73037E821D2A71C60017D024 /* Sb1TableViewCell.m */; };
@@ -821,6 +822,7 @@
 		30DC00651D04845F005EAD0C /* WeiboStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboStatus.m; sourceTree = "<group>"; };
 		30DC00661D04845F005EAD0C /* StatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusTableViewCell.h; sourceTree = "<group>"; };
 		30DC00671D04845F005EAD0C /* StatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTableViewCell.m; sourceTree = "<group>"; };
+		7302FB191FA212CE009460C1 /* 传值和webjs交互.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "传值和webjs交互.zip"; sourceTree = "<group>"; };
 		73037E791D2A5A530017D024 /* tableViewTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = tableViewTest.storyboard; sourceTree = "<group>"; };
 		73037E7E1D2A6CD50017D024 /* Sb0TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sb0TableViewController.h; sourceTree = "<group>"; };
 		73037E7F1D2A6CD50017D024 /* Sb0TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sb0TableViewController.m; sourceTree = "<group>"; };
@@ -1515,9 +1517,6 @@
 				30DC004B1D03D200005EAD0C /* AppDelegate.m */,
 				30DC004C1D03D200005EAD0C /* ViewController.h */,
 				30DC004D1D03D200005EAD0C /* ViewController.m */,
-				73BECD6A1F3B19CC00A301FC /* NSString+PinYin.h */,
-				73BECD6B1F3B19CC00A301FC /* NSString+PinYin.m */,
-				738C03E11F99D8EB00AE96BA /* 高德和腾讯地图位置发送.zip */,
 				738C03E31F99D96500AE96BA /* index.html */,
 				3091A7A21CEE1D00003B97F4 /* OC知识点  看这些就够了 */,
 				7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */,
@@ -1774,6 +1773,15 @@
 			name = "AutoLayout xib和storyboard使用";
 			sourceTree = "<group>";
 		};
+		7302FB1B1FA2141D009460C1 /* 获取文字和字母的首字母 */ = {
+			isa = PBXGroup;
+			children = (
+				73BECD6A1F3B19CC00A301FC /* NSString+PinYin.h */,
+				73BECD6B1F3B19CC00A301FC /* NSString+PinYin.m */,
+			);
+			name = "获取文字和字母的首字母";
+			sourceTree = "<group>";
+		};
 		73037E871D2A74490017D024 /* UITableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1948,6 +1956,9 @@
 		7366B6FC1DF13F570052E1E1 /* 工具箱  使用举例 */ = {
 			isa = PBXGroup;
 			children = (
+				738C03E11F99D8EB00AE96BA /* 高德和腾讯地图位置发送.zip */,
+				7302FB191FA212CE009460C1 /* 传值和webjs交互.zip */,
+				7302FB1B1FA2141D009460C1 /* 获取文字和字母的首字母 */,
 				730CFB351D1A29EF00B62765 /* 混合开发H5和native的交互(WebView和wkwebview) */,
 				30AD66381E23D46100AFA089 /* NavBar联动使用 */,
 				73D600FE1D7D5D2300DCCAC7 /* Runtime魔法拦截系统方法举例 */,
@@ -2849,6 +2860,7 @@
 				73C2B81B1E2E1AC8008702B9 /* lanInfoPlist.strings in Resources */,
 				300C816B1E0ACD5A003C28F9 /* follow.html in Resources */,
 				73BA9AF21DF5455800C0BCA6 /* 9Y.html in Resources */,
+				7302FB1A1FA212CE009460C1 /* 传值和webjs交互.zip in Resources */,
 				300C821E1E0AD05B003C28F9 /* 20130522133457849 in Resources */,
 				30AD65CB1E23D00700AFA089 /* WebViewJavascriptBridge - demo.zip in Resources */,
 				30AD65C91E23D00700AFA089 /* objc_msgForward_demo.zip in Resources */,
