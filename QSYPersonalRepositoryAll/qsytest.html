@@ -34,8 +34,8 @@
             
         function callJsAlert() {
                 alert('Objective-C call js to show alert');// alert中的数据为传递给Native的message。
-                //js调用该appModel，并postMessage：AppModel是我们所注入的对象：body中为 -> 给native传输的数据，数据类型可以为json。
-                window.webkit.messageHandlers.AppModel.postMessage({body: 'call js alert in js'});
+                //js调用 OC 方法- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message;
+                window.webkit.messageHandlers.appFirstModel.postMessage({body: 'call js alert in js'});
             }
         
         function callJsConfirm() {
@@ -47,17 +47,18 @@
                 = '你确定？';
             }
             
-            // AppModel是我们所注入的对象
-            window.webkit.messageHandlers.AppModel.postMessage({body: 'call js confirm in js'});
+            //js调用 OC 方法- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message;
+            window.webkit.messageHandlers.appSecondModel.postMessage({body: 'call js confirm in js'});
         }
         
         function callJsInput() {
             var response = prompt('Hello', 'Please input your name:');
             document.getElementById('jsParamFuncSpan').innerHTML = response;
             
-            // AppModel是我们所注入的对象
-            window.webkit.messageHandlers.AppModel.postMessage({body: response});
+            //js调用 OC 方法- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message;
+            window.webkit.messageHandlers.appSecondModel.postMessage({body: response});
         }
+        
         </script>
     </body>
 </html>

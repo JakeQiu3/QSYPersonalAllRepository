@@ -28,7 +28,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self loadWK];
-    //    [self loadJSCode]; // 手动调用js代码
+    //    [self loadJSCode]; // OC手动调用js代码
 }
 
 - (void)loadWK {
@@ -46,8 +46,10 @@
     config.processPool = [[WKProcessPool alloc] init];
     //1、3 通过JS与webview内容交互,注册js方法:注入JS对象名称“AppModel”的js方法，当JS通过AppModel来调用时，我们可以在WKScriptMessageHandler代理中接收到。
     config.userContentController = [[WKUserContentController alloc] init];
-    
-    [config.userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"AppModel"];
+    //   添加js脚本
+    WeakScriptMessageDelegate *weakDelegate = [[WeakScriptMessageDelegate alloc] initWithDelegate:self];
+    [config.userContentController addScriptMessageHandler:weakDelegate name:@"appFirstModel"];
+    [config.userContentController addScriptMessageHandler:weakDelegate name:@"appSecondModel"];
     //     [config.userContentController addScriptMessageHandler:self name:@"AppModel"]; 该写法中会直接导致self被强引用，而不被释放。
     
     // 加载WKWebview
@@ -58,6 +60,8 @@
     //    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
     
     
+    
+//    注入js方法
     //    // 少1：传递参数给 后端 的方式：在request中执行操作
     //    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     //// 设置url
@@ -74,13 +78,15 @@
     //    [request setHTTPBody:postBody];
     
     
-    // 少2：传递参数给前端的方式：
+    // 少2：传递带参数的js给前端的方式：
+    //    含参数的
     NSString *sourceString = [NSString stringWithFormat:@"document.cookie='id=%@,password=%@,role=%@'",@"111",@"admin222",@"33333"];
     sourceString = [sourceString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     WKUserScript *cookieScript = [[WKUserScript alloc] initWithSource:sourceString injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
     [config.userContentController addUserScript:cookieScript];
     
     
+    // 加载webview
     [_webView loadRequest:[NSURLRequest requestWithURL:url]];
     [self.view addSubview:_webView];
     
@@ -111,7 +117,9 @@
 
 - (void)dealloc{
     //这里需要注意，前面增加过的方法一定要remove。
-    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"sayhello"];
+    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"AppFirstModel"];
+    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"AppSecondModel"];
+    [[self.webView configuration].userContentController removeAllUserScripts];
     [self.webView removeObserver:self forKeyPath:@"loading"];
     [self.webView removeObserver:self forKeyPath:@"title"];
     [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
@@ -137,15 +145,15 @@
     } else if ([keyPath isEqualToString:@"title"]) {
         self.title = self.webView.title;
         [self.webView evaluateJavaScript:@"document.cookie" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
-            NSLog(@"查看cookie中传递过来的参数== %@",result);
-//            NSString *resultStr = (NSString *)result;
-//            NSArray *resultArr = [resultStr componentsSeparatedByString:@","];
-//            for (NSString *str in resultArr) {
-//                NSLog(@"具体的某个参数：%@",str);
-//                if ([str containsString:@"id"]) {
-//                    self.title = [[str componentsSeparatedByString:@"="] lastObject]; //重新把参数设置给title
-//                }
-//            }
+            NSLog(@"查看cookie中传递过来的参数=== %@",result);
+            NSString *resultStr = (NSString *)result;
+            NSArray *resultArr = [resultStr componentsSeparatedByString:@","];
+            for (NSString *str in resultArr) {
+                NSLog(@"具体的某个参数：%@",str);
+                if ([str containsString:@"id"]) {
+                    self.title = [[str componentsSeparatedByString:@"="] lastObject]; //重新把参数设置给title
+                }
+            }
         }];
     } else if ([keyPath isEqualToString:@"estimatedProgress"]) {
         NSLog(@"progress: %f", self.webView.estimatedProgress);
@@ -154,12 +162,42 @@
 }
 
 #pragma mark WKScriptMessageHandler 的代理方法：接受到js调用时，传递过来的body中的信息,OC在JS调用方法后做的处理。如 html中执行了：window.webkit.messageHandlers.AppModel.postMessage({body: 'call js alert in js'});
+// JS调用该OC方法，同时JS把message传递过来
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray, NSDictionary, and NSNull类型
     NSDictionary *dic = (NSDictionary *)message.body;
-    if ([message.name isEqualToString:@"AppModel"]) {
-        NSLog(@"我就是测一测传递给我的body是啥:%@",dic);
+    if ([message.name isEqualToString:@"AppFirstModel"]) {
+        [self ShareWithInformation:dic];
+    }else if ([message.name isEqualToString:@"AppSecondModel"]){
+        [self camera:dic];
     }
+}
+
+#pragma mark - Method
+-(void)ShareWithInformation:(NSDictionary *)dic {
+    NSLog(@"我就是测一测传递给我的body是啥:%@",dic);
+    if (![dic isKindOfClass:[NSDictionary class]]) {
+        return;
+    }
+    NSString *title = [dic objectForKey:@"title"];
+    NSString *content = [dic objectForKey:@"content"];
+    NSString *url = [dic objectForKey:@"url"];
+    
+    //在这里写分享操作的代码
+    NSLog(@"要分享了哦😯");
+    
+    NSString *JSResult = [NSString stringWithFormat:@"shareResult('%@','%@','%@')",title,content,url];
+    
+    // OC调用JS
+    [self.webView evaluateJavaScript:JSResult completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+-(void)camera:(NSDictionary *)dic
+{
+    //在这里写调用打开相88册的代码
+    NSLog(@"我就是测一测传递给我的body是啥:%@",dic);
 }
 
 #pragma mark WKNavigationDelegate 的代理方法,执行状态回调
@@ -334,8 +372,17 @@
     [self presentViewController:alert animated:YES completion:NULL];
 }
 
+- (void)webViewDidClose:(WKWebView *)webView {
+    NSLog(@"%s", __FUNCTION__);
+}
 
-// 动态加载并运行JS代码
+
+// webView 执行JS代码
+- (void)webviewJs {
+    [self.webView evaluateJavaScript:@"javaScriptString" completionHandler:nil];
+}
+
+// OC 动态加载并运行JS代码
 - (void)loadJSCode {
     NSString *js = @"var count = document.images.length;for (var i = 0; i < count; i++) {var image = document.images[i];image.style.width=320;};window.alert('找到' + count + '张图');";
     // 根据JS字符串 初始化WKUserScript对象
@@ -343,6 +390,7 @@
     // 根据生成的WKUserScript对象，初始化WKWebViewConfiguration
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     [config.userContentController addUserScript:script];
+    
     // wkwebview加载html
     _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
     [_webView loadHTMLString:@"<image src='http://www.nsu.edu.cn/v/2014v3/img/background/3.jpg' />" baseURL:nil]; //
@@ -352,16 +400,8 @@
     //OC注册供JS调用的方法
     [[_webView configuration].userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"closeMe"];
 }
-
-- (void)webViewDidClose:(WKWebView *)webView {
-    NSLog(@"%s", __FUNCTION__);
-}
-
-
-
-
-// OC回调JS
-- (void)ocToJs:(NSDictionary *)dic {
+// 注入方法
+- (void)inject_oc_method:(NSDictionary *)dic {
     NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
     NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSString *resultJs = [NSString stringWithFormat:@"window.init(%@)",jsonString];

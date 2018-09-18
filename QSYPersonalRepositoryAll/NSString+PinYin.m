@@ -7,7 +7,7 @@
 //
 
 #import "NSString+PinYin.h"
-#import "QLKDiagnosticsLibraryModel.h"// 导入model
+//#import "QLKDiagnosticsLibraryModel.h"// 导入model
 
 #define HANZI_START 19968
 #define HANZI_COUNT 20902
@@ -308,11 +308,11 @@ static char firstLetterArray[HANZI_COUNT] =
         [dict setObject:[NSMutableArray array]
                  forKey:[NSString stringWithUTF8String:(const char *)&i]];
     }
-    for (QLKDiagnosticsLibraryListModel *model in self) {
-        NSString *firstLetter = [model.name getFirstLetter];
-        NSMutableArray *array = dict[firstLetter];
-        [array addObject:model];
-    }
+//    for (QLKDiagnosticsLibraryListModel *model in self) {
+//        NSString *firstLetter = [model.name getFirstLetter];
+//        NSMutableArray *array = dict[firstLetter];
+//        [array addObject:model];
+//    }
     //
     NSMutableArray *resultArray = [NSMutableArray array];
     for (int i = 'A'; i <= 'Z'; i++) {
