@@ -58,7 +58,14 @@
             //js调用 OC 方法- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message;
             window.webkit.messageHandlers.appSecondModel.postMessage({body: response});
         }
-        
+<!--     2端约定的方法   -->
+        function shareResult(title,content,url) {
+            console.log("this:"+this);
+            console.log("title:"+title);
+            console.log("content:"+content);
+            console.log("url:"+url);
+            return title+content+url;
+        }
         </script>
     </body>
 </html>

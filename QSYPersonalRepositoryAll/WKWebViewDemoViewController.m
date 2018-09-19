@@ -44,12 +44,20 @@
     config.preferences.javaScriptCanOpenWindowsAutomatically = NO;
     //1、2 web内容处理池:未暴露api，暂时无用
     config.processPool = [[WKProcessPool alloc] init];
-    //1、3 通过JS与webview内容交互,注册js方法:注入JS对象名称“AppModel”的js方法，当JS通过AppModel来调用时，我们可以在WKScriptMessageHandler代理中接收到。
+    
+    //添加注入js方法, oc与js端对应实现
+    //1、3 通过JS与webview内容交互,注册js方法:注入JS对象名称“appFirstModel”和appSecondModel的js方法，当JS通过AppModel来调用时，我们可以在WKScriptMessageHandler代理中接收到。
     config.userContentController = [[WKUserContentController alloc] init];
     //   添加js脚本
     WeakScriptMessageDelegate *weakDelegate = [[WeakScriptMessageDelegate alloc] initWithDelegate:self];
     [config.userContentController addScriptMessageHandler:weakDelegate name:@"appFirstModel"];
     [config.userContentController addScriptMessageHandler:weakDelegate name:@"appSecondModel"];
+    
+    
+    // 少js端代码实现实例(此处为js端实现代码给大家粘出来示范的!!!):
+    //window.webkit.messageHandlers.appFirstModel.postMessage({body: 'goodsId=1212'});}
+    //window.webkit.messageHandlers.appSecondModel.postMessage({body: 'goodsId=1212'});}
+    
     //     [config.userContentController addScriptMessageHandler:self name:@"AppModel"]; 该写法中会直接导致self被强引用，而不被释放。
     
     // 加载WKWebview
@@ -81,7 +89,9 @@
     // 少2：传递带参数的js给前端的方式：
     //    含参数的
     NSString *sourceString = [NSString stringWithFormat:@"document.cookie='id=%@,password=%@,role=%@'",@"111",@"admin222",@"33333"];
-    sourceString = [sourceString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *charactersToEscape = @"?!@#$^&%*+,:;='\"`<>()[]{}/\\| ";
+    NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+    sourceString = [sourceString stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
     WKUserScript *cookieScript = [[WKUserScript alloc] initWithSource:sourceString injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
     [config.userContentController addUserScript:cookieScript];
     
@@ -166,11 +176,14 @@
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray, NSDictionary, and NSNull类型
     NSDictionary *dic = (NSDictionary *)message.body;
-    if ([message.name isEqualToString:@"AppFirstModel"]) {
+    if ([message.name isEqualToString:@"appFirstModel"]) {
+        NSLog(@"AppFirstModel的body:%@",message.body);
         [self ShareWithInformation:dic];
-    }else if ([message.name isEqualToString:@"AppSecondModel"]){
+    }else if ([message.name isEqualToString:@"appSecondModel"]){
+        NSLog(@"AppSecondModel的body:%@",message.body);
         [self camera:dic];
     }
+    
 }
 
 #pragma mark - Method
@@ -182,16 +195,31 @@
     NSString *title = [dic objectForKey:@"title"];
     NSString *content = [dic objectForKey:@"content"];
     NSString *url = [dic objectForKey:@"url"];
-    
+//   先用假数据
+    title = @"邱";
+    content = @"少";
+    url = @"一";
     //在这里写分享操作的代码
     NSLog(@"要分享了哦😯");
     
     NSString *JSResult = [NSString stringWithFormat:@"shareResult('%@','%@','%@')",title,content,url];
     
-    // OC调用JS
+    // OC调用JS，将处理结果返回回调给JS
     [self.webView evaluateJavaScript:JSResult completionHandler:^(id _Nullable result, NSError * _Nullable error) {
-        NSLog(@"%@", error);
+        NSLog(@"result:%@ ; error:%@",result,error);
     }];
+    
+    // js端获取传递值代码实现实例(此处为js端实现代码给大家粘出来示范的!!!):
+
+//    function shareResult(title,content,url) {
+//        console.log("this:"+this);
+//        console.log("title:"+title);
+//        console.log("content:"+content);
+//        console.log("url:"+url);
+//        return title+content+url;
+//    }
+
+
 }
 
 -(void)camera:(NSDictionary *)dic
@@ -325,15 +353,19 @@
  
  *
  *  @param webView           实现该代理的webview
- *  @param message           警告框中的内容
+ *  @param message           警告框中的内容：js端传递过来
  *  @param frame             主窗口
  *  @param completionHandler 警告框消失调用
  */
+
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     NSLog(@"%s", __FUNCTION__);
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert" message:@"JS调用alert" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert" message:message preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        completionHandler();// 点击确定后，执行JS中的window.webkit.messageHandlers.AppModel.postMessage({body: 'call js alert in js'});该JS方法用于给OC传递数据，这时候就会调用 didReceiveScriptMessage 代理方法
+        completionHandler();
+        // 若未实现，默认执行该block
+        // 点击确定后，才会触发执行JS中的window.webkit.messageHandlers.AppModel.postMessage({body: 'call js alert in js'});
+        // 该上面JS方法，可用于给OC传递数据，因为已经在开始时注入，所以会触发调用OC中 didReceiveScriptMessage 代理方法
     }]];
     [self presentViewController:alert animated:YES completion:NULL];
     NSLog(@"就是alert方法中传递过来的参数：%@", message);
